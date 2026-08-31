@@ -1,7 +1,7 @@
 ---
 title: "Measure, Don't Guess: Debugging a Laptop Speaker With Claude Code"
 date: 2026-08-31T06:00:00+02:00
-draft: false
+draft: true
 tags: ["claude-code", "linux", "hardware", "debugging", "audio"]
 summary: "A wrong theory, a public retraction, and a small measurement tool — what I learned about using AI assistance for problems that aren't about code at all."
 ---
