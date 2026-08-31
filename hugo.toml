@@ -1,6 +1,6 @@
 baseURL = "https://stefangruehn.github.io/"
 locale = "en-us"
-title = "Stefan Gruehn"
+title = "Stefan Grühn"
 theme = "PaperMod"
 
 enableRobotsTXT = true
@@ -16,10 +16,10 @@ pygmentsUseClasses = true
 
 [params]
   env = "production"
-  title = "Stefan Gruehn"
+  title = "Stefan Grühn"
   description = "Notes on software, systems, and whatever I'm building."
   keywords = ["blog", "software", "engineering"]
-  author = "Stefan Gruehn"
+  author = "Stefan Grühn"
   DateFormat = "January 2, 2006"
   defaultTheme = "auto"
   ShowReadingTime = true
