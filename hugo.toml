@@ -1,7 +1,9 @@
 baseURL = "https://stefangruehn.github.io/"
-locale = "en-us"
 title = "Stefan Grühn"
 theme = "PaperMod"
+
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
 
 enableRobotsTXT = true
 buildDrafts = false
@@ -14,14 +16,13 @@ pygmentsUseClasses = true
 [minify]
   disableXML = true
 
+# Shared params — per-language overrides live under [languages.xx.params]
 [params]
   env = "production"
   title = "Stefan Grühn"
-  description = "Notes on software, systems, and whatever I'm building."
-  keywords = ["blog", "software", "engineering"]
   author = "Stefan Grühn"
-  DateFormat = "January 2, 2006"
   defaultTheme = "auto"
+  displayFullLangName = true
   ShowReadingTime = true
   ShowShareButtons = false
   ShowPostNavLinks = true
@@ -34,10 +35,6 @@ pygmentsUseClasses = true
   hidemeta = false
   hideSummary = false
   showtoc = true
-
-  [params.homeInfoParams]
-    Title = "Hi there 👋"
-    Content = "Welcome to my blog. I write about software, systems, and side projects."
 
   [[params.socialIcons]]
     name = "github"
@@ -60,29 +57,89 @@ pygmentsUseClasses = true
     minMatchCharLength = 0
     keys = ["title", "permalink", "summary", "content"]
 
-[[menu.main]]
-  identifier = "posts"
-  name = "Posts"
-  url = "/posts/"
-  weight = 10
+[languages]
 
-[[menu.main]]
-  identifier = "tags"
-  name = "Tags"
-  url = "/tags/"
-  weight = 20
+  [languages.en]
+    label = "English"
+    locale = "en-US"
+    weight = 1
+    title = "Stefan Grühn"
 
-[[menu.main]]
-  identifier = "search"
-  name = "Search"
-  url = "/search/"
-  weight = 30
+    [languages.en.params]
+      description = "Notes on software, systems, and whatever I'm building."
+      keywords = ["blog", "software", "engineering"]
+      DateFormat = "January 2, 2006"
 
-[[menu.main]]
-  identifier = "about"
-  name = "About"
-  url = "/about/"
-  weight = 40
+      [languages.en.params.homeInfoParams]
+        Title = "Hi there 👋"
+        Content = "Welcome to my blog. I write about software, systems, and side projects."
+
+    [languages.en.menus]
+
+      [[languages.en.menus.main]]
+        identifier = "posts"
+        name = "Posts"
+        url = "/posts/"
+        weight = 10
+
+      [[languages.en.menus.main]]
+        identifier = "tags"
+        name = "Tags"
+        url = "/tags/"
+        weight = 20
+
+      [[languages.en.menus.main]]
+        identifier = "search"
+        name = "Search"
+        url = "/search/"
+        weight = 30
+
+      [[languages.en.menus.main]]
+        identifier = "about"
+        name = "About"
+        url = "/about/"
+        weight = 40
+
+  [languages.de]
+    label = "Deutsch"
+    locale = "de-DE"
+    weight = 2
+    title = "Stefan Grühn"
+
+    [languages.de.params]
+      description = "Notizen zu Software, Systemen und dem, woran ich gerade baue."
+      keywords = ["Blog", "Software", "Softwareentwicklung"]
+      DateFormat = "2. January 2006"
+
+      [languages.de.params.homeInfoParams]
+        Title = "Hallo 👋"
+        Content = "Willkommen auf meinem Blog. Ich schreibe über Software, Systeme und Nebenprojekte."
+
+    [languages.de.menus]
+
+      [[languages.de.menus.main]]
+        identifier = "posts"
+        name = "Beiträge"
+        url = "/posts/"
+        weight = 10
+
+      [[languages.de.menus.main]]
+        identifier = "tags"
+        name = "Tags"
+        url = "/tags/"
+        weight = 20
+
+      [[languages.de.menus.main]]
+        identifier = "search"
+        name = "Suche"
+        url = "/search/"
+        weight = 30
+
+      [[languages.de.menus.main]]
+        identifier = "about"
+        name = "Über mich"
+        url = "/about/"
+        weight = 40
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
