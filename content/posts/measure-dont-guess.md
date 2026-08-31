@@ -80,9 +80,9 @@ tone* being played and ignore everything else — a Goertzel filter, which locks
 frequency and rejects the rest. Two frequencies were used: 1 kHz to gauge level, and 6 kHz to
 ask a different question entirely — *can this speaker even produce high frequencies?*
 
-A note on how ordinary this was: numpy wasn't working in that environment, so the analysis
-was written in plain Python instead. No lab equipment. A laptop microphone, a test tone, and
-about forty lines of arithmetic.
+A note on how ordinary this was: numpy wasn't installed in that environment, so the
+analysis was written in plain Python instead. No lab equipment. A laptop microphone, a
+test tone, and about forty lines of arithmetic.
 
 The results were immediately more useful than anything I had heard:
 
@@ -133,8 +133,9 @@ than by a stranger's bug report in six months.
 
 ## The pause is part of the method
 
-There's a usage limit in Claude Code that rolls over on a five-hour window. Hitting it sounds
-like pure friction. In practice it was one of the more useful things that happened.
+There's a usage limit in Claude Code that rolls over on a five-hour window. Hitting it
+felt like slamming on the brakes. In practice, though, it was one of the more useful
+experiences of the whole Claude session.
 
 The problem stopped being available to poke at, so I stopped poking and started thinking. I
 came back to the next session with a specific new idea rather than another variation on the
@@ -153,11 +154,11 @@ my computer.* That concern deserves a straight answer rather than reassurance.
 I had three worries going in: it would need administrator access, it might break something
 irreversibly, and I wasn't sure what left the machine.
 
-What resolved them wasn't trust. It was that the control is explicit and adjustable. I worked
-in **plan mode**: Claude Code lays out what it intends to do and why, and nothing executes
-until I approve it. For the routine steps that's a formality. For the ones touching hardware
-registers with administrator rights, I read them properly. I could tighten or loosen that at
-any point, and I could stop.
+What resolved them wasn't blind trust in Claude. It was that the control is explicit and
+adjustable. I worked in **plan mode**: Claude Code lays out what it intends to do and why,
+and nothing executes until I approve it. For the routine steps that's a formality. For the
+ones touching hardware registers with administrator rights, though, I read them very
+carefully. I could tighten or loosen that at any point, and I could stop.
 
 Here's the moment that did the most for my confidence, though — and it isn't a reassuring one.
 Late in the session, the left speaker went silent and didn't come back. Unprompted, Claude
@@ -171,36 +172,39 @@ It then laid out the evidence pointing the other way — the amplifier reported 
 over-temperature or clipping faults. (After a reboot the speaker came back, and it's been
 stable since.)
 
-An assistant that flags its own possible contribution to a problem is more useful than one that
-never worries you. I'd call the fear of *losing control* unfounded, because control is a setting
-you choose. The risks themselves are real, manageable, and worth reading the plan for.
+An assistant that flags its own possible contribution to a problem is more useful than one
+that never worries you. I'd call the fear of losing control when running AI locally
+unfounded, because control is a setting you choose. The risks themselves are real,
+manageable, and worth reading the plan for.
 
 ## Lessons learned
 
-1. **A confident impression is not evidence.** My ears gave a different answer each run and
-   felt certain every time.
-2. **Ask what you can measure before deciding what to change.** Days of theorising lost to an
-   afternoon of measurement.
-3. **The instrument can be improvised.** A built-in microphone, a test tone and plain Python
-   replaced equipment I don't own.
+1. **A confident impression is not evidence.** My ears gave a different answer each run
+   and felt certain every time.
+2. **Ask what you can measure before deciding what to change.** Potential days of
+   theorising, replaced by an afternoon of measurement.
+3. **The instrument can be improvised.** A built-in microphone, a test tone and plain
+   Python replaced equipment I don't own.
 4. **Publishing a wrong conclusion is recoverable.** Retracting it clearly costs less than
    leaving it up.
-5. **Step away on purpose.** The break produced the idea; the screen time produced variations.
-6. **Approve the plan, not just the outcome.** Reading what will happen before it happens is
-   where the control actually lives.
+5. **Take deliberate breaks when working with AI.** The restful break gave me a new idea;
+   the screen time afterwards produced new variations of the debugging.
+6. **Approve the plan, not just the outcome.** Reading what will happen before it happens
+   is where the control actually lives.
 
 ## If you're on the fence
 
-You do not need to be a developer for this. I could not have written that analyzer, and I
-didn't need to — I needed to describe a symptom accurately, run what I was asked to run,
-and put my finger over a speaker hole when that turned out to be the best available
-instrument.
+You do not need to be a developer for this. I could not have written that analyzer as fast
+as Claude did, and I didn't need to — I needed to describe a symptom accurately, run what
+I was asked to run, and put my finger over a speaker hole when that turned out to be the
+best available instrument.
 
 If you have a device with something quietly broken on it — a speaker, a sensor, a fan that
-never spins, some feature that silently stopped working — the honest situation is that these
-problems are usually *solvable* and just not worth anyone's time to solve. That calculation
-has changed. Not because the assistance is infallible; mine helped me build a theory that
-turned out to be wrong. It changed because the loop from "something's off" to "here are the
-numbers" got short enough to be worth walking.
+never spins, some feature that silently stopped working — the honest situation is that
+these problems are usually *solvable* and, until now, just haven't been worth the time it
+would take to solve them yourself. That calculation has changed. Not because the
+assistance is infallible; mine helped me build a theory that turned out to be wrong. It
+changed because the loop from "something's off" to "here are the numbers" got short enough
+to be worth walking. Thanks for that, Claude!
 
 Start with the symptom. Ask what could be measured. Read the plan before you approve it.
