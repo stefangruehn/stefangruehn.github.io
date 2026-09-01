@@ -38,7 +38,7 @@ Dann fiel mir an meinem Gerät jedoch etwas auf, das seine Notizen nicht beschri
 ## Eine Theorie, gebaut durch Hinhören
 
 Ton kam für mich sowohl klar aus der linken, vorderen Kante des Laptops, als auch von irgendwo unten rechts hinten.
-Das legte einen **dritten**, vollwertigen Lautsprecher nahe, wobei seine Lösung diesen statt des rechten vorderen Lautsprechers benutzte.
+Das legte einen **dritten** Breitbandlautsprecher nahe, wobei seine Lösung diesen statt des rechten vorderen Lautsprechers benutzte.
 
 Ich habe es auf die naheliegende Art getestet: Ton abspielen, einen Ausgang nach dem anderen stummschalten, notieren, was ich höre.
 Die Ergebnisse wirkten schlüssig.
@@ -74,7 +74,7 @@ Also wurde der Ansatz geschärft.
 Statt die Lautstärke im Allgemeinen zu messen, misst man den *konkret abgespielten Ton* und ignoriert alles andere — ein Goertzel-Filter, der sich auf eine Frequenz einrastet und den Rest verwirft.
 Zwei Frequenzen kamen zum Einsatz: 1 kHz für den Pegel und 6 kHz für eine ganz andere Frage — *kann dieser Lautsprecher überhaupt hohe Frequenzen erzeugen?*
 
-Eine Anmerkung dazu, wie verblüffend flexibel das von Claude gelöst wurde: numpy, eine Python-Bibliothek zur Signalanalyse, war in der Umgebung nicht installiert, also wurde die Analyse von Claude in reinem Python geschrieben.
+Eine Anmerkung dazu, wie verblüffend flexibel das von Claude gelöst wurde: numpy, eine Python-Bibliothek zur Signalanalyse, war in der Umgebung nicht installiert, also wurde die Analyse kurzerhand in reinem Python geschrieben.
 Keine Laborausrüstung nötig.
 Nur ein Laptop-Mikrofon, ein Testton und ungefähr vierzig Zeilen Rechnerei auf den gemessenen Daten.
 
@@ -115,13 +115,13 @@ Allein wäre ich nicht so weit gekommen.
 
 ## Sich öffentlich irren — und es korrigieren
 
-Nun wussten wir: Es gibt keinen dritten vollwertigen Lautsprecher.
+Nun wussten wir: Es gibt keinen dritten Breitbandlautsprecher.
 Der dritte Schallwandler ist ein Tieftöner am Lüftungsschlitz auf der Unterseite, hinten rechts — 45 dB leiser und bei 6 kHz stumm.
 Genau deshalb klang er wie „ein leiser Lautsprecher auf dem linken Kanal“.
-Und die Einstellung, auf der mein erster upstream eingereichter Lösungsvorschlag beruhte, ist nicht wirkungslos, wie ich dachte, sondern schädlich:
-Meine Beobachtung hatte nur den rechten vorderen Lautsprecher im Blick, und auf null gesetzt schaltet dieses Feld den linken vorderen Lautsprecher komplett stumm.
+Und die Einstellung, auf der mein erster Vorschlag im Upstream-Issue beruhte, ist nicht wirkungslos, wie ich dachte, sondern schädlich:
+Meine Beobachtung hatte nur den rechten vorderen Lautsprecher im Blick, und wenn man diese Einstellung auf null setzt, verstummt der linke vordere Lautsprecher komplett.
 
-Mein upstream veröffentlichtes Issue war also falsch, und schlimmer noch: Wer ihm gefolgt wäre, hätte sein Audio verschlechtert.
+Das Issue, das ich upstream veröffentlicht hatte, war also falsch, und schlimmer noch: Wer ihm gefolgt wäre, hätte sein Audio verschlechtert.
 Also habe ich es zurückgezogen.
 Oben einen Warnhinweis eingefügt, der ursprüngliche Text darunter blieb weiterhin sichtbar, und darunter die aktuell gemessenen Ergebnisse als Kommentar eingefügt.
 
@@ -131,7 +131,7 @@ Aber viel lieber lasse ich mich an einem Nachmittag von einer Messung korrigiere
 ## Die Pause gehört zur Methode
 
 In Claude Code gibt es ein Nutzungslimit, das sich in einem Fünf-Stunden-Fenster erneuert.
-Da erstmals anzustoßen fühlte sich für mich an wie eine Vollbremsung.
+Zum ersten Mal daran zu stoßen fühlte sich für mich an wie eine Vollbremsung.
 Es war jedoch eine der besten Erfahrungen, die ich in dieser Claude-Session gemacht habe.
 
 Das Problem stand nicht mehr zum Herumstochern bereit, also habe ich aufgehört zu stochern und angefangen nachzudenken.
@@ -140,7 +140,7 @@ In die nächste Sitzung mit Claude bin ich mit einer konkreten neuen Idee gegang
 Das ist deshalb wichtig, weil Werkzeuge, die sofort antworten, uns dazu verleiten können, sofort weiter zu fragen, statt erst einmal weiter nachzudenken.
 So sind wir Menschen sozial konditioniert, und einer agentischen AI nicht sofort zu antworten, fühlt sich erst einmal komisch an.
 
-Ein erzwungener Break erweist sich aber als durchaus sinnvoll bei einem Problem, das man noch nicht verstanden hat — und anders als bei einem menschlichen Gegenüber setzt die Sitzung exakt dort wieder an, wo sie aufgehört hat, mit vollständigem Kontext.
+Eine erzwungene Pause erweist sich aber als durchaus sinnvoll bei einem Problem, das man noch nicht verstanden hat — und anders als bei einem menschlichen Gegenüber setzt die Sitzung exakt dort wieder an, wo sie aufgehört hat, mit vollständigem Kontext.
 Nichts musste Claude neu erklärt werden.
 
 ## Die Kontrolle behalten
@@ -168,7 +168,7 @@ Nach einem Neustart des Rechners war der Lautsprecher übrigens wieder da und is
 
 Ein Assistent, der proaktiv auf seinen möglichen eigenen Anteil an einem akuten Problem hinweist, ist nützlicher als einer, der einen nie beunruhigen möchte und deshalb Informationen vorenthält.
 Die Angst vor einem Kontrollverlust bei der lokalen Nutzung von agentischer AI empfinde ich als unbegründet.
-Denn Kontrolle ist zuerst eine Frage der Einstellung zum Problem, die man selbst in der Hand hat.
+Denn Kontrolle ist zuerst eine Frage der Haltung zum Problem, die man selbst in der Hand hat.
 Die technischen Risiken sind zwar real, aber beherrschbar, wenn man zuerst den Plan liest und sich dann entscheidet.
 
 ## Was ich gelernt habe
@@ -196,8 +196,8 @@ Wenn du ein Gerät hast, an dem etwas irgendwie kaputt ist — ein Lautsprecher,
 dann ist es doch so: Solche Probleme sind meist *lösbar*, es lohnte sich bisher nur für niemanden, sie selbst zu lösen.
 Diese Rechnung hat sich klar erkennbar geändert.
 Nicht weil die Unterstützung durch agentische AI unfehlbar wäre.
-Meine hat anfangs dabei geholfen, mir eine Theorie über das Problem zu bauen, die sich später als falsch erwies.
-Sie hat sich geändert, weil die Schleife von „da stimmt was nicht“ hin zu „hier ist etwas Solides mit Zahlen“ kurz genug geworden ist, um sie tatsächlich auch zu gehen.
+Meine hat mir anfangs geholfen, eine Theorie über das Problem zu bauen, die sich später als falsch erwies.
+Die Rechnung hat sich geändert, weil die Schleife von „da stimmt was nicht“ hin zu „hier ist etwas Solides mit Zahlen“ kurz genug geworden ist, um sie tatsächlich auch zu gehen.
 Danke dafür, Claude!
 
 Fang beim Symptom an.
