@@ -40,12 +40,13 @@ part starts.
 
 ## A theory built out of listening
 
-Audio came out of the left edge of the laptop, and also from somewhere near the right. That
-suggested a **third** speaker — a middle one — that his fix was accidentally silencing.
+Audio came clearly out of the front left edge of the laptop, and also from somewhere at the
+lower right, towards the back. That suggested a **third** speaker — one his fix was using
+instead of the front right speaker.
 
 I tested it the obvious way: play sound, mute one output at a time, note what I heard. The
 results looked consistent. I wrote it up and filed it as an issue on the upstream project,
-proposing a change so other owners could get their middle speaker back.
+proposing a change so other owners could get their third speaker back.
 
 The problem is that I had built a conclusion out of my ears, and I had no idea how weak an
 instrument that is.
@@ -120,7 +121,7 @@ problem like this, and I would not have got there alone.
 
 ## Being wrong in public, then fixing it
 
-The measurements said there is no middle speaker. The quiet output is a woofer under the
+The measurements said there is no third speaker. The quiet output is a woofer under the
 chassis. And the specific setting my proposed fix relied on turned out to do nothing at all on
 this codec.
 
