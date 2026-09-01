@@ -44,13 +44,13 @@ beginnt mein Teil.
 
 ## Eine Theorie, gebaut aus Hinhören
 
-Ton kam aus der linken Kante des Laptops, und zusätzlich von irgendwo rechts. Das legte einen
-**dritten** Lautsprecher nahe — einen mittleren —, den seine Lösung versehentlich stummschaltete.
+Ton kam sowohl klar aus der linken, vorderen Kante des Laptops, als auch von irgendwo unten rechts hinten. Das legte einen
+**dritten** Lautsprecher nahe, wobei seine Lösung diesen statt des rechten vorderen Lautsprecher benutzte.
 
 Ich habe es auf die naheliegende Art getestet: Ton abspielen, einen Ausgang nach dem anderen
 stummschalten, notieren, was ich höre. Die Ergebnisse wirkten schlüssig. Ich habe das
 aufgeschrieben und als Issue im Upstream-Projekt eingereicht, samt Änderungsvorschlag, damit
-andere Besitzer ihren mittleren Lautsprecher zurückbekommen.
+andere Besitzer ihren dritten Lautsprecher zurückbekommen.
 
 Das Problem: Ich hatte eine Schlussfolgerung mit meinen Ohren gebaut und keine Vorstellung
 davon, was für ein schwaches Instrument das ist.
@@ -129,7 +129,7 @@ einem Problem aus, und allein wäre ich nicht dorthin gekommen.
 
 ## Sich öffentlich irren — und es korrigieren
 
-Die Messungen sagten: Es gibt keinen mittleren Lautsprecher. Der leise Ausgang ist ein
+Die Messungen sagten: Es gibt keinen dritten Lautsprecher. Der leise Ausgang ist ein
 Tieftöner unter dem Gehäuse. Und die konkrete Einstellung, auf der mein Lösungsvorschlag
 beruhte, tut auf diesem Codec schlicht gar nichts.
 
@@ -219,6 +219,6 @@ lohnte sich bisher nur für niemanden, sie selbst zu lösen. Diese Rechnung hat 
 geändert. Nicht weil die Unterstützung unfehlbar wäre; meine hat mir geholfen, eine
 Theorie zu bauen, die sich als falsch erwies. Sie hat sich geändert, weil die Schleife von
 „da stimmt was nicht“ zu „hier sind die Zahlen“ kurz genug geworden ist, um sie
-tatsächlich zu gehen. Danke Claude dafür!
+tatsächlich zu gehen. Danke dafür, Claude!
 
 Fang beim Symptom an. Frag, was sich messen ließe. Lies den Plan, bevor du ihn freigibst.
