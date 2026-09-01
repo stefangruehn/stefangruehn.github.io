@@ -42,7 +42,7 @@ That suggested a **third**, full-range speaker — one his fix was using instead
 
 I tested it the obvious way: play sound, mute one output at a time, note what I heard.
 The results looked consistent.
-I wrote it up and filed it as an issue on the upstream project, proposing a change so other owners could get their front right speaker back.
+I wrote it up and filed it as an issue on the upstream project, proposing a change so other owners could get their third speaker back.
 
 The problem is that I had built a conclusion "with my ears", and I had no idea how weak an instrument that is.
 
@@ -91,7 +91,7 @@ That is a full-range speaker and a woofer.
 
 ## The part where I put my finger on it
 
-One question remained: *where* is that quiet, dull speaker physically located on the mainboard?
+One question remained: *where* is that quiet, dull speaker physically located in the chassis?
 The microphone array's stereo separation was too poor to say.
 
 Rather than fight that, Claude Code proposed a method that doesn't require locating anything:
@@ -106,7 +106,7 @@ It also worked, because a covered speaker gets measurably quieter and a micropho
 I want to highlight this specific progression, because it's the thing I found genuinely impressive — not just any single clever step, but the logical *direction* in which our findings developed:
 
 1. **"Tell me what you hear."** — unreliable, and we found that out quickly.
-2. **"Cover this opening with your hand."** — crude and biophysical, but objectively measurable by Claude.
+2. **"Cover this opening with your hand."** — crude and hands-on, but objectively measurable by Claude.
 3. **"Here's a tone-locked analyzer; the microphone reads the answer."** — repeatable, with numbers.
 
 Each step took me, the biological part of the setup, further out of the measurement.
@@ -121,7 +121,7 @@ That is exactly why it read as "a quiet speaker on the left channel".
 And the setting my first upstream-filed fix relied on isn't inert, as I had thought, but harmful:
 my observation had only ever watched the front right speaker, and setting that field to zero silences the front left speaker completely.
 
-The issue I had published upstream was wrong, then, and worse, anyone following it would have degraded their audio.
+That made the issue I had published upstream wrong, and worse: anyone following it would have degraded their audio.
 So I retracted it.
 A warning banner at the top, the original text left visible underneath, and the current measured findings added below it as a comment.
 
@@ -189,10 +189,10 @@ The technical risks are real but manageable, as long as you read the plan first 
 
 You do not need to be a developer for this.
 I could not have written that tone analyzer in Python as fast as Claude did, and I didn't need to — I only needed to describe a symptom accurately and run what Claude asked me to run.
-And to put a finger over a speaker hole, when that turned out to be the best instrument available at the time.
+And to put a finger over a speaker hole when that turned out to be the best instrument available at the time.
 
 If you have a device with something quietly broken on it — a speaker, a sensor, a fan that never spins, some feature that silently stopped working —
-the situation is this: these problems are usually *solvable*, it just hasn't been worth anyone's time so far to solve them themselves.
+the situation is this: these problems are usually *solvable*; it just hasn't been worth anyone's while, so far, to go and solve them.
 That calculation has visibly changed.
 Not because assistance from agentic AI is infallible.
 Mine initially helped me build a theory about the problem that later turned out to be wrong.

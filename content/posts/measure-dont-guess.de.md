@@ -42,7 +42,7 @@ Das legte einen **dritten**, vollwertigen Lautsprecher nahe, wobei seine Lösung
 
 Ich habe es auf die naheliegende Art getestet: Ton abspielen, einen Ausgang nach dem anderen stummschalten, notieren, was ich höre.
 Die Ergebnisse wirkten schlüssig.
-Ich habe das aufgeschrieben und als Issue im Upstream-Projekt eingereicht, samt Änderungsvorschlag, damit andere Besitzer ihren rechten vorderen Lautsprecher zurückbekommen.
+Ich habe das aufgeschrieben und als Issue im Upstream-Projekt eingereicht, samt Änderungsvorschlag, damit andere Besitzer ihren dritten Lautsprecher zurückbekommen.
 
 Das Problem: Ich hatte eine Schlussfolgerung „mit meinen Ohren“ gebaut und keine Vorstellung davon, was für ein schwaches Instrument das ist.
 
@@ -91,7 +91,7 @@ Das ist ein Breitbandlautsprecher und ein Tieftöner.
 
 ## Der Teil, in dem ich den Finger drauflege
 
-Eine Frage blieb: *Wo* sitzt dieser leise, dumpfe Lautsprecher eigentlich physisch auf dem Mainboard?
+Eine Frage blieb: *Wo* sitzt dieser leise, dumpfe Lautsprecher eigentlich physisch im Gehäuse?
 Die Stereotrennung des Mikrofonarrays war zu schlecht, um das zu sagen.
 
 Statt dagegen anzukämpfen, schlug Claude Code eine Methode vor, die ohne Ortung auskommt:
@@ -106,7 +106,7 @@ Es funktionierte trotzdem, weil ein abgedeckter Lautsprecher messbar leiser wird
 Diese Abfolge möchte ich hervorheben, denn sie ist das, was ich wirklich beeindruckend fand — nicht nur ein einzelner cleverer Schritt, sondern die logische *Richtung*, in der sich unsere Erkenntnisse entwickelten:
 
 1. **„Sag mir, was du hörst.“** — unzuverlässig, und das haben wir schnell herausgefunden.
-2. **„Halt die Hand über diese Öffnung.“** — grob und biophysisch, aber von Claude objektiv messbar.
+2. **„Halt die Hand über diese Öffnung.“** — grob und handfest, aber für Claude objektiv messbar.
 3. **„Hier ist ein tonselektiver Analysator; das Mikrofon liefert die Antwort.“** — wiederholbar, mit Zahlen.
 
 Jeder Schritt hat mich als „Bioware“ aus der Messung weiter herausgenommen.
