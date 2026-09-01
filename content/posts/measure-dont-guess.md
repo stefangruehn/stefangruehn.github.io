@@ -74,7 +74,7 @@ So the approach sharpened.
 Rather than measuring loudness in general, measure the *specific tone* being played and ignore everything else — a Goertzel filter, which locks onto one frequency and rejects the rest.
 Two frequencies were used: 1 kHz to gauge level, and 6 kHz to ask a different question entirely — *can this speaker even produce high frequencies?*
 
-A note on how strikingly flexibly Claude handled this: numpy, a Python library for signal analysis, wasn't installed in that environment, so Claude wrote the analysis in plain Python instead.
+A note on how strikingly flexibly Claude handled this: numpy, a Python library for signal analysis, wasn't installed in that environment, so the analysis was simply written in plain Python instead.
 No lab equipment needed.
 Just a laptop microphone, a test tone, and about forty lines of arithmetic over the measured data.
 
@@ -119,7 +119,7 @@ Now we knew: there is no third full-range speaker.
 The third transducer is a woofer at the underside vent, rear right — 45 dB down and silent at 6 kHz.
 That is exactly why it read as "a quiet speaker on the left channel".
 And the setting my first upstream-filed fix relied on isn't inert, as I had thought, but harmful:
-my observation had only ever watched the front right speaker, and setting that field to zero silences the front left speaker completely.
+my observation had only ever watched the front right speaker, and setting it to zero silences the front left speaker completely.
 
 That made the issue I had published upstream wrong, and worse: anyone following it would have degraded their audio.
 So I retracted it.
@@ -196,7 +196,7 @@ the situation is this: these problems are usually *solvable*; it just hasn't bee
 That calculation has visibly changed.
 Not because assistance from agentic AI is infallible.
 Mine initially helped me build a theory about the problem that later turned out to be wrong.
-It changed because the loop from "something's off" to "here's something solid, with numbers" got short enough to be worth actually walking.
+The calculation changed because the loop from "something's off" to "here's something solid, with numbers" got short enough to be worth actually walking.
 Thanks for that, Claude!
 
 Start with the symptom.
