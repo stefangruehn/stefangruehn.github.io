@@ -1,0 +1,4 @@
+# Feed-Metadaten. Das Theme liefert dafür keine Schlüssel mit.
+feed_title_section: "{{ .section }} – {{ .site }}"
+feed_description: "Neue Inhalte von {{ .site }}"
+feed_description_section: "{{ .section }} – neue Inhalte von {{ .site }}"
