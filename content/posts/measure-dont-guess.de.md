@@ -6,6 +6,11 @@ tags: ["claude-code", "linux", "hardware", "debugging", "audio"]
 summary: "Eine falsche Theorie, ein öffentlicher Widerruf und ein kleines Messwerkzeug — was ich darüber gelernt habe, AI-Unterstützung für Probleme einzusetzen, bei denen es überhaupt nicht um Code geht."
 ---
 
+*Nachtrag vom 2.9.2026:* Zu dieser Geschichte gibt es eine Fußnote.
+Drei Tage nachdem die Lautsprecher liefen, blieb der Lautsprechertest in meinen eigenen Toneinstellungen stumm —
+und die Ursache war ein Rückstand aus genau dieser Fehlersuche, nicht aus der Hardware und nicht aus der Lösung.
+Aufgeschrieben habe ich das separat: [Stille ohne Fehlermeldung](/de/posts/a-remembered-zero/).
+
 ## Kurzfassung
 
 - In meinem Laptop steckt ein Lautsprecher, den Linux nicht korrekt ansteuert.

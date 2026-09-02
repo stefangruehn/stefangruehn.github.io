@@ -6,6 +6,11 @@ tags: ["claude-code", "linux", "hardware", "debugging", "audio"]
 summary: "A wrong theory, a public retraction, and a small measurement tool — what I learned about using AI assistance for problems that aren't about code at all."
 ---
 
+*Postscript, added 2026-09-02:* this story has a footnote.
+Three days after the speakers were working, the speaker test in my own sound settings went silent —
+and the cause turned out to be a leftover from this very debugging session, not from the hardware and not from the fix.
+I wrote that up separately: [Silence Without an Error](/posts/a-remembered-zero/).
+
 ## TL;DR
 
 - My laptop has a speaker that Linux doesn't drive correctly.
