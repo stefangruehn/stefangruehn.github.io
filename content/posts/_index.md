@@ -1,5 +1,7 @@
 ---
 title: "Posts"
+cascade:
+  comments: true
 ---
 
 > **Full disclosure:** every post on this blog is written using [Claude Code](https://claude.com/claude-code), and most of them are about working with it.

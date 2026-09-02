@@ -7,6 +7,7 @@ defaultContentLanguageInSubdir = false
 
 enableRobotsTXT = true
 buildDrafts = false
+enableGitInfo = true
 buildFuture = false
 pygmentsUseClasses = true
 
@@ -36,6 +37,17 @@ pygmentsUseClasses = true
   hideSummary = false
   showtoc = true
 
+  # Zaehlpixel-Endpunkt; leeren, um die Statistik abzuschalten.
+  goatcounter = "https://stefangruehn.goatcounter.com/count"
+
+  # Kommentare via GitHub Discussions. IDs stammen aus der GitHub-API,
+  # Kategorie "Announcements": dort kann nur giscus selbst Threads anlegen.
+  [params.giscus]
+    repo = "stefangruehn/stefangruehn.github.io"
+    repoId = "R_kgDOUJUXvg"
+    category = "Announcements"
+    categoryId = "DIC_kwDOUJUXvs4DEtBd"
+
   [[params.socialIcons]]
     name = "github"
     url = "https://github.com/stefangruehn"
@@ -43,6 +55,12 @@ pygmentsUseClasses = true
   [[params.socialIcons]]
     name = "rss"
     url = "posts/index.xml"
+
+  # Ohne sameAs uebernimmt das Theme alle socialIcons — dann landet der
+  # RSS-Feed im Feld fuer Profile, wo er nicht hingehoert.
+  [params.schema]
+    publisherType = "Person"
+    sameAs = ["https://github.com/stefangruehn"]
 
   [params.assets]
     disableHLJS = true
@@ -69,6 +87,11 @@ pygmentsUseClasses = true
       description = "Notes on software, systems, and whatever I'm building."
       keywords = ["blog", "software", "engineering"]
       DateFormat = "January 2, 2006"
+
+      # Fusszeilen-Link. Absoluter Pfad, weil der Text auf jeder Seite
+      # steht und ein relativer Link auf Unterseiten ins Leere liefe.
+      [languages.en.params.footer]
+        text = "[Legal notice](/imprint/) · [Privacy](/privacy/)"
 
       [languages.en.params.homeInfoParams]
         Title = "Hi, I'm Stefan."
@@ -116,6 +139,11 @@ Every post here is written with [Claude Code](https://claude.com/claude-code), a
       keywords = ["Blog", "Software", "Softwareentwicklung"]
       DateFormat = "2. January 2006"
 
+      # Fusszeilen-Link. Absoluter Pfad, weil der Text auf jeder Seite
+      # steht und ein relativer Link auf Unterseiten ins Leere liefe.
+      [languages.de.params.footer]
+        text = "[Impressum](/de/imprint/) · [Datenschutz](/de/privacy/)"
+
       [languages.de.params.homeInfoParams]
         Title = "Hallo, ich bin Stefan."
         Content = """
@@ -150,6 +178,11 @@ Jeder Beitrag hier entsteht mit [Claude Code](https://claude.com/claude-code), u
         name = "Über mich"
         url = "/about/"
         weight = 40
+
+# Nur Tags. Ohne diesen Block legt Hugo zusaetzlich leere
+# categories-Seiten und -Feeds an, die Suchmaschinen indexieren.
+[taxonomies]
+  tag = "tags"
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
