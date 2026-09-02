@@ -2,7 +2,7 @@
 title: "Silence Without an Error: The Zero My Sound Server Remembered"
 date: 2026-09-02T16:40:00+02:00
 draft: false
-tags: ["claude-code", "linux", "audio", "pipewire", "debugging"]
+tags: ["claude-code", "linux", "audio", "pipewire", "debugging", "chuwi"]
 summary: "The speaker test in my system settings played nothing while music and video were fine. The cause was not a broken driver but a single number my sound server had faithfully remembered — left over from the debugging session I wrote about last time."
 ---
 
