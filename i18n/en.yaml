@@ -1,0 +1,4 @@
+# Feed metadata. The theme ships no keys for these, so they live here.
+feed_title_section: "{{ .section }} on {{ .site }}"
+feed_description: "Recent content on {{ .site }}"
+feed_description_section: "Recent content in {{ .section }} on {{ .site }}"

@@ -2,6 +2,7 @@
 title: "About"
 date: 2026-08-31T00:00:00Z
 draft: false
+hiddenInRss: true
 ---
 
 Hi, I'm Stefan.
