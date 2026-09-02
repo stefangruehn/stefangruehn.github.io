@@ -7,7 +7,7 @@ summary: "System-level tuning has a reputation for being dangerous, so most of u
 ---
 
 *This one is longer and goes deeper than usual.*
-*If you stay with it, the payoff isn't the seconds saved — it's the fix that installed cleanly, loaded without a single error, and did nothing at all.*
+*If you stay with it, the payoff isn't the seconds saved — it's a change to the boot configuration that installed cleanly, loaded without a single error, and did nothing at all.*
 
 ## TL;DR
 
