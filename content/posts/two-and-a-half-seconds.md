@@ -36,7 +36,7 @@ Startup takes what it takes.
 
 That caution isn't stupid.
 It's just pointed at the wrong thing.
-What is actually sitting on a machine like mine is rarely a bold intervention.
+What is actually sitting on a machine like mine is rarely a deliberate intervention.
 It's sediment.
 A kernel parameter copied out of a forum post a year ago.
 A service some package enabled at install time.
@@ -47,7 +47,7 @@ All of it is unexamined.
 And that is exactly why nobody touches it: you don't know what happens if you take it away, so it stays, and it accumulates.
 
 My evening didn't begin with a wish to be faster.
-At 01:27 the laptop stopped during boot after a kernel update.
+In the middle of the night the laptop stopped during boot after a kernel update.
 Splash screen, nothing else.
 The next attempt with the same kernel came up fine — a single event in twenty boots, which is precisely the kind of problem you normally breathe away.
 
@@ -68,8 +68,8 @@ While we were in there, a second find turned up.
 My kernel command line had carried `modprobe.blacklist=simpledrm` for months.
 
 I put it there myself, and for a good reason.
-At some point a kernel update stopped this laptop from booting — an AMD GPU problem — and that parameter was the recommendation I found on the web.
-I added it, the machine came up again, and I got on with my life.
+From some kernel version on, this laptop still booted but the screen stayed dark — an AMD GPU problem — and that parameter was the recommendation I found on the web.
+I added it, the picture came back, and I got on with my life.
 That is exactly how it is supposed to go.
 
 Today the parameter cannot do anything.
@@ -84,7 +84,7 @@ Either way the outcome is the same, and that is the interesting part: the parame
 > The reason expires quietly. The fix stays.
 
 This is the honest failure mode of tuning your own system by hand, and it has nothing to do with recklessness.
-You solve a real problem under pressure, at night, on a machine that won't boot.
+You solve a real problem under pressure, at night, on a machine showing nothing.
 The fix works.
 Six months later the distribution has moved on, the bug is fixed upstream, and your workaround is still sitting in the kernel command line — no longer doing anything, and by now actively misleading, because it looks like a decision somebody made on purpose.
 There is no point in that process where anyone comes back and asks whether it is still needed.
@@ -98,7 +98,7 @@ Doing it this way gets you the change plus its reason, in a form you can still r
 
 ## Where the seconds actually are
 
-Since we were already inside, we looked at what the boot spends its time on.
+Since we were already at it, we looked at what the boot spends its time on.
 `systemd-analyze` splits it into five phases, and the first finding is sobering.
 
 | Phase | Before | After | Difference |
@@ -129,7 +129,6 @@ graphical.target @9.758s
             └─firewalld.service @2.524s
 ```
 
-There it is.
 `NetworkManager-wait-online.service`, 4.038 s, and everything behind it waiting.
 Four of my ten userspace seconds went into waiting for the Wi-Fi to associate.
 
@@ -197,12 +196,11 @@ sudo systemctl disable NetworkManager-wait-online.service
 # back with: sudo systemctl enable NetworkManager-wait-online.service
 ```
 
-The price belongs in the same paragraph.
 Services now start before the Wi-Fi has associated.
 For Docker that's inconsequential — it builds its own bridge and firewall rules.
 For the logger likewise.
 The only real worry was the virus signature update running into a dead network.
-It didn't: on the first boot afterwards, `freshclam` reported all three databases `up-to-date` at 02:10:16.
+It didn't: on the first boot afterwards, `freshclam` reported all three databases `up-to-date`.
 A guess, tested and dropped.
 
 ## What it came to

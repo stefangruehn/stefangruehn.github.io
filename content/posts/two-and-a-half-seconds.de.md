@@ -31,12 +31,12 @@ summary: "Systemnahe Optimierung gilt als gefährlich, also fasst sie kaum jeman
 ## Es fing gar nicht mit Optimierung an
 
 Systemnahe Optimierung hat unter Linux-Gelegenheitsnutzern einen Ruf irgendwo zwischen „unnötig“ und „offene Stromleitung“.
-Man liest von jemandem, der eine systemd-Unit abgeschaltet und danach kein Netzwerk mehr hatte, und beschließt: Läuft doch.
+Man liest von jemandem, bei dem nach dem Abschalten einer systemd-Unit das Netzwerk weg war, und beschließt: Läuft doch.
 Der Start dauert eben, was er dauert.
 
 Diese Vorsicht ist nicht dumm.
 Sie zielt nur auf das Falsche.
-Was auf so einem Rechner tatsächlich liegt, ist selten ein mutiger Eingriff.
+Was auf so einem Rechner tatsächlich liegt, ist selten ein bewusster Eingriff.
 Es ist Ablagerung.
 Ein Kernel-Parameter, vor einem Jahr aus einem Forenbeitrag übernommen.
 Ein Dienst, den irgendein Paket beim Installieren aktiviert hat.
@@ -47,7 +47,7 @@ Alles davon ist unverstanden.
 Und genau deshalb rührt es niemand an: Man weiß nicht, was passiert, wenn man es wegnimmt — also bleibt es liegen und wächst.
 
 Mein Abend begann nicht mit dem Wunsch, schneller zu sein.
-Um 01:27 blieb der Laptop nach einem Kernel-Update beim Booten stehen.
+Mitten in der Nacht blieb der Laptop nach einem Kernel-Update beim Booten stehen.
 Splash-Screen, sonst nichts.
 Der nächste Versuch mit demselben Kernel lief durch — ein einmaliges Ereignis in zwanzig Boots, also genau die Sorte Problem, die man normalerweise wegatmet.
 
@@ -68,8 +68,8 @@ Bei der Gelegenheit fiel ein zweiter Fund an.
 In meiner Kernel-Kommandozeile stand seit Monaten `modprobe.blacklist=simpledrm`.
 
 Den hatte ich selbst gesetzt, und zwar aus gutem Grund.
-Ab einer bestimmten Kernel-Version bootete dieser Laptop nicht mehr — ein AMD-GPU-Problem —, und dieser Parameter war die Empfehlung, die ich damals im Netz gefunden hatte.
-Ich habe ihn eingetragen, die Maschine kam wieder hoch, und ich habe weitergemacht.
+Ab einer bestimmten Kernel-Version bootete dieser Laptop zwar, aber der Bildschirm blieb dunkel — ein AMD-GPU-Problem —, und dieser Parameter war die Empfehlung, die ich damals im Netz gefunden hatte.
+Ich habe ihn eingetragen, das Bild war wieder da, und ich habe weitergemacht.
 Genau so soll es laufen.
 
 Heute kann der Parameter nichts mehr bewirken.
@@ -84,7 +84,7 @@ Das Ergebnis ist in beiden Fällen dasselbe, und das ist der interessante Teil: 
 > Der Grund verfällt still. Der Fix bleibt.
 
 Das ist der ehrliche Schwachpunkt daran, sein System von Hand zu pflegen, und er hat nichts mit Leichtsinn zu tun.
-Man löst nachts unter Druck ein echtes Problem, an einer Maschine, die nicht mehr hochkommt.
+Man löst nachts unter Druck ein echtes Problem, an einer Maschine, die nichts mehr anzeigt.
 Der Fix wirkt.
 Ein halbes Jahr später ist die Distribution weitergezogen, der Fehler ist oben behoben, und der Workaround steht immer noch in der Kernel-Kommandozeile — ohne Wirkung, und inzwischen aktiv irreführend, weil er wie eine bewusst getroffene Entscheidung aussieht.
 In diesem Ablauf ist keine Stelle vorgesehen, an der jemand zurückkommt und fragt, ob das noch gebraucht wird.
@@ -98,7 +98,7 @@ So bekommt man die Änderung samt ihrem Grund, in einer Form, die man nächstes 
 
 ## Wo die Sekunden tatsächlich liegen
 
-Wenn man schon einmal drin ist, kann man auch nachsehen, wofür der Boot seine Zeit ausgibt.
+Wenn man schon einmal dabei ist, kann man auch nachsehen, wofür der Boot seine Zeit ausgibt.
 `systemd-analyze` zerlegt ihn in fünf Phasen, und die erste Erkenntnis ist ernüchternd.
 
 | Phase | Vorher | Nachher | Differenz |
@@ -129,7 +129,6 @@ graphical.target @9.758s
             └─firewalld.service @2.524s
 ```
 
-Da steht sie.
 `NetworkManager-wait-online.service`, 4,038 s, und alles dahinter wartet.
 Vier von zehn Userspace-Sekunden gingen dafür drauf, dass das WLAN assoziiert ist.
 
@@ -181,7 +180,7 @@ Es steht da, sieht nach einer getroffenen Entscheidung aus und schickt den Näch
 
 > Der Unterschied zwischen „ich habe etwas geändert“ und „es hat gewirkt“ ist der ganze Wert der Übung.
 
-Die Nachkontrolle kostet zehn Sekunden. Sie ist der Schritt, den man überspringt.
+Die Nachkontrolle kostet zehn Sekunden. Sie ist der Schritt, den man gern überspringt.
 
 ## Der Hebel
 
@@ -197,12 +196,11 @@ sudo systemctl disable NetworkManager-wait-online.service
 # zurück mit: sudo systemctl enable NetworkManager-wait-online.service
 ```
 
-Der Preis gehört in denselben Absatz.
 Dienste starten jetzt, bevor das WLAN assoziiert ist.
 Für Docker ist das folgenlos — es legt Bridge und Firewall-Regeln selbst an.
 Für den Logger ohnehin.
 Die einzige echte Sorge galt dem Virensignatur-Update, das in ein totes Netz laufen könnte.
-Tat es nicht: Im ersten Boot danach meldete `freshclam` um 02:10:16 alle drei Datenbanken `up-to-date`.
+Tat es nicht: Im ersten Boot danach meldete `freshclam` alle drei Datenbanken `up-to-date`.
 Eine Vermutung, geprüft und verworfen.
 
 ## Was dabei herauskam
