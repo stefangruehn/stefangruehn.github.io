@@ -46,6 +46,19 @@ jobs:
           TZ: Europe/Berlin
         run: hugo --gc --minify
 
+      # A local link check resolves against filenames on disk and therefore
+      # cannot see this: a percent sign in a name means the server decodes the
+      # request to a different name and answers 404, while the check passes.
+      # Hugo produces such names from titles containing umlauts.
+      - name: Reject filenames the web server would decode differently
+        run: |
+          if find public -name '*%*' | grep -q .; then
+            echo "::error::Percent-encoded filenames would 404 when served:"
+            find public -name '*%*'
+            exit 1
+          fi
+          echo "No percent-encoded filenames."
+
       # The settings live in a file rather than in `args` because the remap
       # replacement contains `$1`, which the action's shell would expand away
       # (it runs with `set -u`, so the run fails outright).
