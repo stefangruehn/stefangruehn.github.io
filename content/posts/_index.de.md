@@ -1,5 +1,7 @@
 ---
 title: "Beiträge"
+cascade:
+  comments: true
 ---
 
 > **Volle Transparenz:** Jeder Beitrag in diesem Blog entsteht unter Verwendung von [Claude Code](https://claude.com/claude-code), und die meisten handeln von der Arbeit damit.

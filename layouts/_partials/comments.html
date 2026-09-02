@@ -1,0 +1,56 @@
+{{- /*
+  giscus — Kommentare liegen in den GitHub Discussions dieses Repos.
+  Keine Tracker, keine Datenbank, kein Einwilligungsbanner; wer schreiben
+  will, braucht ein GitHub-Konto.
+
+  Das Skript wird per JavaScript eingehaengt statt als festes <script>-Tag,
+  damit es beim ersten Laden schon das richtige Farbschema bekommt: PaperMod
+  loest data-theme im <head> auf, ein statisches Tag koennte den Wert nicht
+  lesen. Der MutationObserver zieht spaeter beim Umschalten nach.
+*/ -}}
+
+{{- $g := site.Params.giscus }}
+{{- if and $g $g.repoId $g.categoryId }}
+  {{- $cfg := dict
+        "repo" $g.repo
+        "repoId" $g.repoId
+        "category" $g.category
+        "categoryId" $g.categoryId
+        "mapping" "specific"
+        "term" .TranslationKey
+        "strict" "1"
+        "reactionsEnabled" "1"
+        "emitMetadata" "0"
+        "inputPosition" "top"
+        "lang" site.Language.Lang
+        "loading" "lazy" }}
+<div id="giscus-comments" class="giscus"></div>
+<script>
+  (function () {
+    var cfg = {{ $cfg }};
+    var theme = function () {
+      return document.documentElement.dataset.theme === "dark" ? "dark" : "light";
+    };
+    var s = document.createElement("script");
+    s.src = "https://giscus.app/client.js";
+    s.async = true;
+    s.crossOrigin = "anonymous";
+    Object.keys(cfg).forEach(function (k) { s.dataset[k] = cfg[k]; });
+    s.dataset.theme = theme();
+    document.getElementById("giscus-comments").appendChild(s);
+
+    new MutationObserver(function () {
+      var frame = document.querySelector("iframe.giscus-frame");
+      if (frame) {
+        frame.contentWindow.postMessage(
+          { giscus: { setConfig: { theme: theme() } } },
+          "https://giscus.app"
+        );
+      }
+    }).observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-theme"]
+    });
+  })();
+</script>
+{{- end }}

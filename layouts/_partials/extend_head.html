@@ -1,0 +1,8 @@
+{{- /* GoatCounter. Ohne Cookies und ohne personenbezogene Daten, daher ohne
+       Einwilligungsbanner nutzbar. Nur in Produktionsbuilds: ein lokales
+       `hugo server` wuerde die Statistik sonst mit eigenen Aufrufen fuellen. */ -}}
+{{- if hugo.IsProduction }}
+  {{- with site.Params.goatcounter }}
+<script data-goatcounter="{{ . }}" async src="https://gc.zgo.at/count.js"></script>
+  {{- end }}
+{{- end }}
