@@ -1,0 +1,20 @@
+{{- /*
+  Greedy line break at a given width. Returns a slice of lines.
+  Counts runes, not bytes, so an umlaut does not shorten a line.
+
+  Called with (dict "text" "..." "width" 30).
+*/ -}}
+{{- $lines := slice }}
+{{- $cur := "" }}
+{{- range split .text " " }}
+  {{- $word := . }}
+  {{- $try := cond (eq $cur "") $word (printf "%s %s" $cur $word) }}
+  {{- if gt (strings.RuneCount $try) $.width }}
+    {{- if ne $cur "" }}{{ $lines = $lines | append $cur }}{{ end }}
+    {{- $cur = $word }}
+  {{- else }}
+    {{- $cur = $try }}
+  {{- end }}
+{{- end }}
+{{- if ne $cur "" }}{{ $lines = $lines | append $cur }}{{ end }}
+{{- return $lines }}
