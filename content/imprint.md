@@ -18,7 +18,7 @@ Germany
 
 ## Contact
 
-Email: <stefan.gruehn@unique-tokens.com>
+Email: <stefan.gruehn@gmail.com>
 
 ## Responsible for editorial content (§ 18(2) MStV)
 

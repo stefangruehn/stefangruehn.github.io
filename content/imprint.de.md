@@ -15,7 +15,7 @@ Deutschland
 
 ## Kontakt
 
-E-Mail: <stefan.gruehn@unique-tokens.com>
+E-Mail: <stefan.gruehn@gmail.com>
 
 ## Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV
 

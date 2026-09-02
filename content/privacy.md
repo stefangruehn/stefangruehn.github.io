@@ -17,7 +17,7 @@ The site is operated from Germany, and the [German version](/de/privacy/) is the
 Stefan Grühn\
 Sesenheimer Str. 16\
 10627 Berlin, Germany\
-Email: <stefan.gruehn@unique-tokens.com>
+Email: <stefan.gruehn@gmail.com>
 
 ## Hosting
 
