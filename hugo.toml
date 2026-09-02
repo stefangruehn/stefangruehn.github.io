@@ -71,8 +71,13 @@ pygmentsUseClasses = true
       DateFormat = "January 2, 2006"
 
       [languages.en.params.homeInfoParams]
-        Title = "Hi there 👋"
-        Content = "Welcome to my blog. I write about software, systems, and side projects."
+        Title = "Hi, I'm Stefan."
+        Content = """
+I work as a software engineer and data analyst, and I write here about how I use AI in my daily work — mostly in my open-source projects on GitHub.
+
+Every post here is written with [Claude Code](https://claude.com/claude-code), and the commands, measurements and numbers come from real sessions on my own machines.
+[More about me and my tools](about/).
+"""
 
     [languages.en.menus]
 
@@ -112,8 +117,13 @@ pygmentsUseClasses = true
       DateFormat = "2. January 2006"
 
       [languages.de.params.homeInfoParams]
-        Title = "Hallo 👋"
-        Content = "Willkommen auf meinem Blog. Ich schreibe über Software, Systeme und Nebenprojekte."
+        Title = "Hallo, ich bin Stefan."
+        Content = """
+Ich arbeite als Softwareingenieur und Datenanalyst und schreibe hier darüber, wie ich AI in meiner täglichen Arbeit einsetze — vor allem in meinen Open-Source-Projekten auf GitHub.
+
+Jeder Beitrag hier entsteht mit [Claude Code](https://claude.com/claude-code), und die Befehle, Messungen und Zahlen stammen aus echten Sitzungen auf meinen eigenen Rechnern.
+[Mehr über mich und meine Werkzeuge](about/).
+"""
 
     [languages.de.menus]
 
