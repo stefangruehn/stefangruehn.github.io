@@ -1,0 +1,64 @@
+name: Check links
+
+# Deliberately separate from the deploy workflow: a link that rotted on some
+# other site should show up as a red mark here, never hold up publishing.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'content/**'
+      - 'layouts/**'
+      - 'hugo.toml'
+      - '.github/workflows/linkcheck.yml'
+  schedule:
+    # Mondays at 06:00 UTC — catches links that rot without anything changing here.
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  linkcheck:
+    runs-on: ubuntu-latest
+    env:
+      HUGO_VERSION: 0.165.0
+    steps:
+      - name: Install Hugo CLI
+        run: |
+          wget -O ${{ runner.temp }}/hugo.deb \
+            https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb
+          sudo dpkg -i ${{ runner.temp }}/hugo.deb
+
+      - name: Install Dart Sass
+        run: sudo snap install dart-sass
+
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          submodules: recursive
+          # enableGitInfo needs the history, not just the tip.
+          fetch-depth: 0
+
+      - name: Build with Hugo
+        env:
+          HUGO_ENVIRONMENT: production
+          TZ: Europe/Berlin
+        run: hugo --gc --minify
+
+      - name: Check links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # The build writes absolute URLs, so send requests for our own domain
+          # back to the freshly built files instead of to the live site — that
+          # way a page is checked before it is published, not after.
+          args: >-
+            --no-progress
+            --remap "https://stefangruehn\.github\.io/(.*) file://${{ github.workspace }}/public/$1"
+            --accept 200,206,429
+            --max-retries 2
+            --exclude-path public/og
+            "public/**/*.html"
+          fail: true
+          jobSummary: true
