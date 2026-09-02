@@ -14,7 +14,7 @@ Erhoben wird nur das, was hier steht.
 Stefan Grühn\
 Sesenheimer Str. 16\
 10627 Berlin\
-E-Mail: <stefan.gruehn@unique-tokens.com>
+E-Mail: <stefan.gruehn@gmail.com>
 
 ## Hosting
 
