@@ -7,7 +7,7 @@ summary: "Systemnahe Optimierung gilt als gefährlich, also fasst sie kaum jeman
 ---
 
 *Dieser Beitrag ist länger und ausführlicher als üblich.*
-*Wer dranbleibt, bekommt als Ertrag nicht die eingesparten Sekunden, sondern die Änderung, die sauber installiert war, fehlerfrei lud — und trotzdem nichts bewirkt hat.*
+*Wer dranbleibt, bekommt als Ertrag nicht die eingesparten Sekunden, sondern eine Änderung an der Boot-Konfiguration, die sauber installiert war, fehlerfrei lud — und trotzdem nichts bewirkt hat.*
 
 ## Kurzfassung
 
