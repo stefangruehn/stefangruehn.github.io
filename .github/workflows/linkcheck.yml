@@ -17,7 +17,6 @@ on:
 
 permissions:
   contents: read
-  issues: write
 
 jobs:
   linkcheck:
@@ -47,18 +46,26 @@ jobs:
           TZ: Europe/Berlin
         run: hugo --gc --minify
 
+      # The settings live in a file rather than in `args` because the remap
+      # replacement contains `$1`, which the action's shell would expand away
+      # (it runs with `set -u`, so the run fails outright).
+      - name: Configure the link check
+        run: |
+          cat > lychee.toml <<'EOF'
+          no_progress = true
+          max_retries = 2
+          accept = [200, 206, 429]
+          # The build writes absolute URLs. Send requests for our own domain back
+          # to the files just built, so a page is checked before it is published
+          # rather than after; root_dir resolves the root-relative ones.
+          root_dir = "${{ github.workspace }}/public"
+          remap = ["https://stefangruehn\\.github\\.io/(.*) file://${{ github.workspace }}/public/$1"]
+          EOF
+          cat lychee.toml
+
       - name: Check links
         uses: lycheeverse/lychee-action@v2
         with:
-          # The build writes absolute URLs, so send requests for our own domain
-          # back to the freshly built files instead of to the live site — that
-          # way a page is checked before it is published, not after.
-          args: >-
-            --no-progress
-            --remap "https://stefangruehn\.github\.io/(.*) file://${{ github.workspace }}/public/$1"
-            --accept 200,206,429
-            --max-retries 2
-            --exclude-path public/og
-            "public/**/*.html"
+          args: --config lychee.toml "public/**/*.html"
           fail: true
           jobSummary: true
