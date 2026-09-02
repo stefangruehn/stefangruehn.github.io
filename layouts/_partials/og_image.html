@@ -17,7 +17,13 @@
 
   {{- /* Wrap the title by hand: images.Text draws lines but does not break
          them. Rune count, not byte count, so umlauts do not shorten a line. */ -}}
+  {{- /* On the home page the page title is the site title, so a card built
+         from it would print the name twice — once large, once in the byline.
+         Use the site description there instead: it says what the blog is. */ -}}
   {{- $title := .Title | plainify }}
+  {{- if and .IsHome site.Params.description }}
+    {{- $title = site.Params.description | plainify }}
+  {{- end }}
   {{- $lines := slice }}
   {{- $cur := "" }}
   {{- range split $title " " }}
@@ -57,8 +63,19 @@
         "x" 80
         "y" 550)) }}
 
-  {{- /* Stable name per title and language so the cache actually hits. */ -}}
-  {{- $out = $img | resources.Copy (printf "og/%s-%s.png" .Lang (.Title | urlize)) }}
+  {{- /* Stable name per title and language so the cache actually hits.
+
+         The name must survive a round trip through the web server. urlize
+         alone percent-encodes an umlaut, which produces a file literally
+         named "...gr%C3%BChn.png"; the server then decodes the request back
+         to "grühn" and answers 404. So transliterate first, then drop
+         anything that is not plain ASCII. */ -}}
+  {{- $slug := .Title | lower }}
+  {{- range $from, $to := (dict "ä" "ae" "ö" "oe" "ü" "ue" "ß" "ss") }}
+    {{- $slug = replace $slug $from $to }}
+  {{- end }}
+  {{- $slug = replaceRE "[^a-z0-9-]" "" ($slug | urlize) }}
+  {{- $out = $img | resources.Copy (printf "og/%s-%s.png" .Lang $slug) }}
 {{- end }}
 
 {{- return $out }}
