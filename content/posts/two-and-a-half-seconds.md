@@ -1,7 +1,7 @@
 ---
 title: "Two and a Half Seconds and One Mistake: Taking a Linux Boot Apart With Claude Code"
 date: 2026-09-02T02:30:00+02:00
-draft: true
+draft: false
 tags: ["claude-code", "linux", "systemd", "boot", "performance"]
 summary: "System-level tuning has a reputation for being dangerous, so most of us never touch it. An evening with systemd, a fix that loaded cleanly and did absolutely nothing, and an honest look at whether any of this made the machine safer."
 ---
