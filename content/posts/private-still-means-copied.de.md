@@ -211,7 +211,7 @@ Das ist ein eigener Beitrag.
    Der Fehler saß in der neuesten, kleinsten und offensichtlich korrektesten Datei des Projekts.
    Neuer Code ist der Code, den noch niemand angesehen hat — auch nicht die Person, die ihn vor zehn Minuten geschrieben hat.
 
-## Wenn du noch unschlüssig bist
+## In welcher Reihenfolge ich fragen würde
 
 Wenn du Notizen führst und dich fragst, ob du Claude Code an sie heranlassen sollst, ist das Nützlichste, was ich anbieten kann, keine Einrichtungsanleitung.
 Es ist die Reihenfolge der Fragen.

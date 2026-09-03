@@ -156,7 +156,7 @@ Four digits is more agreement than the question deserved, but it is a nice way t
 - **Partial answers are allowed.** "I reproduced the mechanism but not the specific event" is a real result.
   Rounding it up to a clean causal story would have been the only dishonest thing in this whole exercise.
 
-## If you're on the fence
+## What transfers
 
 None of this required deep audio knowledge going in.
 It required refusing to accept a success message, and knowing that you can record what a machine is actually playing and just look at the numbers.

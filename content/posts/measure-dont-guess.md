@@ -190,7 +190,7 @@ The technical risks are real but manageable, as long as you read the plan first 
 6. **Approve the plan, not just the outcome.**
    Reading what will happen before it happens, and then deciding — that is where the control actually lives.
 
-## If you're on the fence
+## Whether this is worth it for you
 
 You do not need to be a developer for this.
 I could not have written that tone analyzer in Python as fast as Claude did, and I didn't need to — I only needed to describe a symptom accurately and run what Claude asked me to run.
