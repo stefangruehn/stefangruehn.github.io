@@ -1,7 +1,7 @@
 ---
 title: "Private Still Means Copied: Where My Unfinished Notes Are Allowed to Live"
 date: 2026-09-03T02:00:00+02:00
-draft: true
+draft: false
 tags: ["claude-code", "obsidian", "syncthing", "privacy", "workflow"]
 summary: "I wanted my half-formed ideas in Obsidian on my phone and Claude Code on them at my desk. Connecting the two turned out not to be a technical question at all — and the checker I wrote afterwards found a bug in the thing I had just built."
 ---
