@@ -12,6 +12,9 @@ Drei Tage nachdem die Lautsprecher liefen, blieb der Lautsprechertest in meinen 
 und die Ursache war ein Rückstand aus genau dieser Fehlersuche, nicht aus der Hardware und nicht aus der Lösung.
 Aufgeschrieben habe ich das separat: [Stille ohne Fehlermeldung](/de/posts/a-remembered-zero/).
 
+*Nachtrag vom 3.9.2026:* Inzwischen ist daraus eine Serie geworden.
+Alle Teile, und ein Schema vorweg, das zeigt, worauf man sich einlässt: [Nachhall](/de/series/nachhall/).
+
 ## Kurzfassung
 
 - In meinem Laptop steckt ein Lautsprecher, den Linux nicht korrekt ansteuert.
