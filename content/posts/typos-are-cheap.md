@@ -1,7 +1,7 @@
 ---
 title: "Typos are cheap: what actually matters when you talk to Claude Code"
-date: 2026-09-03T19:40:00+02:00
-draft: true
+date: 2026-09-04T00:23:36+02:00
+draft: false
 tags: ["claude-code", "rookie", "workflow"]
 summary: "Over one continuous stretch of sessions I typed some four hundred messages to Claude Code, and one in ten contains a German umlaut. Nothing was ever corrected, and everything was understood anyway. What costs you is not the spelling — it is the sentence that allows two outcomes."
 ---

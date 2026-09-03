@@ -1,7 +1,7 @@
 ---
 title: "Tippfehler sind billig: Worauf es beim Reden mit Claude Code wirklich ankommt"
-date: 2026-09-03T19:40:00+02:00
-draft: true
+date: 2026-09-04T00:23:36+02:00
+draft: false
 tags: ["claude-code", "rookie", "workflow"]
 summary: "In einem zusammenhängenden Messzeitraum habe ich gut vierhundert Nachrichten an Claude Code getippt; in jeder zehnten steht ein Umlaut. Korrigiert wurde nie etwas, verstanden wurde trotzdem alles. Teuer wird nicht die Schreibweise — teuer wird der Satz, der zwei Ergebnisse zulässt."
 ---
