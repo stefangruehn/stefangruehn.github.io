@@ -1,7 +1,7 @@
 ---
 title: "Auch privat wird kopiert: Wo die Notizen liegen dürfen, die noch niemand lesen soll"
 date: 2026-09-03T02:00:00+02:00
-draft: true
+draft: false
 tags: ["claude-code", "obsidian", "syncthing", "privacy", "workflow"]
 summary: "Ich wollte meine halbfertigen Ideen in Obsidian auf dem Telefon haben und am Schreibtisch Claude Code daran. Die Verbindung der beiden war am Ende gar keine technische Frage — und das Prüfskript, das ich danach schrieb, fand einen Fehler in dem, was gerade erst entstanden war."
 ---
