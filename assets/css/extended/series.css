@@ -80,11 +80,6 @@
     text-align: center;
 }
 
-/* Einleitung ueber den Serienkarten. */
-.series-intro {
-    margin-bottom: 1.4rem;
-}
-
 /* Einstufung oben auf der Serienseite: eigene Zeile, etwas groesser als im Kasten. */
 .series-badge-line {
     margin: 0 0 1rem;

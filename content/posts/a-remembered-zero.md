@@ -13,6 +13,9 @@ This is a short postscript to it.
 Three days after that work was finished, the same laptop produced a new symptom — and it turned out to be a leftover from the debugging itself,
 not from the hardware and not from the fix.
 
+*Update, added 2026-09-03:* this has since grown into a series.
+All parts, with a diagram up front showing what you are getting into: [Reverberations](/series/reverberations/).
+
 ## TL;DR
 
 - In Settings → Sound, the **Test speakers** dialog played nothing.

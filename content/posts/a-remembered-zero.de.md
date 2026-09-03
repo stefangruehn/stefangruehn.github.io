@@ -13,6 +13,9 @@ Dies ist ein kurzes Nachwort dazu.
 Drei Tage nach dem Ende jener Arbeit zeigte derselbe Laptop ein neues Symptom — und es stellte sich als Rückstand der Fehlersuche selbst heraus,
 nicht der Hardware und nicht der Lösung.
 
+*Nachtrag vom 3.9.2026:* Inzwischen ist daraus eine Serie geworden.
+Alle Teile, und ein Schema vorweg, das zeigt, worauf man sich einlässt: [Nachhall](/de/series/nachhall/).
+
 ## Kurzfassung
 
 - In Einstellungen → Ton spielte der Dialog **Lautsprecher testen** nichts ab.
