@@ -2,7 +2,7 @@
 title: "The Frozen Fader: 23 Decibels Nobody Corrects Any More"
 date: 2026-09-03T12:20:00+02:00
 draft: false
-tags: ["claude-code", "linux", "audio", "alsa", "pipewire", "wireplumber", "systemd", "debugging", "chuwi", "nerd fodder", "technical deep dive"]
+tags: ["claude-code", "linux", "audio", "alsa", "pipewire", "wireplumber", "systemd", "debugging", "chuwi", "Technical Deep Dive"]
 series: ["Reverberations"]
 summary: "After a reboot every audio source was 23 dB too quiet. The cause was an ALSA control that nobody has touched since an earlier fix — and the repair failed the first time because this laptop's card names swap places between boots."
 ---

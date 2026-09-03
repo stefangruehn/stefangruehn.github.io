@@ -2,9 +2,9 @@
 title: "Messen statt raten: Fehlersuche an einem Laptop-Lautsprecher mit Claude Code"
 date: 2026-08-31T06:00:00+02:00
 draft: false
-tags: ["claude-code", "linux", "hardware", "debugging", "audio", "chuwi", "nerdfutter", "technical deep dive"]
+tags: ["claude-code", "linux", "hardware", "debugging", "audio", "chuwi", "Technical Deep Dive"]
 series: ["Nachhall"]
-summary: "Eine falsche Theorie, ein öffentlicher Widerruf und ein kleines Messwerkzeug — was ich darüber gelernt habe, AI-Unterstützung für Probleme einzusetzen, bei denen es überhaupt nicht um Code geht."
+summary: "Eine falsche Theorie, ein öffentlicher Widerruf und ein kleines Messwerkzeug — was ich darüber gelernt habe, KI-Unterstützung für Probleme einzusetzen, bei denen es überhaupt nicht um Code geht."
 ---
 
 *Nachtrag vom 2.9.2026:* Zu dieser Geschichte gibt es eine Fußnote.
@@ -27,7 +27,7 @@ Alle Teile, und ein Schema vorweg, das zeigt, worauf man sich einlässt: [Nachha
 - Der nützlichste Teil dabei war nicht die Geschwindigkeit.
   Es war, dass aus einer vagen Beschwerde — „dieser Lautsprecher klingt falsch“ — an einem Nachmittag etwas Solides mit Zahlen wurde, ohne dass ich Hardware-Ingenieur in einem Messlabor bin.
 - Ich habe das Ganze in einem sicheren Modus laufen lassen, in dem ich den Plan freigebe, bevor irgendetwas lokal ausgeführt wird.
-  Die Kontrolle ist ausdrücklich vorhanden — genau deshalb lohnt sich ein nüchterner Blick auf eine verbreitete Sorge in Bezug auf agentische AI.
+  Die Kontrolle ist ausdrücklich vorhanden — genau deshalb lohnt sich ein nüchterner Blick auf eine verbreitete Sorge in Bezug auf agentische KI.
 
 ---
 
@@ -147,14 +147,14 @@ Das Problem stand nicht mehr zum Herumstochern bereit, also habe ich aufgehört 
 In die nächste Sitzung mit Claude bin ich mit einer konkreten neuen Idee gegangen statt mit einer weiteren Variante des zuletzt Versuchten.
 
 Das ist deshalb wichtig, weil Werkzeuge, die sofort antworten, uns dazu verleiten können, sofort weiter zu fragen, statt erst einmal weiter nachzudenken.
-So sind wir Menschen sozial konditioniert, und einer agentischen AI nicht sofort zu antworten, fühlt sich erst einmal komisch an.
+So sind wir Menschen sozial konditioniert, und einer agentischen KI nicht sofort zu antworten, fühlt sich erst einmal komisch an.
 
 Eine erzwungene Pause erweist sich aber als durchaus sinnvoll bei einem Problem, das man noch nicht verstanden hat — und anders als bei einem menschlichen Gegenüber setzt die Sitzung exakt dort wieder an, wo sie aufgehört hat, mit vollständigem Kontext.
 Nichts musste Claude neu erklärt werden.
 
 ## Die Kontrolle behalten
 
-Ein Vorbehalt, den ich im Zusammenhang mit agentischer AI oft höre, lautet sinngemäß: *Ich lasse AI doch keine Befehle auf meinem Rechner ausführen!*
+Ein Vorbehalt, den ich im Zusammenhang mit agentischer KI oft höre, lautet sinngemäß: *Ich lasse KI doch keine Befehle auf meinem Rechner ausführen!*
 Diese Sorge verdient eine klare Antwort statt Beschwichtigung.
 
 Ich hatte in diesem Projekt anfangs drei Bedenken: Es würde Administratorrechte brauchen, es könnte etwas irreversibel kaputtmachen und ich war mir nicht sicher, was den Rechner an Daten verlässt.
@@ -176,7 +176,7 @@ Anschließend hat es auch die Belege für die Gegenrichtung aufgeführt — der 
 Nach einem Neustart des Rechners war der Lautsprecher übrigens wieder da und ist seitdem stabil.
 
 Ein Assistent, der proaktiv auf seinen möglichen eigenen Anteil an einem akuten Problem hinweist, ist nützlicher als einer, der einen nie beunruhigen möchte und deshalb Informationen vorenthält.
-Die Angst vor einem Kontrollverlust bei der lokalen Nutzung von agentischer AI empfinde ich als unbegründet.
+Die Angst vor einem Kontrollverlust bei der lokalen Nutzung von agentischer KI empfinde ich als unbegründet.
 Denn Kontrolle ist zuerst eine Frage der Haltung zum Problem, die man selbst in der Hand hat.
 Die technischen Risiken sind zwar real, aber beherrschbar, wenn man zuerst den Plan liest und sich dann entscheidet.
 
@@ -190,7 +190,7 @@ Die technischen Risiken sind zwar real, aber beherrschbar, wenn man zuerst den P
    Ein eingebautes Mikrofon, ein Testton und reines Python haben Laborausrüstung ersetzt, die ich nicht besitze.
 4. **Eine falsche Schlussfolgerung zu veröffentlichen ist reparierbar.**
    Sie klar zurückzuziehen kostet letztendlich weniger, als sie öffentlich stehen zu lassen.
-5. **Gönne dir bewusst Pausen bei der Arbeit mit AI!**
+5. **Gönne dir bewusst Pausen bei der Arbeit mit KI.**
    Die erholsame Pause hat mir eine neue Idee geschenkt und die Bildschirmzeit danach hat neue Varianten der Fehlersuche gebracht.
 6. **Gib den Plan frei, nicht nur das Ergebnis.**
    Zu lesen, was passieren wird, bevor es passiert, und dann entscheiden — dort sitzt die Kontrolle tatsächlich.
@@ -204,7 +204,7 @@ Und einen Finger auf ein Lautsprecherloch legen, der sich in diesem Moment als d
 Wenn du ein Gerät hast, an dem etwas irgendwie kaputt ist — ein Lautsprecher, ein Sensor, ein Lüfter, der nie anläuft, irgendeine Funktion, die klammheimlich aufgehört hat zu funktionieren —,
 dann ist es doch so: Solche Probleme sind meist *lösbar*, es lohnte sich bisher nur für niemanden, sie selbst zu lösen.
 Diese Rechnung hat sich klar erkennbar geändert.
-Nicht weil die Unterstützung durch agentische AI unfehlbar wäre.
+Nicht weil die Unterstützung durch agentische KI unfehlbar wäre.
 Meine hat mir anfangs geholfen, eine Theorie über das Problem zu bauen, die sich später als falsch erwies.
 Die Rechnung hat sich geändert, weil die Schleife von „da stimmt was nicht“ hin zu „hier ist etwas Solides mit Zahlen“ kurz genug geworden ist, um sie tatsächlich auch zu gehen.
 Danke dafür, Claude!

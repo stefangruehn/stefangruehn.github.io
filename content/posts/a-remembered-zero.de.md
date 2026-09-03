@@ -2,7 +2,7 @@
 title: "Stille ohne Fehlermeldung: Die Null, die sich mein Audio-Server gemerkt hat"
 date: 2026-09-02T16:40:00+02:00
 draft: false
-tags: ["claude-code", "linux", "audio", "pipewire", "debugging", "chuwi", "nerdfutter", "technical deep dive"]
+tags: ["claude-code", "linux", "audio", "pipewire", "debugging", "chuwi", "Technical Deep Dive"]
 series: ["Nachhall"]
 summary: "Der Lautsprechertest in den Systemeinstellungen blieb stumm, während Musik und Video einwandfrei liefen. Die Ursache war kein defekter Treiber, sondern eine einzelne Zahl, die sich mein Audio-Server treu gemerkt hatte — übrig geblieben aus genau der Fehlersuche, über die ich beim letzten Mal geschrieben habe."
 ---
