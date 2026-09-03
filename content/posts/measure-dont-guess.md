@@ -7,12 +7,12 @@ series: ["Reverberations"]
 summary: "A wrong theory, a public retraction, and a small measurement tool — what I learned about using AI assistance for problems that aren't about code at all."
 ---
 
-*Postscript, added 2026-09-02:* this story has a footnote.
+*Update, added 2026-09-02:* this story has a footnote.
 Three days after the speakers were working, the speaker test in my own sound settings went silent —
 and the cause turned out to be a leftover from this very debugging session, not from the hardware and not from the fix.
 I wrote that up separately: [Silence Without an Error](/posts/a-remembered-zero/).
 
-*Postscript, added 2026-09-03:* this has since grown into a series.
+*Update, added 2026-09-03:* this has since grown into a series.
 All parts, with a diagram up front showing what you are getting into: [Reverberations](/series/reverberations/).
 
 ## TL;DR

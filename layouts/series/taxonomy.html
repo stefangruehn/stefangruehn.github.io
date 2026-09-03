@@ -5,14 +5,41 @@
        Nur fuer diese Taxonomie, /tags/ behaelt seine Chips. */ -}}
 {{- define "main" }}
 
+{{- /* Kopf und Inhalt eins zu eins wie in PaperMods list.html, damit
+       /series/ und /posts/ identisch aussehen: Brotkrumen, RSS-Symbol im
+       Titel, und derselbe Wrapper post-content md-content. */ -}}
 {{- if .Title }}
 <header class="page-header">
-  <h1>{{ .Title }}</h1>
+  {{- partial "breadcrumbs.html" . }}
+  <h1>
+    {{ .Title }}
+    {{- if .Param "ShowRssButtonInSectionTermList" }}
+    {{- with .OutputFormats.Get "rss" }}
+    <a href="{{ .RelPermalink }}" title="RSS" aria-label="RSS">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" height="23">
+        <path d="M4 11a9 9 0 0 1 9 9" />
+        <path d="M4 4a16 16 0 0 1 16 16" />
+        <circle cx="5" cy="19" r="1" />
+      </svg>
+    </a>
+    {{- end }}
+    {{- end }}
+  </h1>
+  {{- if .Description }}
+  <div class="post-description">
+    {{ .Description | markdownify }}
+  </div>
+  {{- end }}
 </header>
 {{- end }}
 
-{{- with .Content }}
-<div class="post-content series-intro">{{ . }}</div>
+{{- if .Content }}
+<div class="post-content md-content">
+  {{- if not (.Param "disableAnchoredHeadings") }}
+  {{- partial "anchored_headings.html" .Content -}}
+  {{- else }}{{ .Content }}{{ end }}
+</div>
 {{- end }}
 
 {{- $type := .Type }}
