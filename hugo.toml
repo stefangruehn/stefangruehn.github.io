@@ -111,6 +111,12 @@ Every post here is written with [Claude Code](https://claude.com/claude-code), a
         weight = 10
 
       [[languages.en.menus.main]]
+        identifier = "series"
+        name = "Series"
+        url = "/series/"
+        weight = 15
+
+      [[languages.en.menus.main]]
         identifier = "tags"
         name = "Tags"
         url = "/tags/"
@@ -162,6 +168,12 @@ Jeder Beitrag hier entsteht mit [Claude Code](https://claude.com/claude-code), u
         weight = 10
 
       [[languages.de.menus.main]]
+        identifier = "series"
+        name = "Serien"
+        url = "/series/"
+        weight = 15
+
+      [[languages.de.menus.main]]
         identifier = "tags"
         name = "Tags"
         url = "/tags/"
@@ -179,10 +191,14 @@ Jeder Beitrag hier entsteht mit [Claude Code](https://claude.com/claude-code), u
         url = "/about/"
         weight = 40
 
-# Nur Tags. Ohne diesen Block legt Hugo zusaetzlich leere
+# Nur Tags und Serien. Ohne diesen Block legt Hugo zusaetzlich leere
 # categories-Seiten und -Feeds an, die Suchmaschinen indexieren.
+# series traegt die mehrteiligen Beitragsfolgen; die Begriffsseite ist
+# zugleich die Uebersichtsseite der Serie. Pro Sprache ein eigener Begriff
+# (DE "Nachhall", EN "Reverberations"), Hugo haelt sie getrennt.
 [taxonomies]
   tag = "tags"
+  series = "series"
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]

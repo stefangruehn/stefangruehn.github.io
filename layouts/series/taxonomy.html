@@ -1,0 +1,41 @@
+{{- /* Uebersicht aller Serien.
+       PaperMods taxonomy.html rendert nur Chips und laesst .Content fallen —
+       fuer Tags reicht das, fuer Serien nicht: Eine Serie hat eine Beschreibung
+       und eine Einstufung, und die Karte soll aussehen wie eine Beitragskarte.
+       Nur fuer diese Taxonomie, /tags/ behaelt seine Chips. */ -}}
+{{- define "main" }}
+
+{{- if .Title }}
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+</header>
+{{- end }}
+
+{{- with .Content }}
+<div class="post-content series-intro">{{ . }}</div>
+{{- end }}
+
+{{- $type := .Type }}
+{{- $de := eq .Lang "de" }}
+{{- range .Data.Terms.Alphabetical }}
+  {{- $count := .Count }}
+  {{- with site.GetPage (printf "/%s/%s" $type .Name) }}
+<article class="post-entry">
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">{{ .LinkTitle }}</h2>
+  </header>
+  {{- with .Params.summary }}
+  <div class="entry-content">
+    <p>{{ . }}</p>
+  </div>
+  {{- end }}
+  <footer class="entry-footer">
+    {{ $count }}&nbsp;{{ if $de }}{{ if eq $count 1 }}Teil{{ else }}Teile{{ end }}{{ else }}{{ if eq $count 1 }}part{{ else }}parts{{ end }}{{ end }}
+    {{- with .Params.badge }}<span class="series-badge">{{ . }}</span>{{ end }}
+  </footer>
+  <a class="entry-link" aria-label="{{ if $de }}Zur Serie{{ else }}Go to series{{ end }} {{ .LinkTitle | plainify }}" href="{{ .Permalink }}"></a>
+</article>
+  {{- end }}
+{{- end }}
+
+{{- end }}{{/* end main */ -}}

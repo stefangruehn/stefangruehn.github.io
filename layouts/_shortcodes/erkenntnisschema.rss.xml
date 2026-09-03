@@ -1,0 +1,25 @@
+{{- /* Erkenntnisschema, RSS-Fassung: ASCII statt SVG.
+       Feed-Leser rendern Inline-SVG unzuverlaessig bis gar nicht.
+       Konvention fuer ASCII-Schemata: an jeder Ecke steht innen ein
+       Leerzeichen zwischen dem + und dem angrenzenden Strich. */ -}}
+{{- if eq .Page.Lang "de" -}}
+<pre>
+             + --- widerlegt --- +
+             v                   |
+ Symptom --&gt; Vermutung --&gt; Messung --&gt; Ursache --&gt; Fix
+    ^                                               |
+    + ----------------- Rückstand ----------------- +
+
+ Dreimal durchlaufen, einmal je Teil.
+</pre>
+{{- else -}}
+<pre>
+             + ------ refuted ------- +
+             v                        |
+ Symptom --&gt; Hypothesis --&gt; Measurement --&gt; Cause --&gt; Fix
+    ^                                                  |
+    + ------------------- residue -------------------- +
+
+ Traversed three times, once per part.
+</pre>
+{{- end -}}

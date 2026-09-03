@@ -1,0 +1,30 @@
+{{- /* Serienkasten. PaperMod kennt keine Serien — dieser Anker unter dem
+       Beitragstext ist der einzige vom Theme vorgesehene Einstiegspunkt,
+       deshalb steht der Kasten am Ende und nicht oben. Den Vorwaerts- und
+       Rueckverweis im Fliesstext ersetzt er nicht. */ -}}
+{{- with .GetTerms "series" }}
+  {{- $current := $.File.ContentBaseName }}
+  {{- range . }}
+    {{- $teile := sort .Pages "Date" "asc" }}
+    <div class="series-box">
+      <div class="series-box-title">
+        {{ if eq $.Lang "de" }}Serie{{ else }}Series{{ end }}:
+        <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+        &middot;
+        {{ if eq $.Lang "de" }}{{ len $teile }} Teile{{ else }}{{ len $teile }} parts{{ end }}
+        {{- with .Params.badge }}<span class="series-badge">{{ . }}</span>{{ end }}
+      </div>
+      <ol>
+        {{- range $teile }}
+          <li{{ if eq .File.ContentBaseName $current }} class="series-current"{{ end }}>
+            {{- if eq .File.ContentBaseName $current -}}
+              {{ .LinkTitle }}
+            {{- else -}}
+              <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+            {{- end -}}
+          </li>
+        {{- end }}
+      </ol>
+    </div>
+  {{- end }}
+{{- end }}

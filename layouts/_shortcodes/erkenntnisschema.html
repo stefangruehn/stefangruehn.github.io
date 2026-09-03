@@ -1,0 +1,46 @@
+{{- /* Erkenntnisschema der Serie, HTML-Fassung.
+       Die RSS-Fassung liegt daneben als erkenntnisschema.rss.xml und liefert
+       ASCII statt SVG — Hugo waehlt die Vorlage nach Ausgabeformat.
+       Beschriftungen kommen aus der Sprache der Seite, damit eine Vorlage
+       fuer beide Fassungen reicht. */ -}}
+{{- $de := eq .Page.Lang "de" -}}
+{{- $n := slice
+    (dict "t" (cond $de "Symptom" "Symptom")         "s" (cond $de "kein Fehler gemeldet" "no error reported"))
+    (dict "t" (cond $de "Vermutung" "Hypothesis")    "s" (cond $de "klingt plausibel" "sounds plausible"))
+    (dict "t" (cond $de "Messung" "Measurement")     "s" (cond $de "Instrument bauen" "build an instrument"))
+    (dict "t" (cond $de "Ursache" "Cause")           "s" (cond $de "eine Zahl, eine Zeile" "one number, one line"))
+    (dict "t" (cond $de "Fix" "Fix")                 "s" (cond $de "meist ein Dreizeiler" "usually three lines"))
+-}}
+<figure class="schema">
+<svg viewBox="0 0 780 250" role="img" aria-labelledby="schema-t schema-d" class="schema-svg">
+  <title id="schema-t">{{ if $de }}Erkenntnisprozess der Serie{{ else }}How the series arrives at answers{{ end }}</title>
+  <desc id="schema-d">{{ if $de }}Symptom, Vermutung, Messung, Ursache, Fix. Von der Messung führt ein Pfeil zurück zur Vermutung, beschriftet „widerlegt". Vom Fix führt ein Pfeil zurück zum Symptom, beschriftet „Rückstand".{{ else }}Symptom, hypothesis, measurement, cause, fix. An arrow leads back from measurement to hypothesis, labelled "refuted". An arrow leads back from fix to symptom, labelled "residue".{{ end }}</desc>
+  <defs>
+    <marker id="ap" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="9" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="var(--secondary)"/>
+    </marker>
+    <marker id="al" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="9" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="var(--primary)"/>
+    </marker>
+  </defs>
+
+  {{- range $i, $b := $n }}
+  {{- $x := add 10 (mul $i 160) }}
+  <rect x="{{ $x }}" y="103" width="120" height="46" rx="6" fill="var(--entry)" stroke="var(--border)"/>
+  <text x="{{ add $x 60 }}" y="122" text-anchor="middle" class="schema-h">{{ $b.t }}</text>
+  <text x="{{ add $x 60 }}" y="139" text-anchor="middle" class="schema-s">{{ $b.s }}</text>
+  {{- if lt $i 4 }}
+  <line x1="{{ add $x 122 }}" y1="126" x2="{{ add $x 156 }}" y2="126" stroke="var(--secondary)" stroke-width="1.5" marker-end="url(#ap)"/>
+  {{- end }}
+  {{- end }}
+
+  <path d="M390,103 C390,55 230,55 230,101" fill="none" stroke="var(--secondary)" stroke-width="1.5"
+        stroke-dasharray="5 4" marker-end="url(#ap)"/>
+  <text x="310" y="48" text-anchor="middle" class="schema-l">{{ if $de }}widerlegt{{ else }}refuted{{ end }}</text>
+
+  <path d="M710,151 C710,205 710,215 660,215 L120,215 C70,215 70,205 70,153" fill="none"
+        stroke="var(--primary)" stroke-width="2" marker-end="url(#al)"/>
+  <text x="390" y="236" text-anchor="middle" class="schema-l schema-l-strong">{{ if $de }}Rückstand{{ else }}residue{{ end }}</text>
+</svg>
+<figcaption>{{ if $de }}Dreimal durchlaufen, einmal je Teil.{{ else }}Traversed three times, once per part.{{ end }}</figcaption>
+</figure>
