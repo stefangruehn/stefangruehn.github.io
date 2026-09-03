@@ -1,0 +1,6 @@
+{{- /* Einstufung der Serie auf ihrer eigenen Uebersichtsseite.
+       Liest denselben badge-Param wie der Serienkasten unter den Beitraegen,
+       damit der Text genau einmal existiert (im Frontmatter der Begriffsseite).
+       Als Shortcode statt als Template, weil PaperMods Begriffsseite sonst
+       eine Kopie von list.html braeuchte. */ -}}
+{{- with .Page.Params.badge }}<p class="series-badge-line"><span class="series-badge">{{ . }}</span></p>{{ end }}

@@ -1,0 +1,96 @@
+/* Serienkasten unter dem Beitrag. PaperMod bindet alles unter
+   assets/css/extended/ automatisch ein, deshalb kein Eingriff ins Theme. */
+.series-box {
+    margin: 2.5rem 0 0;
+    padding: 1rem 1.2rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--entry);
+    font-size: 0.95rem;
+}
+
+.series-box-title {
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+}
+
+.series-box ol {
+    margin: 0;
+    padding-left: 1.4rem;
+}
+
+.series-box li {
+    margin: 0.35rem 0;
+}
+
+.series-box li.series-current {
+    font-weight: 700;
+}
+
+.series-box li.series-current::marker {
+    font-weight: 700;
+}
+
+/* Einstufung der Serie. Steht im Serienkasten neben der Teilezahl. */
+.series-badge {
+    display: inline-block;
+    margin-left: 0.4rem;
+    padding: 0.1rem 0.5rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--theme);
+    font-size: 0.78rem;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+/* Erkenntnisschema. Die SVG-Fassung skaliert mit der Spaltenbreite;
+   Farben kommen aus den PaperMod-Variablen, damit hell und dunkel passen. */
+.schema {
+    margin: 1.6rem 0;
+}
+
+.schema-svg {
+    width: 100%;
+    height: auto;
+    overflow: visible;
+}
+
+.schema-h {
+    font-size: 15px;
+    font-weight: 700;
+    fill: var(--primary);
+}
+
+.schema-s,
+.schema-l {
+    font-size: 12px;
+    fill: var(--secondary);
+}
+
+.schema-l-strong {
+    font-weight: 700;
+    fill: var(--primary);
+}
+
+.schema figcaption {
+    margin-top: 0.4rem;
+    font-size: 0.85rem;
+    color: var(--secondary);
+    text-align: center;
+}
+
+/* Einleitung ueber den Serienkarten. */
+.series-intro {
+    margin-bottom: 1.4rem;
+}
+
+/* Einstufung oben auf der Serienseite: eigene Zeile, etwas groesser als im Kasten. */
+.series-badge-line {
+    margin: 0 0 1rem;
+}
+
+.series-badge-line .series-badge {
+    margin-left: 0;
+    font-size: 0.85rem;
+}
