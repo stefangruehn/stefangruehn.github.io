@@ -2,7 +2,7 @@
 title: "Der eingefrorene Regler: 23 Dezibel, die niemand mehr korrigiert"
 date: 2026-09-03T12:20:00+02:00
 draft: false
-tags: ["claude-code", "linux", "audio", "alsa", "pipewire", "wireplumber", "systemd", "debugging", "chuwi", "nerdfutter", "technical deep dive"]
+tags: ["claude-code", "linux", "audio", "alsa", "pipewire", "wireplumber", "systemd", "debugging", "chuwi", "Technical Deep Dive"]
 series: ["Nachhall"]
 summary: "Nach einem Reboot war jede Audioquelle 23 dB zu leise. Die Ursache war ein ALSA-Regler, den seit einem früheren Fix niemand mehr anfasst — und die Reparatur scheiterte erst einmal daran, dass die Kartennamen dieses Laptops zwischen Boots die Plätze tauschen."
 ---

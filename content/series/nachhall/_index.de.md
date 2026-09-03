@@ -1,6 +1,6 @@
 ---
 title: "Nachhall"
-badge: "Nerdfutter · technical deep dive"
+badge: "Technical Deep Dive"
 summary: "Drei Fehlersuchen an den Lautsprechern eines Laptops. Jeder Teil ist der Nachklang des vorigen: das Hardware-Problem, der Rückstand der Fehlersuche, der Rückstand der Lösung."
 ---
 
@@ -25,7 +25,9 @@ Jeder Teil beginnt mit einer Vermutung, die gut klingt, und endet damit, dass ei
 eine Theorie übers Hinhören, öffentlich vertreten und widerrufen;
 eine Ursachenerklärung, in einer Minute erledigt;
 eine Fehlermeldung, in der ich meine eigene These wiedererkannte, obwohl sie etwas anderes meldete.
-Wer daran Freude hat, dass eine schöne Erklärung an einer Zahl zerbricht, ist hier richtig.
+
+> Wer daran Freude hat, dass eine schöne Erklärung an einer Zahl zerbricht, ist hier richtig.
+> Wem dB-Werte, Konfigurationsschlüssel und Journal-Zeilen den Abend verderben, eher nicht.
 
 **Der durchgezogene Pfeil** ist die These der Serie.
 Jeder Fix hinterlässt einen Zustand, den er selbst nicht mehr korrigiert, und der wird zum Symptom des nächsten Teils.

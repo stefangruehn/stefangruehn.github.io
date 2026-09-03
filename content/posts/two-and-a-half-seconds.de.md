@@ -90,7 +90,7 @@ Ein halbes Jahr später ist die Distribution weitergezogen, der Fehler ist oben 
 In diesem Ablauf ist keine Stelle vorgesehen, an der jemand zurückkommt und fragt, ob das noch gebraucht wird.
 Niemand setzt sich eine Wiedervorlage für seine eigenen Boot-Parameter.
 
-Das ist das stärkste Argument, das ich dafür habe, diese Art Arbeit durch eine agentische AI laufen zu lassen statt von Hand — und es geht dabei nicht um Geschwindigkeit.
+Das ist das stärkste Argument, das ich dafür habe, diese Art Arbeit durch eine agentische KI laufen zu lassen statt von Hand — und es geht dabei nicht um Geschwindigkeit.
 Es geht darum, dass als Nebenprodukt ein Protokoll entsteht: was geändert wurde, warum, wogegen gemessen wurde und mit welchem Befehl man es zurücknimmt.
 Bevor Claude Code den Parameter angefasst hat, hat es geprüft, ob er überhaupt noch etwas bewirkt — also genau die Frage gestellt, die ich in all den Monaten nicht gestellt hatte.
 Von Hand bekommt man die Änderung.

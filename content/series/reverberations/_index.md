@@ -1,6 +1,6 @@
 ---
 title: "Reverberations"
-badge: "Nerd fodder · technical deep dive"
+badge: "Technical Deep Dive"
 summary: "Three debugging stories about the speakers in one laptop. Each part is the aftermath of the one before it: the hardware problem, what the debugging left behind, and what the fix left behind."
 ---
 
@@ -25,7 +25,9 @@ Every part starts with a hypothesis that sounds good and ends with a measurement
 a theory built by listening, argued in public and retracted;
 an explanation of a cause, dismissed in a minute;
 an error message in which I recognised my own theory although it was reporting something else.
-If you enjoy watching a good explanation break against a number, you are in the right place.
+
+> If you enjoy watching a good explanation break against a number, you are in the right place.
+> If decibel values, configuration keys and journal lines spoil your evening, less so.
 
 **The solid arrow** is the argument of the series.
 Every fix leaves behind a state it no longer corrects, and that state becomes the next part's symptom.

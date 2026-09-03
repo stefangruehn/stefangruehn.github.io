@@ -153,7 +153,7 @@ Every post here is written with [Claude Code](https://claude.com/claude-code), a
       [languages.de.params.homeInfoParams]
         Title = "Hallo, ich bin Stefan."
         Content = """
-Ich arbeite als Softwareingenieur und Datenanalyst und schreibe hier darüber, wie ich AI in meiner täglichen Arbeit einsetze — vor allem in meinen Open-Source-Projekten auf GitHub.
+Ich arbeite als Softwareingenieur und Datenanalyst und schreibe hier darüber, wie ich KI in meiner täglichen Arbeit einsetze — vor allem in meinen Open-Source-Projekten auf GitHub.
 
 Jeder Beitrag hier entsteht mit [Claude Code](https://claude.com/claude-code), und die Befehle, Messungen und Zahlen stammen aus echten Sitzungen auf meinen eigenen Rechnern.
 [Mehr über mich und meine Werkzeuge](about/).
