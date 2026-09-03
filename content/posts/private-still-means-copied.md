@@ -210,7 +210,7 @@ That's a post of its own.
    The bug was in the newest, smallest, most obviously correct file in the project.
    New code is the code nobody has looked at yet, including the person who wrote it ten minutes ago.
 
-## If you're on the fence
+## The order I'd ask the questions in
 
 If you keep notes and you've wondered whether to let Claude Code near them, the useful thing I can offer isn't a setup.
 It's the order of the questions.

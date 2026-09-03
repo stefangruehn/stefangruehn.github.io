@@ -156,7 +156,7 @@ Vier Stellen Übereinstimmung sind mehr, als die Frage verdient hatte, aber es i
 - **Unvollständige Antworten sind erlaubt.** „Ich habe den Mechanismus reproduziert, aber nicht das konkrete Ereignis" ist ein echtes Ergebnis.
   Es zu einer glatten Ursachengeschichte aufzurunden wäre das einzig Unehrliche an dieser ganzen Übung gewesen.
 
-## Falls du noch unschlüssig bist
+## Was sich übertragen lässt
 
 Nichts davon setzte tiefes Audiowissen voraus.
 Es setzte voraus, eine Erfolgsmeldung nicht zu akzeptieren, und zu wissen, dass man aufzeichnen kann, was eine Maschine tatsächlich abspielt, und einfach die Zahlen ansieht.

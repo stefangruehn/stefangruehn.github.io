@@ -191,7 +191,7 @@ Die technischen Risiken sind zwar real, aber beherrschbar, wenn man zuerst den P
 6. **Gib den Plan frei, nicht nur das Ergebnis.**
    Zu lesen, was passieren wird, bevor es passiert, und dann entscheiden — dort sitzt die Kontrolle tatsächlich.
 
-## Falls du noch unschlüssig bist
+## Ob sich das für dich lohnt
 
 Du musst dafür kein Entwickler sein.
 Diesen Ton-Analysator hätte ich nicht so schnell in Python schreiben können wie Claude, und ich musste es auch nicht — ich musste nur ein Symptom genau beschreiben und ausführen, worum ich von Claude gebeten wurde.
