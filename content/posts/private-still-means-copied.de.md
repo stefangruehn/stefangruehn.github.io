@@ -80,7 +80,7 @@ Es gibt ein Community-Plugin — Vault Companion for Claude —, das ein Chatfen
 Das ist ziemlich genau die Form dessen, was ich mir ursprünglich vorgestellt hatte.
 
 Es hat zwei Betriebsarten.
-Die eine leitet über einen Rechner mit installiertem Claude Code weiter; dafür wollte sie einen Node-Server nutzen, der zudem nur auf einem Mac läuft.
+Die eine leitet über einen Rechner mit installiertem Claude Code weiter; dafür wollte sie einen Node server nutzen, der zudem nur auf einem Mac läuft.
 Ich bin Linuxer und Node? Denk dir den Rest.
 Die andere spricht direkt mit dem Anbieter, über **einen eigenen API-Schlüssel**, abgerechnet nach Token.
 
