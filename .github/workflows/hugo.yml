@@ -53,6 +53,15 @@ jobs:
           key: hugo-${{ runner.os }}-${{ hashFiles('**/hugo.toml') }}
           restore-keys: hugo-${{ runner.os }}-
 
+      # Der Minifier ist die einzige Stufe, die lokal nicht laeuft: gebaut wird
+      # hier mit --minify, auf dem Rechner ohne. Verliert er die Spur, fehlen
+      # Leerzeichen und schliessende Tags — in der Quelle nicht zu sehen.
+      # Der Schritt baut deshalb beides und vergleicht, bevor deployt wird.
+      - name: Check that --minify leaves the pages intact
+        env:
+          TZ: Europe/Berlin
+        run: ./tools/check-minify.py
+
       - name: Build with Hugo
         env:
           HUGO_ENVIRONMENT: production
