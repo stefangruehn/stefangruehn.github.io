@@ -37,7 +37,7 @@ Der schwierige Teil war eine Frage, die ich mir gar nicht gestellt hatte: **Wo b
 
 ## Kommt Claude an meinen Obsidian-Vault? Nein.
 
-Fang mit dem Naheliegenden an.
+Fangen wir mit dem Naheliegenden an.
 Es gibt eine Claude-App fürs Telefon.
 Der Obsidian-Vault ist ein Verzeichnis voller Markdown-Dateien auf demselben Telefon.
 
@@ -47,7 +47,7 @@ Was sie kann: eine Datei entgegennehmen, die du ihr von Hand über den System-Di
 Das ist kein Arbeiten an einem Vault.
 Das ist eine Mail an sich selbst mit Anhang.
 
-Der direkte Weg ist also zu.
+Der direkte Weg war also versperrt.
 Und damit fängt das Interessante an, denn es gibt drei indirekte.
 
 ## Weg eins: den Vault in ein Repository legen
@@ -80,7 +80,8 @@ Es gibt ein Community-Plugin — Vault Companion for Claude —, das ein Chatfen
 Das ist ziemlich genau die Form dessen, was ich mir ursprünglich vorgestellt hatte.
 
 Es hat zwei Betriebsarten.
-Die eine leitet über einen Rechner mit installiertem Claude Code weiter; dafür wollte sie Hardware, die ich nicht habe.
+Die eine leitet über einen Rechner mit installiertem Claude Code weiter; dafür wollte sie einen Node-Server nutzen, der zudem nur auf einem Mac läuft.
+Ich bin Linuxer und Node? Denk dir den Rest.
 Die andere spricht direkt mit dem Anbieter, über **einen eigenen API-Schlüssel**, abgerechnet nach Token.
 
 Und dort war Schluss, aus einem Grund, der langweilig und vollkommen ausschlaggebend ist: Ich zahle bereits ein monatliches Abo, und ich hatte keine Vorstellung davon, was eine zweite, verbrauchsabhängige Abrechnung daneben mit meinen Kosten machen würde.

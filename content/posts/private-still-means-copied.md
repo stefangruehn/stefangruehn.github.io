@@ -37,7 +37,7 @@ The hard part was a question I had not thought to ask: **where am I willing to l
 
 ## Can Claude reach my Obsidian vault? No.
 
-Start with the obvious attempt.
+Let's start with the obvious attempt.
 There is a Claude app for the phone.
 The Obsidian vault is a folder of Markdown files on the same phone.
 
@@ -47,7 +47,7 @@ What it can do is accept a file you attach by hand through the system picker, on
 That is not working on a vault.
 That is emailing yourself an attachment.
 
-So the direct route is closed, and the interesting part begins: there are three indirect ones.
+So the direct route was blocked, and the interesting part begins: there are three indirect ones.
 
 ## Way one: put the vault in a repository
 
@@ -79,7 +79,8 @@ There is a community plugin — Vault Companion for Claude — that puts a chat 
 That is exactly the shape of the thing I originally imagined.
 
 It has two backends.
-One relays through a desktop machine running Claude Code; that one wanted hardware I don't have.
+One relays through a desktop machine running Claude Code; for that it wanted a Node server, running on a Mac at that.
+I live on Linux, and Node? You can work out the rest.
 The other talks straight to the model provider using **an API key of your own**, billed per token.
 
 And that is where it stopped, for a reason that is boring and completely decisive: I already pay a monthly subscription, and I had no idea what adding a second, usage-metered billing relationship would do to my costs.
