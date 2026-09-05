@@ -1,0 +1,31 @@
+{{- /* Schema der Serie Codebuch, RSS-Fassung: ASCII statt SVG.
+       Feed-Leser rendern Inline-SVG unzuverlaessig bis gar nicht.
+       Konvention fuer ASCII-Schemata: an jeder Ecke steht innen ein
+       Leerzeichen zwischen dem + und dem angrenzenden Strich. */ -}}
+{{- if eq .Page.Lang "de" -}}
+<pre>
+                                  + --&gt; weniger Anschläge
+                                  |
+ Korpus --&gt; Häufigkeit --&gt; Codebuch
+    ^                             |
+    |                             + --&gt; weniger Runden
+    |                                          |
+    + ---------- wächst weiter --------------- +
+
+ Teil 1 misst die Kosten, Teil 2 baut das Codebuch,
+ Teil 3 fragt, wem es nützt.
+</pre>
+{{- else -}}
+<pre>
+                                  + --&gt; fewer keystrokes
+                                  |
+ Corpus --&gt; Frequency --&gt; Codebook
+    ^                             |
+    |                             + --&gt; fewer round-trips
+    |                                          |
+    + ---------- keeps growing --------------- +
+
+ Part 1 measures the cost, part 2 builds the codebook,
+ part 3 asks who it helps.
+</pre>
+{{- end -}}
