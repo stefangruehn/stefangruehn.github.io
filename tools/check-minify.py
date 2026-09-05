@@ -1,21 +1,21 @@
 #!/usr/bin/env python3
-"""Prüft, ob `hugo --minify` die Seiten unbeschädigt lässt.
+"""Check that `hugo --minify` leaves the pages intact.
 
-Der Minifier ist die einzige Stufe, die zwischen dem lokalen Bild und der
-veröffentlichten Seite liegt: gebaut wird lokal ohne, im CI mit `--minify`.
-Verliert er dabei die Spur — ein ungepaartes `"` in einem SVG-Textknoten
-genügt —, fehlen Leerzeichen an Inline-Tags und schließende Tags fallen weg.
-Beides ist in der Quelle nicht zu sehen und lokal nicht zu bemerken.
+The minifier is the only stage between the local picture and the published
+page: the local build runs without it, CI builds with `--minify`. When it
+loses track — a single unpaired `"` in an SVG text node is enough — spaces
+around inline tags go missing and closing tags are dropped. Neither is
+visible in the source, and neither shows up locally.
 
-Deshalb wird zweimal gebaut und verglichen. Zwei Prüfungen je Seite:
+So we build twice and compare. Two checks per page:
 
-  Text      Inline-Tags gelten als nichts, Block-Tags als Leerzeichen.
-            Fällt ein Leerzeichen weg, unterscheiden sich die Fassungen.
-  Struktur  Start- und End-Tags je Elementname müssen gleich häufig sein.
-            Fällt ein `</a>` weg, fällt es hier auf.
+  Text       Inline tags count as nothing, block tags as a space.
+             If a space is lost, the two versions differ.
+  Structure  Start and end tags must be equally frequent per element name.
+             If a `</a>` is dropped, it shows up here.
 
-Aufruf:  tools/check-minify.py [--hugo PFAD]
-Rückgabe: 0 wenn beide Fassungen übereinstimmen, sonst 1.
+Usage:  tools/check-minify.py [--hugo PATH]
+Returns: 0 if both versions agree, 1 otherwise.
 """
 
 from __future__ import annotations
@@ -33,22 +33,23 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 
-# Elemente ohne eigene Zeilenbox. Ihr Wegfall darf den Text nicht verändern,
-# ihr Vorhandensein kein Leerzeichen erzeugen — sonst schluckte der Vergleich
-# genau den Fehler, den er finden soll.
+# Elements without a line box of their own. Dropping them must not change the
+# text, and their presence must not create a space — otherwise the comparison
+# would swallow the very defect it is meant to find.
 INLINE = (
     "a abbr b bdi bdo cite code data dfn em i kbd mark q s samp small span "
     "strong sub sup time u var wbr"
 ).split()
 
-# void: haben nie ein End-Tag, dürfen in der Strukturzählung nicht fehlen.
+# void: never have an end tag, so they must not be counted as missing one.
 VOID = (
     "area base br col embed hr img input link meta param source track wbr"
 ).split()
 
 WEG = re.compile(r"(?is)<(script|style|head)\b.*?</\1>")
-# In SVG und MathML schliesst `<path/>` wirklich, in HTML nicht. Die
-# Strukturpruefung gilt darum nur fuer HTML; Fremdelemente fliegen vorher raus.
+# In SVG and MathML `<path/>` really does close; in HTML it does not. The
+# structure check therefore covers HTML only; foreign elements are stripped
+# beforehand.
 FREMD = re.compile(r"(?is)<(svg|math)\b.*?</\1>")
 KOMMENTAR = re.compile(r"(?s)<!--.*?-->")
 INLINE_TAG = re.compile(r"(?is)</?(%s)(\s[^>]*)?/?>" % "|".join(INLINE))
@@ -57,7 +58,7 @@ LEER = re.compile(r"[ \t\r\n]+")
 
 
 def text(html_quelle: str) -> str:
-    """Sichtbarer Text, so wie der Browser ihn zusammensetzt."""
+    """Visible text, the way the browser assembles it."""
     s = WEG.sub(" ", html_quelle)
     s = KOMMENTAR.sub(" ", s)
     s = INLINE_TAG.sub("", s)
@@ -66,7 +67,7 @@ def text(html_quelle: str) -> str:
 
 
 class Zaehler(HTMLParser):
-    """Zählt Start- und End-Tags je Elementname."""
+    """Counts start and end tags per element name."""
 
     def __init__(self) -> None:
         super().__init__(convert_charrefs=True)
@@ -80,17 +81,17 @@ class Zaehler(HTMLParser):
         self.zu[tag] += 1
 
     def handle_startendtag(self, tag, attrs):
-        # `<a/>` ist in HTML kein geschlossenes Element: der Parser im Browser
-        # ignoriert den Schrägstrich und lässt das Element offen. Nur bei
-        # void-Elementen bedeutet er etwas. Python zählte sonst ein End-Tag mit,
-        # das es nicht gibt — und der Befund fiele unter den Tisch.
+        # `<a/>` is not a closed element in HTML: the browser parser ignores
+        # the slash and leaves the element open. Only for void elements does it
+        # mean anything. Otherwise Python would count an end tag that does not
+        # exist — and the finding would go unnoticed.
         self.auf[tag] += 1
         if tag in VOID:
             self.zu[tag] += 1
 
 
 def struktur(html_quelle: str) -> Counter[str]:
-    """Elementnamen, bei denen Start- und End-Tag nicht aufgehen."""
+    """Element names whose start and end tags do not add up."""
     z = Zaehler()
     z.feed(FREMD.sub("", WEG.sub("", html_quelle)))
     offen: Counter[str] = Counter()
@@ -114,7 +115,7 @@ def bauen(hugo: str, ziel: Path, minify: bool) -> None:
 
 
 def ausschnitt(a: str, b: str) -> str:
-    """Die Stelle, an der sich zwei Textfassungen erstmals trennen."""
+    """The spot where two text versions first diverge."""
     i = 0
     while i < min(len(a), len(b)) and a[i] == b[i]:
         i += 1
