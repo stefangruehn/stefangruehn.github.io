@@ -1,0 +1,90 @@
+{{- /*
+  Statt der grossen "404" des Themes zeigt die Fehlerseite den Inhalt der
+  Startseite: Begruessungsblock und die neuesten Beitraege. Wer auf einer
+  toten URL landet, sieht damit sofort, worum es hier geht, statt in eine
+  Sackgasse zu laufen. Kein Redirect — die falsche URL bleibt sichtbar und
+  der Server antwortet weiter mit Status 404.
+*/ -}}
+{{- define "main" }}
+
+<header class="page-header">
+  <h1>404</h1>
+  <div class="post-description">
+    {{ i18n "not_found" }}
+  </div>
+</header>
+
+{{- with site.Home }}
+{{- partial "home_info.html" . }}
+{{- end }}
+
+{{- /* Gleiche Auswahl wie die Startseite; mainSections setzt Hugo selbst,
+       der default faengt eine leere Konfiguration ab. */ -}}
+{{- $sections := site.Params.mainSections | default (slice "posts") }}
+{{- $pages := where site.RegularPages "Type" "in" $sections }}
+{{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true" }}
+
+{{- range first 10 $pages }}
+<article class="post-entry">
+  {{- $isHidden := (.Param "cover.hiddenInList") | default (.Param "cover.hidden") | default false }}
+  {{- partial "cover.html" (dict "cxt" . "IsSingle" false "isHidden" $isHidden) }}
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">{{ .Title }}</h2>
+  </header>
+  {{- if (ne (.Param "hideSummary") true) }}
+  <div class="entry-content">
+    <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
+  </div>
+  {{- end }}
+  {{- if not (.Param "hideMeta") }}
+  <footer class="entry-footer">
+    {{- partial "post_meta.html" . -}}
+  </footer>
+  {{- end }}
+  <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
+</article>
+{{- end }}
+
+{{- /*
+  GitHub Pages liefert fuer jede tote URL nur die /404.html aus der Wurzel,
+  also die Fassung in der Standardsprache — auch unterhalb von /de/. Hugo baut
+  /de/404.html zwar, ausgeliefert wird sie dort nie. Deshalb holt die
+  Wurzelfassung die passende Sprachfassung nach und schreibt sie an ihre
+  Stelle. document.write statt innerHTML, weil sonst die Skripte der neuen
+  Seite (Theme-Umschalter, Zaehlpixel) nicht mehr anlaufen.
+
+  Ohne JavaScript bleibt die Standardsprache stehen — kein Redirect, die
+  aufgerufene URL bleibt in der Adresszeile und der Status bleibt 404.
+*/ -}}
+{{- if eq site.Home.RelPermalink "/" }}
+{{- $andere := slice }}
+{{- range site.Sites }}
+{{- $praefix := .Home.RelPermalink }}
+{{- if ne $praefix "/" }}
+{{- $andere = $andere | append (dict "praefix" $praefix "seite" (printf "%s404.html" $praefix)) }}
+{{- end }}
+{{- end }}
+{{- with $andere }}
+<script>
+  (function () {
+    var pfad = window.location.pathname;
+    var fassungen = {{ . }};
+    for (var i = 0; i < fassungen.length; i++) {
+      var f = fassungen[i];
+      if (pfad.indexOf(f.praefix) !== 0 || pfad === f.seite) { continue; }
+      fetch(f.seite, { credentials: "same-origin" }).then(function (antwort) {
+        return antwort.ok ? antwort.text() : null;
+      }).then(function (html) {
+        if (!html) { return; }
+        document.open();
+        document.write(html);
+        document.close();
+      }).catch(function () { /* offline oder blockiert: Standardsprache bleibt stehen */ });
+      return;
+    }
+  })();
+</script>
+{{- end }}
+{{- end }}
+
+{{- end }}{{- /* end main */ -}}

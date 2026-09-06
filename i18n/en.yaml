@@ -2,3 +2,7 @@
 feed_title_section: "{{ .section }} on {{ .site }}"
 feed_description: "Recent content on {{ .site }}"
 feed_description_section: "Recent content in {{ .section }} on {{ .site }}"
+
+# Error page: it shows the home page content below.
+not_found: "This page does not exist — here is the start instead."
+not_found_title: "404 – Page not found"

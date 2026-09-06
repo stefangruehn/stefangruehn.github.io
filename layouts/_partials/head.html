@@ -7,8 +7,10 @@
 <meta name="robots" content="noindex, nofollow">
 {{- end }}
 
-{{- /* Title */}}
-<title>{{ if .IsHome }}{{ else }}{{ if .Title }}{{ .Title }} | {{ end }}{{ end }}{{ site.Title }}</title>
+{{- /* Title. Hugo gibt der Fehlerseite in jeder Sprache denselben
+       englischen Titel "404 Page not found"; die Uebersetzung steht
+       deshalb hier in i18n. */}}
+<title>{{ if eq .Kind "404" }}{{ i18n "not_found_title" }} | {{ else if .IsHome }}{{ else }}{{ if .Title }}{{ .Title }} | {{ end }}{{ end }}{{ site.Title }}</title>
 
 {{- /* Meta */}}
 {{- if .IsHome }}
