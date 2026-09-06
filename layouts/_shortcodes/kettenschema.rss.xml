@@ -1,0 +1,25 @@
+{{- /* Kettenschema, RSS-Fassung: ASCII statt SVG.
+       Feed-Leser rendern Inline-SVG unzuverlaessig bis gar nicht.
+       Konvention fuer ASCII-Schemata: an jeder Ecke steht innen ein
+       Leerzeichen zwischen dem + und dem angrenzenden Strich. */ -}}
+{{- if eq .Page.Lang "de" -}}
+<pre>
+     + ------------- die nächste Frage ------------- +
+     v                                               |
+  Frage --&gt; Kette --&gt; Tatsache --&gt; Datei ------------+
+              |
+              + -- Papier --- Abbild --- Gerät
+
+  Dreizehn Ketten, drei Teile — je nachdem, wer am Ende antwortet.
+</pre>
+{{- else -}}
+<pre>
+     + ------------ the next question ------------- +
+     v                                              |
+  Question --&gt; Chain --&gt; Fact --&gt; File ------------+
+                 |
+                 + -- Paper --- Image --- Device
+
+  Thirteen chains, three parts — grouped by who answers at the end.
+</pre>
+{{- end -}}

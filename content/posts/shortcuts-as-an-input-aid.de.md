@@ -177,7 +177,7 @@ Er war, dass sie an ihrer eigenen Sache vorbeigebaut war — und die Korrektur, 
 
 ## Was sich übertragen lässt
 
-Das Ganze handelt von einer Kürzelliste, aber die Bewegung dahinter ist allgemeiner, und sie lässt sich an jeder Schnittstelle machen, die jemand mit den Händen bedient.
+Das Ganze handelt von einer Kürzelliste, aber das Prinzip dahinter ist allgemeiner, und es lässt sich an jeder Schnittstelle anwenden, die jemand mit den Händen bedient.
 
 **Bau die Toleranz ein, nicht die Präzision.**
 Frag nicht, wie du deine Eingabe eindeutig machst, sondern welche vier Fehler deine Nutzer tatsächlich produzieren — und fang genau die auf, still.

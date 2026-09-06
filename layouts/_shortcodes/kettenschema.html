@@ -1,0 +1,57 @@
+{{- /* Kettenschema der Serie, HTML-Fassung.
+       Die RSS-Fassung liegt daneben als kettenschema.rss.xml und liefert
+       ASCII statt SVG — Hugo waehlt die Vorlage nach Ausgabeformat.
+       Beschriftungen kommen aus der Sprache der Seite, damit eine Vorlage
+       fuer beide Fassungen reicht.
+       KEINE einfachen Anfuehrungszeichen im Textinhalt: ein ungepaartes
+       Zeichen bringt hugo --minify aus dem Tritt (tools/check-minify.py). */ -}}
+{{- $de := eq .Page.Lang "de" -}}
+{{- $n := slice
+    (dict "t" (cond $de "Frage" "Question")     "s" (cond $de "eine, nicht zehn" "one, not ten"))
+    (dict "t" (cond $de "Kette" "Chain")        "s" (cond $de "vorhandene Standardteile" "existing standard parts"))
+    (dict "t" (cond $de "Tatsache" "Fact")      "s" (cond $de "genau eine" "exactly one"))
+    (dict "t" (cond $de "Datei" "File")         "s" (cond $de "letzte Stufe, immer" "the last stage, always"))
+-}}
+{{- $w := slice
+    (dict "x" 130 "t" (cond $de "Papier" "Paper")  "s" (cond $de "Datenblatt, Schaltplan" "datasheet, schematic"))
+    (dict "x" 300 "t" (cond $de "Abbild" "Image")  "s" (cond $de "Firmware, zweimal gelesen" "firmware, read twice"))
+    (dict "x" 470 "t" (cond $de "Gerät" "Device")  "s" (cond $de "eigene Firmware, Hand, Ohr" "own firmware, hand, ear"))
+-}}
+<figure class="schema">
+<svg viewBox="0 0 780 220" role="img" aria-labelledby="kette-t kette-d" class="schema-svg">
+  <title id="kette-t">{{ if $de }}Wie eine Kette entsteht{{ else }}How a chain is assembled{{ end }}</title>
+  <desc id="kette-d">{{ if $de }}Frage, Kette, Tatsache, Datei. Von der Datei führt ein Pfeil zurück zur Frage, beschriftet: die nächste Frage. Unter der Kette stehen drei Gruppen, die antworten können: Papier, Abbild, Gerät.{{ else }}Question, chain, fact, file. An arrow leads back from the file to the question, labelled: the next question. Below the chain stand three groups that can answer: paper, image, device.{{ end }}</desc>
+  <defs>
+    <marker id="kp" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="9" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="var(--secondary)"/>
+    </marker>
+    <marker id="kl" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="9" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="var(--primary)"/>
+    </marker>
+  </defs>
+
+  {{- range $i, $b := $n }}
+  {{- $x := add 10 (mul $i 195) }}
+  <rect x="{{ $x }}" y="55" width="150" height="46" rx="6" fill="var(--entry)" stroke="var(--border)"/>
+  <text x="{{ add $x 75 }}" y="74" text-anchor="middle" class="schema-h">{{ $b.t }}</text>
+  <text x="{{ add $x 75 }}" y="91" text-anchor="middle" class="schema-s">{{ $b.s }}</text>
+  {{- if lt $i 3 }}
+  <line x1="{{ add $x 162 }}" y1="78" x2="{{ add $x 191 }}" y2="78" stroke="var(--secondary)" stroke-width="1.5" marker-end="url(#kp)"/>
+  {{- end }}
+  {{- end }}
+
+  <path d="M670,53 C670,22 670,20 620,20 L135,20 C85,20 85,22 85,51" fill="none"
+        stroke="var(--primary)" stroke-width="2" marker-end="url(#kl)"/>
+  <text x="390" y="14" text-anchor="middle" class="schema-l schema-l-strong">{{ if $de }}die nächste Frage{{ else }}the next question{{ end }}</text>
+
+  <line x1="280" y1="101" x2="280" y2="138" stroke="var(--secondary)" stroke-width="1.5"/>
+  <line x1="200" y1="138" x2="540" y2="138" stroke="var(--secondary)" stroke-width="1.5"/>
+  {{- range $w }}
+  <line x1="{{ add .x 70 }}" y1="138" x2="{{ add .x 70 }}" y2="159" stroke="var(--secondary)" stroke-width="1.5" marker-end="url(#kp)"/>
+  <rect x="{{ .x }}" y="161" width="140" height="46" rx="6" fill="var(--entry)" stroke="var(--border)"/>
+  <text x="{{ add .x 70 }}" y="180" text-anchor="middle" class="schema-h">{{ .t }}</text>
+  <text x="{{ add .x 70 }}" y="197" text-anchor="middle" class="schema-s">{{ .s }}</text>
+  {{- end }}
+</svg>
+<figcaption>{{ if $de }}Dreizehn Ketten, drei Teile — je nachdem, wer am Ende antwortet.{{ else }}Thirteen chains, three parts — grouped by who answers at the end.{{ end }}</figcaption>
+</figure>
