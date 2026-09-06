@@ -4,7 +4,7 @@ date: 2026-09-06T08:40:00+02:00
 draft: true
 tags: ["claude-code", "workflow", "schreiben", "Essay"]
 themen: ["autor"]
-series: ["Dieselben Regeln"]
+series: ["Selbstaehnlichkeit"]
 summary: "Zehn Beiträge in der ersten Woche, jeder zweisprachig — eine Zahl, bei der man misstrauisch wird. Der Verdacht ist berechtigt und trotzdem falsch: Neu ist an diesen Texten nicht der Inhalt. Neu ist, dass er abfließen kann."
 ---
 
@@ -75,7 +75,12 @@ Stumme Lautsprecher, ein Lautstärkeregler, den seit Jahren niemand mehr anfasst
 Jede einzelne Zahl darin stammt von dieser einen Maschine.
 Kein Modell der Welt kennt sie, bevor sie jemand misst.
 
-Dasselbe gilt für die IoT-Hardware auf meinem Schreibtisch, für die Entscheidung, dass die halbfertigen Notizen zu diesem Blog aufs Telefon dürfen, aber nicht in fremde Hände, und für jede Zahl weiter oben.
+Dasselbe gilt für den Drehknopf mit Display, der hier auf dem Schreibtisch liegt.
+Auf dem Board sitzen zwei Mikrocontroller, und am USB-Anschluss meldet sich immer nur einer von beiden — welcher, hängt davon ab, wie herum der Stecker steckt.
+In keinem Datenblatt steht das.
+In meinen Notizen steht es, weil es mich eine halbe Stunde gekostet hat.
+
+Dasselbe gilt für die Entscheidung, dass die halbfertigen Notizen zu diesem Blog aufs Telefon dürfen, aber nicht in fremde Hände, und für jede Zahl weiter oben.
 Der Stoff kommt von hier.
 Das Werkzeug übernimmt den Weg vom Stoff zum Text — und dieser Weg war dreißig Jahre lang die Stelle, an der alles steckenblieb.
 

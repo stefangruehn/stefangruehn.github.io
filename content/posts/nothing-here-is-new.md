@@ -4,7 +4,7 @@ date: 2026-09-06T08:40:00+02:00
 draft: true
 tags: ["claude-code", "workflow", "writing", "Essay"]
 topics: ["author"]
-series: ["The Same Rules"]
+series: ["Self-Similarity"]
 summary: "Ten posts in the first week, each of them in two languages — a number that invites suspicion. The suspicion is fair and still wrong: what is new about these texts is not their content. What is new is that it can finally drain."
 ---
 
@@ -75,7 +75,12 @@ Silent speakers, a volume control nobody has touched in years, a boot that got t
 Every single number in them comes from that one machine.
 No model on earth knows those numbers before somebody measures them.
 
-The same goes for the IoT hardware on my desk, for the decision that half-finished notes about this blog may reach my phone but nobody else's, and for every number above.
+The same goes for the knob with a display sitting on my desk.
+There are two microcontrollers on that board, and only ever one of them shows up on USB — which one depends on which way round the plug is inserted.
+No datasheet says so.
+My notes say so, because it cost me half an hour.
+
+The same goes for the decision that half-finished notes about this blog may reach my phone but nobody else's, and for every number above.
 The material comes from here.
 The tool takes over the road from material to text — and that road is where everything got stuck for thirty years.
 
