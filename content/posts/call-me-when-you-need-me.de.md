@@ -1,8 +1,8 @@
 ---
 title: "Ruf mich, wenn du mich brauchst: zwei Töne, die aus Warten Weggehen machen"
 date: 2026-09-06T02:17:32+02:00
-draft: true
 tags: ["claude-code", "workflow", "hooks", "linux", "Field Notes"]
+themen: ["kosten"]
 summary: "Ein Agent, der zwanzig Minuten rechnet, macht mich nur dann frei, wenn er mich zurückholen kann. Sonst sehe ich alle zwei Minuten nach und bin doch gebunden. Zwei Zeilen Konfiguration machen aus dem Nachsehen einen Rückruf — und den Ausgangswert dafür habe ich noch schnell gemessen, bevor ich es eingeschaltet habe."
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: "Call me when you need me: two sounds that turn waiting into leaving"
 date: 2026-09-06T02:17:32+02:00
-draft: true
 tags: ["claude-code", "workflow", "hooks", "linux", "Field Notes"]
+topics: ["cost"]
 summary: "An agent that runs for twenty minutes only frees me if it can call me back. Otherwise I check every two minutes and stay tied to the screen anyway. Two lines of configuration turn the checking into a callback — and I measured the baseline for it just before switching it on."
 ---
 
