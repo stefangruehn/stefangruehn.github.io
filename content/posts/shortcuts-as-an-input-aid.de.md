@@ -3,6 +3,7 @@ title: "Kürzel als Eingabehilfe: Wenn der Parser die Fehler verzeiht, die die H
 date: 2026-09-05T12:00:00+02:00
 draft: false
 tags: ["claude-code", "workflow", "shortcuts", "accessibility", "Field Notes"]
+themen: ["agent"]
 series: ["Codebuch"]
 summary: "Die erste Fassung meiner Kürzelliste stand in runden Klammern — und war damit für den Fall, in dem Tippersparnis am meisten zählt, falsch gebaut. Die Korrektur war als Zweitform für Härtefälle gedacht. Sie ist inzwischen die Hauptform für alle."
 ---

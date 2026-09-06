@@ -3,6 +3,7 @@ title: "Die teuerste Antwort ist ja: Was ein Nutzungslimit wirklich misst"
 date: 2026-09-05T11:00:00+02:00
 draft: false
 tags: ["claude-code", "workflow", "performance", "agents", "context", "Field Notes"]
+themen: ["kosten"]
 series: ["Codebuch"]
 summary: "Um 10:07 war das Fünf-Stunden-Kontingent erschöpft und drei Agenten tot. Die naheliegende Erklärung waren die drei Agenten. Die Messung sagt: Sie waren 7,8 Prozent. Der Rest war eine Sitzung, die sich an sich selbst erinnerte."
 ---

@@ -3,6 +3,7 @@ title: "Shortcuts as an input aid: when the parser forgives the errors the hand 
 date: 2026-09-05T12:00:00+02:00
 draft: false
 tags: ["claude-code", "workflow", "shortcuts", "accessibility", "Field Notes"]
+topics: ["agent"]
 series: ["Codebook"]
 summary: "The first version of my shortcut list used round brackets — which made it wrong for exactly the case where saved keystrokes matter most. The fix was meant as a second form for hard cases. It has since become the main form for everyone."
 ---

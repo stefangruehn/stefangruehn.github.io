@@ -1,0 +1,48 @@
+{{- /* Uebersicht der Themen. Eine einzige Seite: je Thema Ueberschrift,
+       Beschreibung und direkt darunter die Beitraege — ein Klick weniger als
+       eine Kachelseite, und Kontext und Angebot stehen zusammen.
+
+       Die Taxonomie heisst pro Sprache anders (themen/topics), die Darstellung
+       ist dieselbe; deshalb ein Partial und zwei duenne Templates.
+       Terme nach Weight, damit die Fragen in der gedachten Reihenfolge stehen
+       und nicht alphabetisch. */ -}}
+
+{{- $de := eq .Lang "de" }}
+
+{{- if .Title }}
+<header class="page-header">
+  {{- partial "breadcrumbs.html" . }}
+  <h1>{{ .Title }}</h1>
+  {{- if .Description }}
+  <div class="post-description">{{ .Description | markdownify }}</div>
+  {{- end }}
+</header>
+{{- end }}
+
+{{- if .Content }}
+<div class="post-content md-content">
+  {{- if not (.Param "disableAnchoredHeadings") }}
+  {{- partial "anchored_headings.html" .Content -}}
+  {{- else }}{{ .Content }}{{ end }}
+</div>
+{{- end }}
+
+{{- range .Pages.ByWeight }}
+<section class="thema">
+  <h2 class="thema-titel"><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></h2>
+  {{- with .Params.summary }}
+  <p class="thema-beschreibung">{{ . }}</p>
+  {{- end }}
+  <ul class="thema-beitraege">
+    {{- range .Pages.ByDate.Reverse }}
+    <li>
+      <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+      <span class="thema-datum">{{ .Date | time.Format (default "January 2, 2006" site.Params.DateFormat) }}</span>
+    </li>
+    {{- end }}
+  </ul>
+  <p class="thema-mehr">
+    <a href="{{ .Permalink }}">{{ if $de }}Zum Thema{{ else }}Go to topic{{ end }} &rarr;</a>
+  </p>
+</section>
+{{- end }}

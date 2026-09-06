@@ -1,0 +1,73 @@
+/* Themenuebersicht: je Thema ein Block aus Frage, Einordnung und Beitraegen.
+   Bewusst keine Karten wie auf /posts/ — die Karte betont den einzelnen
+   Beitrag, hier soll die Frage die Einheit sein. */
+.thema {
+    margin: 2.4rem 0 0;
+    padding-top: 1.6rem;
+    border-top: 1px solid var(--border);
+}
+
+.thema:first-of-type {
+    border-top: none;
+    padding-top: 0;
+}
+
+.thema-titel {
+    margin: 0 0 0.5rem;
+    font-size: 1.5rem;
+}
+
+.thema-titel a {
+    box-shadow: none;
+}
+
+.thema-beschreibung {
+    margin: 0 0 1rem;
+    color: var(--secondary);
+}
+
+.thema-beitraege {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.thema-beitraege li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.2rem 0.7rem;
+    margin: 0.45rem 0;
+}
+
+/* Das Datum steht rechts, solange Platz ist, und rutscht auf schmalen
+   Schirmen unter den Titel, statt ihn umzubrechen. */
+.thema-datum {
+    margin-left: auto;
+    color: var(--secondary);
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.thema-mehr {
+    margin: 0.9rem 0 0;
+    font-size: 0.9rem;
+}
+
+/* Tagwolke am Fuss der Suchseite. Sie stand frueher unter /tags/ im Menue;
+   der Abstand trennt sie vom Suchfeld, damit sie nicht wie ein Ergebnis wirkt. */
+.tagwolke {
+    margin-top: 3rem;
+    padding-top: 1.6rem;
+    border-top: 1px solid var(--border);
+}
+
+.tagwolke h2 {
+    margin: 0 0 0.4rem;
+    font-size: 1.3rem;
+}
+
+.tagwolke-hinweis {
+    margin: 0 0 1rem;
+    color: var(--secondary);
+}

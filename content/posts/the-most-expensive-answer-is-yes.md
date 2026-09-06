@@ -3,6 +3,7 @@ title: "The most expensive answer is yes: what a usage limit actually measures"
 date: 2026-09-05T11:00:00+02:00
 draft: false
 tags: ["claude-code", "workflow", "performance", "agents", "context", "Field Notes"]
+topics: ["cost"]
 series: ["Codebook"]
 summary: "At 10:07 my five-hour allowance was gone and three agents were dead. The obvious explanation was the three agents. The measurement says they were 7.8 per cent. The rest was a session remembering itself."
 ---

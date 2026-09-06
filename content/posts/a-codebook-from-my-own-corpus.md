@@ -3,6 +3,7 @@ title: "A codebook from my own corpus: the shortcuts you cannot guess"
 date: 2026-09-05T11:30:00+02:00
 draft: false
 tags: ["claude-code", "workflow", "shortcuts", "language", "Field Notes"]
+topics: ["agent"]
 series: ["Codebook"]
 summary: "Work with an agent for long enough and you repeat yourself. What you repeat can be abbreviated — but the good abbreviations cannot be guessed. They are in your own transcripts, and the most frequent word of all was missing from my guessed list."
 ---

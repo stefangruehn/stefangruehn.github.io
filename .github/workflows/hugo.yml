@@ -62,6 +62,13 @@ jobs:
           TZ: Europe/Berlin
         run: ./tools/check-minify.py
 
+      # Hugo erzwingt die Themen-Zuordnung nicht: ein Beitrag ohne themen:
+      # fehlt auf der Uebersicht, ohne dass der Build etwas meldet. Der
+      # Themen-Einstieg steht im Menue an erster Stelle und taugt nur, wenn
+      # er vollstaendig ist — deshalb vor dem Deploy statt danach.
+      - name: Check the topic taxonomy
+        run: ./tools/check-themen.py
+
       - name: Build with Hugo
         env:
           HUGO_ENVIRONMENT: production

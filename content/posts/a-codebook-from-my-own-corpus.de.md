@@ -3,6 +3,7 @@ title: "Ein Codebuch aus dem eigenen Korpus: Die Abkürzungen, die man nicht rat
 date: 2026-09-05T11:30:00+02:00
 draft: false
 tags: ["claude-code", "workflow", "shortcuts", "language", "Field Notes"]
+themen: ["agent"]
 series: ["Codebuch"]
 summary: "Wer lange genug mit einem Agenten arbeitet, wiederholt sich. Was man wiederholt, lässt sich abkürzen — aber die guten Abkürzungen kann man nicht raten. Sie stehen in den eigenen Transkripten, und das häufigste Wort fehlte in meiner geratenen Liste."
 ---

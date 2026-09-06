@@ -1,10 +1,10 @@
 ---
-title: "Suche"
-layout: "search"
-summary: "search"
-placeholder: "Beiträge durchsuchen …"
+title: "Themen"
+translationKey: "themen"
 ---
 
 > **Volle Transparenz:** Jeder Beitrag in diesem Blog entsteht unter Verwendung von [Claude Code](https://claude.com/claude-code), und die meisten handeln von der Arbeit damit.
 > Die Befehle, Messungen und Zahlen hier stammen aus echten Sitzungen auf meinen eigenen Rechnern — ich lese, prüfe und überarbeite alles, bevor es online geht.
 > Wo sich etwas als falsch herausgestellt hat, steht es im Beitrag.
+
+Vier Fragen, mit denen man hier ankommt. Jeder Beitrag steht in genau einer davon — die Liste unten ist also vollständig und überschneidungsfrei.

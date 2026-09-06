@@ -3,6 +3,7 @@ title: "Zweieinhalb Sekunden und ein Irrtum: Einen Linux-Boot mit Claude Code au
 date: 2026-09-02T02:30:00+02:00
 draft: false
 tags: ["claude-code", "linux", "systemd", "boot", "performance"]
+themen: ["rechner"]
 summary: "Systemnahe Optimierung gilt als gefährlich, also fasst sie kaum jemand an. Ein Abend mit systemd, eine Änderung, die sauber geladen wurde und trotzdem nichts tat, und eine ehrliche Antwort auf die Frage, ob das Ganze das System sicherer macht."
 ---
 

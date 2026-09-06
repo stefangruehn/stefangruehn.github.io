@@ -3,6 +3,7 @@ title: "Messen statt raten: Fehlersuche an einem Laptop-Lautsprecher mit Claude 
 date: 2026-08-31T06:00:00+02:00
 draft: false
 tags: ["claude-code", "linux", "hardware", "debugging", "audio", "chuwi", "Technical Deep Dive"]
+themen: ["rechner"]
 series: ["Nachhall"]
 summary: "Eine falsche Theorie, ein öffentlicher Widerruf und ein kleines Messwerkzeug — was ich darüber gelernt habe, KI-Unterstützung für Probleme einzusetzen, bei denen es überhaupt nicht um Code geht."
 ---

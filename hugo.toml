@@ -105,22 +105,22 @@ Every post here is written with [Claude Code](https://claude.com/claude-code), a
     [languages.en.menus]
 
       [[languages.en.menus.main]]
+        identifier = "topics"
+        name = "Topics"
+        url = "/topics/"
+        weight = 5
+
+      [[languages.en.menus.main]]
         identifier = "posts"
         name = "Posts"
         url = "/posts/"
-        weight = 10
+        weight = 15
 
       [[languages.en.menus.main]]
         identifier = "series"
         name = "Series"
         url = "/series/"
-        weight = 15
-
-      [[languages.en.menus.main]]
-        identifier = "tags"
-        name = "Tags"
-        url = "/tags/"
-        weight = 20
+        weight = 10
 
       [[languages.en.menus.main]]
         identifier = "search"
@@ -162,22 +162,22 @@ Jeder Beitrag hier entsteht mit [Claude Code](https://claude.com/claude-code), u
     [languages.de.menus]
 
       [[languages.de.menus.main]]
+        identifier = "themen"
+        name = "Themen"
+        url = "/de/themen/"
+        weight = 5
+
+      [[languages.de.menus.main]]
         identifier = "posts"
         name = "Beiträge"
         url = "/posts/"
-        weight = 10
+        weight = 15
 
       [[languages.de.menus.main]]
         identifier = "series"
         name = "Serien"
         url = "/series/"
-        weight = 15
-
-      [[languages.de.menus.main]]
-        identifier = "tags"
-        name = "Tags"
-        url = "/tags/"
-        weight = 20
+        weight = 10
 
       [[languages.de.menus.main]]
         identifier = "search"
@@ -191,14 +191,26 @@ Jeder Beitrag hier entsteht mit [Claude Code](https://claude.com/claude-code), u
         url = "/about/"
         weight = 40
 
-# Nur Tags und Serien. Ohne diesen Block legt Hugo zusaetzlich leere
+# Nur Tags, Serien und Themen. Ohne diesen Block legt Hugo zusaetzlich leere
 # categories-Seiten und -Feeds an, die Suchmaschinen indexieren.
 # series traegt die mehrteiligen Beitragsfolgen; die Begriffsseite ist
 # zugleich die Uebersichtsseite der Serie. Pro Sprache ein eigener Begriff
 # (DE "Nachhall", EN "Reverberations"), Hugo haelt sie getrennt.
-[taxonomies]
+#
+# thema/themen ist der oberste Einstieg: vier Leserfragen, jeder Beitrag
+# gehoert in genau eine. Die Taxonomie heisst pro Sprache anders, damit der
+# Pfad in der Sprache des Lesers steht (/de/themen/, /topics/) — deshalb
+# steht sie unter [languages.xx.taxonomies] und nicht global. Wer eine
+# Sprachfassung ueberschreibt, muss tag und series dort wiederholen.
+[languages.en.taxonomies]
   tag = "tags"
   series = "series"
+  topic = "topics"
+
+[languages.de.taxonomies]
+  tag = "tags"
+  series = "series"
+  thema = "themen"
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]

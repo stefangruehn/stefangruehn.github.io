@@ -1,0 +1,59 @@
+{{- /* Suchseite mit der Tagwolke darunter.
+       Kopf und Suchfeld eins zu eins aus PaperMods search.html — das Theme
+       bietet an dieser Stelle keinen Einhängepunkt, und der Suchindex haengt
+       an genau diesen IDs (#searchbox, #searchInput, #searchResults).
+       Angehaengt ist, was frueher /tags/ war: seit die Themen den Einstieg
+       uebernehmen, steht Tags nicht mehr im Menue. Die Seiten unter /tags/
+       gibt es weiter, hier ist ihr Verzeichnis. */ -}}
+{{- define "main" }}
+
+<header class="page-header">
+    <h1>{{- (printf "%s&nbsp;" .Title ) | htmlUnescape -}}
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+    </h1>
+    {{- if .Description }}
+    <div class="post-description">
+        {{ .Description }}
+    </div>
+    {{- end }}
+    {{- if not (.Param "hideMeta") }}
+    <div class="post-meta">
+        {{- partial "translation_list.html" . -}}
+    </div>
+    {{- end }}
+</header>
+
+{{- if .Content }}
+<div class="post-content md-content">{{ .Content }}</div>
+{{- end }}
+
+<div id="searchbox" class="searchbox">
+    <input id="searchInput" disabled placeholder="{{ .Params.placeholder | default (printf "%s ↵" .Title) }}"
+        aria-label="search" type="search" autocomplete="off" maxlength="64">
+    <ul id="searchResults" class="searchResults" aria-label="search results"></ul>
+</div>
+
+{{- $de := eq .Lang "de" }}
+{{- with site.Taxonomies.tags }}
+<section class="tagwolke">
+  <h2>{{ if $de }}Alle Tags{{ else }}All tags{{ end }}</h2>
+  <p class="tagwolke-hinweis">
+    {{ if $de }}Feiner als die Themen und ohne deren Einordnung — wer einen Begriff sucht und nicht eine Frage, findet ihn hier.{{ else }}Finer than the topics and without their framing — for looking up a term rather than a question.{{ end }}
+  </p>
+  <ul class="terms-tags">
+    {{- range $name, $wert := . }}
+    {{- with site.GetPage (printf "/tags/%s" $name) }}
+    <li>
+      <a href="{{ .Permalink }}">{{ .LinkTitle }} <sup><strong><sup>{{ len $wert.Pages }}</sup></strong></sup> </a>
+    </li>
+    {{- end }}
+    {{- end }}
+  </ul>
+</section>
+{{- end }}
+
+{{- end }}{{/* end main */}}
