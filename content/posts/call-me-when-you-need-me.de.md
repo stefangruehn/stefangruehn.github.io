@@ -142,7 +142,7 @@ Eine Frage an mich kostet den Agenten eine volle Runde mit dem gesamten mitgesch
 Was er ändert, ist die Wartezeit davor.
 
 Genau deshalb sind es nur zwei Ereignisse geblieben.
-Es gäbe mehr: vor jedem Werkzeugaufruf, nach jedem Werkzeugaufruf, bei jeder Sitzungsende.
+Es gäbe mehr: vor jedem Werkzeugaufruf, nach jedem Werkzeugaufruf, bei jedem Sitzungsende.
 Ein Ton, der ständig kommt, wird nach zwei Stunden nicht mehr gehört — und dann höre ich auch den einen nicht mehr, der zählt.
 
 ## Was ich gelernt habe
