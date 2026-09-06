@@ -7,4 +7,4 @@ translationKey: "themen"
 > The commands, measurements and numbers you find here come from real sessions on my own machines — I read, check and edit everything before it goes up.
 > Where something turned out to be wrong, the post says so.
 
-Four questions people arrive with. Every post belongs to exactly one of them, so the list below is complete and free of overlap.
+Five questions people arrive with. Every post belongs to exactly one of them, so the list below is complete and free of overlap.

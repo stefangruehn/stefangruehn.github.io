@@ -2,7 +2,6 @@
 title: "Who is actually writing this"
 translationKey: "thema-autor"
 weight: 5
-draft: true
 summary: "These posts appear fast; very little in them is new. Where they come from, what drives them, and how much of what you read is really mine."
 ---
 

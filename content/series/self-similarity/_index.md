@@ -1,7 +1,6 @@
 ---
 title: "Self-Similarity"
 badge: "Essay"
-draft: true
 summary: "Four posts about who is actually writing here: where the material comes from, what drives it, why chaotic systems and agentic AI share the same rules — and how much of these texts is really mine."
 ---
 

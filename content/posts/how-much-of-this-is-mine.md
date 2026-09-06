@@ -1,7 +1,6 @@
 ---
 title: "How much of this is really mine — and the one sentence that would not translate"
 date: 2026-09-06T09:10:00+02:00
-draft: true
 tags: ["claude-code", "workflow", "writing", "language", "Essay"]
 topics: ["author"]
 series: ["Self-Similarity"]
@@ -19,7 +18,7 @@ What makes it interesting is that the parts come apart fairly cleanly.
   No model knows which speaker on my laptop stays silent.
 - The seam between the two is easiest to see where language refuses to cooperate: *erfahren* and *erlaufen*.
 - What persists between sessions is a memory made of text files.
-  It holds no knowledge about code, only working agreements — each one from a moment when something went wrong.
+  It holds no knowledge about code, only working agreements — each one from a moment when something surprised me: going wrong, or going better than expected.
 - What carries over: keep the material, give away the shape.
   The other way round produces text nobody needed.
 
@@ -40,7 +39,7 @@ A text does not become mine because I read it over.
 It becomes mine when sentences disappear that I would not put my name to.
 
 Part two of this series even contains a case of exactly that.
-My raw notes claimed the logistic equation "still cannot be simulated".
+My raw notes said the logistic equation "still cannot be simulated" — jotted down so briefly that, taken literally, the sentence is wrong.
 It surfaced during preparation — the machine flagged the sentence and put two more precise versions next to it.
 I decided.
 That is what the division of labour looks like in practice: the objection can come from anywhere, the responsibility cannot.
@@ -117,7 +116,7 @@ That I type without umlauts and that typos should not be commented on.
 That a context reset should be proposed to me rather than waited for.
 That quotations get translated in the English version rather than left standing.
 
-Every one of those lines comes from a moment when something went wrong.
+Every one of those lines comes from a moment when something surprised me — going wrong, or going better than expected.
 Together they are what is left of a working day once the context has been cleared.
 
 Which leads straight to the next question, out of the previous part.

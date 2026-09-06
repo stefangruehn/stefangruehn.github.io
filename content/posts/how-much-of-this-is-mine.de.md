@@ -1,7 +1,6 @@
 ---
 title: "Erfahren und erlaufen: wie viel von diesen Texten wirklich von mir ist"
 date: 2026-09-06T09:10:00+02:00
-draft: true
 tags: ["claude-code", "workflow", "schreiben", "language", "Essay"]
 themen: ["autor"]
 series: ["Selbstaehnlichkeit"]
@@ -19,7 +18,7 @@ Interessant ist daran, dass sich die Teile ziemlich sauber trennen lassen.
   Kein Modell weiß, welcher Lautsprecher an meinem Laptop stumm bleibt.
 - Die Naht zwischen beidem wird an einer Stelle sichtbar, an der die Sprache nicht mitspielt: *erfahren* und *erlaufen*.
 - Was mitlernt, ist ein Gedächtnis aus Textdateien.
-  Darin steht kein Wissen über Code, sondern Arbeitsabsprachen — jede aus einem Moment, in dem etwas schieflief.
+  Darin steht kein Wissen über Code, sondern Arbeitsabsprachen — jede aus einem Moment, in dem etwas überraschte: schieflief oder besser lief als gedacht.
 - Übertragbar: Behalte den Stoff, gib die Form ab.
   Andersherum entsteht Text, den niemand braucht.
 
@@ -39,7 +38,7 @@ Dazu gehört ein Teil, der weniger nach Autorschaft aussieht und trotzdem einer 
 Ein Text wird nicht dadurch meiner, dass ich ihn gegenlese, sondern dadurch, dass Sätze verschwinden, die ich nicht unterschreiben würde.
 
 Im zweiten Teil dieser Serie steht so ein Fall sogar drin.
-In meinen Rohnotizen behauptete ein Satz, die logistische Gleichung lasse sich „bis heute nicht simulieren".
+In meinen Rohnotizen stand, die logistische Gleichung lasse sich „bis heute nicht simulieren" — so knapp notiert, dass der Satz wörtlich genommen falsch ist.
 Aufgefallen ist das beim Vorbereiten — die Maschine hat den Satz markiert und zwei präzisere Fassungen danebengelegt.
 Entschieden habe ich.
 So sieht die Arbeitsteilung in der Praxis aus: Der Einwand kann von überall kommen, die Verantwortung nicht.
@@ -113,7 +112,7 @@ Dass ich ohne Umlaute tippe und Tippfehler nicht kommentiert werden sollen.
 Dass ein Schnitt im Kontext vorgeschlagen werden soll, statt darauf zu warten, dass ich ihn verlange.
 Dass Zitate in der englischen Fassung mit übersetzt werden.
 
-Jede dieser Zeilen kommt aus einem Moment, in dem etwas schieflief.
+Jede dieser Zeilen kommt aus einem Moment, in dem etwas überraschte — schieflief oder besser lief als gedacht.
 Zusammen sind sie das, was von einem Arbeitstag übrig bleibt, wenn der Kontext gelöscht ist.
 
 Aus dem letzten Teil folgt daraus direkt die nächste Frage.

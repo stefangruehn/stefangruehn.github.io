@@ -1,11 +1,10 @@
 ---
 title: "The silky sound of mechanical arithmetic: where the material comes from"
 date: 2026-09-06T09:00:00+02:00
-draft: true
 tags: ["chaos", "complexity", "hardware", "books", "Essay"]
 topics: ["author"]
 series: ["Self-Similarity"]
-summary: "A Rubik's cube, four rules about neighbouring cells, a formula three symbols long, and a calculating machine you turn by hand. Four objects that all show the same thing — and one sentence from my own notes that I had to take back to get there."
+summary: "A Rubik's cube, four rules about neighbouring cells, a formula three symbols long, and a calculating machine you turn by hand. Four objects that all show the same thing — and one sentence from my own notes that I had to write out in full to get there."
 ---
 
 A calculating machine once gave me gooseflesh.
@@ -18,8 +17,8 @@ That is an odd sentence, and it is the shortest route to what this blog is actua
   A handful of rules that yield far more than they look like they contain — and no way to skip ahead to the result.
 - Two books turned that into a concept: *Gödel, Escher, Bach* and *A New Kind of Science*.
 - The sentence that holds it all together fits on one line: x → r · x · (1 − x).
-- Getting there meant striking a claim out of my own notes.
-  It was overstated, and the correct version is the more interesting one.
+- Getting there meant writing out a sentence from my own notes.
+  As short as I had jotted it down, taken literally it was wrong — and the full version is the more interesting one.
 - None of this is nostalgia.
   It is the toolkit I bring to agentic AI in the next part.
 
@@ -63,10 +62,6 @@ The gooseflesh was not nostalgia.
 It came from realising that a procedure can be an object.
 An algorithm you can pick up, turn, and hear working — no power, no screen, and not one place where you would have to take its word for anything.
 
-Since then there have been mechanical and analogue calculating devices around the house, and old optical microscopes alongside them.
-Much of it from flea markets, most of it made to work again by hand.
-The microscopes for the same reason as the calculators: instruments that make something visible that is there whether or not anyone is looking.
-
 ## Two books
 
 *Gödel, Escher, Bach* by Douglas R. Hofstadter, 1979.
@@ -101,21 +96,22 @@ And then, shortly after, it is chaos: no period, no return, and two starting val
 
 Robert M. May wrote this up in *Nature* in 1976, under a title that still says everything: *Simple mathematical models with very complicated dynamics*.
 
-### Where I have to correct myself
+### Where I have to be more precise
 
 My notes for this post contained the claim that the logistic equation "still cannot be simulated or even adequately represented, all our computing power notwithstanding, except by the formula itself".
 
-That is not right.
-Any pocket calculator can iterate it, as often as you like.
+As noted, that is too short.
+Taken literally it would be wrong: any pocket calculator can iterate the equation, as often as you like.
 
-Two more precise statements do hold.
+What it meant was two statements, each of which holds on its own.
 First, for general *r* there is no closed-form solution that computes x after n steps directly; known exceptions such as *r* = 4 stay exceptions.
 Second, with finite precision the specific trajectory is not predictable in the long run, because every rounding error grows along with it.
 
+The second one is what I meant: "except by the formula itself" says there is no way past the steps.
 The term that covers both is Wolfram's again: no shortcut.
 You have to go through.
 
-That is the stronger claim, not the weaker one — which is why this passage is here instead of the original sentence.
+Written out, that is the stronger claim, not the weaker one — which is why this passage is here instead of the sentence I had abbreviated.
 
 ## What carries over
 

@@ -7,4 +7,4 @@ translationKey: "themen"
 > Die Befehle, Messungen und Zahlen hier stammen aus echten Sitzungen auf meinen eigenen Rechnern — ich lese, prüfe und überarbeite alles, bevor es online geht.
 > Wo sich etwas als falsch herausgestellt hat, steht es im Beitrag.
 
-Vier Fragen, mit denen man hier ankommt. Jeder Beitrag steht in genau einer davon — die Liste unten ist also vollständig und überschneidungsfrei.
+Fünf Fragen, mit denen man hier ankommt. Jeder Beitrag steht in genau einer davon — die Liste unten ist also vollständig und überschneidungsfrei.

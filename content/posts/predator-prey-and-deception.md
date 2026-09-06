@@ -1,7 +1,6 @@
 ---
 title: "Predator, prey, deception: why agentic AI follows the same rules"
 date: 2026-09-06T09:05:00+02:00
-draft: true
 tags: ["agents", "complexity", "chaos", "claude-code", "Essay"]
 topics: ["author"]
 series: ["Self-Similarity"]

@@ -1,7 +1,6 @@
 ---
 title: "Selbstähnlichkeit"
 badge: "Essay"
-draft: true
 summary: "Vier Beiträge über die Frage, wer hier eigentlich schreibt: woher der Stoff kommt, was ihn antreibt, warum chaotische Systeme und agentische KI dieselben Regeln teilen — und wie viel von diesen Texten wirklich von mir stammt."
 ---
 

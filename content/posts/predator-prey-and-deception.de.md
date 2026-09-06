@@ -1,7 +1,6 @@
 ---
 title: "Räuber, Beute, Täuschung: warum agentische KI denselben Regeln folgt"
 date: 2026-09-06T09:05:00+02:00
-draft: true
 tags: ["agents", "complexity", "chaos", "claude-code", "Essay"]
 themen: ["autor"]
 series: ["Selbstaehnlichkeit"]

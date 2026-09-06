@@ -1,7 +1,6 @@
 ---
 title: "In the damp darkness of my head: ten posts in seven days, and not one of the thoughts is new"
 date: 2026-09-06T08:40:00+02:00
-draft: true
 tags: ["claude-code", "workflow", "writing", "Essay"]
 topics: ["author"]
 series: ["Self-Similarity"]
@@ -76,9 +75,11 @@ Every single number in them comes from that one machine.
 No model on earth knows those numbers before somebody measures them.
 
 The same goes for the knob with a display sitting on my desk.
-There are two microcontrollers on that board, and only ever one of them shows up on USB — which one depends on which way round the plug is inserted.
-No datasheet says so.
-My notes say so, because it cost me half an hour.
+There are two microcontrollers on that board, and which of them shows up on the USB-C port depends on which way round the plug is inserted — that much the vendor does document.
+It also states that the board has two rotary encoders.
+The pins say otherwise: not two channels a quarter cycle apart, but one pulse line per direction of turn — read them as an encoder and you get a counter that steps one out and one back forever.
+No datasheet says so, because at this point the datasheet claims the opposite.
+My notes say so, because I traced 134 steps to find out what those two lines actually do.
 
 The same goes for the decision that half-finished notes about this blog may reach my phone but nobody else's, and for every number above.
 The material comes from here.

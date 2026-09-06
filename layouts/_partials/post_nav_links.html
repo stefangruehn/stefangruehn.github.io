@@ -1,0 +1,25 @@
+{{- /* Vorwaerts- und Rueckverweis unter einem Beitrag.
+       PaperMods Fassung beschriftet Hugos .Next (den *neueren* Beitrag) mit
+       "Vorherige" und .Prev (den *aelteren*) mit "Naechste". Das liest sich
+       genau falsch herum: "Vorherige" fuehrte nach vorn in der Zeit, und in
+       einer Serie zeigte es auf einen spaeteren Teil.
+       Hier benennen die Beschriftungen, was der Link tut, statt eine
+       Leserichtung zu behaupten — und die Zeitachse laeuft wie gewohnt von
+       links nach rechts: aelter links, neuer rechts. */ -}}
+{{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{- if and (gt (len $pages) 1) (in $pages . ) }}
+<nav class="paginav">
+  {{- with $pages.Prev . }}
+  <a class="prev" href="{{ .Permalink }}">
+    <span class="title">« {{ i18n "older_post" }}</span>
+    <span>{{- .Name -}}</span>
+  </a>
+  {{- end }}
+  {{- with $pages.Next . }}
+  <a class="next" href="{{ .Permalink }}">
+    <span class="title">{{ i18n "newer_post" }} »</span>
+    <span>{{- .Name -}}</span>
+  </a>
+  {{- end }}
+</nav>
+{{- end }}

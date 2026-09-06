@@ -6,3 +6,9 @@ feed_description_section: "{{ .section }} – neue Inhalte von {{ .site }}"
 # Fehlerseite: sie zeigt darunter den Inhalt der Startseite.
 not_found: "Diese Seite gibt es nicht — hier ist stattdessen der Anfang."
 not_found_title: "404 – Seite nicht gefunden"
+
+# Vorwaerts- und Rueckverweis unter einem Beitrag. Eigene Schluessel statt
+# prev_page/next_page, weil das Theme dieselben Schluessel fuer die
+# Seitenblaetterung der Uebersichten benutzt — dort sind sie richtig.
+older_post: "Älterer Beitrag"
+newer_post: "Neuerer Beitrag"
