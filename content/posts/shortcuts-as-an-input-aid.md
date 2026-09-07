@@ -10,7 +10,7 @@ summary: "The first version of my shortcut list used round brackets — which ma
 
 Part one measured what shared context [costs](/posts/the-most-expensive-answer-is-yes/).
 Part two [built a codebook](/posts/a-codebook-from-my-own-corpus/) out of it.
-This part is about the people for whom that codebook is not a convenience.
+This part is about where that codebook is more than an incremental improvement.
 
 ## TL;DR
 

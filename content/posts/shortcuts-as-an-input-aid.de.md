@@ -10,7 +10,7 @@ summary: "Die erste Fassung meiner Kürzelliste stand in runden Klammern — und
 
 Teil eins hat gemessen, was der geteilte Kontext [kostet](/de/posts/the-most-expensive-answer-is-yes/).
 Teil zwei hat daraus [ein Codebuch gebaut](/de/posts/a-codebook-from-my-own-corpus/).
-Hier geht es darum, für wen dieses Codebuch keine Bequemlichkeit ist.
+Hier geht es darum, wo dieses Codebuch nicht mehr nur eine graduelle Verbesserung ist.
 
 ## Kurzfassung
 
