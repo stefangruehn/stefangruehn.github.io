@@ -1,0 +1,30 @@
+{{- /* Zwei Quellen, RSS-Fassung: ASCII statt SVG. */ -}}
+{{- if eq .Page.Lang "de" -}}
+<pre>
+  Rückstau ------------ läuft ab ------------ +
+  dreißig Jahre, endlich                      |
+                                              v
+                                          Beiträge
+                                              |
+  Rückkopplung &lt;----------------------------- +
+  die Arbeit am Blog selbst |
+        + ------------------+
+          und erzeugt neuen Stoff
+
+  Die eine Quelle läuft leer, die andere liefert nach.
+</pre>
+{{- else -}}
+<pre>
+  Backlog -------------- drains ------------- +
+  thirty years, finite                        |
+                                              v
+                                            Posts
+                                              |
+  Feedback &lt;--------------------------------- +
+  the work on the blog itself |
+        + --------------------+
+          and produces new material
+
+  One source empties, the other resupplies.
+</pre>
+{{- end -}}

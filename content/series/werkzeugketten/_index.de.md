@@ -1,5 +1,6 @@
 ---
-title: "Jede Frage ihre eigene Kette"
+draft: true
+title: "Werkzeugketten"
 badge: "Technical Deep Dive"
 summary: "Dreizehn kurze Werkzeugketten an einer Platine ohne brauchbare Dokumentation. Jede aus vorhandenen Standardteilen zusammengesteckt, jede endet in genau einer Tatsache — und der Unterschied zwischen ihnen ist nicht die Technik, sondern wer am Ende antwortet."
 ---

@@ -4,7 +4,7 @@ date: 2026-09-06T14:05:00+02:00
 draft: true
 tags: ["claude-code", "hardware", "esp32", "reverse-engineering", "debugging", "Technical Deep Dive"]
 themen: ["rechner"]
-series: ["Jede Frage ihre eigene Kette"]
+series: ["Werkzeugketten"]
 summary: "Ein Firmware-Abbild beschreibt nicht, was jemand vorhatte, sondern was ausgeführt wird. Drei Ketten enden in einem Abbild: eine liest die Werksfirmware, eine liest zwei gegeneinander, und eine liest dieselbe zweimal — und findet den Unterschied."
 ---
 
@@ -14,7 +14,7 @@ Ein Firmware-Abbild beschreibt, was ausgeführt wird — und auf dieser Platine 
 
 ## Kurzfassung
 
-- Die erste Frage dieses Teils: Warum zeigt die Werksfirmware auf demselben Glas ein stabiles Bild und die eigene nicht?
+- Die erste Frage dieses Teils: Warum zeigt die Werksfirmware auf demselben Bildschirm ein stabiles Bild und die eigene nicht?
   Ein Abbild kann diese Frage beantworten, weil es die Antwort enthält.
 - **Ankertechnik:** Log-Texte im Abbild sind die Fixpunkte.
   Die Adresse eines Textes steht in einer Konstantentabelle, und von dort führt eine einzelne Ladeanweisung zurück in die Funktion, die ihn ausgibt.

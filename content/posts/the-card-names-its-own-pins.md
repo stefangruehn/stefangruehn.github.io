@@ -4,7 +4,7 @@ date: 2026-09-06T14:10:00+02:00
 draft: true
 tags: ["claude-code", "hardware", "esp32", "reverse-engineering", "debugging", "Technical Deep Dive"]
 topics: ["machine"]
-series: ["Every Question Its Own Chain"]
+series: ["Toolchains"]
 summary: "840 pin assignments tried until a memory card answered. A vibration motor measured by a fingertip. A cable whose plug direction decides which processor you are talking to. The four chains that end in the device itself — and what the whole thing was for."
 ---
 
@@ -99,7 +99,7 @@ The fingertip settled it.
 The three clicks under the zero stream were **shorter and slightly quieter** than the three with the line held steadily high.
 So it is not the measurement that changes but the motor that is driven less.
 
-For that the project has a small scaffold of its own: a sequence that halts before every step and waits — a press of the knob, a touch of the glass or a keypress at the computer are equivalent go-signals.
+For that the project has a small scaffold of its own: a sequence that halts before every step and waits — a press of the knob, a touch of the screen or a keypress at the computer are equivalent go-signals.
 The answer arrives while the hand is still on the knob, instead of out of a log afterwards.
 
 The loudspeaker was decided the same way, and there the ear was the instrument.

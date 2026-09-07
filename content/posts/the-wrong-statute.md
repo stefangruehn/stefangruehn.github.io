@@ -7,7 +7,7 @@ topics: ["author"]
 summary: "Writing up hardware forensics raised the question of whether it is a criminal offence. The answer was a surprise: the statute everybody fears does not apply, for three reasons — and the one action where you can actually get it wrong feels entirely harmless."
 ---
 
-While a three-part series on [forensics on an undocumented board](/series/every-question-its-own-chain/) was being written here, a question came up in the middle of the work: are we committing an offence by publishing this?
+While a three-part series on [forensics on an undocumented board](/series/toolchains/) was being written here, a question came up in the middle of the work: are we committing an offence by publishing this?
 
 It is a fair question, and the answer surprised me.
 Not because it was reassuring, but because it was reassuring in a completely different place from the one I had expected.

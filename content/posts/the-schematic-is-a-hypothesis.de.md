@@ -4,7 +4,7 @@ date: 2026-09-06T14:00:00+02:00
 draft: true
 tags: ["claude-code", "hardware", "esp32", "reverse-engineering", "debugging", "Technical Deep Dive"]
 themen: ["rechner"]
-series: ["Jede Frage ihre eigene Kette"]
+series: ["Werkzeugketten"]
 summary: "Eine Platine ohne brauchbare Doku beantwortet keine Frage von selbst. Man steckt sich für jede Frage eine kurze Kette aus Standardwerkzeugen zusammen — und die erste Gruppe dieser Ketten endet auf Papier. Dreimal hat das Papier hier gelogen."
 ---
 

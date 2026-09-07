@@ -8,7 +8,17 @@ not_found: "Diese Seite gibt es nicht — hier ist stattdessen der Anfang."
 not_found_title: "404 – Seite nicht gefunden"
 
 # Vorwaerts- und Rueckverweis unter einem Beitrag. Eigene Schluessel statt
-# prev_page/next_page, weil das Theme dieselben Schluessel fuer die
-# Seitenblaetterung der Uebersichten benutzt — dort sind sie richtig.
+# prev_page/next_page: die beiden gehoeren zur Seitenblaetterung weiter unten
+# und sind auf eine Seite voller Beitraege gemuenzt, nicht auf einen einzelnen.
 older_post: "Älterer Beitrag"
 newer_post: "Neuerer Beitrag"
+
+# Seitenblaetterung der Uebersichten. Das Theme beschriftet die beiden Links mit
+# "Vorherige" und "Naechste" — das sagt nichts ueber eine Liste, die neueste
+# zuerst zeigt: Auf Seite 2 stehen die aelteren Beitraege, und "Naechste" liest
+# sich, als fuehrte es vorwaerts in der Zeit. Jede blaetterbare Liste hier ist
+# eine solche Beitragsliste — /posts/, die Startseite, Tag- und Themenseiten —
+# also benennen die Beschriftungen die Richtung in der Zeit, wie die Links unter
+# einem Beitrag (older_post/newer_post).
+prev_page: "Neuere Beiträge"
+next_page: "Ältere Beiträge"

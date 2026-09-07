@@ -7,7 +7,7 @@ themen: ["autor"]
 summary: "Beim Schreiben über Hardware-Forensik kam die Frage, ob man sich damit strafbar macht. Die Antwort war überraschend: Der gefürchtete Paragraf greift aus drei Gründen nicht — und die einzige Handlung, bei der man wirklich etwas falsch machen kann, fühlt sich vollkommen harmlos an."
 ---
 
-Als hier eine dreiteilige Serie über [Forensik an einer undokumentierten Platine](/de/series/jede-frage-ihre-eigene-kette/) entstand, kam mitten im Bauen die Frage: Machen wir uns strafbar, wenn wir das veröffentlichen?
+Als hier eine dreiteilige Serie über [Forensik an einer undokumentierten Platine](/de/series/werkzeugketten/) entstand, kam mitten im Bauen die Frage: Machen wir uns strafbar, wenn wir das veröffentlichen?
 
 Die Frage ist berechtigt und die Antwort war für mich überraschend.
 Nicht, weil sie beruhigend ausfiel — sondern weil sie an einer ganz anderen Stelle beruhigend ausfiel, als ich vermutet hatte.

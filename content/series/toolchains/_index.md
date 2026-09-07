@@ -1,5 +1,6 @@
 ---
-title: "Every Question Its Own Chain"
+draft: true
+title: "Toolchains"
 badge: "Technical Deep Dive"
 summary: "Thirteen short tool chains on a board with no usable documentation. Each assembled from existing standard parts, each ending in exactly one fact — and what separates them is not the technique but who answers at the end."
 ---

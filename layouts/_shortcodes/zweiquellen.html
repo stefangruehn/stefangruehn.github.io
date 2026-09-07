@@ -1,0 +1,40 @@
+{{- /* Zwei Quellen, ein Blog: der endliche Rueckstau und die nachliefernde
+       Rueckkopplung. HTML-Fassung; die RSS-Fassung liegt daneben als
+       zweiquellen.rss.xml. Farben nur ueber die PaperMod-Variablen. */ -}}
+{{- $de := eq .Page.Lang "de" -}}
+<figure class="schema">
+<svg viewBox="0 0 640 246" role="img" aria-labelledby="zq-t zq-d" class="schema-svg">
+  <title id="zq-t">{{ if $de }}Zwei Quellen, ein Blog{{ else }}Two sources, one blog{{ end }}</title>
+  <desc id="zq-d">{{ if $de }}Zwei Kästen links speisen einen Kasten rechts. Oben der Rückstau aus dreißig Jahren, der abläuft und endlich ist. Unten die Rückkopplung, die Arbeit am Blog selbst. Von den Beiträgen führt ein Pfeil zurück zur Rückkopplung: sie liefert nach.{{ else }}Two boxes on the left feed one box on the right. Above, the backlog of thirty years, which drains and is finite. Below, the feedback loop, the work on the blog itself. An arrow leads back from the posts to the feedback loop: it resupplies.{{ end }}</desc>
+  <defs>
+    <marker id="zp" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="9" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="var(--secondary)"/>
+    </marker>
+    <marker id="zl" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="9" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="var(--primary)"/>
+    </marker>
+  </defs>
+
+  <rect x="10" y="26" width="200" height="50" rx="6" fill="var(--entry)" stroke="var(--border)"/>
+  <text x="110" y="47" text-anchor="middle" class="schema-h">{{ if $de }}Rückstau{{ else }}Backlog{{ end }}</text>
+  <text x="110" y="64" text-anchor="middle" class="schema-s">{{ if $de }}dreißig Jahre, endlich{{ else }}thirty years, finite{{ end }}</text>
+
+  <rect x="10" y="150" width="200" height="50" rx="6" fill="var(--entry)" stroke="var(--border)"/>
+  <text x="110" y="171" text-anchor="middle" class="schema-h">{{ if $de }}Rückkopplung{{ else }}Feedback{{ end }}</text>
+  <text x="110" y="188" text-anchor="middle" class="schema-s">{{ if $de }}die Arbeit am Blog selbst{{ else }}the work on the blog itself{{ end }}</text>
+
+  <rect x="390" y="88" width="200" height="50" rx="6" fill="var(--entry)" stroke="var(--border)"/>
+  <text x="490" y="109" text-anchor="middle" class="schema-h">{{ if $de }}Beiträge{{ else }}Posts{{ end }}</text>
+  <text x="490" y="126" text-anchor="middle" class="schema-s">{{ if $de }}vierzehn, plus Entwürfe{{ else }}fourteen, plus drafts{{ end }}</text>
+
+  <path d="M212,58 C300,58 300,96 386,102" fill="none" stroke="var(--secondary)" stroke-width="1.5" marker-end="url(#zp)"/>
+  <text x="299" y="72" text-anchor="middle" class="schema-l">{{ if $de }}läuft ab{{ else }}drains{{ end }}</text>
+
+  <path d="M212,170 C300,170 300,130 386,124" fill="none" stroke="var(--primary)" stroke-width="2" marker-end="url(#zl)"/>
+
+  <path d="M490,140 C490,214 490,220 420,220 L180,220 C112,220 110,214 110,204" fill="none"
+        stroke="var(--primary)" stroke-width="2" marker-end="url(#zl)"/>
+  <text x="300" y="238" text-anchor="middle" class="schema-l schema-l-strong">{{ if $de }}und erzeugt neuen Stoff{{ else }}and produces new material{{ end }}</text>
+</svg>
+<figcaption>{{ if $de }}Die eine Quelle läuft leer, die andere liefert nach.{{ else }}One source empties, the other resupplies.{{ end }}</figcaption>
+</figure>

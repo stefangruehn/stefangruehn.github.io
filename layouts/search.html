@@ -4,25 +4,20 @@
        an genau diesen IDs (#searchbox, #searchInput, #searchResults).
        Angehaengt ist, was frueher /tags/ war: seit die Themen den Einstieg
        uebernehmen, steht Tags nicht mehr im Menue. Die Seiten unter /tags/
-       gibt es weiter, hier ist ihr Verzeichnis. */ -}}
+       gibt es weiter, hier ist ihr Verzeichnis.
+       Abweichend von PaperMod steht oben der Home-Link statt der
+       Uebersetzungszeile unter der Ueberschrift — so wie Themen, Serien
+       und Beitraege es zeigen. Der Sprachwechsel liegt auf dieser Seite
+       damit nur noch im Menue. Die Lupe hinter der Ueberschrift ist
+       ebenfalls raus: keine andere Seite fuehrt ein Icon im Titel. */ -}}
 {{- define "main" }}
 
 <header class="page-header">
-    <h1>{{- (printf "%s&nbsp;" .Title ) | htmlUnescape -}}
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-        </svg>
-    </h1>
+    {{- partial "breadcrumbs.html" . }}
+    <h1>{{ .Title }}</h1>
     {{- if .Description }}
     <div class="post-description">
         {{ .Description }}
-    </div>
-    {{- end }}
-    {{- if not (.Param "hideMeta") }}
-    <div class="post-meta">
-        {{- partial "translation_list.html" . -}}
     </div>
     {{- end }}
 </header>

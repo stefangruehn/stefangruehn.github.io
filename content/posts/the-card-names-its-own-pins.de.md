@@ -4,7 +4,7 @@ date: 2026-09-06T14:10:00+02:00
 draft: true
 tags: ["claude-code", "hardware", "esp32", "reverse-engineering", "debugging", "Technical Deep Dive"]
 themen: ["rechner"]
-series: ["Jede Frage ihre eigene Kette"]
+series: ["Werkzeugketten"]
 summary: "840 Pinbelegungen durchprobiert, bis eine Speicherkarte antwortet. Ein Vibrationsmotor, den die Fingerkuppe misst. Ein Kabel, dessen Steckrichtung entscheidet, mit welchem Prozessor man spricht. Die vier Ketten, die im Gerät selbst enden — und wozu das Ganze gut war."
 ---
 
@@ -99,7 +99,7 @@ Die Fingerkuppe hat es entschieden.
 Die drei Klicks unter dem Nullstrom waren **kürzer und etwas leiser** als die drei mit ruhig hochgehaltener Leitung.
 Damit ist es nicht die Messung, die sich ändert, sondern der Motor, der weniger angetrieben wird.
 
-Dafür gibt es im Projekt ein eigenes kleines Gerüst: ein Ablauf, der vor jedem Schritt anhält und wartet — Knopfdruck, Berührung des Glases oder Tastendruck am Rechner sind gleichwertige Weiter-Signale.
+Dafür gibt es im Projekt ein eigenes kleines Gerüst: ein Ablauf, der vor jedem Schritt anhält und wartet — Knopfdruck, Berührung des Bildschirms oder Tastendruck am Rechner sind gleichwertige Weiter-Signale.
 Damit fällt die Antwort, während die Hand noch am Knopf liegt, statt aus einem Log hinterher.
 
 Genauso ist der Lautsprecher entschieden worden, und dort war das Ohr das Instrument.

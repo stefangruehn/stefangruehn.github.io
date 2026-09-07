@@ -7,7 +7,17 @@ feed_description_section: "Recent content in {{ .section }} on {{ .site }}"
 not_found: "This page does not exist — here is the start instead."
 not_found_title: "404 – Page not found"
 
-# Post-to-post navigation. Own keys rather than prev_page/next_page: the theme
-# uses those for list pagination, where they are correct.
+# Post-to-post navigation. Own keys rather than prev_page/next_page: those two
+# belong to the list pagination below and are worded for a page of posts, not
+# for a single one.
 older_post: "Older post"
 newer_post: "Newer post"
+
+# List pagination. The theme labels the two links "Prev" and "Next", which says
+# nothing about a list sorted newest first: page 2 holds the older posts, and
+# "Next" reads as if it led forward in time. Every paginated list on this site is
+# a post list in that order — /posts/, the home page, tag and topic pages — so
+# the labels name the direction in time instead, the same way the links under a
+# post do (older_post/newer_post).
+prev_page: "Newer posts"
+next_page: "Older posts"

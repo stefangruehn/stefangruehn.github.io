@@ -1,0 +1,24 @@
+{{- /* Die Schleife, RSS-Fassung: ASCII statt SVG. Ecken innen mit Leerzeichen. */ -}}
+{{- if eq .Page.Lang "de" -}}
+<pre>
+     + ------------- und die Arbeit ändert sich ------------- +
+     v                                                        |
+  Arbeit --&gt; Zählung --&gt; Beitrag --&gt; Regel --&gt; Nächste Sitzung
+                                           |
+                                           + -- Sitzungsgrenze:
+                                                die Regel gilt erst danach
+
+  Fünf Schritte, ein Umlauf — und eine Verzögerung, die nicht wegfällt.
+</pre>
+{{- else -}}
+<pre>
+     + ---------------- and the work changes ---------------- +
+     v                                                        |
+  Work --&gt; Count --&gt; Post --&gt; Rule --&gt; Next session
+                                  |
+                                  + -- session boundary:
+                                       the rule applies only after
+
+  Five steps, one turn — and a delay that does not go away.
+</pre>
+{{- end -}}

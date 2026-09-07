@@ -1,0 +1,32 @@
+{{- /* Verteilung der Ausbreitung, RSS-Fassung: ASCII statt SVG. */ -}}
+{{- if eq .Page.Lang "de" -}}
+<pre>
+  angefasste Dateien   Commits
+      0  ############################# 29
+      1  ######                         6
+      2  ###############               15   &lt;-- Median: beide Sprachfassungen
+      3  #                              1
+      4  ##                             2
+      6  #                              1
+      7  #                              1
+      8  #                              1
+     18  #                              1   &lt;-- Themenseiten eingeführt
+
+  57 Commits vom 31. August bis 6. September, sortiert danach, wie weit sie reichen.
+</pre>
+{{- else -}}
+<pre>
+  files touched      commits
+      0  ############################# 29
+      1  ######                         6
+      2  ###############               15   &lt;-- median: the two language versions
+      3  #                              1
+      4  ##                             2
+      6  #                              1
+      7  #                              1
+      8  #                              1
+     18  #                              1   &lt;-- topic pages introduced
+
+  57 commits from 31 August to 6 September, sorted by how far they reach.
+</pre>
+{{- end -}}

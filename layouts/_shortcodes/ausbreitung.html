@@ -1,0 +1,41 @@
+{{- /* Verteilung der Ausbreitung je Commit, HTML-Fassung (Balken).
+       Gezaehlt am 2026-09-07 ueber 57 Commits: wie viele bestehende
+       Beitragsdateien ein Commit anfasst. Die Luecken bei 5 und zwischen
+       9 und 17 stehen bewusst leer - sie sind die Aussage.
+       Farben nur ueber die PaperMod-Variablen. */ -}}
+{{- $de := eq .Page.Lang "de" -}}
+{{- $v := dict "0" 29 "1" 6 "2" 15 "3" 1 "4" 2 "6" 1 "7" 1 "8" 1 "18" 1 -}}
+<figure class="schema">
+<svg viewBox="0 0 800 232" role="img" aria-labelledby="ausb-t ausb-d" class="schema-svg">
+  <title id="ausb-t">{{ if $de }}Wie weit eine Änderung reicht{{ else }}How far a change reaches{{ end }}</title>
+  <desc id="ausb-d">{{ if $de }}Balken über 57 Commits. 29 Commits fassen keine bestehende Beitragsdatei an, 6 fassen eine an, 15 fassen zwei an, danach je ein oder zwei Commits bei drei, vier, sechs, sieben und acht — und ein einzelner Commit bei achtzehn.{{ else }}Bars across 57 commits. 29 commits touch no existing post file, 6 touch one, 15 touch two, then one or two commits each at three, four, six, seven and eight — and a single commit at eighteen.{{ end }}</desc>
+  <defs>
+    <marker id="ap" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="8" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="var(--secondary)"/>
+    </marker>
+  </defs>
+
+  {{- range $k := (seq 0 18) }}
+  {{- $x := add 48 (mul $k 38) }}
+  {{- $c := index $v (printf "%d" $k) }}
+  {{- if $c }}
+  {{- $h := mul $c 5 }}
+  <rect x="{{ $x }}" y="{{ sub 180 $h }}" width="26" height="{{ $h }}" rx="2"
+        fill="{{ if or (eq $k 2) (eq $k 18) }}var(--primary){{ else }}var(--secondary){{ end }}"/>
+  {{- if gt $c 3 }}
+  <text x="{{ add $x 13 }}" y="{{ sub 174 $h }}" text-anchor="middle" class="schema-s">{{ $c }}</text>
+  {{- end }}
+  {{- end }}
+  <text x="{{ add $x 13 }}" y="197" text-anchor="middle" class="schema-s">{{ $k }}</text>
+  {{- end }}
+
+  <line x1="40" y1="180" x2="766" y2="180" stroke="var(--border)" stroke-width="1"/>
+  <text x="403" y="216" text-anchor="middle" class="schema-l">{{ if $de }}bestehende Beitragsdateien, die ein Commit anfasst{{ else }}existing post files a commit touches{{ end }}</text>
+
+  <line x1="172" y1="115" x2="153" y2="115" stroke="var(--secondary)" stroke-width="1.5" marker-end="url(#ap)"/>
+  <text x="178" y="119" class="schema-l schema-l-strong">{{ if $de }}Median: die beiden Sprachfassungen{{ else }}median: the two language versions{{ end }}</text>
+  <line x1="706" y1="158" x2="730" y2="172" stroke="var(--secondary)" stroke-width="1.5" marker-end="url(#ap)"/>
+  <text x="702" y="154" text-anchor="end" class="schema-l schema-l-strong">{{ if $de }}Themenseiten eingeführt{{ else }}topic pages introduced{{ end }}</text>
+</svg>
+<figcaption>{{ if $de }}57 Commits vom 31. August bis 6. September, sortiert danach, wie weit sie reichen.{{ else }}57 commits from 31 August to 6 September, sorted by how far they reach.{{ end }}</figcaption>
+</figure>

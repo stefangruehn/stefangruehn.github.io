@@ -1,0 +1,45 @@
+{{- /* Die fuenfschrittige Rueckkopplungsschleife, HTML-Fassung.
+       Die RSS-Fassung liegt daneben als schleife.rss.xml und liefert ASCII.
+       Beschriftungen aus der Sprache der Seite; Farben nur ueber die
+       PaperMod-Variablen, sonst bricht das Schema im anderen Farbschema.
+       KEINE einfachen Anfuehrungszeichen im Textinhalt (tools/check-minify.py). */ -}}
+{{- $de := eq .Page.Lang "de" -}}
+{{- $n := slice
+    (dict "t" (cond $de "Arbeit" "Work")                  "s" (cond $de "Transkripte fallen an" "transcripts accumulate"))
+    (dict "t" (cond $de "Zählung" "Count")                "s" (cond $de "764 Nachrichten" "764 messages"))
+    (dict "t" (cond $de "Beitrag" "Post")                 "s" (cond $de "der Fehler fällt auf" "the flaw surfaces"))
+    (dict "t" (cond $de "Regel" "Rule")                   "s" (cond $de "steht in CLAUDE.md" "sits in CLAUDE.md"))
+    (dict "t" (cond $de "Nächste Sitzung" "Next session") "s" (cond $de "die Regel gilt" "the rule applies"))
+-}}
+<figure class="schema">
+<svg viewBox="0 0 890 172" role="img" aria-labelledby="schleife-t schleife-d" class="schema-svg">
+  <title id="schleife-t">{{ if $de }}Die Schleife in fünf Schritten{{ else }}The loop in five steps{{ end }}</title>
+  <desc id="schleife-d">{{ if $de }}Arbeit, Zählung, Beitrag, Regel, nächste Sitzung — in dieser Reihenfolge. Von der nächsten Sitzung führt ein Pfeil zurück zur Arbeit, beschriftet: und die Arbeit ändert sich. Zwischen Regel und nächster Sitzung liegt eine Sitzungsgrenze; die Regel gilt erst danach.{{ else }}Work, count, post, rule, next session — in that order. An arrow leads back from the next session to the work, labelled: and the work changes. Between rule and next session lies a session boundary; the rule applies only after it.{{ end }}</desc>
+  <defs>
+    <marker id="sp" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="9" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="var(--secondary)"/>
+    </marker>
+    <marker id="sl" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="9" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="var(--primary)"/>
+    </marker>
+  </defs>
+
+  {{- range $i, $b := $n }}
+  {{- $x := add 10 (mul $i 178) }}
+  <rect x="{{ $x }}" y="70" width="150" height="48" rx="6" fill="var(--entry)" stroke="var(--border)"/>
+  <text x="{{ add $x 75 }}" y="90" text-anchor="middle" class="schema-h">{{ $b.t }}</text>
+  <text x="{{ add $x 75 }}" y="107" text-anchor="middle" class="schema-s">{{ $b.s }}</text>
+  {{- if lt $i 4 }}
+  <line x1="{{ add $x 152 }}" y1="94" x2="{{ add $x 174 }}" y2="94" stroke="var(--secondary)" stroke-width="1.5" marker-end="url(#sp)"/>
+  {{- end }}
+  {{- end }}
+
+  <path d="M797,68 C797,30 797,26 740,26 L145,26 C88,26 85,30 85,66" fill="none"
+        stroke="var(--primary)" stroke-width="2" marker-end="url(#sl)"/>
+  <text x="440" y="20" text-anchor="middle" class="schema-l schema-l-strong">{{ if $de }}und die Arbeit ändert sich{{ else }}and the work changes{{ end }}</text>
+
+  <line x1="708" y1="100" x2="708" y2="134" stroke="var(--border)" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <text x="708" y="150" text-anchor="middle" class="schema-l">{{ if $de }}Sitzungsgrenze: die Regel gilt erst danach{{ else }}session boundary: the rule applies only after{{ end }}</text>
+</svg>
+<figcaption>{{ if $de }}Fünf Schritte, ein Umlauf — und eine Verzögerung, die nicht wegfällt.{{ else }}Five steps, one turn — and a delay that does not go away.{{ end }}</figcaption>
+</figure>

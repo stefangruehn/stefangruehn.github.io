@@ -4,7 +4,7 @@ date: 2026-09-06T14:05:00+02:00
 draft: true
 tags: ["claude-code", "hardware", "esp32", "reverse-engineering", "debugging", "Technical Deep Dive"]
 topics: ["machine"]
-series: ["Every Question Its Own Chain"]
+series: ["Toolchains"]
 summary: "A firmware image does not describe what somebody intended, it describes what gets executed. Three chains end in an image: one reads the factory firmware, one reads two of them against each other, and one reads the same one twice — and finds the difference."
 ---
 
@@ -14,7 +14,7 @@ A firmware image describes what gets executed — and this board carried two of 
 
 ## TL;DR
 
-- The first question of this part: why does the factory firmware hold a stable picture on the same glass when ours does not?
+- The first question of this part: why does the factory firmware hold a stable picture on the same screen when ours does not?
   An image can answer that, because it contains the answer.
 - **Anchor technique:** log strings inside the image are the fixed points.
   A string's address sits in a constant pool, and from there a single load instruction leads back into the function that prints it.

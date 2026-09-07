@@ -4,7 +4,7 @@ date: 2026-09-06T14:00:00+02:00
 draft: true
 tags: ["claude-code", "hardware", "esp32", "reverse-engineering", "debugging", "Technical Deep Dive"]
 topics: ["machine"]
-series: ["Every Question Its Own Chain"]
+series: ["Toolchains"]
 summary: "A board with no usable documentation answers no question by itself. For every question you assemble a short chain out of standard tools — and the first group of those chains ends on paper. Three times, the paper here was wrong."
 ---
 
