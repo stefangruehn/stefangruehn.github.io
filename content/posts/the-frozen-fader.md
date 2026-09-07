@@ -256,3 +256,10 @@ If everything on your machine is uniformly too quiet and the desktop slider is a
 
 The fix is three lines in a shell script.
 The two reboots before it cost more and showed more.
+
+## Update, added 2026-09-07: not one fader, all of them
+
+Four days later it was silent again — noticed once more in the speaker test in Settings, but affecting every output through the built-in speakers.
+This time `Master` was correct at 69; the mute sat on `Speaker`, at `-74 dB` and switched off, from the same source as the 51 back then: at boot, `alsactl restore` puts back whatever is in `asound.state`.
+Which makes the lesson above too narrow — the soft mixer doesn't freeze `Master`, it freezes **every** fader on this card, and I had fixed one while missing the class it belongs to.
+Since then the unit sets `Speaker` and `Headphone` to pass-through as well, so `Master` stays the only fader whose value means anything.

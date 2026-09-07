@@ -256,3 +256,10 @@ Wenn auf deiner Maschine alles gleichmäßig zu leise ist und der Desktop-Regler
 
 Der Fix ist am Ende ein Dreizeiler in einem Shell-Skript.
 Die beiden Reboots davor waren teurer als er und haben mehr gezeigt.
+
+## Nachtrag vom 7.9.2026: nicht ein Regler, alle
+
+Vier Tage später war es wieder still — aufgefallen erneut im Lautsprechertest der Systemeinstellungen, betroffen aber jede Ausgabe über die eingebauten Lautsprecher.
+`Master` stand diesmal korrekt auf 69; stumm war `Speaker`, auf `-74 dB` und abgeschaltet, aus derselben Quelle wie die 51 von damals: Beim Boot spielt `alsactl restore` zurück, was in `asound.state` steht.
+Damit war die Lehre oben zu eng — der Soft-Mixer friert nicht `Master` ein, sondern **jeden** Regler dieser Karte, und ich habe einen repariert und die Klasse übersehen, zu der er gehört.
+Die Unit setzt seitdem auch `Speaker` und `Headphone` auf Durchlass, damit `Master` der einzige Regler bleibt, dessen Wert etwas bedeutet.
