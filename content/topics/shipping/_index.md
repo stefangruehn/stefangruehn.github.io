@@ -2,7 +2,6 @@
 title: "How it reaches the web"
 translationKey: "thema-veroeffentlichen"
 weight: 7
-draft: true
 summary: "Between what sits on my machine and what arrives on the web are stages nobody ever looks at. These posts are about what happens after the writing — from the commit to the page that gets served."
 ---
 

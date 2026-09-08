@@ -2,7 +2,6 @@
 title: "Wie kommt das ins Web?"
 translationKey: "thema-veroeffentlichen"
 weight: 7
-draft: true
 summary: "Zwischen dem, was auf meinem Rechner steht, und dem, was im Web ankommt, liegen Stufen, die niemand ansieht. Diese Beiträge handeln von dem, was nach dem Schreiben passiert — vom Commit bis zur ausgelieferten Seite."
 ---
 
