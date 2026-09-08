@@ -4,7 +4,7 @@ date: 2026-09-06T08:40:00+02:00
 tags: ["claude-code", "workflow", "writing", "Essay"]
 topics: ["author"]
 series: ["Self-Similarity"]
-summary: "Ten posts in the first week, each of them in two languages — a number that invites suspicion. The suspicion is fair and still wrong: what is new about these texts is not their content. What is new is that it can finally drain."
+summary: "Ten posts in the first week, each of them in two languages, a number that invites suspicion. The suspicion is fair and still wrong: what is new about these texts is not their content. What is new is that it can finally drain."
 ---
 
 Ten posts in seven days is the kind of number that makes people suspicious.

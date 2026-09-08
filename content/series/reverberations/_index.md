@@ -34,4 +34,4 @@ Every fix leaves behind a state it no longer corrects, and that state becomes th
 
 Familiarity with ALSA, PipeWire and systemd is assumed.
 The posts name controls, configuration keys and journal timestamps directly and explain no fundamentals.
-There are commands in them, but as evidence rather than instructions — if you want to repair your own speaker, what you will find here is a method, not a recipe.
+There are commands in them, but as evidence rather than instructions. If you want to repair your own speaker, what you will find here is a method, not a recipe.

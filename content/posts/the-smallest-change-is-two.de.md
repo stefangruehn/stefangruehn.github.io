@@ -5,7 +5,7 @@ draft: false
 tags: ["claude-code", "workflow", "komplexität", "chaos", "messung", "selbstbezug", "Essay"]
 themen: ["schreiben"]
 series: ["Rueckkopplung"]
-summary: "In sieben Tagen sind 39 Beitragsdateien entstanden und 86 bestehende geändert worden. Die meisten Änderungen fassen zwei Dateien an, eine fasste achtzehn an. Diese Verteilung ist der Grund, warum sich ein Blog wie ein gekoppeltes System verhält — und die Stelle, an der ich beiläufig an ihm drehe."
+summary: "In sieben Tagen sind 39 Beitragsdateien entstanden und 86 bestehende geändert worden. Die meisten Änderungen fassen zwei Dateien an, eine fasste achtzehn an. Diese Verteilung ist der Grund, warum sich ein Blog wie ein gekoppeltes System verhält, und die Stelle, an der ich beiläufig an ihm drehe."
 ---
 
 Die kleinste mögliche Änderung an diesem Blog ist zwei Dateien.
@@ -34,7 +34,7 @@ Es gibt keine Änderung an einer Stelle, weil jeder Beitrag zweisprachig ist.
 Der erste Commit liegt auf dem 31. August 2026, der letzte dieser Zählung auf dem 6. September.
 Dazwischen liegen 57 Commits.
 
-In ihnen entstehen 39 neue Beitragsdateien — das sind, weil jeder Beitrag doppelt existiert, knapp zwanzig Beiträge einschließlich der Entwürfe.
+In ihnen entstehen 39 neue Beitragsdateien. Das sind, weil jeder Beitrag doppelt existiert, knapp zwanzig Beiträge einschließlich der Entwürfe.
 Und es werden 86-mal bestehende Beitragsdateien geändert.
 
 Das Verhältnis überrascht beim ersten Hinsehen: Auf jede neu geschriebene Datei kommen gut zwei Änderungen an schon geschriebenen.
@@ -85,7 +85,7 @@ Alle fünf sind Entscheidungen über die Form, und jede einzelne hat mehr Beitr�
 ## Der Parameter
 
 Der Satz, mit dem die 18 anfingen, war kein technischer Auftrag.
-Er lief darauf hinaus, dass Leser nicht mit einer Liste nach Datum empfangen werden sollten, sondern mit Fragen — was hier eigentlich verhandelt wird.
+Er lief darauf hinaus, dass Leser statt einer Liste nach Datum die Frage sehen sollten, was hier eigentlich verhandelt wird.
 
 Aus diesem Wunsch folgt eine Regel: Jeder Beitrag gehört zu genau einem Thema, und jedes Thema hat eine Seite.
 Achtzehn Beitragsdateien mussten dafür ein Feld bekommen.
@@ -105,7 +105,7 @@ Genau das meint Parametrisieren im Vorbeigehen: Der Satz handelt vom Einstieg f�
 
 ## Drei von vier Zutaten
 
-Damit eine Schleife nicht ruhig einläuft, sondern schwingt, braucht es vier Dinge.
+Damit eine Schleife schwingt, statt ruhig einzulaufen, braucht es vier Dinge.
 
 **Rückkopplung.** Sie ist belegt: Die Klammerregel steht in der Datei, die die nächste Sitzung liest.
 
@@ -144,23 +144,23 @@ Steigt es über mehrere Wochen, frisst die Struktur das Schreiben: Dann geht die
 Fällt es gegen null, ist die Ordnung eingefroren — auch kein gutes Zeichen, nur ein anderes.
 
 Die Zahl steht in jedem Repository, sie muss nur einmal ausgerechnet werden.
-In sieben Tagen weiß ich mehr; die Zählung von heute ist der Anfangswert, gegen den ich später vergleiche.
+In sieben Tagen weiß ich mehr. Die Zählung von heute ist der Anfangswert, gegen den ich später vergleiche.
 
 ## Was ich gelernt habe
 
 - **Die kleinste Änderung ist selten eins.** Zweisprachigkeit macht aus jedem Fund zwei Handgriffe. Das ist kein Ärgernis, sondern die Grundverstärkung des Systems, und man sollte sie kennen, bevor man Aufwand schätzt.
 - **Strukturentscheidungen kosten zweimal.** Einmal beim Einbau, sichtbar im Commit. Und dann dauerhaft, unsichtbar, an jedem Beitrag, der danach entsteht.
 - **Wer über den Leser spricht, entscheidet über die Kopplung.** Der Satz klang nach Gestaltung und war eine Aussage über die Verbindungsdichte.
-- **Die Bedingungen für eine Schwingung sind leichter erfüllt, als es aussieht.** Rückkopplung, Verzögerung, Verstärkung und eine knappe Ressource — vier Dinge, die in einem Blog von vierzehn Beiträgen bereits alle vorliegen.
+- **Die Bedingungen für eine Schwingung sind leichter erfüllt, als es aussieht.** Rückkopplung, Verzögerung, Verstärkung und eine knappe Ressource: vier Dinge, die in einem Blog von vierzehn Beiträgen bereits alle vorliegen.
 - **Bedingungen erfüllt heißt nicht Wirkung nachgewiesen.** Die Trennung zwischen beidem ist der ganze Unterschied zwischen einer Messung und einer schönen Erzählung.
 
 ## Was sich übertragen lässt
 
-Wenn dich interessiert, wie stark dein eigenes Projekt gekoppelt ist, brauchst du keine Theorie, sondern eine Zeile Auswertung: Zähle für jeden Commit, wie viele bestehende Inhaltsdateien er anfasst, und sieh dir den Median und das Maximum an.
+Wenn dich interessiert, wie stark dein eigenes Projekt gekoppelt ist, brauchst du keine Theorie, eine Zeile Auswertung genügt: Zähle für jeden Commit, wie viele bestehende Inhaltsdateien er anfasst, und sieh dir den Median und das Maximum an.
 
 Der Median sagt dir, was eine gewöhnliche Änderung kostet.
 Das Maximum sagt dir, was eine Entscheidung kosten kann.
-Klaffen beide weit auseinander, hast du ein System, in dem seltene Entscheidungen teuer sind — und in dem es sich lohnt, vor der nächsten kurz innezuhalten.
+Klaffen beide weit auseinander, hast du ein System, in dem seltene Entscheidungen teuer sind, und in dem es sich lohnt, vor der nächsten kurz innezuhalten.
 
 Die Zahl selbst ist harmlos.
 Interessant wird sie, wenn du sie in vier Wochen noch einmal ausrechnest.

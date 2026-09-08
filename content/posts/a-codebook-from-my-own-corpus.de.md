@@ -5,10 +5,10 @@ draft: false
 tags: ["claude-code", "workflow", "shortcuts", "language", "Field Notes"]
 themen: ["agent"]
 series: ["Codebuch"]
-summary: "Wer lange genug mit einem Agenten arbeitet, wiederholt sich. Was man wiederholt, lässt sich abkürzen — aber die guten Abkürzungen kann man nicht raten. Sie stehen in den eigenen Transkripten, und das häufigste Wort fehlte in meiner geratenen Liste."
+summary: "Wer lange genug mit einem Agenten arbeitet, wiederholt sich. Was man wiederholt, lässt sich abkürzen, aber die guten Abkürzungen kann man nicht raten. Sie stehen in den eigenen Transkripten, und das häufigste Wort fehlte in meiner geratenen Liste."
 ---
 
-Teil eins hat gemessen, was der geteilte Kontext [wirklich kostet](/de/posts/the-most-expensive-answer-is-yes/) — und dass eine vermiedene Rückfrage einen vollen Durchlauf spart.
+Teil eins hat gemessen, was der geteilte Kontext [wirklich kostet](/de/posts/the-most-expensive-answer-is-yes/), und dass eine vermiedene Rückfrage einen vollen Durchlauf spart.
 Das hier ist der Versuch, sie planmäßig zu vermeiden.
 
 ## Kurzfassung
@@ -20,7 +20,7 @@ Das hier ist der Versuch, sie planmäßig zu vermeiden.
 - Die Prüfung fand drei Defekte, die beim Schreiben keinem auffallen: einen echten Widerspruch, ein Escape-Zeichen, das mit sich selbst kollidiert, und ein Zeichen, das längst vergeben war.
 - Ein Kürzel, das eine bestehende Dauerregel nur wiederholt, ist tote Syntax.
   Es taugt nur als Verstärker.
-- Der Unterschied zu jedem Textbaustein: Das Ziel der Expansion ist keine Zeichenkette, sondern eine Anweisung.
+- Der Unterschied zu jedem Textbaustein: Das Ziel der Expansion ist eine Anweisung und keine Zeichenkette.
   Drei Anschläge können eine halbe Stunde Arbeit auslösen.
 
 ---
@@ -28,7 +28,7 @@ Das hier ist der Versuch, sie planmäßig zu vermeiden.
 ## Aus einem Zeichen wurde eine Liste
 
 Am Anfang stand eine Bequemlichkeit.
-Ich schreibe oft „bitte interviewe mich jetzt dazu, bevor du schreibst" — jedes Mal derselbe Satz, jedes Mal in derselben Situation.
+Ich schreibe oft „bitte interviewe mich jetzt dazu, bevor du schreibst", jedes Mal derselbe Satz, jedes Mal in derselben Situation.
 
 Also wurde daraus ein Zeichen: `[?]`.
 
@@ -62,7 +62,7 @@ test      13×      merke dir  7×
 `commit`, das häufigste von allen, stand nicht darauf.
 
 Das ist der ganze Punkt des Messens.
-Die Intuition erwischt zuverlässig das, was auffällt — die besonderen Anweisungen, die neuen Werkzeuge, das zuletzt Gelernte.
+Die Intuition erwischt zuverlässig das, was auffällt: die besonderen Anweisungen, die neuen Werkzeuge, das zuletzt Gelernte.
 Sie erwischt nicht das, was so selbstverständlich ist, dass man es beim Nachdenken über die eigene Arbeit überliest.
 
 Ein Codebuch, das man rät, ist ein Codebuch über die eigene Selbstwahrnehmung.
@@ -76,12 +76,12 @@ Die geratene Liste hatte drei Defekte, und keiner davon war beim Schreiben zu se
 `[-]` sollte „das sehe ich anders" heißen und gleichzeitig „korrigiere mich".
 Das sind zwei entgegengesetzte Richtungen in einem Zeichen: Wer irrt sich denn, du oder ich?
 Ein Zeichen, das beides bedeuten kann, bedeutet nichts.
-Es heißt jetzt nur noch das eine — „das sehe ich anders, begründe deine Position neu oder revidiere sie" —, und damit ist auch klar, wer am Zug ist.
+Es heißt jetzt nur noch das eine, „das sehe ich anders, begründe deine Position neu oder revidiere sie", und damit ist auch klar, wer am Zug ist.
 
 **Ein Escape-Zeichen, das mit sich selbst kollidiert.**
 Man braucht eine Möglichkeit zu sagen: *diesmal meine ich wirklich nur das Zeichen.*
 Vorgeschlagen war ein Schrägstrich davor.
-Nur ist der Schrägstrich selbst ein Kürzel der Liste, `[/]` für „nenn mir eine Alternative" — und am Zeilenanfang ist er in Claude Code der Präfix für Slash-Befehle.
+Nur ist der Schrägstrich selbst ein Kürzel der Liste, `[/]` für „nenn mir eine Alternative", und am Zeilenanfang ist er in Claude Code der Präfix für Slash-Befehle.
 Zwei Kollisionen in einem Zeichen.
 Es wurde der Backslash.
 
@@ -95,7 +95,7 @@ Es wurde der Backslash.
 Das heißt nicht „interviewe mich".
 Das heißt „stimmt das?".
 
-Aufgelöst wurde es ohne Verlust: Genau diese Fälle heißen jetzt `[&]` — „ich vermute, dass …, prüf es, statt es zu übernehmen".
+Aufgelöst wurde es ohne Verlust: Genau diese Fälle heißen jetzt `[&]`: „ich vermute, dass …, prüf es, statt es zu übernehmen".
 Die alte Bedeutung ist umgezogen, die neue hat das Zeichen bekommen.
 Eine Umbuchung, keine Kollision.
 
@@ -110,7 +110,8 @@ Sparsamkeit steht bei mir längst als Dauerregel in der globalen Konfiguration, 
 Ein Zeichen, das eine Regel wiederholt, die ohnehin gilt, schaltet nichts ein.
 Es ist tote Syntax: Man tippt es, es fühlt sich wirksam an, und es ändert nichts.
 
-Gerettet wurde es dadurch, dass es nicht mehr dasselbe sagt, sondern mehr:
+Gerettet wurde es dadurch, dass es nicht mehr dasselbe sagt.
+Es sagt mehr:
 
 > Nimm die tokensparsamste Route — **auch auf Kosten von Gründlichkeit.**
 
@@ -127,8 +128,9 @@ Hier ist das Ziel der Expansion keine Zeichenkette, sondern eine Anweisung.
 `[s]` heißt: *Sieh dir die Beiträge im Blog an, die zu dieser Idee passen, Entwürfe eingeschlossen, bewerte sie, und wenn es mehr als zwei sind, schlag eine Serie vor.*
 Das sind drei Anschläge und eine halbe Stunde Arbeit.
 
-Genau das macht die Liste zu etwas anderem als eine Bequemlichkeit — und es verbindet sie mit der Rechnung aus Teil eins.
-Eine Rückfrage kostet nicht das, was sie an Zeichen wiegt, sondern einen vollständigen Durchlauf des bisherigen Gesprächs.
+Genau das macht die Liste zu etwas anderem als eine Bequemlichkeit, und es verbindet sie mit der Rechnung aus Teil eins.
+Eine Rückfrage kostet nicht das, was sie an Zeichen wiegt.
+Sie kostet einen vollständigen Durchlauf des bisherigen Gesprächs.
 Ein Zeichen, das eine Rückfrage überflüssig macht, spart nicht drei Anschläge.
 Es spart eine ganze Runde.
 
@@ -149,13 +151,13 @@ Was hilft, ist ein Satz am Ende beider Dateien: *Ändert sich etwas, gehört es 
 Die Sache ist nicht neu, sie hat nur bisher andere Namen getragen.
 
 - **Quellenkodierung.**
-  Kurze Codes für häufige Symbole, lange für seltene — das ist die Idee hinter jedem Kompressionsverfahren.
+  Kurze Codes für häufige Symbole, lange für seltene, das ist die Idee hinter jedem Kompressionsverfahren.
   Das Codebuch ist hier der geteilte Kontext, und die Verteilung ist meine eigene Anweisungshäufigkeit.
 - **Restringierter Code.**
   Basil Bernstein hat beschrieben, dass Gruppen mit viel geteiltem Hintergrund kürzer sprechen können, weil der Rest vorausgesetzt ist.
-  Nur wächst dieser geteilte Hintergrund hier nicht über Generationen, sondern über Sitzungen.
+  Nur wächst dieser geteilte Hintergrund hier über Sitzungen und nicht über Generationen.
 - **Grammatikalisierung im Zeitraffer.**
-  Häufig gebrauchte Inhaltswörter fallen mit der Zeit zu Funktionsmarkern zusammen — in natürlichen Sprachen dauert das Jahrhunderte.
+  Häufig gebrauchte Inhaltswörter fallen mit der Zeit zu Funktionsmarkern zusammen, in natürlichen Sprachen dauert das Jahrhunderte.
   Hier dauert es einen Nachmittag, weil beide Seiten das Wörterbuch aufschreiben können, statt es aushandeln zu müssen.
 - **Eine gemeinsame Fachsprache.**
   Im Softwareentwurf ist das ein alter Ratschlag: erst die Begriffe klären, dann bauen.
@@ -166,7 +168,7 @@ Die Sache ist nicht neu, sie hat nur bisher andere Namen getragen.
 - **Messen schlägt raten, und zwar reproduzierbar.**
   Das häufigste Wort meiner eigenen Arbeit fehlte auf der Liste, die ich über meine eigene Arbeit geschrieben hatte.
 - **Ein Kürzel ist ein Entwurf und hat Defekte.**
-  Widersprüchliche Bedeutung, kollidierendes Escape, doppelt vergebenes Zeichen — das sind gewöhnliche Entwurfsfehler und keine Kleinigkeiten.
+  Widersprüchliche Bedeutung, kollidierendes Escape, doppelt vergebenes Zeichen, das sind gewöhnliche Entwurfsfehler und keine Kleinigkeiten.
 - **Prüf jeden Eintrag daran, was ohne ihn anders wäre.**
   Was eine bestehende Regel nur wiederholt, wirkt nicht. Was eine Abwägung verschiebt, wirkt.
 - **Eine belegte Bedeutung wird umgebucht, nicht überschrieben.**
@@ -176,7 +178,7 @@ Die Sache ist nicht neu, sie hat nur bisher andere Namen getragen.
 
 ## Wenn du dir selbst eines bauen willst
 
-Das lohnt sich, sobald du merkst, dass du dich wiederholst — und du merkst es später, als es anfängt.
+Das lohnt sich, sobald du merkst, dass du dich wiederholst, und du merkst es später, als es anfängt.
 
 1. **Zähl zuerst, schreib danach.**
    Nimm deine eigenen Transkripte, sortier nach Häufigkeit und sieh dir die ersten zwanzig Zeilen an. Sie werden dich überraschen.
@@ -190,5 +192,5 @@ Das lohnt sich, sobald du merkst, dass du dich wiederholst — und du merkst es 
    Ein Codebuch, das nur eine Seite kennt, ist keins.
 
 Der Aufwand dafür ist ein Nachmittag, und der größte Teil davon geht für Schritt drei drauf.
-Was danach steht, ist keine Sammlung von Abkürzungen mehr, sondern eine kleine gemeinsame Sprache — und die hat eine Eigenschaft, mit der ich nicht gerechnet hatte.
+Was danach steht, ist eine kleine gemeinsame Sprache und keine Sammlung von Abkürzungen mehr, und die hat eine Eigenschaft, mit der ich nicht gerechnet hatte.
 Sie ist für jemanden, der sie dringender braucht als ich, etwas ganz anderes als eine Bequemlichkeit.

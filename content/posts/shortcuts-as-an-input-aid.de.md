@@ -5,7 +5,7 @@ draft: false
 tags: ["claude-code", "workflow", "shortcuts", "accessibility", "Field Notes"]
 themen: ["agent"]
 series: ["Codebuch"]
-summary: "Die erste Fassung meiner Kürzelliste stand in runden Klammern — und war damit für den Fall, in dem Tippersparnis am meisten zählt, falsch gebaut. Die Korrektur war als Zweitform für Härtefälle gedacht. Sie ist inzwischen die Hauptform für alle."
+summary: "Die erste Fassung meiner Kürzelliste stand in runden Klammern und war damit für den Fall, in dem Tippersparnis am meisten zählt, falsch gebaut. Die Korrektur war als Zweitform für Härtefälle gedacht. Sie ist inzwischen die Hauptform für alle."
 ---
 
 Teil eins hat gemessen, was der geteilte Kontext [kostet](/de/posts/the-most-expensive-answer-is-yes/).
@@ -15,7 +15,7 @@ Hier geht es darum, wo dieses Codebuch nicht mehr nur eine graduelle Verbesserun
 ## Kurzfassung
 
 - Meine erste Kürzelliste benutzte runde Klammern.
-  Die brauchen Shift — einen gehaltenen Modifier plus zweite Taste.
+  Die brauchen Shift, also einen gehaltenen Modifier plus zweite Taste.
 - Genau das ist die teuerste Bewegung für jeden, dessen Hand nicht genau trifft.
   Die Liste, die Tippen sparen sollte, war für den Fall, in dem das am meisten zählt, falsch gebaut.
 - Behoben wurde es durch eine ungeshiftete Form: `[x]` statt `(x)`.
@@ -36,7 +36,7 @@ Auf meiner US-Tastatur kosten sie Shift, und Shift ist kein Anschlag wie jeder a
 Es ist ein Modifier, der **gehalten** werden muss, während eine zweite Taste getroffen wird.
 
 Für die meisten ist das nicht der Rede wert.
-Für jemanden mit Tremor, Dystonie oder einer anderen Bewegungsstörung ist genau diese Kombination die teuerste Bewegung auf der Tastatur — deshalb gibt es „Einrastfunktion" als Betriebssystem-Einstellung überhaupt.
+Für jemanden mit Tremor, Dystonie oder einer anderen Bewegungsstörung ist genau diese Kombination die teuerste Bewegung auf der Tastatur, deshalb gibt es „Einrastfunktion" als Betriebssystem-Einstellung überhaupt.
 
 Damit war die Liste an ihrer eigenen Begründung vorbeigebaut.
 Sie sollte Anschläge sparen.
@@ -52,7 +52,7 @@ Die Klammerform war das Offensichtliche.
 Das Interessantere steckt eine Ebene tiefer.
 
 Eine Hand, die nicht genau trifft, macht nicht irgendwelche Fehler.
-Sie macht immer wieder dieselben vier: eine Taste wiederholt sich, weil sie zu lange gehalten wurde; ein Anschlag kommt doppelt; die Nachbartaste erwischt es; die schließende Klammer fehlt.
+Sie macht immer wieder dieselben vier: Eine Taste wiederholt sich, weil sie zu lange gehalten wurde. Ein Anschlag kommt doppelt. Die Nachbartaste erwischt es. Die schließende Klammer fehlt.
 
 Also verzeiht der Parser genau diese vier.
 Alles hier ist dasselbe Zeichen:
@@ -66,26 +66,28 @@ Der Satz, um den es geht, klingt selbstverständlich und ist es historisch nicht
 > Eine Eingabehilfe für eine Bewegungsstörung sollte genau die Fehler verzeihen, die diese Störung produziert.
 
 Klassische Eingabehilfen können das nicht.
-Ein Text-Expander, ein Makro, eine Tastenkombination — sie alle brauchen exakte Eingabe, weil ihr Parser exakt sein muss.
+Ein Text-Expander, ein Makro, eine Tastenkombination, sie alle brauchen exakte Eingabe, weil ihr Parser exakt sein muss.
 Ein falsches Zeichen, und nichts passiert.
 Man merkt es, korrigiert es und tippt es noch einmal, was den Fehler oft genug reproduziert.
 
 Vor einem Sprachmodell steht diese Anforderung nicht mehr.
 Es hat einen Prior: Aus dem Satz drumherum ist ableitbar, was gemeint war.
-Es degradiert graziös, statt abzubrechen — dieselbe Eigenschaft, die dafür sorgt, dass [Tippfehler ohnehin nichts kosten](/de/posts/typos-are-cheap/).
+Es degradiert graziös, statt abzubrechen, dieselbe Eigenschaft, die dafür sorgt, dass [Tippfehler ohnehin nichts kosten](/de/posts/typos-are-cheap/).
 
 Das verschiebt das Entwurfsziel.
-Es geht nicht mehr um eine eindeutige Grammatik, sondern um **rekonstruierbare Absicht**.
-Und die Toleranz muss aufgeschrieben werden, sonst passiert sie nur zufällig: Was auffangen wird, steht in der Liste — samt der Regel, dass ein aufgefangener Fehler nie angemerkt wird.
+Es geht nicht mehr um eine eindeutige Grammatik.
+Es geht um **rekonstruierbare Absicht**.
+Und die Toleranz muss aufgeschrieben werden, sonst passiert sie nur zufällig: Was aufgefangen wird, steht in der Liste, samt der Regel, dass ein aufgefangener Fehler nie angemerkt wird.
 
 ## Der größere Hebel: seltener, nicht kürzer
 
 Die Eingabe zu verkürzen ist der offensichtliche Gewinn und der kleinere.
 
 Der größere ist, die Zahl der nötigen Eingaben zu senken.
-Wer für jeden Anschlag bezahlt, für den kostet eine Rückfragerunde mehr als ein falscher erster Versuch — es ist billiger, wenn der Agent rät und ich korrigiere, als wenn er fragt und ich antworte.
+Wer für jeden Anschlag bezahlt, für den kostet eine Rückfragerunde mehr als ein falscher erster Versuch.
+Es ist billiger, wenn der Agent rät und ich korrigiere, als wenn er fragt und ich antworte.
 
-Deshalb ist ausgerechnet `[$]` — „nimm die kürzeste Route, auch auf Kosten von Gründlichkeit" — eine Eingabehilfe.
+Deshalb ist ausgerechnet `[$]` („nimm die kürzeste Route, auch auf Kosten von Gründlichkeit") eine Eingabehilfe.
 Es sagt nicht „sei schneller".
 Es sagt: „frag mich nicht noch dreimal."
 
@@ -93,7 +95,7 @@ Und hier trifft sich dieser Beitrag mit Teil eins, auf eine Weise, die ich nicht
 Dort war das Ergebnis: Eine Rückfrage kostet einen vollständigen Durchlauf des bisherigen Gesprächs, egal wie kurz die Antwort ist.
 Hier ist das Ergebnis: Eine Rückfrage kostet Anschläge, die jemand vielleicht nicht hat.
 
-Zwei völlig verschiedene Begründungen — die eine ökonomisch, die andere körperlich — und beide führen auf dieselbe Optimierung.
+Zwei völlig verschiedene Begründungen, die eine ökonomisch, die andere körperlich, und beide führen auf dieselbe Optimierung.
 Wenn zwei unabhängige Argumente auf denselben Entwurf zeigen, ist das der belastbarste Hinweis, den man bekommt.
 
 ## Auch eine Pause braucht ein Zeichen
@@ -112,7 +114,7 @@ Das Naheliegendste hat mir am längsten gefehlt: die Regie drumherum.
 Zwei Anschläge für etwas, das sonst zwei Sätze braucht.
 
 Wer eine Pause frei wählen kann, macht sie einfach.
-Wer sie nicht frei wählen kann, muss sie ankündigen — und zahlt für die Ankündigung mit genau der Ressource, die gerade knapp ist.
+Wer sie nicht frei wählen kann, muss sie ankündigen, und zahlt für die Ankündigung mit genau der Ressource, die gerade knapp ist.
 Ein Zeichen dafür zu haben ist kein Komfort.
 
 Nebenbei ist es wieder Token-Ökonomie: Die Wartezeit soll keine Runde kosten.
@@ -121,7 +123,7 @@ Dieselbe Optimierung, zum dritten Mal, aus einer dritten Richtung.
 ## Ein altes Feld mit einem neuen Ziel
 
 Nichts davon ist meine Erfindung.
-Das Feld heißt AAC — *Augmentative and Alternative Communication* — und die Unterfamilie heißt *abbreviation expansion*.
+Das Feld heißt AAC, *Augmentative and Alternative Communication*, und die Unterfamilie heißt *abbreviation expansion*.
 Wortvorhersage, Buchstabenkarten, Systeme wie EZ Keys oder Dasher: Das wird seit Jahrzehnten erforscht und gebaut.
 
 Neu ist genau eine Sache.
@@ -149,8 +151,9 @@ Sonderfall, Nebeneingang, gut gemeint.
 
 Sie hat noch am selben Tag die runde Form abgelöst.
 
-Nicht aus Rücksicht, sondern weil sie schlicht besser war: eine Taste statt zwei, dieselbe Bedeutung, nichts eingebüßt.
-Die runde Form gilt weiter — sie ist nur nicht mehr die, in der jemand schreibt.
+Nicht aus Rücksicht.
+Sie war schlicht besser: eine Taste statt zwei, dieselbe Bedeutung, nichts eingebüßt.
+Die runde Form gilt weiter, sie ist nur nicht mehr die, in der jemand schreibt.
 
 Das ist der *curb cut effect*, im Zeitraffer.
 Bordsteinabsenkungen wurden für Rollstühle gebaut, und heute benutzt sie jeder mit Rollkoffer, Kinderwagen oder Fahrrad, ohne einen Gedanken daran zu verschwenden.
@@ -167,7 +170,7 @@ Er war, dass sie an ihrer eigenen Sache vorbeigebaut war — und die Korrektur, 
 - **Frag bei jeder Abkürzung, was sie von der Hand verlangt.**
   Nicht nur, wie viele Zeichen sie spart. Ein gehaltener Modifier ist teurer als ein zusätzlicher Anschlag.
 - **Toleranz muss aufgeschrieben werden.**
-  Ein Modell verzeiht ohnehin viel. Welche Fehler es verzeihen *soll* — und dass es sie nicht anmerkt —, steht sonst nirgends.
+  Ein Modell verzeiht ohnehin viel. Welche Fehler es verzeihen *soll*, und dass es sie nicht anmerkt, steht sonst nirgends.
 - **Zähl die Runden, nicht die Zeichen.**
   Die teuerste Eingabe ist die, die überhaupt erst nötig wird, weil eine Antwort fehlt.
 - **Zwei unabhängige Begründungen für denselben Entwurf sind besser als eine gute.**
@@ -180,7 +183,7 @@ Er war, dass sie an ihrer eigenen Sache vorbeigebaut war — und die Korrektur, 
 Das Ganze handelt von einer Kürzelliste, aber das Prinzip dahinter ist allgemeiner, und es lässt sich an jeder Schnittstelle anwenden, die jemand mit den Händen bedient.
 
 **Bau die Toleranz ein, nicht die Präzision.**
-Frag nicht, wie du deine Eingabe eindeutig machst, sondern welche vier Fehler deine Nutzer tatsächlich produzieren — und fang genau die auf, still.
+Frag nicht, wie du deine Eingabe eindeutig machst, sondern welche vier Fehler deine Nutzer tatsächlich produzieren, und fang genau die auf, still.
 
 **Zähl die Interaktionen, nicht die Klicks.**
 Ein Formular mit weniger Feldern ist gut. Ein Formular, das gar nicht erst erscheint, weil die Antwort ableitbar war, ist besser.

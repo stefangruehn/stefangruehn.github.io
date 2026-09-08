@@ -4,7 +4,7 @@ date: 2026-09-06T09:00:00+02:00
 tags: ["chaos", "complexity", "hardware", "books", "Essay"]
 topics: ["author"]
 series: ["Self-Similarity"]
-summary: "A Rubik's cube, four rules about neighbouring cells, a formula three symbols long, and a calculating machine you turn by hand. Four objects that all show the same thing — and one sentence from my own notes that I had to write out in full to get there."
+summary: "A Rubik's cube, four rules about neighbouring cells, a formula three symbols long, and a calculating machine you turn by hand. Four objects that all show the same thing, and one sentence from my own notes that I had to write out in full to get there."
 ---
 
 A calculating machine once gave me gooseflesh.
@@ -14,7 +14,7 @@ That is an odd sentence, and it is the shortest route to what this blog is actua
 
 - Four objects set the direction: a Rubik's cube, Conway's *Life*, the Mandelbrot set, and a Curta.
 - All four share the same property.
-  A handful of rules that yield far more than they look like they contain — and no way to skip ahead to the result.
+  A handful of rules that yield far more than they look like they contain, and no way to skip ahead to the result.
 - Two books turned that into a concept: *Gödel, Escher, Bach* and *A New Kind of Science*.
 - The sentence that holds it all together fits on one line: x → r · x · (1 − x).
 - Getting there meant writing out a sentence from my own notes.
@@ -91,7 +91,7 @@ Two ingredients, one line.
 
 For small *r* it settles on a fixed value.
 Turn *r* up and at some point it starts alternating between two values, then four, then eight.
-The gaps between those doublings shrink at a fixed ratio — the Feigenbaum constant, roughly 4.669.
+The gaps between those doublings shrink at a fixed ratio, the Feigenbaum constant, roughly 4.669.
 And then, shortly after, it is chaos: no period, no return, and two starting values that differ in the eighth decimal place come apart completely within a few dozen steps.
 
 Robert M. May wrote this up in *Nature* in 1976, under a title that still says everything: *Simple mathematical models with very complicated dynamics*.

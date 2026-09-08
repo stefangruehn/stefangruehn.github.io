@@ -5,7 +5,7 @@ draft: true
 tags: ["claude-code", "hardware", "esp32", "reverse-engineering", "debugging", "Technical Deep Dive"]
 topics: ["machine"]
 series: ["Toolchains"]
-summary: "840 pin assignments tried until a memory card answered. A vibration motor measured by a fingertip. A cable whose plug direction decides which processor you are talking to. The four chains that end in the device itself — and what the whole thing was for."
+summary: "840 pin assignments tried until a memory card answered. A vibration motor measured by a fingertip. A cable whose plug direction decides which processor you are talking to. The four chains that end in the device itself, and what the whole thing was for."
 ---
 
 Part one read [paper](/posts/the-schematic-is-a-hypothesis/) and refuted it three times.
@@ -17,7 +17,7 @@ What is actually soldered onto this board is said by neither.
 
 - Four chains end in the device: **your own firmware as an instrument**, **hand and ear in the loop**, **the USB enumeration**, **the boot log**.
 - A memory card whose pins are documented nowhere named its own: 840 combinations tried, **exactly one** answered, reproduced twice.
-- Scanning every pin with the internal pull-up and pull-down separates the connected lines from the free ones in a single flash cycle — and the first version measured nothing because it read two milliseconds too early.
+- Scanning every pin with the internal pull-up and pull-down separates the connected lines from the free ones in a single flash cycle, and the first version measured nothing because it read two milliseconds too early.
 - A fingertip measured what no register would give up: that a click gets **shorter and quieter** under traffic.
 - Two workbench traps that each cost a run are written down here on purpose.
 - The point at the end: none of these chains is new. What is new is that every question builds its own in minutes.
@@ -33,7 +33,7 @@ src/bin/<question>.rs  ->  flash  ->  monitor log  ->  scratch-findings/logs/
 ```
 
 Every question gets a small program of its own that does nothing except ask that one question, and its log is the measurement record.
-Not one program with switches, but many small ones — `pullscan`, `sdprobe`, `switchhunt`, `uartsniff`, `pin38` — each with the question in its file header and the result in the log beside it.
+No one program with switches, many small ones instead: `pullscan`, `sdprobe`, `switchhunt`, `uartsniff`, `pin38`, each with the question in its file header and the result in the log beside it.
 
 **Scanning the pins.**
 The first question to put to an unknown board is: which pins are connected to anything at all?
@@ -53,10 +53,10 @@ The method reports what it claims to report.
 
 **And then the memory card that names itself.**
 After the scan, seven pins were left hanging on something unnamed.
-A card in the slot has five pulled-up lines and one that is not pulled up — that is the pattern being searched for.
+A card in the slot has five pulled-up lines and one that is not pulled up, that is the pattern being searched for.
 Rather than guess which is which, you can ask the card: it also speaks the simple serial protocol on the same contacts, and its first command, `CMD0`, has a known reply.
 
-`sdprobe` worked through **840 assignments** — clock from the floating candidates, the three data lines from the pulled-up ones — and put the same question to each.
+`sdprobe` worked through **840 assignments**, clock from the floating candidates, the three data lines from the pulled-up ones, and put the same question to each.
 
 ```
 CLK GPIO4  CS GPIO2  MOSI GPIO3  MISO GPIO5  --  CMD0 0x01, CMD8 0x01 00 00 01 aa
@@ -72,13 +72,14 @@ The card was later read over exactly those four pins — 480 MiB, one FAT32 part
 
 **Two corrections to the method**, both expensive enough to write down.
 
-The first version of the scanner read the pin immediately after switching the internal pull — and reported every free pin as "held low externally".
+The first version of the scanner read the pin immediately after switching the internal pull, and reported every free pin as "held low externally".
 An internal pull is weak and needs a moment against the line's own capacitance.
 Two milliseconds of settling fixed it and invalidated every result before that.
 
 The second concerns a program hunting for the loudspeaker switch by flipping one pin after another while music played.
 It reported: nothing changed.
-Except it had never left the candidate list — the rotary knob used to step through it was polled too slowly, and its pulses are shorter than the polling interval.
+Except it had never left the candidate list.
+The rotary knob used to step through it was polled too slowly, and its pulses are shorter than the polling interval.
 An entire run measured the same first candidate over and over.
 **A negative result needs proof that the check happened.**
 The fix was to acknowledge every step in the case: the vibration motor clicks as many times as the number of the candidate it moved to.
@@ -88,7 +89,7 @@ Without that, "found nothing" and "tried nothing" are the same sentence.
 
 Some questions no register answered.
 
-The vibration motor shares its enable input with a transmit line — that was the GPIO38 from part one, the one the schematic ties permanently to 3.3 volts and which in fact has to be driven.
+The vibration motor shares its enable input with a transmit line, that was the GPIO38 from part one, the one the schematic ties permanently to 3.3 volts and which in fact has to be driven.
 From which came a question: if the same line transmits *and* enables, what does that cost the motor?
 
 A serial transmit line idles high, which is the enabled state.
@@ -97,13 +98,14 @@ The diagnostic register then reported `0xE9` on the first of three attempts and 
 
 The fingertip settled it.
 The three clicks under the zero stream were **shorter and slightly quieter** than the three with the line held steadily high.
-So it is not the measurement that changes but the motor that is driven less.
+So what changes is not the measurement, it is the motor, which is driven less.
 
-For that the project has a small scaffold of its own: a sequence that halts before every step and waits — a press of the knob, a touch of the screen or a keypress at the computer are equivalent go-signals.
+For that the project has a small scaffold of its own: a sequence that halts before every step and waits.
+A press of the knob, a touch of the screen or a keypress at the computer are equivalent go-signals.
 The answer arrives while the hand is still on the knob, instead of out of a log afterwards.
 
 The loudspeaker was decided the same way, and there the ear was the instrument.
-With music from a phone coming out of the jack over the second processor's Bluetooth link — which by itself proves that jack, converter, analogue supply and mute all work — our own firmware flipped each remaining pin in turn.
+With music from a phone coming out of the jack over the second processor's Bluetooth link, which by itself proves that jack, converter, analogue supply and mute all work, our own firmware flipped each remaining pin in turn.
 The music was disturbed by none of them, and our own tone was never audible.
 The loudspeaker does not belong to this processor.
 No register would have said so.
@@ -119,7 +121,7 @@ lsusb
 This board has two USB sockets: one goes straight to the ESP32-S3, the other through a serial converter chip to the classic ESP32.
 If a CH340 shows up on the computer, you are talking to the *other* microcontroller.
 
-That sounds trivial, and it is — right up to the moment a tool reports an unfamiliar chip type and the explanation is not that something is broken but that the cable is in the other socket.
+That sounds trivial, and it is, right up to the moment a tool reports an unfamiliar chip type and the explanation is not that something is broken: the cable is in the other socket.
 **The plug direction is this board's selector switch.**
 On a board with two processors, the first question about any inexplicable behaviour is: which of the two am I talking to right now?
 One command, one line of output, question answered.
@@ -164,7 +166,8 @@ An empty log is not an observation.
 One chain is left that touches no hardware.
 
 The sessions in which all of this happened are kept as transcripts in the project.
-They are not documentation — that is what the finding notes from part two are for — but raw material: the numbers, the order of events and the dead ends nobody remembers come out of them later.
+They are raw material, not documentation, that is what the finding notes from part two are for.
+The numbers, the order of events and the dead ends nobody remembers come out of them later.
 The sentence about the first pin scanner reading two milliseconds too early is not in this post because somebody remembered it.
 
 That is the same movement as in all thirteen chains: the last stage is always **writing to a file**.
@@ -179,12 +182,13 @@ Dumping and disassembling firmware has been done for decades.
 Trying pin assignments until the far end answers is brute force and was always possible.
 
 What has changed is the price.
-A chain like this used to be a project: find the right tools, get them to work together, build the measurement rig — and because that was expensive, you built the rig and *then* worked out which questions it could answer.
+A chain like this used to be a project: find the right tools, get them to work together, build the measurement rig, and because that was expensive, you built the rig and *then* worked out which questions it could answer.
 The questions followed the tool.
 
 Here it was the other way round.
 Thirteen different chains in a few days, each assembled for exactly one question, none of them reused.
-The search space of 840 pin combinations was not worked through because that is clever, but because the program for it was cheaper than thinking about how to avoid it.
+The search space of 840 pin combinations was not worked through because that is clever.
+It was worked through because the program for it was cheaper than thinking about how to avoid it.
 That is the actual change: **the question no longer follows the measurement rig; the rig follows the question.**
 
 And the order behind it is simple in the end.

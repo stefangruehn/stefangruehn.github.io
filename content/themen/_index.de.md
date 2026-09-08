@@ -4,8 +4,9 @@ translationKey: "themen"
 ---
 
 > **Volle Transparenz:** Jeder Beitrag in diesem Blog entsteht unter Verwendung von [Claude Code](https://claude.com/claude-code), und die meisten handeln von der Arbeit damit.
-> Die Befehle, Messungen und Zahlen hier stammen aus echten Sitzungen auf meinen eigenen Rechnern — ich lese, prüfe und überarbeite alles, bevor es online geht.
+> Die Befehle, Messungen und Zahlen hier stammen aus echten Sitzungen auf meinen eigenen Rechnern. Ich lese, prüfe und überarbeite alles, bevor es online geht.
 > Wo sich etwas als falsch herausgestellt hat, steht es im Beitrag.
+> Der Schreibstil der deutschen Seiten ist mein eigener. Die englischen Fassungen sind daraus übersetzt und folgen ihm nur so weit, wie es das Englische zulässt: Was sie sagen, ist dasselbe, wie sie klingen, nicht.
 
 **Zwei Leitthemen ziehen sich durch alles hier.**
 
@@ -15,6 +16,6 @@ Die interessante Frage ist deshalb nicht, ob man sie einsetzt, sondern wie: welc
 
 Das zweite: **messen statt behaupten.**
 Eine Zahl aus einem echten Lauf schlägt jede plausible Vermutung, auch meine eigene.
-Wo hier etwas behauptet wird, steht dabei, woran es gemessen wurde — und wo eine Messung mich widerlegt hat, steht das im Beitrag.
+Wo hier etwas behauptet wird, steht dabei, woran es gemessen wurde, und wo eine Messung mich widerlegt hat, steht das im Beitrag.
 
-Sieben Fragen, mit denen man hier ankommt. Jeder Beitrag steht in genau einer davon — die Liste unten ist also vollständig und überschneidungsfrei.
+Sieben Fragen, mit denen man hier ankommt. Jeder Beitrag steht in genau einer davon, die Liste unten ist also vollständig und überschneidungsfrei.

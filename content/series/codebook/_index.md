@@ -1,7 +1,7 @@
 ---
 title: "Codebook"
 badge: "Field Notes"
-summary: "Three posts about the context you share with an agent: what it costs, how to measure it and how to shorten it — until the shortening stops being a convenience for some people and becomes access."
+summary: "Three posts about the context you share with an agent: what it costs, how to measure it and how to shorten it, until the shortening stops being a convenience for some people and becomes access."
 ---
 
 {{< serienbadge >}}
@@ -20,7 +20,7 @@ and the third finds that this codebook is not a convenience for someone else but
 The chain from left to right is the story: measure, abbreviate, hand on.
 
 **The two arrows to the upper and lower right** are the reason to read.
-The same shortcut saves two entirely different things — keystrokes on a keyboard and round-trips in a conversation — and the two savings have nothing to do with each other.
+The same shortcut saves two entirely different things (keystrokes on a keyboard and round-trips in a conversation), and the two savings have nothing to do with each other.
 Two completely different arguments lead to the same optimisation.
 That is the claim of the series.
 

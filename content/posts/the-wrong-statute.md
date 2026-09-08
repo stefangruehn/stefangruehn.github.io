@@ -4,7 +4,7 @@ date: 2026-09-06T14:20:00+02:00
 draft: true
 tags: ["claude-code", "hardware", "law", "writing", "meta", "Essay"]
 topics: ["author"]
-summary: "Writing up hardware forensics raised the question of whether it is a criminal offence. The answer was a surprise: the statute everybody fears does not apply, for three reasons — and the one action where you can actually get it wrong feels entirely harmless."
+summary: "Writing up hardware forensics raised the question of whether it is a criminal offence. The answer was a surprise: the statute everybody fears does not apply, for three reasons, and the one action where you can actually get it wrong feels entirely harmless."
 ---
 
 While a three-part series on [forensics on an undocumented board](/series/toolchains/) was being written here, a question came up in the middle of the work: are we committing an offence by publishing this?
@@ -23,7 +23,7 @@ Not because it was reassuring, but because it was reassuring in a completely dif
 - It also has no offence to prepare here: it is my own board, and secure boot and flash encryption are off as shipped.
   There is no protection to overcome.
 - The one action carrying real risk is the one that feels most harmless: **passing on the 16 MB file** created when you take the backup.
-- Dumping and disassembling are not merely tolerated, they are **expressly privileged** in copyright law — for interoperability and for fixing errors.
+- Dumping and disassembling are not merely tolerated, they are **expressly privileged** in copyright law, for interoperability and for fixing errors.
 - Protocol structure and register values are facts and can be published; somebody else's schematic drawings cannot.
 - The actual thought: **intuition follows the vocabulary, not the law.**
   "Disassembling" sounds like breaking in, "backup" sounds like housekeeping — and the risk lies exactly the other way round.
@@ -39,20 +39,20 @@ It simply does not apply to a post about your own board, for three reasons, each
 **First, it covers no texts.**
 What is punishable is producing and distributing *passwords and access codes*, or *computer programs whose purpose is the commission of an offence* under § 202a or § 202b.
 An essay describing a method is neither.
-Knowledge is not a tool in the sense of the statute — the Federal Constitutional Court read it narrowly in that direction in 2009 and took dual-use tools out of its scope in principle.
+Knowledge is not a tool in the sense of the statute, the Federal Constitutional Court read it narrowly in that direction in 2009 and took dual-use tools out of its scope in principle.
 
 **Second, there is no offence to prepare.**
 § 202c is an inchoate offence; with no possible principal offence it has nothing to attach to.
 § 202a requires data that is *not intended for the perpetrator* and *specially protected against unauthorised access*.
 Neither element is present here, and not by a narrow margin: the board is mine, and its flash is unencrypted because the manufacturer never switched secure boot on.
 There is nothing to overcome.
-§ 202b, intercepting data, fails at the same point — what was listened to was a conversation between two chips that both belong to me.
+§ 202b, intercepting data, fails at the same point, what was listened to was a conversation between two chips that both belong to me.
 
 **Third, the intent to prepare such an offence is missing.**
 
 The neighbouring provisions go the same way.
 Data tampering and computer sabotage (§ 303a, § 303b) require somebody else's data.
-And § 108b UrhG, circumventing technical protection measures, would need an *effective technical measure* — which demonstrably does not exist here.
+And § 108b UrhG, circumventing technical protection measures, would need an *effective technical measure*, which demonstrably does not exist here.
 
 What is remarkable is how little of this is a question of interpretation.
 I had expected to be weighing things up, and found elements of the offence that are simply absent.
@@ -85,7 +85,7 @@ A `.gitignore` entry with no reason attached does not survive the next tidying-u
 **Disassembling.**
 Copyright law privileges it explicitly.
 § 69d(3) permits observing, studying and testing a program in order to determine the ideas underlying it.
-§ 69e permits decompilation where it is necessary to achieve **interoperability** — precisely the case when you want to find out how one chip talks to the other.
+§ 69e permits decompilation where it is necessary to achieve **interoperability**, precisely the case when you want to find out how one chip talks to the other.
 And in 2021 the Court of Justice of the European Union held that a lawful acquirer may also decompile in order to **correct errors**.
 Both purposes applied here: talking to the second microcontroller, and repairing a picture that faded after two seconds.
 
@@ -108,7 +108,7 @@ There is no licence attached, and with no licence the default is: all rights res
 A schematic is protected as a technical drawing.
 What is protected, however, is the **drawing**, not its content.
 That the display clock hangs on GPIO13 is a fact about a piece of copper and can be restated in a table of your own.
-Reprinting the sheet itself would be something else — which is why the series contains no images at all.
+Reprinting the sheet itself would be something else, which is why the series contains no images at all.
 
 **The datasheet** is quoted, and that is permitted.
 § 51 UrhG allows quotation where it serves as evidence for a statement of your own, is justified in extent by that purpose, and names the source.
@@ -140,7 +140,7 @@ It belongs at the point where the file comes into being.
 That is why the rule in this project lives in the `.gitignore` and not in a checklist nobody reads.
 
 One postscript, which shows that the check should not confine itself to law: part three carried the full MAC address of my board.
-Legally entirely unobjectionable — my device, my identifier.
+Legally entirely unobjectionable: my device, my identifier.
 It is masked there now anyway, because a permanent device identifier in a public text proves nothing it would not equally prove with three `xx`.
 Not everything that is allowed is something you want to have done.
 

@@ -5,7 +5,7 @@ draft: false
 tags: ["claude-code", "workflow", "writing", "complexity", "self-reference", "Essay"]
 topics: ["writing"]
 series: ["Feedback"]
-summary: "A feedback loop that works well has a problem: it keeps supplying. The blog can live off itself — and precisely then it lacks the thing its theories break against. Three checkable expectations, allowed to be wrong in four weeks."
+summary: "A feedback loop that works well has a problem: it keeps supplying. The blog can live off itself, and precisely then it lacks the thing its theories break against. Three checkable expectations, allowed to be wrong in four weeks."
 ---
 
 A backlog runs out eventually.
@@ -16,8 +16,8 @@ A feedback loop does not.
 - The expectation after the first week was that the pace would drop once thirty years of unwritten thoughts had drained.
 - That expectation misses the second source: the work on the blog produces material of its own, in proportion to how closely it observes itself.
 - So the blog does not run dry.
-  It switches source — and that is not a good state but a dangerous one.
-- The reason is not taste but checkability: on a laptop, a wrong theory breaks against a measurement. In a text about your own blog it breaks against nobody.
+  It switches source, and that is not a good state but a dangerous one.
+- This is not about taste, it is about checkability: on a laptop, a wrong theory breaks against a measurement. In a text about your own blog it breaks against nobody.
 - Twice, this blog's history contains a correction to an already published factual claim.
   Both times a human found it while proofreading, not a checking program.
 - Three expectations stand at the end, each with a number, each recomputable in four weeks.
@@ -39,7 +39,7 @@ It counts on one source, and there are two.
 The second one is the work itself.
 Every session produces transcripts, every decision produces commits, every tool produces measurements, and each of those traces can be turned into a post.
 Six of the fourteen published posts come from that source.
-It does not run dry as long as work continues — on the contrary: the more the blog writes about its own machinery, the more machinery there is to write about.
+It does not run dry as long as work continues, on the contrary: the more the blog writes about its own machinery, the more machinery there is to write about.
 
 A store empties.
 A feedback loop resupplies.
@@ -54,9 +54,9 @@ That is not the serious objection.
 The serious one is the missing authority against which a wrong claim breaks.
 
 Four posts here are about a laptop.
-In every single one of them a theory that looked good breaks: the silent speaker was not a driver fault but a number the sound server had remembered.
-The volume was not set wrong but frozen by a repair made years ago.
-The machine did not boot faster because a configuration took hold — the configuration loaded cleanly and did nothing.
+In every single one of them a theory that looked good breaks: the silent speaker was not a driver fault, it was a number the sound server had remembered.
+The volume was not set wrong, a repair made years ago had frozen it.
+The machine did not boot faster because a configuration took hold. The configuration loaded cleanly and did nothing.
 
 Every time the reason was the same: the machine has an opinion, and it is not mine.
 It answers to measurements, not to phrasing.
@@ -121,7 +121,7 @@ What remains is unspectacular: let it run, write it down, recompute in four week
 
 - **A well-functioning feedback loop has a supply problem, not a drying-up problem.** It does not stop; it quietly replaces the source it feeds on with itself.
 - **Outside material is the error correction, not the variety.** A device has an opinion; a text about your own work has none.
-- **Checking programs only find what is formally wrong.** What is factually wrong is found by a human who knows how it was — and who reliably finds it only once reading the finished text.
+- **Checking programs only find what is formally wrong.** What is factually wrong is found by a human who knows how it was, and who reliably finds it only once reading the finished text.
 - **Expectations with numbers are cheaper than expectations without.** They cost almost nothing and make being wrong demonstrable instead of letting it disappear.
 - **Declining to predict is not a lack of ambition.** It follows from the subject: where there is no shortcut, letting it run is the only method.
 

@@ -4,7 +4,7 @@ date: 2026-09-06T09:00:00+02:00
 tags: ["chaos", "complexity", "hardware", "books", "Essay"]
 themen: ["autor"]
 series: ["Selbstaehnlichkeit"]
-summary: "Ein Zauberwürfel, vier Regeln über Nachbarzellen, eine Formel mit drei Zeichen und eine Rechenmaschine, die man drehen kann. Vier Gegenstände, die dieselbe Sache zeigen — und ein Satz aus meinen eigenen Notizen, den ich dafür ausschreiben musste."
+summary: "Ein Zauberwürfel, vier Regeln über Nachbarzellen, eine Formel mit drei Zeichen und eine Rechenmaschine, die man drehen kann. Vier Gegenstände, die dieselbe Sache zeigen, und ein Satz aus meinen eigenen Notizen, den ich dafür ausschreiben musste."
 ---
 
 Eine Rechenmaschine hat mir einmal eine Gänsehaut gemacht.
@@ -14,11 +14,11 @@ Das ist ein seltsamer Satz, und er ist der kürzeste Weg zu der Frage, worum es 
 
 - Vier Gegenstände haben die Richtung gesetzt: ein Zauberwürfel, Conways *Life*, das Apfelmännchen und eine Curta.
 - Allen vieren ist dasselbe gemeinsam.
-  Eine Handvoll Regeln, aus denen mehr folgt, als man ihnen ansieht — und kein Weg, das Ergebnis abzukürzen.
+  Eine Handvoll Regeln, aus denen mehr folgt, als man ihnen ansieht, und kein Weg, das Ergebnis abzukürzen.
 - Zwei Bücher haben daraus einen Begriff gemacht: *Gödel, Escher, Bach* und *A New Kind of Science*.
 - Der Satz, der alles zusammenhält, passt in eine Zeile: x → r · x · (1 − x).
 - Einen Satz aus meinen eigenen Notizen musste ich dafür ausschreiben.
-  So knapp notiert, wie er dastand, war er wörtlich genommen falsch — und die ausgeschriebene Fassung ist die interessantere.
+  So knapp notiert, wie er dastand, war er wörtlich genommen falsch, und die ausgeschriebene Fassung ist die interessantere.
 - Nichts davon ist Nostalgie.
   Es ist das Werkzeug, mit dem ich im nächsten Teil auf agentische KI sehe.
 
@@ -41,7 +41,7 @@ Man sieht es erst, wenn man es laufen lässt.
 
 **Das Apfelmännchen.**
 z → z² + c, ein einziger Ausdruck, ein paar Zeilen Code drumherum.
-Der Rand der Menge ist unendlich fein; man kann beliebig weit hineinfahren und findet immer wieder Struktur, immer wieder das Ganze im Kleinen.
+Der Rand der Menge ist unendlich fein. Man kann beliebig weit hineinfahren und findet immer wieder Struktur, immer wieder das Ganze im Kleinen.
 Ein Bild in brauchbarer Auflösung brauchte auf der Maschine von damals lange genug, dass man den Rechner damit allein lassen konnte.
 Es war das zweite Programm, das ich geschrieben habe, und das erste, bei dem ich das Ergebnis nicht vorhergesehen hatte.
 
@@ -51,7 +51,7 @@ Die bekommt einen eigenen Abschnitt.
 ## Ein Algorithmus, den man drehen kann
 
 Die Curta ist eine mechanische Rechenmaschine, klein genug für eine Hand, gebaut um eine gestufte Walze herum.
-Konstruiert hat sie Curt Herzstark; die entscheidenden Zeichnungen entstanden, während er im Konzentrationslager Buchenwald gefangen war.
+Konstruiert hat sie Curt Herzstark. Die entscheidenden Zeichnungen entstanden, während er im Konzentrationslager Buchenwald gefangen war.
 Gebaut wurde sie ab 1948 von der Contina AG in Liechtenstein.
 
 Man stellt eine Zahl ein, dreht die Kurbel, und im Inneren läuft die Rechnung durch die Zahnräder.
@@ -68,13 +68,13 @@ Ein Algorithmus, den man in die Hand nimmt, dreht und dabei arbeiten hört — o
 Ein Buch über Rekursion, Selbstbezug und seltsame Schleifen, und darüber, wie aus Regeln, die selbst nichts bedeuten, Bedeutung entstehen kann.
 
 *A New Kind of Science* von Stephen Wolfram, 2002.
-Die systematische Fassung derselben Sache: elementare zelluläre Automaten, durchnummeriert, einer nach dem anderen abgefahren — und mittendrin Regel 110, die aus einer Zeile Vorschrift Muster erzeugt, die man ihr nicht ansieht.
+Die systematische Fassung derselben Sache: elementare zelluläre Automaten, durchnummeriert, einer nach dem anderen abgefahren, und mittendrin Regel 110, die aus einer Zeile Vorschrift Muster erzeugt, die man ihr nicht ansieht.
 Von dort kommt auch der Begriff, auf den es in dieser Serie ankommt: *computational irreducibility*.
 Für manche Prozesse gibt es keine Abkürzung.
 Wer wissen will, wie sie ausgehen, muss sie Schritt für Schritt durchlaufen lassen.
 
 Beide Bücher haben mich vor allem staunen lassen über die Geistesgröße ihrer Autoren.
-Dass ich heute Wolfram-Code für Datenanalysen schreibe, ist kein Zufall, sondern eine sehr lange Leitung von diesem Buch bis zu meiner Arbeit.
+Dass ich heute Wolfram-Code für Datenanalysen schreibe, ist kein Zufall. Von diesem Buch bis zu meiner Arbeit führt eine sehr lange Leitung.
 
 Von zellulären Automaten habe ich nächtelang geträumt.
 Das ist keine Redewendung.
@@ -91,7 +91,7 @@ Zwei Zutaten, eine Zeile.
 
 Bei kleinem *r* läuft sie auf einen festen Wert zu.
 Dreht man *r* hoch, springt sie irgendwann zwischen zwei Werten hin und her, dann zwischen vieren, dann zwischen achten.
-Die Abstände zwischen diesen Verdopplungen schrumpfen in einem festen Verhältnis — der Feigenbaum-Konstante, ungefähr 4,669.
+Die Abstände zwischen diesen Verdopplungen schrumpfen in einem festen Verhältnis, der Feigenbaum-Konstante, ungefähr 4,669.
 Und dann, kurz danach, ist es Chaos: keine Periode mehr, keine Wiederkehr, und zwei Startwerte, die sich in der achten Nachkommastelle unterscheiden, laufen nach ein paar Dutzend Schritten völlig auseinander.
 
 Robert M. May hat das 1976 in *Nature* aufgeschrieben, unter einem Titel, der bis heute alles sagt: *Simple mathematical models with very complicated dynamics*.
@@ -104,7 +104,7 @@ So notiert ist das zu knapp.
 Wörtlich genommen wäre es falsch: Iterieren kann die Gleichung jeder Taschenrechner, und zwar beliebig oft.
 
 Gemeint waren zwei Aussagen, die einzeln haltbar sind.
-Erstens gibt es für allgemeines *r* keine geschlossene Lösung, die x nach n Schritten direkt ausrechnet; Ausnahmen wie *r* = 4 sind bekannt und bleiben Ausnahmen.
+Erstens gibt es für allgemeines *r* keine geschlossene Lösung, die x nach n Schritten direkt ausrechnet. Ausnahmen wie *r* = 4 sind bekannt und bleiben Ausnahmen.
 Zweitens ist die konkrete Bahn bei endlicher Rechengenauigkeit langfristig nicht vorhersagbar, weil jeder Rundungsfehler mitwächst.
 
 Die zweite ist die, die ich meinte: „außer durch die Formel selbst" heißt, dass es keinen Weg an den Schritten vorbei gibt.

@@ -5,10 +5,10 @@ draft: false
 tags: ["claude-code", "workflow", "shortcuts", "language", "Field Notes"]
 topics: ["agent"]
 series: ["Codebook"]
-summary: "Work with an agent for long enough and you repeat yourself. What you repeat can be abbreviated — but the good abbreviations cannot be guessed. They are in your own transcripts, and the most frequent word of all was missing from my guessed list."
+summary: "Work with an agent for long enough and you repeat yourself. What you repeat can be abbreviated, but the good abbreviations cannot be guessed. They are in your own transcripts, and the most frequent word of all was missing from my guessed list."
 ---
 
-Part one measured what shared context [actually costs](/posts/the-most-expensive-answer-is-yes/) — and that an avoided question saves a full pass.
+Part one measured what shared context [actually costs](/posts/the-most-expensive-answer-is-yes/), and that an avoided question saves a full pass.
 This is the attempt to avoid them on purpose.
 
 ## TL;DR
@@ -20,7 +20,7 @@ This is the attempt to avoid them on purpose.
 - Checking the list found three defects that nobody notices while writing one: a genuine contradiction, an escape character that collides with itself, and a token that was already taken.
 - A shortcut that merely repeats a standing rule is dead syntax.
   It only works as an amplifier.
-- What makes this different from any text expander: the target of the expansion is not a string but an instruction.
+- What makes this different from any text expander: the target of the expansion is an instruction, not a string.
   Three keystrokes can set off half an hour of work.
 
 ---
@@ -28,7 +28,7 @@ This is the attempt to avoid them on purpose.
 ## One token became a list
 
 It started as a convenience.
-I often write "please interview me about this before you write anything" — the same sentence every time, in the same situation every time.
+I often write "please interview me about this before you write anything", the same sentence every time, in the same situation every time.
 
 So it became a token: `[?]`.
 
@@ -62,7 +62,7 @@ My guessed list had caught `hugo` and `serie`.
 `commit`, the most frequent of them all, was not on it.
 
 That is the whole point of measuring.
-Intuition reliably catches what stands out — the special instructions, the new tools, the thing you learned last week.
+Intuition reliably catches what stands out: the special instructions, the new tools, the thing you learned last week.
 It does not catch what is so ordinary that you read straight past it while thinking about your own work.
 
 A codebook you guess is a codebook about your self-image.
@@ -81,7 +81,7 @@ It now says only the one thing — "I see this differently, argue your position 
 **An escape character that collides with itself.**
 You need a way to say: *this time I really do mean just the character.*
 The proposal was a slash in front of it.
-Except the slash is itself one of the shortcuts, `[/]` for "give me an alternative" — and at the start of a line it is Claude Code's prefix for slash commands.
+Except the slash is itself one of the shortcuts, `[/]` for "give me an alternative", and at the start of a line it is Claude Code's prefix for slash commands.
 Two collisions in one character.
 It became the backslash.
 
@@ -95,7 +95,7 @@ It became the backslash.
 That does not mean "interview me".
 That means "is that right?".
 
-It was resolved without loss: those cases are now `[&]` — "I suspect that …, check it rather than adopting it".
+It was resolved without loss: those cases are now `[&]`: "I suspect that …, check it rather than adopting it".
 The old meaning moved house, and the new meaning got the token.
 A reassignment, not a collision.
 
@@ -149,13 +149,13 @@ What helps is one sentence at the end of both files: *if something changes, it g
 None of this is new; it has just gone by other names.
 
 - **Source coding.**
-  Short codes for frequent symbols, long codes for rare ones — that is the idea behind every compression scheme.
+  Short codes for frequent symbols, long codes for rare ones, that is the idea behind every compression scheme.
   Here the codebook is the shared context, and the distribution is the frequency of my own instructions.
 - **Restricted code.**
   Basil Bernstein described how groups with a lot of shared background can speak more briefly, because the rest is taken as given.
   Only here that shared background grows over sessions rather than over generations.
 - **Grammaticalisation on fast-forward.**
-  Frequently used content words collapse into function markers over time — in natural languages that takes centuries.
+  Frequently used content words collapse into function markers over time, in natural languages that takes centuries.
   Here it takes an afternoon, because both sides can write the dictionary down instead of having to negotiate it.
 - **A shared working vocabulary.**
   In software design this is old advice: settle the terms first, then build.
@@ -166,7 +166,7 @@ None of this is new; it has just gone by other names.
 - **Measuring beats guessing, reproducibly.**
   The most frequent word in my own work was missing from the list I had written about my own work.
 - **A shortcut is a design and it has defects.**
-  Contradictory meaning, colliding escape, a token assigned twice — those are ordinary design errors, not details.
+  Contradictory meaning, colliding escape, a token assigned twice, those are ordinary design errors, not details.
 - **Test every entry by what would be different without it.**
   Anything that merely repeats an existing rule has no effect. Anything that shifts a trade-off does.
 - **A meaning that is already in use gets reassigned, not overwritten.**
@@ -190,5 +190,5 @@ It is worth it as soon as you notice you are repeating yourself — and you noti
    A codebook only one side knows is not one.
 
 The whole thing costs an afternoon, and most of it goes into step three.
-What you end up with is no longer a set of abbreviations but a small shared language — and it has one property I had not counted on.
+What you end up with is a small shared language, not a set of abbreviations any more, and it has one property I had not counted on.
 For someone who needs it more badly than I do, it is something else entirely than a convenience.

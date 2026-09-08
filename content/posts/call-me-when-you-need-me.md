@@ -3,7 +3,7 @@ title: "Call me when you need me: two sounds that turn waiting into leaving"
 date: 2026-09-06T02:17:32+02:00
 tags: ["claude-code", "workflow", "hooks", "linux", "Field Notes"]
 topics: ["cost"]
-summary: "An agent that runs for twenty minutes only frees me if it can call me back. Otherwise I check every two minutes and stay tied to the screen anyway. Two lines of configuration turn the checking into a callback — and I measured the baseline for it just before switching it on."
+summary: "An agent that runs for twenty minutes only frees me if it can call me back. Otherwise I check every two minutes and stay tied to the screen anyway. Two lines of configuration turn the checking into a callback, and I measured the baseline for it just before switching it on."
 ---
 
 ## TL;DR
@@ -12,7 +12,7 @@ summary: "An agent that runs for twenty minutes only frees me if it can call me 
 - The second one is the expensive state. Until it is answered, nothing moves.
 - Without a callback the human polls: a glance every two minutes, mostly for nothing. With one, the human may walk away.
 - The baseline, from my own transcripts: 471 waits over two weeks, 20.2 hours in total. 14 per cent of them longer than five minutes, the longest 48.
-- Whether the sound shortens that, I don't know yet. Eleven waits have accumulated since I switched it on — which proves nothing.
+- Whether the sound shortens that, I don't know yet. Eleven waits have accumulated since I switched it on, which proves nothing.
 - What goes silent is the single session, not the machine. The script reads the session ID out of the hook payload for that.
 - The built-in trap: hooks are read at session start. The automation you are entering right now does not yet apply to you.
 
@@ -88,7 +88,7 @@ The interesting ones are the 5 per cent over ten minutes: 23 cases in which I wa
 
 To be fair about it: those 20.2 hours are not all idle time.
 In many of those spans I was reading, checking or thinking.
-The timestamp doesn't know whether I was in the kitchen or studying some output — it measures the agent's waiting, not the human's idleness.
+The timestamp doesn't know whether I was in the kitchen or studying some output, it measures the agent's waiting, not the human's idleness.
 
 And the second honest note: whether the sound changes any of this, I cannot say yet.
 It has been running since just after six yesterday evening.
@@ -100,7 +100,7 @@ In two weeks the same script runs again, and then there is a comparison instead 
 
 The first draft was a one-liner in the configuration, with no script in between.
 It survived until the evening two sessions were running at once: one that was computing away and supposed to call me, and a second one alongside whose sounds were in the way.
-A global switch would have silenced both — including the one I was waiting for.
+A global switch would have silenced both, including the one I was waiting for.
 
 So there is a small script between hook and speaker.
 The hook payload arrives as JSON on `stdin`, and the session ID is in there:
@@ -127,13 +127,14 @@ Four lines for the case that something underneath me changes.
 One thing cost me twenty minutes, and it is typical of automations that concern themselves.
 
 Hooks are read **at session start**.
-If I add one mid-session, nothing happens in that session — not until `/hooks` or a restart.
+If I add one mid-session, nothing happens in that session, not until `/hooks` or a restart.
 Of all sessions, the one in which you set up the notification is the one without a notification.
 And because it is the session you are working in, it is also the one you want to test it in.
 
 The stopgap is inelegant and works: while the hook is not yet live, the agent plays the sound itself, as the last command of its answer.
 That is the same `paplay` call, one level up.
-If you build yourself an automation, build it so it can also be triggered by hand — then "not active yet" is not a special case, just one extra step.
+If you build yourself an automation, build it so it can also be triggered by hand.
+Then "not active yet" is not a special case, just one extra step.
 
 ## What the sound can't do
 
@@ -163,7 +164,7 @@ A sound that arrives constantly stops being heard after two hours — and then I
 If you work with an agent that runs longer than you care to watch:
 
 1. **Take two events, not eight.** Done, and needs-you. Anything else dilutes both.
-2. **Take two distinct sounds.** They are already on your system; you don't have to install anything or pick something beautiful — just two you can tell apart.
+2. **Take two distinct sounds.** They are already on your system; you don't have to install anything or pick something beautiful, just two you can tell apart.
 3. **Build the mute right away, and build it per session.** The day you run two sessions in parallel arrives sooner than you think.
 4. **Test it in a new session.** The one you configure it in is the only one where it won't work.
 5. **Measure your waits before you switch it on.** Your transcripts are already there, with a timestamp on every line.

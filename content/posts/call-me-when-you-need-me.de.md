@@ -3,7 +3,7 @@ title: "Ruf mich, wenn du mich brauchst: zwei Töne, die aus Warten Weggehen mac
 date: 2026-09-06T02:17:32+02:00
 tags: ["claude-code", "workflow", "hooks", "linux", "Field Notes"]
 themen: ["kosten"]
-summary: "Ein Agent, der zwanzig Minuten rechnet, macht mich nur dann frei, wenn er mich zurückholen kann. Sonst sehe ich alle zwei Minuten nach und bin doch gebunden. Zwei Zeilen Konfiguration machen aus dem Nachsehen einen Rückruf — und den Ausgangswert dafür habe ich noch schnell gemessen, bevor ich es eingeschaltet habe."
+summary: "Ein Agent, der zwanzig Minuten rechnet, macht mich nur dann frei, wenn er mich zurückholen kann. Sonst sehe ich alle zwei Minuten nach und bin doch gebunden. Zwei Zeilen Konfiguration machen aus dem Nachsehen einen Rückruf, und den Ausgangswert dafür habe ich noch schnell gemessen, bevor ich es eingeschaltet habe."
 ---
 
 ## Kurzfassung
@@ -12,7 +12,7 @@ summary: "Ein Agent, der zwanzig Minuten rechnet, macht mich nur dann frei, wenn
 - Der zweite ist der teure. Bis er beantwortet ist, steht die Arbeit.
 - Ohne Rückruf pollt der Mensch: alle zwei Minuten hinsehen, meistens umsonst. Mit Rückruf darf er weggehen.
 - Der Ausgangswert aus meinen eigenen Transkripten: 471 Wartezeiten in zwei Wochen, zusammen 20,2 Stunden. 14 Prozent davon länger als fünf Minuten, die längste 48.
-- Ob der Ton das verkürzt, weiß ich noch nicht. Seit der Einrichtung sind elf Wartezeiten aufgelaufen — daraus folgt nichts.
+- Ob der Ton das verkürzt, weiß ich noch nicht. Seit der Einrichtung sind elf Wartezeiten aufgelaufen, daraus folgt nichts.
 - Stumm wird die einzelne Sitzung, nicht der Rechner. Das Skript liest dazu die Sitzungs-ID aus den Hook-Daten.
 - Die eingebaute Falle: Hooks werden beim Sitzungsstart gelesen. Der Automatismus, den du gerade einträgst, gilt für dich noch nicht.
 
@@ -54,9 +54,9 @@ Beide bekommen einen Klang, und zwar ausdrücklich **nicht denselben**:
 ```
 
 Zwei verschiedene Klänge sind der ganze Trick.
-Ein einziger Ton würde bedeuten: „irgendetwas ist passiert, komm gucken" — und damit wäre ich wieder am Hinsehen.
+Ein einziger Ton würde bedeuten: „irgendetwas ist passiert, komm gucken", und damit wäre ich wieder am Hinsehen.
 Zwei Töne tragen die Information, auf die es ankommt, nämlich ob es eilt.
-„Fertig" darf fünf Minuten liegenbleiben; der Kaffee ist wichtiger.
+„Fertig" darf fünf Minuten liegenbleiben, der Kaffee ist wichtiger.
 „Ich brauche eine Entscheidung" heißt, dass gerade nichts passiert, solange ich in der Küche stehe.
 
 Die Klangdateien liegen auf jedem Fedora-System schon herum, das ist der Vorrat aus dem freedesktop-Sound-Theme.
@@ -88,7 +88,7 @@ Die 5 Prozent über zehn Minuten sind die interessanten: 23 Fälle, in denen ich
 
 Ehrlich dazugesagt: Diese 20,2 Stunden sind nicht durchweg Leerlauf.
 In vielen Spannen habe ich gelesen, geprüft oder überlegt.
-Der Zeitstempel weiß nicht, ob ich in der Küche stand oder eine Ausgabe studiert habe — er misst die Wartezeit des Agenten, nicht die Untätigkeit des Menschen.
+Der Zeitstempel weiß nicht, ob ich in der Küche stand oder eine Ausgabe studiert habe, er misst die Wartezeit des Agenten, nicht die Untätigkeit des Menschen.
 
 Und die zweite ehrliche Auskunft: Ob der Ton daran etwas ändert, kann ich noch nicht sagen.
 Er läuft seit gestern Abend um kurz nach sechs.
@@ -100,7 +100,7 @@ In zwei Wochen läuft dasselbe Skript noch einmal, und dann gibt es einen Vergle
 
 Der erste Entwurf war ein Einzeiler in der Konfiguration, ohne Skript dazwischen.
 Der hielt genau bis zu dem Abend, an dem zwei Sitzungen gleichzeitig liefen: eine, die lange rechnete und mich rufen sollte, und eine zweite nebenher, deren Töne mich störten.
-Ein globaler Schalter hätte beide stummgeschaltet — also genau die mit, auf die ich gewartet habe.
+Ein globaler Schalter hätte beide stummgeschaltet, also genau die mit, auf die ich gewartet habe.
 
 Deshalb liegt zwischen Hook und Lautsprecher ein kleines Skript.
 Die Hook-Daten kommen als JSON auf `stdin`, und darin steht die Sitzungs-ID:
@@ -115,7 +115,7 @@ paplay "$klang" >/dev/null 2>&1 &
 ```
 
 Eine Sitzung schweigt, solange eine Datei mit ihrer ID existiert.
-Zwei Kürzel legen sie an und löschen sie wieder — `[x]` aus, `[o]` an —, und das ist die ganze Bedienung.
+Zwei Kürzel legen sie an und löschen sie wieder, `[x]` aus, `[o]` an, und das ist die ganze Bedienung.
 Andere offene Sitzungen bleiben hörbar, ohne dass ich irgendwo eine ID abtippen müsste.
 
 Das Skript hat noch einen zweiten Zweig, den ich hier stehenlasse, weil er ein allgemeines Muster ist: Ältere Fassungen liefern statt der ID nur den Pfad zum Transkript.
@@ -127,18 +127,19 @@ Vier Zeilen für den Fall, dass sich unter mir etwas ändert.
 Eine Sache hat mich zwanzig Minuten gekostet, und sie ist typisch für Automatismen, die sich selbst betreffen.
 
 Hooks werden **beim Sitzungsstart** eingelesen.
-Trage ich mitten in einer Sitzung einen ein, tut sich in genau dieser Sitzung nichts — bis `/hooks` oder ein Neustart.
+Trage ich mitten in einer Sitzung einen ein, tut sich in genau dieser Sitzung nichts, bis `/hooks` oder ein Neustart.
 Ausgerechnet die Sitzung, in der du die Benachrichtigung einrichtest, hat keine Benachrichtigung.
 Und weil du gerade an ihr arbeitest, ist sie auch die, in der du sie prüfen willst.
 
 Die Zwischenlösung ist unelegant und funktioniert: Solange der Hook noch nicht greift, spielt der Agent den Ton selbst, als letzten Befehl seiner Antwort.
 Das ist derselbe `paplay`-Aufruf, nur eine Ebene höher.
-Wer sich einen Automatismus baut, sollte ihn so bauen, dass er auch von Hand auslösbar ist — dann ist der Zustand „noch nicht aktiv" kein Sonderfall, sondern nur ein zusätzlicher Handgriff.
+Wer sich einen Automatismus baut, sollte ihn so bauen, dass er auch von Hand auslösbar ist.
+Dann ist der Zustand „noch nicht aktiv" kein Sonderfall, sondern nur ein zusätzlicher Handgriff.
 
 ## Was der Ton nicht kann
 
 Er macht Rückfragen nicht billiger.
-Eine Frage an mich kostet den Agenten eine volle Runde mit dem gesamten mitgeschleppten Kontext, und das ist der [teuerste Posten](/de/posts/the-most-expensive-answer-is-yes/) im ganzen Betrieb — daran ändert ein Klang nichts.
+Eine Frage an mich kostet den Agenten eine volle Runde mit dem gesamten mitgeschleppten Kontext, und das ist der [teuerste Posten](/de/posts/the-most-expensive-answer-is-yes/) im ganzen Betrieb, daran ändert ein Klang nichts.
 Was er ändert, ist die Wartezeit davor.
 
 Genau deshalb sind es nur zwei Ereignisse geblieben.
@@ -163,7 +164,7 @@ Ein Ton, der ständig kommt, wird nach zwei Stunden nicht mehr gehört — und d
 Wenn du mit einem Agenten arbeitest, der länger rechnet, als du zusehen magst:
 
 1. **Nimm zwei Ereignisse, nicht acht.** Fertig, und braucht-dich. Alles Weitere verwässert beide.
-2. **Nimm zwei verschiedene Klänge.** Die liegen auf deinem System schon herum; du musst nichts installieren und nichts aussuchen, was gut klingt — nur zwei, die du auseinanderhältst.
+2. **Nimm zwei verschiedene Klänge.** Die liegen auf deinem System schon herum, du musst nichts installieren und nichts aussuchen, was gut klingt, nur zwei, die du auseinanderhältst.
 3. **Bau die Stummschaltung gleich mit, und zwar pro Sitzung.** Der Tag, an dem du zwei Sitzungen parallel fährst, kommt früher als gedacht.
 4. **Prüf es in einer neuen Sitzung.** Die, in der du es einträgst, ist die einzige, in der es nicht funktioniert.
 5. **Miss deine Wartezeiten, bevor du es einschaltest.** Deine Transkripte liegen schon da, mit Zeitstempel an jeder Zeile.

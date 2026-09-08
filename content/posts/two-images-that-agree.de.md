@@ -5,12 +5,12 @@ draft: true
 tags: ["claude-code", "hardware", "esp32", "reverse-engineering", "debugging", "Technical Deep Dive"]
 themen: ["rechner"]
 series: ["Werkzeugketten"]
-summary: "Ein Firmware-Abbild beschreibt nicht, was jemand vorhatte, sondern was ausgeführt wird. Drei Ketten enden in einem Abbild: eine liest die Werksfirmware, eine liest zwei gegeneinander, und eine liest dieselbe zweimal — und findet den Unterschied."
+summary: "Ein Firmware-Abbild beschreibt nicht, was jemand vorhatte, es beschreibt, was ausgeführt wird. Drei Ketten enden in einem Abbild: eine liest die Werksfirmware, eine liest zwei gegeneinander, und eine liest dieselbe zweimal und findet den Unterschied."
 ---
 
 Teil eins hat drei Ketten beschrieben, die auf [Papier enden](/de/posts/the-schematic-is-a-hypothesis/), und den Schaltplan dabei dreimal widerlegt.
 Papier beschreibt eine Absicht.
-Ein Firmware-Abbild beschreibt, was ausgeführt wird — und auf dieser Platine lagen zwei davon, jedes vor dem ersten eigenen Schreibzugriff gesichert.
+Ein Firmware-Abbild beschreibt, was ausgeführt wird, und auf dieser Platine lagen zwei davon, jedes vor dem ersten eigenen Schreibzugriff gesichert.
 
 ## Kurzfassung
 
@@ -18,12 +18,12 @@ Ein Firmware-Abbild beschreibt, was ausgeführt wird — und auf dieser Platine 
   Ein Abbild kann diese Frage beantworten, weil es die Antwort enthält.
 - **Ankertechnik:** Log-Texte im Abbild sind die Fixpunkte.
   Die Adresse eines Textes steht in einer Konstantentabelle, und von dort führt eine einzelne Ladeanweisung zurück in die Funktion, die ihn ausgibt.
-- Ergebnis: Die Werksfirmware benutzt **nicht** die Standard-Initialisierungstabelle des Herstellertreibers, sondern eine eigene mit 184 Einträgen — und die endet mit dem Befehl, der in der Standardtabelle fehlt.
+- Ergebnis: Die Werksfirmware benutzt **nicht** die Standard-Initialisierungstabelle des Herstellertreibers, sie hat eine eigene mit 184 Einträgen, und die endet mit dem Befehl, der in der Standardtabelle fehlt.
 - **Zwei Abbilder gegeneinander** ergaben das Protokoll zwischen den beiden Prozessoren vollständig: Baudrate, Pins, Rahmenformat, Befehlsvorrat.
-  Beide Enden unabhängig gelesen, beide einig — und die Pins widersprechen dem Schaltplan.
+  Beide Enden unabhängig gelesen, beide einig, und die Pins widersprechen dem Schaltplan.
 - **Dieselbe Firmware zweimal gelesen** und verglichen: alles bytegleich außer 1 985 Bytes.
   Der Unterschied *ist* der Befund.
-- Am Ende: Mitschreiben ist keine Ordnungsliebe, sondern ein Werkzeug.
+- Am Ende: Mitschreiben ist ein Werkzeug und keine Ordnungsliebe.
   Von drei Recherchen, die am Nutzungslimit starben, blieb genau das erhalten, was zu dem Zeitpunkt in der Datei stand.
 
 ---
@@ -32,7 +32,7 @@ Ein Firmware-Abbild beschreibt, was ausgeführt wird — und auf dieser Platine 
 
 Das Ausgangsproblem stand am Ende von Teil eins: Das gezeichnete Bild verblasst nach ein bis zwei Sekunden.
 Das Datenblatt hatte die Physik dazu geliefert.
-Offen blieb, was die Werksfirmware anders macht — denn sie zeigt auf demselben Panel ein Bild, das steht.
+Offen blieb, was die Werksfirmware anders macht, denn sie zeigt auf demselben Panel ein Bild, das steht.
 
 Die Kette:
 
@@ -49,27 +49,29 @@ Danach existiert der Auslieferungszustand als Datei, und alles Weitere ist Arbei
 
 Zwei Sätze zur Ordnung, weil an dieser Stelle die einzige Datei entsteht, die nicht weitergegeben wird.
 Das Abbild ist fremde Firmware: Es bleibt auf der Platte, `backup/*.bin` steht in der `.gitignore`, und was in diesen Beiträgen steht, sind ausschließlich die Befunde daraus — keine Bytes.
-Das Gerät gehört mir, Secure Boot und Flash-Verschlüsselung sind ab Werk aus; es wird hier nichts umgangen, was jemand als Schutz gemeint hätte.
+Das Gerät gehört mir, Secure Boot und Flash-Verschlüsselung sind ab Werk aus, es wird hier nichts umgangen, was jemand als Schutz gemeint hätte.
 Warum das die einzige Stelle der ganzen Serie ist, an der man wirklich etwas falsch machen kann, steht [in einem eigenen Beitrag](/de/posts/the-wrong-statute/).
 
 Der zweite Schritt trennt das Abbild in seine Teile.
-An Adresse `0x10000` beginnt ein Kopfbereich, der auflistet, welcher Abschnitt der Datei später an welche Adresse im Speicher geladen wird — sechs Segmente, jedes mit Dateioffset, Zieladresse und Länge.
+An Adresse `0x10000` beginnt ein Kopfbereich, der auflistet, welcher Abschnitt der Datei später an welche Adresse im Speicher geladen wird: sechs Segmente, jedes mit Dateioffset, Zieladresse und Länge.
 Ohne diese Zuordnung ist ein Disassembler wertlos: Er kann Maschinenbefehle entziffern, aber jeder Sprung und jeder Verweis auf Daten zeigt an eine Adresse, die er nicht kennt.
-Mit ihr — `--adjust-vma=<Ladeadresse>` sagt dem Disassembler, wo das Stück im Speicher liegt — stimmen alle Adressen wieder.
+Mit ihr stimmen alle Adressen wieder.
+`--adjust-vma=<Ladeadresse>` sagt dem Disassembler, wo das Stück im Speicher liegt.
 
 Der dritte Schritt ist der eigentliche Trick.
 Kompilierter Code hat keine Funktionsnamen mehr, aber er hat **Log-Texte**, und die haben Adressen.
-Auf dieser Prozessorarchitektur kann ein Befehl keine vollständige Adresse als Zahl enthalten; Konstanten liegen in einem kleinen Vorrat neben dem Code und werden mit einer eigenen Ladeanweisung geholt.
+Auf dieser Prozessorarchitektur kann ein Befehl keine vollständige Adresse als Zahl enthalten.
+Konstanten liegen in einem kleinen Vorrat neben dem Code und werden mit einer eigenen Ladeanweisung geholt.
 Sucht man also die Adresse des Textes `ESP_PanelBus_QSPI` in diesem Vorrat und dann die Ladeanweisungen, die diese Stelle lesen, landet man bei genau den Funktionen, die diesen Text ausgeben.
 Aus einer Zeichenkette wird ein Einstiegspunkt.
 
 Was so gefunden wurde:
 
 **Die Werksfirmware benutzt eine eigene Initialisierungstabelle.**
-Die Bibliothek, gegen die sie gebaut ist, bringt eine 216 Einträge lange Standardtabelle mit — und die wird nur in einem Zweig referenziert, der nicht läuft.
+Die Bibliothek, gegen die sie gebaut ist, bringt eine 216 Einträge lange Standardtabelle mit, und die wird nur in einem Zweig referenziert, der nicht läuft.
 Stattdessen installiert die Anwendung eine eigene mit **184 Einträgen**, die an einer ganz anderen Stelle im Datenbereich liegt.
 Deshalb hatte ein früherer Durchgang, der in der Nähe der Bibliotheksdaten gesucht hatte, immer nur die Standardtabelle gefunden.
-Die beiden unterscheiden sich in fast jedem Analogregister — und die eigene endet mit `INVON`, `SLPOUT`, **`DISPON`**.
+Die beiden unterscheiden sich in fast jedem Analogregister, und die eigene endet mit `INVON`, `SLPOUT`, **`DISPON`**.
 Genau der Befehl, der in der Standardtabelle fehlt und den das Datenblatt als einzigen Ausweg aus dem Aus-Zustand nennt.
 
 **Die Buskonfiguration steht in den Konstruktorkonstanten.**
@@ -81,14 +83,14 @@ Die Frage, wie man dem Anzeigetreiber korrekt ein Register ausliest, sollte an d
 Die Suche nach der Lesefunktion ergab: Sie hat genau zwei Aufrufer im gesamten Abbild, und beide gehören zum Berührungssensor.
 **Die Werksfirmware liest den Bildschirm nie.**
 Es gibt nichts abzuschauen.
-Diese Antwort ist unbefriedigend und trotzdem viel wert — sie verhindert, dass weiter danach gesucht wird.
+Diese Antwort ist unbefriedigend und trotzdem viel wert, sie verhindert, dass weiter danach gesucht wird.
 
 ## Kette 5: zwei Abbilder gegeneinander
 
 Die zweite Kette ist die interessanteste, weil sie ohne jedes Messgerät auskommt und trotzdem stärker ist als der Schaltplan.
 
 Auf der Platine sitzen zwei Mikrocontroller, die über eine serielle Leitung miteinander reden.
-Beide tragen ihre Werksfirmware, beide wurden ausgelesen, und beide Enden desselben Gesprächs wurden **unabhängig voneinander** disassembliert — dieselbe Ankertechnik, andere Prozessorarchitektur, andere Toolchain.
+Beide tragen ihre Werksfirmware, beide wurden ausgelesen, und beide Enden desselben Gesprächs wurden **unabhängig voneinander** disassembliert: dieselbe Ankertechnik, andere Prozessorarchitektur, andere Toolchain.
 
 Was dabei herauskam, deckt sich in jedem Punkt:
 
@@ -119,10 +121,10 @@ Auch das Protokoll selbst ließ sich vollständig zurücklesen, aus den Verteile
  4   Daten   Länge Bytes
 ```
 
-Titelbilder werden in nummerierten Paketen übertragen, **und der Empfänger fordert jedes einzelne an** — der Sender läuft nie voraus.
+Titelbilder werden in nummerierten Paketen übertragen, **und der Empfänger fordert jedes einzelne an**, der Sender läuft nie voraus.
 Beide Seiten berechnen dieselbe Schrittweite von 1 016 Bytes je Paket, an zwei Stellen in zwei verschiedenen Abbildern, und beide begrenzen die Nutzlast auf denselben Wert.
 
-Das alles war zu diesem Zeitpunkt noch nicht gemessen, sondern gelesen, und die Notiz sagte das auch so.
+Das alles war zu diesem Zeitpunkt gelesen und noch nicht gemessen, und die Notiz sagte das auch so.
 Einen Tag später hörte ein Empfänger auf GPIO39 mit: **921 600 Baud, 8N1, null Rahmenfehler, null verlorene Bytes**, Kennung `0xBD` wie gelesen.
 Und der Befehl `0x06` entpuppte sich als Metadatenrahmen mit vier Textlängen im Kopf:
 
@@ -165,20 +167,21 @@ Er ist die Antwort auf eine Frage, die man nicht gestellt hatte.
 Am Ende dieses Teils eine Kette, die über allen anderen liegt.
 
 Jede der Recherchen oben hat ihre Befunde **während der Arbeit** in eine Datei geschrieben, nicht danach.
-Die Dateien in `scratch-findings/` fangen als Gerüst an — die offenen Fragen als nummerierte Überschriften, darunter jeweils `(to fill)` — und daneben steht ein Quellenlog: `S1`, `S2`, `S3`, jede Quelle mit Adresse, Zitat und dem Vermerk, ob sie etwas belegt oder widerlegt.
+Die Dateien in `scratch-findings/` fangen als Gerüst an, die offenen Fragen als nummerierte Überschriften, darunter jeweils `(to fill)`, und daneben steht ein Quellenlog: `S1`, `S2`, `S3`, jede Quelle mit Adresse, Zitat und dem Vermerk, ob sie etwas belegt oder widerlegt.
 Ganz unten ein Abschnitt mit der Überschrift „Dead ends (do not search again)".
 
-Der Grund dafür ist nicht Ordnungsliebe, sondern eine Erfahrung mit einem Datum.
+Der Grund dafür ist keine Ordnungsliebe.
+Es ist eine Erfahrung mit einem Datum.
 Am 4. September starben drei parallel laufende Recherchen am Nutzungslimit, mitten im Satz.
-Erhalten blieb exakt das, was zu diesem Zeitpunkt in ihren Dateien stand — und das war genug, um weiterzuarbeiten.
+Erhalten blieb exakt das, was zu diesem Zeitpunkt in ihren Dateien stand, und das war genug, um weiterzuarbeiten.
 Verloren war nicht Information, sondern **Verdichtung**: die Zusammenfassung, die es nie gegeben hat.
 
 Daraus folgt eine Regel, die für Recherche allgemein gilt und nicht nur für Hardware: Wer Befunde für den Abschlussbericht aufspart, riskiert alles auf das Ende.
-Wer sie fortlaufend hinschreibt, riskiert nur die Zusammenfassung — und die ist der billigste Teil.
+Wer sie fortlaufend hinschreibt, riskiert nur die Zusammenfassung, und die ist der billigste Teil.
 
 Die Sammlung der toten Spuren ist dabei das unterschätzte Stück.
-„Der Schaltplan hat keinen Freigabepin für das Panel", „der gemeldete Fehler betrifft 33 000 Bytes und nicht 3 600", „die Werksfirmware liest den Bildschirm nie" — drei Sätze, die keine Frage beantworten und trotzdem jeder eine Stunde sparen, sobald jemand die Spur zum zweiten Mal aufnimmt.
+„Der Schaltplan hat keinen Freigabepin für das Panel", „der gemeldete Fehler betrifft 33 000 Bytes und nicht 3 600", „die Werksfirmware liest den Bildschirm nie", drei Sätze, die keine Frage beantworten und trotzdem jeder eine Stunde sparen, sobald jemand die Spur zum zweiten Mal aufnimmt.
 
 Der letzte Teil verlässt die Abbilder.
-Papier sagt, was gedacht war; ein Abbild sagt, was ausgeführt wird.
-Was auf der Platine wirklich verlötet ist, sagt keins von beiden — dazu muss man das Gerät fragen.
+Papier sagt, was gedacht war, ein Abbild sagt, was ausgeführt wird.
+Was auf der Platine wirklich verlötet ist, sagt keins von beiden, dazu muss man das Gerät fragen.

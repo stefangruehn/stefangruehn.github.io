@@ -5,11 +5,11 @@ draft: false
 tags: ["claude-code", "linux", "hardware", "debugging", "audio", "chuwi", "Technical Deep Dive"]
 topics: ["machine"]
 series: ["Reverberations"]
-summary: "A wrong theory, a public retraction, and a small measurement tool — what I learned about using AI assistance for problems that aren't about code at all."
+summary: "A wrong theory, a public retraction, and a small measurement tool: what I learned about using AI assistance for problems that aren't about code at all."
 ---
 
 *Update, added 2026-09-02:* this story has a footnote.
-Three days after the speakers were working, the speaker test in my own sound settings went silent —
+Three days after the speakers were working, the speaker test in my own sound settings went silent,
 and the cause turned out to be a leftover from this very debugging session, not from the hardware and not from the fix.
 I wrote that up separately: [Silence Without an Error](/posts/a-remembered-zero/).
 
@@ -43,12 +43,12 @@ I did not solve that.
 His project log is [worth reading on its own](https://github.com/pacomont/chuwi-corebook-x-left-speaker), and everything below sits on top of it.
 
 I installed his daemon and both speakers worked.
-Then, though, I noticed something on my machine that his notes didn't describe — and that is where my contribution to the topic starts.
+Then, though, I noticed something on my machine that his notes didn't describe, and that is where my contribution to the topic starts.
 
 ## A theory built by listening
 
 To me, audio came clearly out of the front left edge of the laptop, and also from somewhere at the lower right, towards the back.
-That suggested a **third**, full-range speaker — one his fix was using instead of the front right speaker.
+That suggested a **third**, full-range speaker, one his fix was using instead of the front right speaker.
 
 I tested it the obvious way: play sound, mute one output at a time, note what I heard.
 The results looked consistent.
@@ -73,7 +73,7 @@ Claude Code called this out rather than continuing to collect my reports:
 > Let me stop relying on that.
 
 Our shared failure at that point in the session wasn't down to a lack of effort on my part.
-It was rather that we were measuring with the wrong instrument — and no amount of careful listening, or younger ears, would have changed that.
+It was rather that we were measuring with the wrong instrument, and no amount of careful listening, or younger ears, would have changed that.
 
 ## Building an instrument instead
 
@@ -81,8 +81,8 @@ The next approach was to record the signals from the laptop's built-in microphon
 That nearly worked too, but the microphone noise floor swamped the quiet speaker.
 
 So the approach sharpened.
-Rather than measuring loudness in general, measure the *specific tone* being played and ignore everything else — a Goertzel filter, which locks onto one frequency and rejects the rest.
-Two frequencies were used: 1 kHz to gauge level, and 6 kHz to ask a different question entirely — *can this speaker even produce high frequencies?*
+Rather than measuring loudness in general, measure the *specific tone* being played and ignore everything else: a Goertzel filter, which locks onto one frequency and rejects the rest.
+Two frequencies were used: 1 kHz to gauge level, and 6 kHz to ask a different question entirely: *can this speaker even produce high frequencies?*
 
 A note on how strikingly flexibly Claude handled this: numpy, a Python library for signal analysis, wasn't installed in that environment, so the analysis was simply written in plain Python instead.
 No lab equipment needed.
@@ -113,11 +113,11 @@ So I sat there sealing speaker slots with my finger while a tone played and a sc
 Incidentally: it felt faintly ridiculous.
 It also worked, because a covered speaker gets measurably quieter and a microphone has no opinions of its own.
 
-I want to highlight this specific progression, because it's the thing I found genuinely impressive — not just any single clever step, but the logical *direction* in which our findings developed:
+I want to highlight this specific progression, because it's the thing I found genuinely impressive, not just any single clever step, but the logical *direction* in which our findings developed:
 
-1. **"Tell me what you hear."** — unreliable, and we found that out quickly.
-2. **"Cover this opening with your hand."** — crude and hands-on, but objectively measurable by Claude.
-3. **"Here's a tone-locked analyzer; the microphone reads the answer."** — repeatable, with numbers.
+1. **"Tell me what you hear."** Unreliable, and we found that out quickly.
+2. **"Cover this opening with your hand."** Crude and hands-on, but objectively measurable by Claude.
+3. **"Here's a tone-locked analyzer; the microphone reads the answer."** Repeatable, with numbers.
 
 Each step took me, the biological part of the setup, further out of the measurement.
 That is what real progress looks like on a problem like this.
@@ -150,7 +150,7 @@ I came back to the next session with Claude with a specific new idea rather than
 This matters because tools that answer instantly can tempt us to keep asking instead of stopping to think first.
 That is how we are socially conditioned as humans, and not answering an agentic AI straight away feels odd at first.
 
-A forced break does turn out to be genuinely useful on a problem you don't yet understand — and unlike a human collaborator, the session picks up exactly where it left off, with the full context intact.
+A forced break does turn out to be genuinely useful on a problem you don't yet understand, and unlike a human collaborator, the session picks up exactly where it left off, with the full context intact.
 Nothing had to be re-explained to Claude.
 
 ## Keeping control
@@ -172,7 +172,7 @@ Unprompted, Claude Code wrote this:
 
 > I should be straight about my part: to get measurable levels I ran the path at its calibrated maximum with sustained full-scale sine tones, which is louder and harsher than your normal use, so I can't rule that out as a contributor.
 
-It then laid out the evidence pointing the other way, too — the amplifier reported no over-current, over-temperature or clipping faults.
+It then laid out the evidence pointing the other way, too: the amplifier reported no over-current, over-temperature or clipping faults.
 After a reboot of the machine the speaker was back, incidentally, and it has been stable since.
 
 An assistant that proactively flags its own possible contribution to an acute problem is more useful than one that would rather not worry you and withholds information as a result.
@@ -198,7 +198,8 @@ The technical risks are real but manageable, as long as you read the plan first 
 ## Whether this is worth it for you
 
 You do not need to be a developer for this.
-I could not have written that tone analyzer in Python as fast as Claude did, and I didn't need to — I only needed to describe a symptom accurately and run what Claude asked me to run.
+I could not have written that tone analyzer in Python as fast as Claude did, and I didn't need to.
+I only needed to describe a symptom accurately and run what Claude asked me to run.
 And to put a finger over a speaker hole when that turned out to be the best instrument available at the time.
 
 If you have a device with something quietly broken on it — a speaker, a sensor, a fan that never spins, some feature that silently stopped working —

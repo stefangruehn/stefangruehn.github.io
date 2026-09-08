@@ -41,7 +41,7 @@ Werde ich auf einen aufmerksam, entferne ich den Verweis.
 
 Die Inhalte dieser Seite unterliegen dem deutschen Urheberrecht.
 Vervielfältigung, Bearbeitung und Verbreitung außerhalb der Grenzen des Urheberrechts bedürfen meiner Zustimmung.
-Für Zitate mit Quellenangabe gilt das nicht — die sind ausdrücklich willkommen.
+Für Zitate mit Quellenangabe gilt das nicht, die sind ausdrücklich willkommen.
 
 ## Stand
 

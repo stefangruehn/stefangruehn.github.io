@@ -35,7 +35,7 @@ I want to know which posts get read, and use [GoatCounter](https://www.goatcount
 The service is run by Martin Tournoij in Ireland; the servers are at Hetzner Online GmbH in Finland and Germany.
 The data therefore never leaves the European Union.
 
-GoatCounter sets no cookies and stores nothing in your browser — not in local storage, not by any other means.
+GoatCounter sets no cookies and stores nothing in your browser, not in local storage, not by any other means.
 It records the page you opened, the referring source, browser, operating system, screen width, language, and the country derived from your IP address.
 
 Your IP address is not stored permanently.
@@ -47,7 +47,7 @@ See [GoatCounter's privacy policy](https://www.goatcounter.com/help/privacy) for
 
 ## Comments
 
-Below the posts — and only there — [giscus](https://giscus.app) is embedded.
+Below the posts, and only there, [giscus](https://giscus.app) is embedded.
 Loading that section makes your browser connect to `giscus.app`, which necessarily transmits your IP address.
 On every other page, giscus is not loaded at all.
 

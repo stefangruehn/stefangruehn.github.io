@@ -5,7 +5,7 @@ draft: false
 tags: ["claude-code", "workflow", "schreiben", "werkzeuge", "selbstbezug", "Essay"]
 themen: ["schreiben"]
 series: ["Rueckkopplung"]
-summary: "Von vierzehn veröffentlichten Beiträgen handeln sechs von Werkzeugen, die bei der Arbeit an diesem Blog entstanden sind. Das ist keine Themenwahl, sondern eine Folge davon, woher der Stoff kommt — und es hat eine Grenze, die man kennen sollte."
+summary: "Von vierzehn veröffentlichten Beiträgen handeln sechs von Werkzeugen, die bei der Arbeit an diesem Blog entstanden sind. Das ist keine Themenwahl, sondern eine Folge davon, woher der Stoff kommt, und es hat eine Grenze, die man kennen sollte."
 ---
 
 Vierzehn Beiträge stehen hier veröffentlicht.
@@ -19,7 +19,7 @@ Sechs davon handeln von Werkzeugen, die es ohne diesen Blog nicht gäbe.
 - Vier Prüfprogramme und zwei Messwerkzeuge gehören inzwischen dazu, dazu drei Selbsttests, die die Prüfer prüfen.
   Jedes davon entstand, weil etwas schiefgegangen war.
 - Der reinste Fall ist ein Änderungswunsch am Verfahren für Änderungswünsche.
-  Das Feld für den betroffenen Beitrag bleibt dort leer — betroffen ist kein Beitrag, sondern das Verfahren.
+  Das Feld für den betroffenen Beitrag bleibt dort leer. Betroffen ist das Verfahren.
 - Es gibt einen eigenen Herkunftsvermerk für Vorschläge, die niemandem beim Lesen aufgefallen sind, sondern beim Arbeiten am Bestand.
   Den braucht nur ein System, das sich selbst beobachtet.
 - Die Schleife schließt mit Verzögerung: Eine Regel, die ich heute eintrage, gilt erst ab der nächsten Sitzung.
@@ -48,12 +48,12 @@ Sie sind nicht erhoben worden, sie lagen da.
 
 Im Werkzeugverzeichnis dieses Blogs und im Nachbarverzeichnis daneben liegen inzwischen elf Programme.
 
-Fünf prüfen: ob jeder Beitrag genau ein Thema hat und jedes Thema eine Seite; ob eine Serienseite erst dann öffentlich steht, wenn keiner ihrer Teile mehr Entwurf ist; ob das Minimieren der Auslieferung den Text unangetastet lässt; ob die Ideennotizen zum veröffentlichten Stand passen; ob die Änderungswünsche ins Leere zielen.
+Fünf prüfen: ob jeder Beitrag genau ein Thema hat und jedes Thema eine Seite, ob eine Serienseite erst dann öffentlich steht, wenn keiner ihrer Teile mehr Entwurf ist, ob das Minimieren der Auslieferung den Text unangetastet lässt, ob die Ideennotizen zum veröffentlichten Stand passen, ob die Änderungswünsche ins Leere zielen.
 Zwei messen: den Tokenverbrauch über eine Sitzung, die Wartezeiten zwischen meinen Eingaben.
 Vier prüfen die Prüfer.
 
 Keines davon war geplant.
-Jedes entstand, nachdem etwas danebengegangen war, das man vorher für unmöglich gehalten hätte — ein Beitrag, der auf keiner Themenseite auftauchte und trotzdem nirgends fehlte, weil eine Seite, die nie gebaut wurde, auch keine Lücke hinterlässt.
+Jedes entstand, nachdem etwas danebengegangen war, das man vorher für unmöglich gehalten hätte: ein Beitrag, der auf keiner Themenseite auftauchte und trotzdem nirgends fehlte, weil eine Seite, die nie gebaut wurde, auch keine Lücke hinterlässt.
 
 Der fünfte kam am 7. September dazu: Die Übersichtsseite einer Serie stand öffentlich im Netz, während alle drei Teile noch Entwürfe waren.
 Angekündigt war eine Serie, zu öffnen war nichts.
@@ -62,14 +62,14 @@ Und jedes von ihnen prüft seitdem den Blog, der von ihnen erzählt.
 
 ## Ein Vorschlag zum Verfahren für Vorschläge
 
-Änderungswünsche zu veröffentlichten Beiträgen liegen nicht in diesem Verzeichnis, sondern in einer eigenen Ablage: eine Notiz je Eingang, ein Frontmatter mit Status und Kanal, ein Abschnitt mit Ersetzungen, ein Index.
+Änderungswünsche zu veröffentlichten Beiträgen liegen nicht in diesem Verzeichnis, sie haben eine eigene Ablage: eine Notiz je Eingang, ein Frontmatter mit Status und Kanal, ein Abschnitt mit Ersetzungen, ein Index.
 
 Am 6. September ging dort ein Vorschlag ein, der das Ersetzungsmuster selbst betraf.
 Er schlug neben der wörtlichen Form eine sinngemäße vor, weil die wörtliche unterwegs nicht funktioniert: Wer auf dem Telefon nachliest, hat den Beitragstext nicht vor sich und trifft den Wortlaut selten.
 
 Im Frontmatter dieser Notiz gibt es ein Feld für den betroffenen Beitrag.
 Es ist leer.
-Betroffen ist kein Beitrag, sondern das Verfahren, in dem die Notiz steht — und die Änderung hat die Vorlage geändert, nach der die nächste Notiz angelegt wird, samt Prüfer und Selbsttest.
+Betroffen ist kein Beitrag, sondern das Verfahren, in dem die Notiz steht, und die Änderung hat die Vorlage geändert, nach der die nächste Notiz angelegt wird, samt Prüfer und Selbsttest.
 
 Das ist derselbe Schritt wie bei den Klammern, eine Ebene weiter innen.
 
@@ -79,7 +79,7 @@ Jede Notiz hält fest, woher der Vorschlag kam: eigenes Nachlesen, ein Gespräch
 
 Ein Wert in dieser Liste fällt aus der Reihe.
 Er heißt `intern` und bedeutet: aufgefallen bei der Arbeit am Blog selbst, ohne dass jemand gelesen hat.
-Niemand hat den Text betrachtet und sich gestört; das System ist über eine eigene Ungenauigkeit gestolpert, während es an etwas anderem arbeitete.
+Niemand hat den Text betrachtet und sich gestört. Das System ist über eine eigene Ungenauigkeit gestolpert, während es an etwas anderem arbeitete.
 
 Vier der acht bisherigen Notizen tragen diesen Vermerk.
 Bei einer davon stand für die Anzeigefläche eines Drehknopfs an vier Stellen „Glas" statt „Bildschirm" — in zwei Beiträgen, in zwei Sprachen, gefunden beim Umbauen.
@@ -119,7 +119,7 @@ Die Zahl ist zu klein, um beruhigend zu sein, und sie steht hier, damit sie nach
 - **Prüfprogramme sind der billigste Teil einer Rückkopplung.** Sie kosten eine Stunde und finden danach jeden Tag das, wofür man sonst Aufmerksamkeit braucht.
 - **Ein Verfahren, das sich selbst als Gegenstand zulässt, ist fertig.** Solange es keinen Weg gibt, das Verfahren mit den eigenen Mitteln zu ändern, ist es keins.
 - **Selbstbeobachtung braucht eigene Vermerke.** Ein Fund beim Arbeiten ist etwas anderes als ein Fund beim Lesen, und wer beides gleich ablegt, verliert die Unterscheidung genau dann, wenn sie interessant wird.
-- **Die Verzögerung ist der Teil, den man vergisst.** Nicht weil sie versteckt ist, sondern weil sie erst auffällt, wenn eine Regel schon zweimal nicht gegriffen hat.
+- **Die Verzögerung ist der Teil, den man vergisst.** Nicht weil sie versteckt ist. Sie fällt erst auf, wenn eine Regel schon zweimal nicht gegriffen hat.
 
 ## Was sich übertragen lässt
 

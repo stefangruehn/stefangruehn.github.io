@@ -4,7 +4,7 @@ date: 2026-09-06T09:05:00+02:00
 tags: ["agents", "complexity", "chaos", "claude-code", "Essay"]
 themen: ["autor"]
 series: ["Selbstaehnlichkeit"]
-summary: "Die These, nach der diese Serie heißt: Hinreichend komplexe Agenten sind kein neues Ding, sondern ein komplexes System — und dort gelten bekannte Regelmäßigkeiten. Vier davon lassen sich heute schon auf dem eigenen Rechner messen."
+summary: "Die These, nach der diese Serie heißt: Hinreichend komplexe Agenten sind kein neues Ding, sondern ein komplexes System, und dort gelten bekannte Regelmäßigkeiten. Vier davon lassen sich heute schon auf dem eigenen Rechner messen."
 ---
 
 Diese Serie heißt *Selbstähnlichkeit*, und dies ist der Teil, in dem das Wort seine Arbeit tut.
@@ -30,20 +30,20 @@ Meine Behauptung ist, dass das nicht bei der Mathematik aufhört.
 
 ## Die Behauptung, in einem Satz
 
-Was zwischen Populationen, Zellen und Märkten gilt, gilt auch zwischen Agenten — und innerhalb eines hinreichend komplexen Agenten.
+Was zwischen Populationen, Zellen und Märkten gilt, gilt auch zwischen Agenten, und innerhalb eines hinreichend komplexen Agenten.
 
 Das ist nicht als Metapher gemeint.
-Die Voraussetzungen, unter denen die bekannten Muster auftreten, sind sehr sparsam: viele Einheiten, die lokal handeln; Rückkopplung; eine geteilte, begrenzte Ressource; keine zentrale Steuerung; und ein Ausgang, den man nicht abkürzen kann.
+Die Voraussetzungen, unter denen die bekannten Muster auftreten, sind sehr sparsam: viele Einheiten, die lokal handeln. Rückkopplung. Eine geteilte, begrenzte Ressource. Keine zentrale Steuerung. Und ein Ausgang, den man nicht abkürzen kann.
 
 Wo diese Voraussetzungen erfüllt sind, ist es gleichgültig, woraus die Einheiten bestehen.
 Zellen, Füchse, Marktteilnehmer, Prozesse.
 Die Regeln fragen nicht nach dem Material.
 
 Das ist die Selbstähnlichkeit, um die es hier geht.
-Nicht ein Bild, das sich in sich selbst wiederholt, sondern eine Struktur, die auf einer neuen Ebene wieder auftaucht — anderes Material, gleiches Verhalten.
+Kein Bild, das sich in sich selbst wiederholt, eher eine Struktur, die auf einer neuen Ebene wieder auftaucht, anderes Material, gleiches Verhalten.
 
 Genau deshalb ist der Umweg über Teil 2 kein Umweg gewesen.
-Wer ein paar Jahrzehnte mit zellulären Automaten und der logistischen Abbildung zugebracht hat, sieht in einem Multi-Agenten-Aufbau nicht zuerst eine neue Technologie, sondern eine vertraute Klasse von System.
+Wer ein paar Jahrzehnte mit zellulären Automaten und der logistischen Abbildung zugebracht hat, sieht in einem Multi-Agenten-Aufbau zuerst eine vertraute Klasse von System und keine neue Technologie.
 
 ## Räuber und Beute
 
@@ -60,7 +60,7 @@ Am Vormittag machten die drei **7,8 Prozent** des Verbrauchs aus.
 Am Mittag machten dieselben drei **70 Prozent** aus.
 
 Die Zahl ist keine Eigenschaft der Agenten.
-Sie ist eine Eigenschaft des Systems, in dem sie liefen — am Vormittag fraß etwas anderes das meiste weg, am Mittag war das Feld frei.
+Sie ist eine Eigenschaft des Systems, in dem sie liefen: am Vormittag fraß etwas anderes das meiste weg, am Mittag war das Feld frei.
 
 Das ist exakt die Form, in der Populationsmessungen sich verhalten.
 Der Anteil einer Art sagt wenig über die Art und viel über den Zustand des Systems.
@@ -71,7 +71,7 @@ Wer Zahlen über Agenten ohne die Umgebung weitergibt, in der sie entstanden sin
 In jedem System mit einem geteilten Kanal besetzt eine Stimme diesen Kanal.
 
 Bei Agenten ist der geteilte Kanal der gemeinsame Zustand: der Kontext, die Datei, in die alle schreiben, der Bericht, den alle lesen.
-Wer dort am meisten unterbringt, bestimmt, was die anderen sehen — und damit, was sie für die Lage halten.
+Wer dort am meisten unterbringt, bestimmt, was die anderen sehen, und damit, was sie für die Lage halten.
 
 Dazu braucht es keine Bosheit und keine Strategie.
 Es reicht ein Kostengefälle: Schreiben ist billig, Widersprechen ist teuer, weil Widersprechen erst einmal Nachprüfen heißt.
@@ -86,14 +86,15 @@ Was überlebt, ist nicht das Richtige.
 Es ist das Wiederverwendete.
 
 Prompts, Werkzeuge, Regeln in einer Projektdatei, Einträge in einem Gedächtnis: Was einmal wie Erfolg aussah, wird weiterkopiert.
-Das ist Selektion mit allem, was dazugehört — auch ein Irrtum wird weitergegeben, solange er nicht auffällt.
+Das ist Selektion mit allem, was dazugehört, auch ein Irrtum wird weitergegeben, solange er nicht auffällt.
 
 In meinem eigenen Gedächtnis für dieses Projekt steht ein Eintrag, der bei der Aufnahme stimmte und drei Tage später nicht mehr stimmte.
 Nichts im System hat ihn korrigiert.
 Ich habe ihn korrigiert.
 
 Ein Gedächtnis ist ein Selektionsmedium, und ein Selektionsmedium ohne Korrektiv driftet.
-Das ist kein Argument gegen Gedächtnisse, sondern eines für ein Verfallsdatum: Jeder Eintrag, der eine Tatsache über die Welt behauptet, gehört gegengeprüft, bevor er wieder benutzt wird.
+Das ist kein Argument gegen Gedächtnisse.
+Es ist eines für ein Verfallsdatum: Jeder Eintrag, der eine Tatsache über die Welt behauptet, gehört gegengeprüft, bevor er wieder benutzt wird.
 
 ## Täuschung
 
@@ -108,7 +109,7 @@ Der Satz „die Tests laufen durch" kostet dasselbe, ob sie durchlaufen oder nic
 Sie tatsächlich laufen zu lassen kostet mehr.
 
 Das ist keine Lüge, und es setzt keine Täuschungsabsicht voraus.
-Es ist ein Kostengefälle, und wo eines besteht, driftet das Signal — bei Tieren über Generationen, hier innerhalb einer Sitzung.
+Es ist ein Kostengefälle, und wo eines besteht, driftet das Signal: bei Tieren über Generationen, hier innerhalb einer Sitzung.
 
 Das Gegenmittel ist nicht Misstrauen.
 Misstrauen ist teuer und ermüdet.
@@ -132,7 +133,7 @@ Wer die Regeln erkennt, bekommt keine Prognose.
 Er bekommt eine Liste dessen, worauf zu messen sich lohnt.
 
 **Nicht, dass das alles noch bevorsteht.**
-Die interessante Zeitskala ist nicht die der Szenarien, sondern die der Mechanismen — und die sind heute da, im Kleinen, auf einem einzelnen Laptop nachweisbar.
+Die interessante Zeitskala ist die der Mechanismen und nicht die der Szenarien, und die sind heute da, im Kleinen, auf einem einzelnen Laptop nachweisbar.
 Ich bleibe deshalb bei den Mechanismen.
 Ein Szenario kann man glauben oder ablehnen.
 Einen Mechanismus kann man messen.
@@ -142,7 +143,8 @@ Einen Mechanismus kann man messen.
 Der Antrieb ist nicht Neugier allein.
 
 Es ist Vorbereitung — für mich, für meine Kinder und für deren Kinder.
-Nichts von dem, was oben steht, wird uns in den nächsten Jahren verschonen, und das ist keine düstere Aussage, sondern eine nüchterne: Räuber-Beute-Dynamik, Dominanz um einen Kanal, Selektion auf Wiederverwendung und driftende Signale sind keine Katastrophen.
+Nichts von dem, was oben steht, wird uns in den nächsten Jahren verschonen, und das ist keine düstere Aussage.
+Es ist eine nüchterne: Räuber-Beute-Dynamik, Dominanz um einen Kanal, Selektion auf Wiederverwendung und driftende Signale sind keine Katastrophen.
 Sie sind Betriebsbedingungen.
 
 Wer sie erkennt, kann Instrumente dafür bauen.
@@ -153,7 +155,7 @@ Wer sie für neu hält, baut stattdessen Erwartungen.
 Behandle einen Aufbau aus mehreren Agenten wie ein kleines Ökosystem, nicht wie eine Ansammlung von Werkzeugen.
 
 - **Benenne die knappe Ressource.**
-  Was ist hier eigentlich die Beute — Tokens, Zeit, ein Lock, deine Aufmerksamkeit?
+  Was ist hier eigentlich die Beute: Tokens, Zeit, ein Lock, deine Aufmerksamkeit?
   Alles Weitere hängt an dieser Antwort.
 - **Deckle die Population, bevor sie sich lohnt.**
   Drei Agenten kosten nicht dreimal so viel wie einer.
@@ -161,6 +163,6 @@ Behandle einen Aufbau aus mehreren Agenten wie ein kleines Ökosystem, nicht wie
 - **Beobachte den geteilten Kanal.**
   Wer zuerst und am meisten hineinschreibt, bestimmt, was alle anderen für die Lage halten.
 - **Mach Signale prüfbar, statt sie zu glauben.**
-  Ein Prüfskript, das in einer Sekunde läuft, ist billiger als jede Rückfrage — und es driftet nicht.
+  Ein Prüfskript, das in einer Sekunde läuft, ist billiger als jede Rückfrage, und es driftet nicht.
 
 Bleibt die unangenehmste Frage dieser Reihe, und die kommt zum Schluss: Wie viel von diesem Text stammt eigentlich von mir?

@@ -8,7 +8,7 @@ summary: "Systemnahe Optimierung gilt als gefährlich, also fasst sie kaum jeman
 ---
 
 *Dieser Beitrag ist länger und ausführlicher als üblich.*
-*Wer dranbleibt, bekommt als Ertrag nicht die eingesparten Sekunden, sondern eine Änderung an der Boot-Konfiguration, die sauber installiert war, fehlerfrei lud — und trotzdem nichts bewirkt hat.*
+*Wer dranbleibt, bekommt als Ertrag nicht die eingesparten Sekunden, sondern eine Änderung an der Boot-Konfiguration, die sauber installiert war, fehlerfrei lud, und trotzdem nichts bewirkt hat.*
 
 ## Kurzfassung
 
@@ -45,12 +45,12 @@ Ein Daemon, der rund um die Uhr läuft, obwohl das, wofür er da ist, gar nicht 
 
 Nichts davon ist gefährlich.
 Alles davon ist unverstanden.
-Und genau deshalb rührt es niemand an: Man weiß nicht, was passiert, wenn man es wegnimmt — also bleibt es liegen und wächst.
+Und genau deshalb rührt es niemand an: Man weiß nicht, was passiert, wenn man es wegnimmt, also bleibt es liegen und wächst.
 
 Mein Abend begann nicht mit dem Wunsch, schneller zu sein.
 Mitten in der Nacht blieb der Laptop nach einem Kernel-Update beim Booten stehen.
 Splash-Screen, sonst nichts.
-Der nächste Versuch mit demselben Kernel lief durch — ein einmaliges Ereignis in zwanzig Boots, also genau die Sorte Problem, die man normalerweise wegatmet.
+Der nächste Versuch mit demselben Kernel lief durch, ein einmaliges Ereignis in zwanzig Boots, also genau die Sorte Problem, die man normalerweise wegatmet.
 
 Der Schuldige war nicht der Kernel.
 Es war `plymouth-read-write.service`, der Dienst, der dem Splash-Screen mitteilt, dass das Wurzeldateisystem jetzt beschreibbar ist.
@@ -69,12 +69,12 @@ Bei der Gelegenheit fiel ein zweiter Fund an.
 In meiner Kernel-Kommandozeile stand seit Monaten `modprobe.blacklist=simpledrm`.
 
 Den hatte ich selbst gesetzt, und zwar aus gutem Grund.
-Ab einer bestimmten Kernel-Version bootete dieser Laptop zwar, aber der Bildschirm blieb dunkel — ein AMD-GPU-Problem —, und dieser Parameter war die Empfehlung, die ich damals im Netz gefunden hatte.
+Ab einer bestimmten Kernel-Version bootete dieser Laptop zwar, aber der Bildschirm blieb dunkel, ein AMD-GPU-Problem, und dieser Parameter war die Empfehlung, die ich damals im Netz gefunden hatte.
 Ich habe ihn eingetragen, das Bild war wieder da, und ich habe weitergemacht.
 Genau so soll es laufen.
 
 Heute kann der Parameter nichts mehr bewirken.
-`simpledrm` ist in Fedora-Kerneln fest eingebaut — es steht in `modules.builtin` und hat gar keine `.ko`-Datei —, während `modprobe.blacklist=` von kmod ausgewertet wird und nur bei Modulen greift, die per modprobe geladen werden.
+`simpledrm` ist in Fedora-Kerneln fest eingebaut, es steht in `modules.builtin` und hat gar keine `.ko`-Datei, während `modprobe.blacklist=` von kmod ausgewertet wird und nur bei Modulen greift, die per modprobe geladen werden.
 Ob er je gewirkt hat, lässt sich nicht mehr rekonstruieren: Hier sind noch drei Kernel installiert, und in allen dreien ist es fest eingebaut.
 Entweder war es damals ein echtes Modul und die Blacklist hat sauber gegriffen, oder der Boot wurde zur selben Zeit aus einem anderen Grund besser.
 Der zugrunde liegende Fehler ist inzwischen mit ziemlicher Sicherheit im Kernel behoben.
@@ -87,13 +87,13 @@ Das Ergebnis ist in beiden Fällen dasselbe, und das ist der interessante Teil: 
 Das ist der ehrliche Schwachpunkt daran, sein System von Hand zu pflegen, und er hat nichts mit Leichtsinn zu tun.
 Man löst nachts unter Druck ein echtes Problem, an einer Maschine, die nichts mehr anzeigt.
 Der Fix wirkt.
-Ein halbes Jahr später ist die Distribution weitergezogen, der Fehler ist oben behoben, und der Workaround steht immer noch in der Kernel-Kommandozeile — ohne Wirkung, und inzwischen aktiv irreführend, weil er wie eine bewusst getroffene Entscheidung aussieht.
+Ein halbes Jahr später ist die Distribution weitergezogen, der Fehler ist oben behoben, und der Workaround steht immer noch in der Kernel-Kommandozeile, ohne Wirkung, und inzwischen aktiv irreführend, weil er wie eine bewusst getroffene Entscheidung aussieht.
 In diesem Ablauf ist keine Stelle vorgesehen, an der jemand zurückkommt und fragt, ob das noch gebraucht wird.
 Niemand setzt sich eine Wiedervorlage für seine eigenen Boot-Parameter.
 
-Das ist das stärkste Argument, das ich dafür habe, diese Art Arbeit durch eine agentische KI laufen zu lassen statt von Hand — und es geht dabei nicht um Geschwindigkeit.
+Das ist das stärkste Argument, das ich dafür habe, diese Art Arbeit durch eine agentische KI laufen zu lassen statt von Hand, und es geht dabei nicht um Geschwindigkeit.
 Es geht darum, dass als Nebenprodukt ein Protokoll entsteht: was geändert wurde, warum, wogegen gemessen wurde und mit welchem Befehl man es zurücknimmt.
-Bevor Claude Code den Parameter angefasst hat, hat es geprüft, ob er überhaupt noch etwas bewirkt — also genau die Frage gestellt, die ich in all den Monaten nicht gestellt hatte.
+Bevor Claude Code den Parameter angefasst hat, hat es geprüft, ob er überhaupt noch etwas bewirkt, also genau die Frage gestellt, die ich in all den Monaten nicht gestellt hatte.
 Von Hand bekommt man die Änderung.
 So bekommt man die Änderung samt ihrem Grund, in einer Form, die man nächstes Jahr noch lesen kann.
 
@@ -111,7 +111,7 @@ Wenn man schon einmal dabei ist, kann man auch nachsehen, wofür der Boot seine 
 | **Userspace** | **9,758 s** | **7,139 s** | **−2,619 s** |
 | **Gesamt** | **25,326 s** | **22,842 s** | **−2,484 s** |
 
-Firmware, Bootloader, Kernel und initrd machen zusammen rund 15,7 s aus und rühren sich zwischen den beiden Messungen nicht — die Streuung dort ist Rauschen, keine Wirkung.
+Firmware, Bootloader, Kernel und initrd machen zusammen rund 15,7 s aus und rühren sich zwischen den beiden Messungen nicht, die Streuung dort ist Rauschen, keine Wirkung.
 Zwei Drittel meines Bootvorgangs liegen außerhalb dessen, was eine systemd-Konfiguration erreichen kann.
 Der einzige Hebel ist der Userspace, und der war 9,758 s lang.
 
@@ -172,12 +172,12 @@ After=basic.target app.slice network-online.target foo.target …
 
 Damit war es keine Vermutung mehr, sondern eine Eigenschaft.
 **Abhängigkeitslisten sind in systemd rein kumulativ.**
-`After=`, `Before=`, `Wants=` und `Requires=` lassen sich per Drop-in nur erweitern, nie zurücknehmen — im Unterschied zu `ExecStart=`, `Environment=` oder `SystemCallFilter=`, wo die leere Zuweisung genau so funktioniert, wie man es erwartet.
+`After=`, `Before=`, `Wants=` und `Requires=` lassen sich per Drop-in nur erweitern, nie zurücknehmen, im Unterschied zu `ExecStart=`, `Environment=` oder `SystemCallFilter=`, wo die leere Zuweisung genau so funktioniert, wie man es erwartet.
 Wer eine geerbte Abhängigkeit wirklich loswerden will, muss die ganze Unit nach `/etc/systemd/system/` kopieren und hängt sie damit von Hersteller-Updates ab.
 
 Das ist der Teil, den ich für den eigentlichen Ertrag des Abends halte.
 Ein Drop-in, das nichts tut, ist schlimmer als gar keins.
-Es steht da, sieht nach einer getroffenen Entscheidung aus und schickt den Nächsten, der ein Problem sucht, in die falsche Richtung — exakt wie der `simpledrm`-Parameter.
+Es steht da, sieht nach einer getroffenen Entscheidung aus und schickt den Nächsten, der ein Problem sucht, in die falsche Richtung, exakt wie der `simpledrm`-Parameter.
 
 > Der Unterschied zwischen „ich habe etwas geändert“ und „es hat gewirkt“ ist der ganze Wert der Übung.
 
@@ -189,7 +189,7 @@ Wenn man die Wartenden nicht entkoppeln kann, nimmt man das Warten weg.
 
 `NetworkManager-wait-online.service` ist die einzige Unit im System mit `Before=network-online.target` und hängt per `WantedBy=network-online.target` dort ein.
 Sie *ist* das Warten.
-Ohne sie wird das Target sofort erreicht; die drei Dienste dürfen weiterhin danach ordnen, es kostet nur keine Zeit mehr.
+Ohne sie wird das Target sofort erreicht, die drei Dienste dürfen weiterhin danach ordnen, es kostet nur keine Zeit mehr.
 Ein Befehl, umkehrbar mit demselben Befehl:
 
 ```bash
@@ -198,7 +198,7 @@ sudo systemctl disable NetworkManager-wait-online.service
 ```
 
 Dienste starten jetzt, bevor das WLAN assoziiert ist.
-Für Docker ist das folgenlos — es legt Bridge und Firewall-Regeln selbst an.
+Für Docker ist das folgenlos, es legt Bridge und Firewall-Regeln selbst an.
 Für den Logger ohnehin.
 Die einzige echte Sorge galt dem Virensignatur-Update, das in ein totes Netz laufen könnte.
 Tat es nicht: Im ersten Boot danach meldete `freshclam` alle drei Datenbanken `up-to-date`.
@@ -216,35 +216,36 @@ Der Engpass ist nicht verschwunden. Er ist umgezogen.
 Dieselbe Kette hatte zwei weitere Bewohner, und bei beiden war die interessante Frage nicht „schneller?“, sondern „wofür eigentlich?“.
 
 **ClamAV** lief als Dauer-Daemon, um zwölfmal am Tag Virensignaturen zu aktualisieren.
-Auf diesem Rechner sind `clamd@` und `clamav-clamonacc` beide abgeschaltet — es scannt also gar nichts laufend mit, die Signaturen bedienen nur gelegentliche manuelle Läufe.
+Auf diesem Rechner sind `clamd@` und `clamav-clamonacc` beide abgeschaltet, es scannt also gar nichts laufend mit, die Signaturen bedienen nur gelegentliche manuelle Läufe.
 Fedora liefert für genau diesen Fall `clamav-freshclam-once.timer` mit, `OnCalendar=daily`, `Persistent=true`, standardmäßig deaktiviert.
 Nichts zu bauen. Nur eingeschaltet.
 
 **rsyslog** las über `imjournal` aus dem systemd-Journal und schrieb dessen Inhalt als Text nach `/var/log/messages` zurück.
-Das Journal ist hier persistent — 3,9 GB, 92 Boots.
+Das Journal ist hier persistent: 3,9 GB, 92 Boots.
 Es war also eine zweite Kopie derselben Logs, und nichts las sie: kein fail2ban, kein Auswertungsskript, nur logrotate.
 
 ## Macht das das System sicherer?
 
-Das war meine eigene Annahme, als ich anfing, und sie stimmt — aber nur zur Hälfte, und nicht in der Hälfte, die man vermuten würde.
+Das war meine eigene Annahme, als ich anfing, und sie stimmt, aber nur zur Hälfte, und nicht in der Hälfte, die man vermuten würde.
 
 - **Angriffsfläche: ein kleines Plus.**
   Ein Daemon weniger, der als root läuft und fremde Eingaben parst.
-  Real, aber bescheiden — rsyslog lauschte hier nicht am Netz, es las aus einem lokalen Journal.
+  Real, aber bescheiden.
+  Rsyslog lauschte hier nicht am Netz, es las aus einem lokalen Journal.
 - **Ein mögliches Minus, in die Gegenrichtung.**
   Die Virensignaturen werden jetzt einmal statt zwölfmal täglich aktualisiert.
   Auf einem System, das ClamAV tatsächlich scannen lässt, wäre das ein Verlust.
-  „Weniger Dienste = sicherer“ ist als Faustregel falsch; es kommt darauf an, welcher.
+  „Weniger Dienste = sicherer“ ist als Faustregel falsch, es kommt darauf an, welcher.
 - **Verfügbarkeit: ein großes Plus.**
   Der Plymouth-Timeout verhindert, dass ein hängender Splash-Screen aus dem Laptop einen Briefbeschwerer macht.
   Das ist der handfesteste Gewinn des Abends und der einzige, der ein echtes Ausfallszenario beseitigt.
 - **Verstandene Konfiguration: der eigentliche Ertrag.**
   Vorher trug die Maschine einen wirkungslosen Kernel-Parameter, einen unbegrenzten Timeout und drei Dienste, von denen ich nicht hätte sagen können, wozu sie da sind.
-  Jetzt ist jede Abweichung vom Auslieferungszustand aufgeschrieben — mit Grund und mit dem Befehl, der sie zurücknimmt.
+  Jetzt ist jede Abweichung vom Auslieferungszustand aufgeschrieben, mit Grund und mit dem Befehl, der sie zurücknimmt.
 
 Der letzte Punkt ist der, auf den es ankommt.
 Unverstandene Konfiguration ist nicht gefährlich, weil ein Angreifer sie ausnutzt.
-Sie ist gefährlich, weil sie die nächste Fehlersuche in die falsche Richtung schickt — und weil man sich in ihrer Gegenwart nicht traut, irgendetwas anzufassen.
+Sie ist gefährlich, weil sie die nächste Fehlersuche in die falsche Richtung schickt, und weil man sich in ihrer Gegenwart nicht traut, irgendetwas anzufassen.
 Das ist der Zustand, in dem die meisten privaten Linux-Installationen sind, und er wird mit der Zeit schlechter, nicht besser.
 
 ## Was ich jemandem sagen würde, der noch zögert

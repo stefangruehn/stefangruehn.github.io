@@ -5,7 +5,7 @@ draft: false
 tags: ["claude-code", "workflow", "writing", "tooling", "self-reference", "Essay"]
 topics: ["writing"]
 series: ["Feedback"]
-summary: "Of fourteen published posts, six are about tools that came out of working on this blog. That is not a choice of topic, it follows from where the material comes from — and it has a limit worth knowing about."
+summary: "Of fourteen published posts, six are about tools that came out of working on this blog. That is not a choice of topic, it follows from where the material comes from, and it has a limit worth knowing about."
 ---
 
 Fourteen posts are published here.
@@ -19,7 +19,7 @@ Six of them are about tools that would not exist without this blog.
 - Four checking programs and two measuring tools now belong to it, plus three self-tests that check the checkers.
   Every one of them exists because something had gone wrong.
 - The purest case is a change request about the procedure for change requests.
-  The field for the affected post stays empty there — what is affected is not a post but the procedure.
+  The field for the affected post stays empty there. What is affected is the procedure.
 - There is a separate origin marker for suggestions nobody noticed while reading, but while working on the existing text.
   Only a system that observes itself needs one.
 - The loop closes with a delay: a rule I enter today applies from the next session onwards.
@@ -119,7 +119,7 @@ The number is too small to be reassuring, and it stands here so that it stays ch
 - **Checking programs are the cheapest part of a feedback loop.** They cost an hour and then find, every day, what would otherwise cost attention.
 - **A procedure that admits itself as a subject is finished.** As long as there is no way to change the procedure by its own means, it is not one.
 - **Self-observation needs markers of its own.** A finding while working is a different thing from a finding while reading, and filing both the same way loses the distinction exactly when it gets interesting.
-- **The delay is the part you forget.** Not because it is hidden, but because it only registers once a rule has failed to bite twice.
+- **The delay is the part you forget.** Not because it is hidden. It only registers once a rule has failed to bite twice.
 
 ## What carries over
 

@@ -32,7 +32,7 @@ Ich möchte wissen, welche Beiträge gelesen werden, und nutze dafür [GoatCount
 Der Dienst wird von Martin Tournoij in Irland betrieben, die Server stehen bei der Hetzner Online GmbH in Finnland und Deutschland.
 Die Daten verlassen die Europäische Union also nicht.
 
-GoatCounter setzt keine Cookies und legt nichts in deinem Browser ab — weder im lokalen Speicher noch auf anderem Weg.
+GoatCounter setzt keine Cookies und legt nichts in deinem Browser ab, weder im lokalen Speicher noch auf anderem Weg.
 Erfasst werden die aufgerufene Seite, die Verweisquelle, Browser, Betriebssystem, Bildschirmbreite, Sprache und das aus der IP-Adresse abgeleitete Land.
 
 Deine IP-Adresse wird nicht dauerhaft gespeichert.
@@ -44,7 +44,7 @@ Näheres in der [Datenschutzerklärung von GoatCounter](https://www.goatcounter.
 
 ## Kommentare
 
-Unter den Beiträgen — und nur dort — ist [giscus](https://giscus.app) eingebunden.
+Unter den Beiträgen, und nur dort, ist [giscus](https://giscus.app) eingebunden.
 Beim Laden dieses Bereichs stellt dein Browser eine Verbindung zu `giscus.app` her und übermittelt dabei technisch bedingt deine IP-Adresse.
 Auf allen übrigen Seiten wird giscus nicht geladen.
 

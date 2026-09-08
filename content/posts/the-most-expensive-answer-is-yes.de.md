@@ -12,14 +12,14 @@ Alle Teile, und ein Schema vorweg, das zeigt, worauf man sich einlässt: [Codebu
 
 ## Kurzfassung
 
-- An einem Vormittag im September war mein Fünf-Stunden-Kontingent um 10:07 erschöpft — nach zwei Stunden und 27 Minuten von fünf.
+- An einem Vormittag im September war mein Fünf-Stunden-Kontingent um 10:07 erschöpft, nach zwei Stunden und 27 Minuten von fünf.
 - Sekunden vorher waren drei Rechercheagenten gestorben, jeder beim nächsten eigenen Aufruf, im Abstand von zwölf Sekunden.
 - Die naheliegende Erklärung lag auf der Hand: drei Agenten gleichzeitig.
   Die Messung sagt etwas anderes.
   Die drei waren **7,8 Prozent** des Verbrauchs.
 - Der Rest war die Sitzung selbst: 394 Anfragen, deren mitgeschleppter Kontext von 68.000 auf 388.000 Tokens wuchs.
 - Die Anfragen halbierten sich im Lauf des Vormittags, der Verbrauch je Viertelstunde blieb gleich.
-  Je Anfrage ist das der Faktor fünf — bei nachweislich weniger Tätigkeit.
+  Je Anfrage ist das der Faktor fünf, bei nachweislich weniger Tätigkeit.
 - Über dreißig Runden bestanden aus „ja", „flash" oder „ja, flash".
   Drei Zeichen Eingabe, 388.000 Tokens Abrechnung.
 - Am Tag darauf, mit Kontextschnitten an den richtigen Stellen: fast doppelt so viele Runden, ein Drittel weniger Kontext, gleich viel Ergebnis.
@@ -31,7 +31,7 @@ Alle Teile, und ein Schema vorweg, das zeigt, worauf man sich einlässt: [Codebu
 Ich hatte drei Agenten losgeschickt, jeden mit einem eigenen Rechercheauftrag rund um ein Display, das sein Bild verlor.
 Sieben Minuten später waren sie tot.
 
-Sie starben nicht gemeinsam, sondern einzeln, jeder beim nächsten Aufruf, den er von sich aus machte:
+Sie starben nicht gemeinsam. Jeder starb beim nächsten Aufruf, den er von sich aus machte:
 
 ```
 10:06:45   Agent terminated early due to an API error
@@ -114,7 +114,7 @@ Daraus folgt eine Rechenregel, die den ganzen Rest erklärt:
 Ein Limit misst also nicht, wie viel ein Agent arbeitet.
 Es misst, wie viel er sich merken muss.
 
-Und weil der zweite Faktor mit jeder Runde wächst, wird dieselbe Frage am Ende einer Sitzung um ein Vielfaches teurer als am Anfang — ohne dass die Antwort besser wird.
+Und weil der zweite Faktor mit jeder Runde wächst, wird dieselbe Frage am Ende einer Sitzung um ein Vielfaches teurer als am Anfang, ohne dass die Antwort besser wird.
 
 ## Dieselbe Messung, vier Stunden später
 
@@ -134,14 +134,14 @@ Diesmal fällt die Messung genau umgekehrt aus.
 7,8 Prozent am Vormittag, 70 Prozent am Mittag.
 Gleiche Werkzeuge, gleicher Tag, gleicher Rechner.
 
-Damit ist die erste Zahl keine Eigenschaft von Agenten, sondern eine Eigenschaft dieses einen Vormittags.
+Damit ist die erste Zahl keine Eigenschaft von Agenten. Sie ist eine Eigenschaft dieses einen Vormittags.
 Was sich nicht ändert, ist die Regel darunter.
-Am Vormittag drehte die Sitzung die vielen Runden mit dem großen Kontext, am Mittag taten es die Agenten — 312 Anfragen zu dritt gegen eine frisch geleerte Sitzung.
+Am Vormittag drehte die Sitzung die vielen Runden mit dem großen Kontext, am Mittag taten es die Agenten: 312 Anfragen zu dritt gegen eine frisch geleerte Sitzung.
 
 Ein Agent ist nicht billig.
 **Er fängt nur klein an**, und dann wächst er wie alles andere auch.
 
-Eine ehrliche Anmerkung dazu, weil sie sich beim Nachrechnen aufdrängt: Das erste Fenster hielt 102,7 Millionen Tokens aus, das zweite brach schon bei 38,8 Millionen ab — und in diesem zweiten Fenster gab es keinen Verbrauch außerhalb dieser Sitzung.
+Eine ehrliche Anmerkung dazu, weil sie sich beim Nachrechnen aufdrängt: Das erste Fenster hielt 102,7 Millionen Tokens aus, das zweite brach schon bei 38,8 Millionen ab, und in diesem zweiten Fenster gab es keinen Verbrauch außerhalb dieser Sitzung.
 Ein Limit ist also nicht in gelesenen Tokens ausgedrückt, jedenfalls nicht linear.
 Den eigenen Verbrauch kann man messen.
 Die Grenze, an der er abbricht, nicht.
@@ -158,14 +158,14 @@ Der Zyklus erzeugt genau die Sorte kurzer Runden, bei der das Verhältnis zwisch
 
 Drei Zeichen.
 Und jedes davon zieht den vollständigen bisherigen Verlauf noch einmal durch die Abrechnung.
-Zum Schluss waren das 388.000 Tokens für ein Wort, das keine Information trägt, sondern nur eine Erlaubnis.
+Zum Schluss waren das 388.000 Tokens für ein Wort, das keine Information trägt, nur eine Erlaubnis.
 
 Das ist die Stelle, an der der Beitrag praktisch wird: Eine Bestätigungsrunde ist nicht billig, weil sie kurz ist.
 Sie ist genauso teuer wie jede andere Runde.
 
 Und eine Bestätigung, die man dauerhaft erteilen kann, kostet einmal statt dreißigmal.
 Was ein Projekt immer erlauben soll, gehört in seine Konfiguration und nicht in eine Rückfrage je Vorgang.
-Für alles, was gefährlich oder nach außen wirksam ist, bleibt die Rückfrage richtig — nur eben nicht für das Flashen desselben Chips zum einunddreißigsten Mal.
+Für alles, was gefährlich oder nach außen wirksam ist, bleibt die Rückfrage richtig, nur eben nicht für das Flashen desselben Chips zum einunddreißigsten Mal.
 
 ## Das Gegenmittel, gemessen
 
@@ -173,7 +173,7 @@ Bis hierhin ist das eine Diagnose.
 Das Gegenmittel ist unspektakulär: den Kontext wegwerfen, sobald der Stand woanders steht.
 
 Am nächsten Morgen habe ich es gemessen.
-Zwei Vormittage, dasselbe Projekt, fast gleich lang — einmal ohne Schnitt, einmal mit:
+Zwei Vormittage, dasselbe Projekt, fast gleich lang, einmal ohne Schnitt, einmal mit:
 
 ```
 04.09.  07:48–10:07   394 Anfragen   94,7 M Kontext   734 k Ausgabe   240 k/Anfrage
@@ -184,7 +184,7 @@ Anfragen ×1,81     Kontext ×0,65     Ausgabe ×0,93     Kontext je Anfrage ×0
 
 Fast doppelt so viele Runden.
 Ein Drittel weniger Kontext.
-Und die Ausgabe — das, was tatsächlich an Arbeit entstanden ist — lag bei 93 Prozent.
+Und die Ausgabe (das, was tatsächlich an Arbeit entstanden ist) lag bei 93 Prozent.
 
 Bezahlt habe ich dafür 65 Prozent.
 Je Anfrage war der zweite Tag **2,8-mal billiger**, und die teuerste Einzelanfrage hat sich halbiert.
@@ -198,7 +198,7 @@ Jeder Schnitt legt eine neue Sitzungsdatei an, und am zweiten Tag liegen zwische
 
 Zwei Einschränkungen, damit die Zahlen nicht mehr behaupten, als sie hergeben.
 Es sind zwei verschiedene Tage mit verschiedenen Aufgaben, also n = 2; belastbar ist davon allein der Kontext je Anfrage, weil er nicht davon abhängt, wie viel an einem Tag zu tun war.
-Und der erste Tag ist noch zu günstig gerechnet — seine Kurve stieg noch, als das Limit sie abschnitt.
+Und der erste Tag ist noch zu günstig gerechnet: seine Kurve stieg noch, als das Limit sie abschnitt.
 
 Die naheliegende Gegenrechnung wäre, dass sieben Sitzungen statt drei auch sechsmal Wiederaufsetzen bedeuten und die Ersparnis genau dort wieder verloren geht.
 Gemerkt habe ich davon nichts.
@@ -218,7 +218,7 @@ Also muss der Schnitt von der Seite vorgeschlagen werden, die die Zahl hat, und 
 Daraus folgt etwas, das ich nicht erwartet hatte.
 Ein Agent, der vorschlägt, den Kontext zu leeren, schlägt die Löschung seines eigenen Gedächtnisses vor.
 Es gibt keinen Anreiz dafür, der aus der Situation selbst käme.
-Es passiert nur, wenn es als Regel aufgeschrieben ist — an dem Vormittag war es das nicht, und das Ergebnis waren drei Agenten in einem fast leeren Kontingent.
+Es passiert nur, wenn es als Regel aufgeschrieben ist. An dem Vormittag war es das nicht, und das Ergebnis waren drei Agenten in einem fast leeren Kontingent.
 
 ## Was der Abbruch zerstört hat
 
@@ -265,9 +265,9 @@ Wenn dir dasselbe passiert ist und du wissen willst, woran es lag, ist das die R
 3. **Was davon kannst du einmalig erlauben, statt es jedes Mal zu bestätigen?**
    Alles, was wiederkehrt und weder gefährlich noch nach außen wirksam ist.
 4. **Wann stand dein Stand zuletzt vollständig auf Platte?**
-   Genau dort war der richtige Moment zu schneiden. Bei mir war es ein Commit um 09:57 — zehn Minuten vor dem Abbruch, und da kostete jede weitere Anfrage schon 388.000 Tokens.
+   Genau dort war der richtige Moment zu schneiden. Bei mir war es ein Commit um 09:57, zehn Minuten vor dem Abbruch, und da kostete jede weitere Anfrage schon 388.000 Tokens.
 5. **Und erst dann: Wären Agenten hier richtig gewesen?**
-   Sie wären es gewesen — aber zu Beginn der Recherche, nicht am Ende eines langen Vormittags.
+   Sie wären es gewesen, aber zu Beginn der Recherche, nicht am Ende eines langen Vormittags.
 
 Die unangenehme Hälfte davon ist die vierte Frage, und sie hat mit Tokens am Ende wenig zu tun.
 Wer den Kontext wegwerfen will, muss vorher aufgeschrieben haben, was er weiß.

@@ -34,4 +34,4 @@ Jeder Fix hinterlässt einen Zustand, den er selbst nicht mehr korrigiert, und d
 
 Vorausgesetzt wird Vertrautheit mit ALSA, PipeWire und systemd.
 Die Beiträge nennen Regler, Konfigurationsschlüssel und Journal-Zeitstempel beim Namen und erklären keine Grundlagen.
-Befehle stehen darin, aber als Beleg, nicht als Anleitung — wer den eigenen Lautsprecher reparieren will, findet hier eine Methode und kein Rezept.
+Befehle stehen darin, aber als Beleg, nicht als Anleitung. Wer den eigenen Lautsprecher reparieren will, findet hier eine Methode und kein Rezept.

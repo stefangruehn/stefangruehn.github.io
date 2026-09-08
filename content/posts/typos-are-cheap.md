@@ -4,7 +4,7 @@ date: 2026-09-04T00:23:36+02:00
 draft: false
 tags: ["claude-code", "rookie", "workflow"]
 topics: ["agent"]
-summary: "Over one continuous stretch of sessions I typed some four hundred messages to Claude Code, and one in ten contains a German umlaut. Nothing was ever corrected, and everything was understood anyway. What costs you is not the spelling — it is the sentence that allows two outcomes."
+summary: "Over one continuous stretch of sessions I typed some four hundred messages to Claude Code, and one in ten contains a German umlaut. Nothing was ever corrected, and everything was understood anyway. What costs you is not the spelling, it is the sentence that allows two outcomes."
 ---
 
 ## TL;DR
@@ -22,7 +22,7 @@ summary: "Over one continuous stretch of sessions I typed some four hundred mess
 
 I type on a US keyboard.
 Many German developers do, and the reason is unremarkable: `[ ] { } \ | @ ~` sit there unshifted or behind Shift, while a German layout puts them behind AltGr.
-On a German layout the backtick and the acute accent are dead keys as well — you press them twice, or follow them with a space.
+On a German layout the backtick and the acute accent are dead keys as well, you press them twice, or follow them with a space.
 Anyone writing paths, code blocks and command-line options all day pays that tax on every line.
 
 The price is the umlauts.
@@ -51,7 +51,7 @@ The surrounding sentence holds it.
 So a correction would have cost me attention and gained nothing.
 It would have pulled the focus from the matter to the spelling, in the middle of work where the matter is the expensive part.
 
-This is not leniency and not a character trait, but a default.
+This is a default, not leniency and not a character trait.
 Say "please correct my German along the way" and it gets corrected from then on.
 The other direction holds too: there is nothing you need to tighten up for while typing.
 
@@ -70,7 +70,7 @@ Two readings, two different results, one round of work between them.
 
 The typo in that same sentence was irrelevant.
 The ambiguity was not.
-That is where the line runs — not between tidy and sloppy writing, but between one reading and two.
+That is where the line runs, not between tidy and sloppy writing, but between one reading and two.
 
 ## A word that carries a claim
 
@@ -130,12 +130,13 @@ It forces every occurrence to be read, which was the point all along.
 You are starting out and wondering how carefully you have to phrase things.
 The answer has two halves, and the pleasant one comes first.
 
-1. **Type the way you type.** Dropped umlauts, swapped letters, changing direction mid-sentence — none of it needs to slow you down. It costs nothing.
+1. **Type the way you type.** Dropped umlauts, swapped letters, changing direction mid-sentence, none of it needs to slow you down. It costs nothing.
 2. **Read your instruction once more, with a single question in mind:** can this turn out two ways? Not: is this nicely written.
 3. **If it can, name the result.** One sentence describing what should be true afterwards is worth more than three cleanly phrased commands.
 4. **Watch negations, comparisons and restrictions in particular.** That is where the meaning sits in a single word.
 5. **Answer the question when one comes back.** It is not a reproach; it is the cheapest point in the whole process.
 
 So the effort is not where beginners expect it.
-It is not in the spelling and not in the grammar, but in one single question you can ask yourself before any larger instruction.
+It is not in the spelling and not in the grammar.
+It is in one single question you can ask yourself before any larger instruction.
 And you can ask it with your letters in the wrong order.

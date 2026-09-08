@@ -5,7 +5,7 @@ draft: false
 tags: ["claude-code", "linux", "audio", "pipewire", "debugging", "chuwi", "Technical Deep Dive"]
 topics: ["machine"]
 series: ["Reverberations"]
-summary: "The speaker test in my system settings played nothing while music and video were fine. The cause was not a broken driver but a single number my sound server had faithfully remembered — left over from the debugging session I wrote about last time."
+summary: "The speaker test in my system settings played nothing while music and video were fine. The cause was not a broken driver but a single number my sound server had faithfully remembered, left over from the debugging session I wrote about last time."
 ---
 
 Last time I wrote about [measuring instead of guessing](/posts/measure-dont-guess/),
@@ -95,7 +95,7 @@ The honest answer has three parts.
 
 **The fix itself cannot do this.** It is a one-line rule that changes a property of the *sound card*.
 The zero sits on a *stream*, in a different mechanism entirely.
-I tested the obvious bridge between them — driving the balance to its extreme and then running the speaker test — and checked whether that writes anything into the stored entry.
+I tested the obvious bridge between them, driving the balance to its extreme and then running the speaker test, and checked whether that writes anything into the stored entry.
 It does not. Hypothesis dead, one minute, no argument.
 
 **The debugging around the fix is the plausible origin.** That whole session consisted of pushing the balance to both extremes
@@ -142,7 +142,7 @@ A command-line tool refused to play the same sounds with `Sound disabled`.
 Different reason entirely: system event sounds were simply switched off in the desktop settings, a deliberate on/off toggle that the speaker test does not go through.
 
 Two silences, one panel, unrelated causes.
-Turning the event sounds back on was one setting — and revealed a third small thing:
+Turning the event sounds back on was one setting, and revealed a third small thing:
 notification sounds were stored at 90.48 % rather than 100 %.
 Setting that to full and re-measuring gave a level ratio of 1.1052 against the predicted 1 / 0.904817 = 1.1052.
 Four digits is more agreement than the question deserved, but it is a nice way to be sure you changed the thing you meant to change.

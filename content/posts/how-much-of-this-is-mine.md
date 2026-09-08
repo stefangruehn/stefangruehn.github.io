@@ -1,10 +1,10 @@
 ---
-title: "How much of this is really mine — and the one sentence that would not translate"
+title: "How much of this is really mine, and the one sentence that would not translate"
 date: 2026-09-06T09:10:00+02:00
 tags: ["claude-code", "workflow", "writing", "language", "Essay"]
 topics: ["author"]
 series: ["Self-Similarity"]
-summary: "The honest answer is: partly. What makes it interesting is that the parts come apart cleanly — the material is mine, the shape is usually Claude's. The seam between them is easiest to see at a sentence that does not survive translation."
+summary: "The honest answer is: partly. What makes it interesting is that the parts come apart cleanly: the material is mine, the shape is usually Claude's. The seam between them is easiest to see at a sentence that does not survive translation."
 ---
 
 The honest answer to whether a human writes this is: partly.
@@ -13,12 +13,12 @@ What makes it interesting is that the parts come apart fairly cleanly.
 ## TL;DR
 
 - The content is mine without exception so far: every measurement, every decision, every opinion, every retraction.
-- The shape is usually Claude's — and it is usually better than mine.
+- The shape is usually Claude's, and it is usually better than mine.
 - The evidence is in the posts themselves.
   No model knows which speaker on my laptop stays silent.
 - The seam between the two is easiest to see where language refuses to cooperate: *erfahren* and *erlaufen*.
 - What persists between sessions is a memory made of text files.
-  It holds no knowledge about code, only working agreements — each one from a moment when something surprised me: going wrong, or going better than expected.
+  It holds no knowledge about code, only working agreements, each one from a moment when something surprised me: going wrong, or going better than expected.
 - What carries over: keep the material, give away the shape.
   The other way round produces text nobody needed.
 
@@ -39,8 +39,9 @@ A text does not become mine because I read it over.
 It becomes mine when sentences disappear that I would not put my name to.
 
 Part two of this series even contains a case of exactly that.
-My raw notes said the logistic equation "still cannot be simulated" — jotted down so briefly that, taken literally, the sentence is wrong.
-It surfaced during preparation — the machine flagged the sentence and put two more precise versions next to it.
+My raw notes said the logistic equation "still cannot be simulated", jotted down so briefly that, taken literally, the sentence is wrong.
+It surfaced during preparation.
+The machine flagged the sentence and put two more precise versions next to it.
 I decided.
 That is what the division of labour looks like in practice: the objection can come from anywhere, the responsibility cannot.
 
@@ -86,8 +87,8 @@ It is the compromise I chose: keep the German words, show what they do, and admi
 Put the two versions side by side and this is where you see the seam.
 
 And that is what I am actually after here.
-Not that a machine could not build a pun — it can, and rather well.
-Rather that deciding what happens to an untranslatable sentence — leave it, rebuild it, or expose it — is a decision about what the text is for.
+Not that a machine could not build a pun, it can, and rather well.
+Rather that deciding what happens to an untranslatable sentence (leave it, rebuild it, or expose it) is a decision about what the text is for.
 That decision belongs to whoever owns the text.
 
 ## What reading it over looks like
@@ -95,14 +96,14 @@ That decision belongs to whoever owns the text.
 The road from an idea to a post has a fixed shape by now:
 
 1. The idea becomes a note in an Obsidian vault, with a status and a source.
-2. The note becomes an interview — questions with proposed answers that I click rather than type, because typing is the expensive part for me.
+2. The note becomes an interview: questions with proposed answers that I click rather than type, because typing is the expensive part for me.
 3. Out of that comes the German and English pair, both as drafts.
 4. I read them over, delete, reorder, disagree.
 5. Three small checking scripts run: one compares the minified build against the plain one, one checks the topic taxonomy, one checks the vault.
 6. Only then does it go online.
 
 One step in that chain is easy to overlook and is the most important one.
-Before a post is published, its note collects a list of every statement backed by neither a log nor a measurement — sentences about my own past, for instance.
+Before a post is published, its note collects a list of every statement backed by neither a log nor a measurement, sentences about my own past, for instance.
 Those I confirm one by one, or they go.
 For this series the list is long, because it is the most personal thing that has stood here so far.
 
@@ -116,7 +117,7 @@ That I type without umlauts and that typos should not be commented on.
 That a context reset should be proposed to me rather than waited for.
 That quotations get translated in the English version rather than left standing.
 
-Every one of those lines comes from a moment when something surprised me — going wrong, or going better than expected.
+Every one of those lines comes from a moment when something surprised me: going wrong, or going better than expected.
 Together they are what is left of a working day once the context has been cleared.
 
 Which leads straight to the next question, out of the previous part.

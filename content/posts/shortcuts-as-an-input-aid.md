@@ -5,7 +5,7 @@ draft: false
 tags: ["claude-code", "workflow", "shortcuts", "accessibility", "Field Notes"]
 topics: ["agent"]
 series: ["Codebook"]
-summary: "The first version of my shortcut list used round brackets — which made it wrong for exactly the case where saved keystrokes matter most. The fix was meant as a second form for hard cases. It has since become the main form for everyone."
+summary: "The first version of my shortcut list used round brackets, which made it wrong for exactly the case where saved keystrokes matter most. The fix was meant as a second form for hard cases. It has since become the main form for everyone."
 ---
 
 Part one measured what shared context [costs](/posts/the-most-expensive-answer-is-yes/).
@@ -15,7 +15,7 @@ This part is about where that codebook is more than an incremental improvement.
 ## TL;DR
 
 - My first shortcut list used round brackets.
-  Those need Shift — a held modifier plus a second key.
+  Those need Shift, a held modifier plus a second key.
 - That is the most expensive movement there is for anyone whose hand does not land precisely.
   The list meant to save typing was built wrong for exactly the case where saving typing matters most.
 - The fix was an unshifted form: `[x]` instead of `(x)`.
@@ -66,24 +66,26 @@ The sentence this is all about sounds obvious and historically is not:
 > An input aid for a movement disorder should forgive exactly the errors that disorder produces.
 
 Classical input aids cannot do this.
-A text expander, a macro, a key combination — all of them need exact input, because their parser has to be exact.
+A text expander, a macro, a key combination, all of them need exact input, because their parser has to be exact.
 One wrong character and nothing happens.
 You notice, you correct it, you type it again, which often enough reproduces the error.
 
 In front of a language model that requirement disappears.
 It has a prior: what was meant can be reconstructed from the sentence around it.
-It degrades gracefully instead of failing — the same property that makes [typos cost nothing](/posts/typos-are-cheap/) in the first place.
+It degrades gracefully instead of failing, the same property that makes [typos cost nothing](/posts/typos-are-cheap/) in the first place.
 
 That shifts the design goal.
-It is no longer about an unambiguous grammar but about **recoverable intent**.
-And the tolerance has to be written down, or it only happens by accident: which errors get absorbed is part of the list — along with the rule that an absorbed error is never remarked on.
+It is no longer about an unambiguous grammar.
+It is about **recoverable intent**.
+And the tolerance has to be written down, or it only happens by accident: which errors get absorbed is part of the list, along with the rule that an absorbed error is never remarked on.
 
 ## The bigger lever: fewer, not shorter
 
 Making the input shorter is the obvious gain, and the smaller one.
 
 The bigger one is reducing how many inputs are needed at all.
-If you pay for every keystroke, a round of questions costs more than a wrong first attempt — it is cheaper for the agent to guess and me to correct than for it to ask and me to answer.
+If you pay for every keystroke, a round of questions costs more than a wrong first attempt.
+It is cheaper for the agent to guess and me to correct than for it to ask and me to answer.
 
 Which is why `[$]` of all things — "take the shortest route, even at the cost of thoroughness" — is an input aid.
 It does not say "be faster".
@@ -93,7 +95,7 @@ And here this post meets part one in a way I had not planned.
 There the finding was: a question costs one full pass over the entire conversation, however short the answer.
 Here the finding is: a question costs keystrokes somebody may not have.
 
-Two completely different arguments — one economic, one physical — and both land on the same optimisation.
+Two completely different arguments, one economic, one physical, and both land on the same optimisation.
 When two independent arguments point at the same design, that is the strongest signal you are going to get.
 
 ## A pause needs a token too
@@ -112,7 +114,7 @@ The most obvious thing was what I was missing longest: the stage directions arou
 Two keystrokes for something that otherwise takes two sentences.
 
 Someone who can choose their breaks freely simply takes one.
-Someone who cannot has to announce it — and pays for the announcement with exactly the resource that is scarce at that moment.
+Someone who cannot has to announce it, and pays for the announcement with exactly the resource that is scarce at that moment.
 Having a token for that is not a convenience.
 
 Incidentally it is token economics again: the waiting should not cost a turn.
@@ -121,7 +123,7 @@ The same optimisation, for the third time, from a third direction.
 ## An old field with a new target
 
 None of this is my invention.
-The field is called AAC — augmentative and alternative communication — and the sub-family is *abbreviation expansion*.
+The field is called AAC, augmentative and alternative communication, and the sub-family is *abbreviation expansion*.
 Word prediction, letter boards, systems like EZ Keys or Dasher: this has been researched and built for decades.
 
 Exactly one thing is new.
@@ -149,8 +151,9 @@ Special case, side entrance, well meant.
 
 It replaced the round form the same day.
 
-Not out of consideration, but because it was simply better: one key instead of two, the same meaning, nothing given up.
-The round form still counts — it is just not the one anybody writes in any more.
+Not out of consideration.
+It was simply better: one key instead of two, the same meaning, nothing given up.
+The round form still counts, it is just not the one anybody writes in any more.
 
 That is the curb cut effect, on fast-forward.
 Dropped kerbs were built for wheelchairs, and today everyone with a wheeled suitcase, a pram or a bicycle uses them without sparing it a thought.
@@ -167,7 +170,7 @@ It was that the list had been built past its own point — and the correction ai
 - **For every abbreviation, ask what it demands of the hand.**
   Not just how many characters it saves. A held modifier costs more than an extra keystroke.
 - **Tolerance has to be written down.**
-  A model forgives a lot anyway. Which errors it *should* forgive — and that it never remarks on them — is written nowhere else.
+  A model forgives a lot anyway. Which errors it *should* forgive, and that it never remarks on them, is written nowhere else.
 - **Count the turns, not the characters.**
   The most expensive input is the one that only became necessary because an answer was missing.
 - **Two independent arguments for the same design beat one good one.**

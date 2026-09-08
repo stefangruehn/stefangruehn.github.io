@@ -44,7 +44,7 @@ Should I become aware of one, I will remove the link.
 
 The content of this site is subject to German copyright law.
 Reproduction, adaptation and distribution beyond the limits of copyright require my consent.
-Quotation with attribution is exempt from this — and explicitly welcome.
+Quotation with attribution is exempt from this, and explicitly welcome.
 
 ## Last updated
 

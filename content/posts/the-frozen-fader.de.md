@@ -5,11 +5,11 @@ draft: false
 tags: ["claude-code", "linux", "audio", "alsa", "pipewire", "wireplumber", "systemd", "debugging", "chuwi", "Technical Deep Dive"]
 themen: ["rechner"]
 series: ["Nachhall"]
-summary: "Nach einem Reboot war jede Audioquelle 23 dB zu leise. Die Ursache war ein ALSA-Regler, den seit einem früheren Fix niemand mehr anfasst — und die Reparatur scheiterte erst einmal daran, dass die Kartennamen dieses Laptops zwischen Boots die Plätze tauschen."
+summary: "Nach einem Reboot war jede Audioquelle 23 dB zu leise. Die Ursache war ein ALSA-Regler, den seit einem früheren Fix niemand mehr anfasst, und die Reparatur scheiterte erst einmal daran, dass die Kartennamen dieses Laptops zwischen Boots die Plätze tauschen."
 ---
 
 Teil eins dieser Serie fand ein [Hardware-Problem](/de/posts/measure-dont-guess/) und löste es.
-Teil zwei fand, was die [Fehlersuche hinterlassen](/de/posts/a-remembered-zero/) hatte — eine gespeicherte Null.
+Teil zwei fand, was die [Fehlersuche hinterlassen](/de/posts/a-remembered-zero/) hatte: eine gespeicherte Null.
 Dies ist, was die *Lösung* hinterlassen hat.
 
 ## Kurzfassung
@@ -22,7 +22,7 @@ Dies ist, was die *Lösung* hinterlassen hat.
   Nominell und akustisch klaffen 3 dB auseinander, und die Rechnung hätte auf einen anderen Regler gezeigt.
 - Die erste Reparatur überlebte den Testreboot **nicht**.
   Beide HDA-Controller dieses Laptops heißen `HD-Audio Generic`, und die ALSA-Namen tauschen zwischen Boots die Plätze.
-  `asound.state` ist nach Namen gegliedert, meine systemd-Unit war es auch — beide griffen daneben.
+  `asound.state` ist nach Namen gegliedert, meine systemd-Unit war es auch, beide griffen daneben.
 - Die zweite Fassung löst die Karte über die PCI-Adresse auf und wartet auf ihre Enumeration.
   Dass die Warteschleife wirklich gebraucht wird, steht nirgends als Fehler.
   Es steht in einer Sekunde zwischen zwei Logzeilen.
@@ -59,7 +59,7 @@ Der Regler, den PipeWire anzeigt, und der Regler, der tatsächlich dämpft, hatt
 
 ## Wer den Mixer abschaltet, friert ihn ein
 
-Das ist kein Zufall, sondern die Nachwirkung der Lösung aus Teil eins.
+Das ist die Nachwirkung der Lösung aus Teil eins und kein Zufall.
 Jene Lösung verlegte Lautstärke und Balance aus dem Tonchip heraus in die Software, damit die Verstärkung jedes Kanals bei seinem eigenen Lautsprecher ankommt:
 
 ```
@@ -112,7 +112,7 @@ Das ist die ganze Antwort: Die 69 stimmt.
 Die Spalten `n` und `sd` stehen da, weil ich sie mir selbst schuldig geblieben war.
 Zwei Einzelablesungen derselben Einstellung landeten kurz zuvor zwei Dezibel zu tief, fünf hintereinander streuten um 1,3 dB.
 Eine einzelne Messung dieses Aufbaus beantwortet die Frage „sind diese beiden gleich laut" schlicht nicht.
-Erst verschränkt gemessen — A, B, A, B, jeweils sechsmal, damit langsame Drift beide Seiten gleich trifft — sinkt die Streuung auf 0,1 dB, und dann trägt der Vergleich.
+Erst verschränkt gemessen, A, B, A, B, jeweils sechsmal, damit langsame Drift beide Seiten gleich trifft, sinkt die Streuung auf 0,1 dB, und dann trägt der Vergleich.
 Der erste Anlauf hatte zufällig zweimal dieselbe Zahl geliefert und mich das für Präzision halten lassen.
 
 Die Zwischenwerte stimmen nicht.
@@ -155,14 +155,15 @@ Damit fällt auch die zweite Absicherung, und zwar aus demselben Grund:
 Die gespeicherte 69 lag unter `state.Generic` und wurde nach dem Tausch auf die HDMI-Karte angewandt, die gar keinen `Master` besitzt.
 Erneutes `alsactl store` repariert das nicht, es verschiebt das Problem nur:
 Der Abschnitt des jeweils anderen Namens wird dabei mit dem überschrieben, was gerade darunter läuft.
-Nach dem nächsten sauberen Shutdown steht die 69 unter `Generic_1` — und beim übernächsten Namenstausch greift die Wiederherstellung wieder daneben.
+Nach dem nächsten sauberen Shutdown steht die 69 unter `Generic_1`, und beim übernächsten Namenstausch greift die Wiederherstellung wieder daneben.
 
 Auf einer Maschine mit zwei gleichnamigen Karten ist `asound.state` als Ablage für einen bestimmten Regler nicht brauchbar.
 
 ## Die PCI-Adresse ist das einzig Stabile
 
 Was sich nicht bewegt, ist die Adresse auf dem Bus.
-Also nicht mehr fragen, wie die Karte heißt, sondern welche Karte an `0000:03:00.6` hängt:
+Also nicht mehr fragen, wie die Karte heißt.
+Die Frage ist, welche Karte an `0000:03:00.6` hängt:
 
 ```bash
 for d in /sys/class/sound/card*; do
@@ -183,7 +184,8 @@ Die Warteschleife war eine Nebensache beim Schreiben.
 Zwei Zeilen, eingebaut aus der Erinnerung an eine Fehlermeldung, ohne Beleg, dass sie nötig ist.
 
 Der zweite Testreboot hat gehalten: Unit sauber durchgelaufen, zwei Messungen bei 50 % mit -30,2 und -30,3 dB im Referenzbereich.
-Interessant ist nicht das Ergebnis, sondern wie es zustande kam:
+Interessant ist nicht das Ergebnis.
+Interessant ist, wie es zustande kam:
 
 ```
 12:01:50.304347  Starting chuwi-master-volume.service...
@@ -191,7 +193,7 @@ Interessant ist nicht das Ergebnis, sondern wie es zustande kam:
 ```
 
 Eintausendeinunddreißig Millisekunden für ein `amixer sset`.
-Der Kartenscan selbst dauert Millisekunden — die Sekunde ist der `sleep 1` zwischen einem gescheiterten und einem geglückten Durchlauf.
+Der Kartenscan selbst dauert Millisekunden, die Sekunde ist der `sleep 1` zwischen einem gescheiterten und einem geglückten Durchlauf.
 Beim Login ist die Analogkarte noch nicht enumeriert.
 Ohne Schleife wäre auch diese Fassung gescheitert.
 
@@ -202,9 +204,9 @@ Sie lautete:
 amixer[3682]: Invalid card number 'Generic'.
 ```
 
-Ich hatte sie als Beleg für den Namenstausch genommen — der Name stand ja darin.
+Ich hatte sie als Beleg für den Namenstausch genommen, der Name stand ja darin.
 Sie ist keiner.
-Zu diesem Zeitpunkt hieß card0 tatsächlich `Generic`; die Karte existierte, sie war nur die falsche.
+Zu diesem Zeitpunkt hieß card0 tatsächlich `Generic`, die Karte existierte, sie war nur die falsche.
 So klingt der Namensfehler nämlich, nachgeprüft an derselben Maschine:
 
 ```
@@ -240,19 +242,19 @@ Nur das Timing zu reparieren auch nicht, weil der Pegel dann auf der HDMI-Karte 
 Wenn auf deiner Maschine alles gleichmäßig zu leise ist und der Desktop-Regler am Anschlag steht, in dieser Reihenfolge:
 
 1. **Den Hardware-Mixer direkt ansehen**, nicht den Sink.
-   `amixer -c<n> scontents` zeigt, was tatsächlich dämpft; `pactl list sinks` zeigt nur, was PipeWire meint.
+   `amixer -c<n> scontents` zeigt, was tatsächlich dämpft, `pactl list sinks` zeigt nur, was PipeWire meint.
    Weichen beide voneinander ab, ist die Frage nicht mehr „wie laut", sondern „wer schreibt da hinein".
 2. **Prüfen, ob überhaupt noch jemand hineinschreibt.**
    Bei `api.alsa.soft-mixer = true` ist die Antwort: niemand.
    Dasselbe gilt für jedes UCM-Profil und jede Regel, die einen Control aus der Verwaltung nimmt.
 3. **Zählen, wie viele Karten gleich heißen.**
    `cat /proc/asound/cards` und `readlink -f /sys/class/sound/card*/device` nebeneinander.
-   Sind zwei Namen austauschbar, ist jede namensbasierte Konfiguration — deine eigene und `asound.state` — eine Wette auf die Probe-Reihenfolge.
+   Sind zwei Namen austauschbar, ist jede namensbasierte Konfiguration, deine eigene wie `asound.state`, eine Wette auf die Probe-Reihenfolge.
 4. **Den Zielwert messen, nicht ausrechnen.**
    Ein Ton, das eingebaute Mikrofon und eine FFT reichen.
    Die Kennlinie zwischen Regler und Schalldruck ist an den Rändern nicht die, die im Datenblatt steht.
 5. **Neu starten, bevor du es für erledigt hältst.**
-   Der simulierte Test — Wert zurückdrehen, Unit neu starten — war beide Male grün, auch bei der Fassung, die den Reboot nicht überlebte.
+   Der simulierte Test, Wert zurückdrehen, Unit neu starten, war beide Male grün, auch bei der Fassung, die den Reboot nicht überlebte.
 
 Der Fix ist am Ende ein Dreizeiler in einem Shell-Skript.
 Die beiden Reboots davor waren teurer als er und haben mehr gezeigt.
@@ -260,6 +262,6 @@ Die beiden Reboots davor waren teurer als er und haben mehr gezeigt.
 ## Nachtrag vom 7.9.2026: nicht ein Regler, alle
 
 Vier Tage später war es wieder still — aufgefallen erneut im Lautsprechertest der Systemeinstellungen, betroffen aber jede Ausgabe über die eingebauten Lautsprecher.
-`Master` stand diesmal korrekt auf 69; stumm war `Speaker`, auf `-74 dB` und abgeschaltet, aus derselben Quelle wie die 51 von damals: Beim Boot spielt `alsactl restore` zurück, was in `asound.state` steht.
-Damit war die Lehre oben zu eng — der Soft-Mixer friert nicht `Master` ein, sondern **jeden** Regler dieser Karte, und ich habe einen repariert und die Klasse übersehen, zu der er gehört.
+`Master` stand diesmal korrekt auf 69, stumm war `Speaker`, auf `-74 dB` und abgeschaltet, aus derselben Quelle wie die 51 von damals: Beim Boot spielt `alsactl restore` zurück, was in `asound.state` steht.
+Damit war die Lehre oben zu eng: der Soft-Mixer friert nicht `Master` ein, sondern **jeden** Regler dieser Karte, und ich habe einen repariert und die Klasse übersehen, zu der er gehört.
 Die Unit setzt seitdem auch `Speaker` und `Headphone` auf Durchlass, damit `Master` der einzige Regler bleibt, dessen Wert etwas bedeutet.

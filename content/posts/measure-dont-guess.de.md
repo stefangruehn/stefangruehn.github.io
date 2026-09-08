@@ -5,11 +5,11 @@ draft: false
 tags: ["claude-code", "linux", "hardware", "debugging", "audio", "chuwi", "Technical Deep Dive"]
 themen: ["rechner"]
 series: ["Nachhall"]
-summary: "Eine falsche Theorie, ein öffentlicher Widerruf und ein kleines Messwerkzeug — was ich darüber gelernt habe, KI-Unterstützung für Probleme einzusetzen, bei denen es überhaupt nicht um Code geht."
+summary: "Eine falsche Theorie, ein öffentlicher Widerruf und ein kleines Messwerkzeug: was ich darüber gelernt habe, KI-Unterstützung für Probleme einzusetzen, bei denen es überhaupt nicht um Code geht."
 ---
 
 *Nachtrag vom 2.9.2026:* Zu dieser Geschichte gibt es eine Fußnote.
-Drei Tage nachdem die Lautsprecher liefen, blieb der Lautsprechertest in meinen eigenen Toneinstellungen stumm —
+Drei Tage nachdem die Lautsprecher liefen, blieb der Lautsprechertest in meinen eigenen Toneinstellungen stumm,
 und die Ursache war ein Rückstand aus genau dieser Fehlersuche, nicht aus der Hardware und nicht aus der Lösung.
 Aufgeschrieben habe ich das separat: [Stille ohne Fehlermeldung](/de/posts/a-remembered-zero/).
 
@@ -19,16 +19,16 @@ Alle Teile, und ein Schema vorweg, das zeigt, worauf man sich einlässt: [Nachha
 ## Kurzfassung
 
 - In meinem Laptop steckt ein Lautsprecher, den Linux nicht korrekt ansteuert.
-  Jemand anderes hatte die eigentliche Tiefenarbeit bereits geleistet;
+  Jemand anderes hatte die eigentliche Tiefenarbeit bereits geleistet,
   ich bin von seiner Lösung ausgegangen und dabei auf meinem Gerät auf ein weiteres Problem gestoßen.
-- Ich habe mir durch Hinhören eine erste Theorie gebildet, sie veröffentlicht — und sie war **falsch**!
+- Ich habe mir durch Hinhören eine erste Theorie gebildet, sie veröffentlicht, und sie war **falsch**!
 - Statt darüber zu streiten, was wir da hören, haben Claude Code und ich aus dem eingebauten Mikrofon des Laptops ein kleines Messinstrument gebaut.
   Es hat meine erste Theorie über das Problem innerhalb einer Stunde widerlegt.
 - Ich habe meine veröffentlichte Behauptung zurückgezogen und durch gemessene Fakten ersetzt.
 - Der nützlichste Teil dabei war nicht die Geschwindigkeit.
-  Es war, dass aus einer vagen Beschwerde — „dieser Lautsprecher klingt falsch“ — an einem Nachmittag etwas Solides mit Zahlen wurde, ohne dass ich Hardware-Ingenieur in einem Messlabor bin.
+  Es war, dass aus einer vagen Beschwerde („dieser Lautsprecher klingt falsch“) an einem Nachmittag etwas Solides mit Zahlen wurde, ohne dass ich Hardware-Ingenieur in einem Messlabor bin.
 - Ich habe das Ganze in einem sicheren Modus laufen lassen, in dem ich den Plan freigebe, bevor irgendetwas lokal ausgeführt wird.
-  Die Kontrolle ist ausdrücklich vorhanden — genau deshalb lohnt sich ein nüchterner Blick auf eine verbreitete Sorge in Bezug auf agentische KI.
+  Die Kontrolle ist ausdrücklich vorhanden, genau deshalb lohnt sich ein nüchterner Blick auf eine verbreitete Sorge in Bezug auf agentische KI.
 
 ---
 
@@ -36,14 +36,14 @@ Alle Teile, und ein Schema vorweg, das zeigt, worauf man sich einlässt: [Nachha
 
 Der Laptop ist ein Chuwi CoreBook X.
 Unter Linux bleibt sein linker Lautsprecher ab Werk stumm.
-Der Chip, der ihn antreibt — ein AWINIC AW88298 Verstärker, der an einem undokumentierten Ausgang des Audio-Codecs hängt —, hat keinen Treiber im Mainline-Kernel.
+Der Chip, der ihn antreibt, ein AWINIC AW88298 Verstärker an einem undokumentierten Ausgang des Audio-Codecs, hat keinen Treiber im Mainline-Kernel.
 
 Das habe nicht ich gelöst.
 **Francisco Montañés García ([@pacomont](https://github.com/pacomont))** hat es getan, über rund fünf Wochen echter Knochenarbeit: den Chip über I2C abklopfen, nachweisen, welcher Teil des Systems ihm überhaupt Audio zuspielt, und schließlich herausfinden, warum jeder Benachrichtigungston mit einem Knacken beginnt.
 Sein Projektlog ist [für sich genommen lesenswert](https://github.com/pacomont/chuwi-corebook-x-left-speaker), und alles Folgende baut darauf auf.
 
 Ich habe seinen Daemon installiert und beide Lautsprecher liefen.
-Dann fiel mir an meinem Gerät jedoch etwas auf, das seine Notizen nicht beschrieben — und dort beginnt mein Beitrag zu diesem Thema.
+Dann fiel mir an meinem Gerät jedoch etwas auf, das seine Notizen nicht beschrieben, und dort beginnt mein Beitrag zu diesem Thema.
 
 ## Eine Theorie, gebaut durch Hinhören
 
@@ -73,7 +73,7 @@ Claude Code hat das angesprochen, statt weiter meine Meldungen einzusammeln:
 > Ich höre auf, mich darauf zu stützen.
 
 Unser gemeinsames Scheitern an diesem Punkt der Sitzung lag wohl nicht an mangelnder Mühe meinerseits.
-Es lag vielmehr daran, dass wir mit dem falschen Instrument gemessen haben — und daran hätten auch noch so sorgfältiges Hinhören oder jüngere Ohren nichts geändert.
+Es lag vielmehr daran, dass wir mit dem falschen Instrument gemessen haben, und daran hätten auch noch so sorgfältiges Hinhören oder jüngere Ohren nichts geändert.
 
 ## Stattdessen: ein Instrument bauen
 
@@ -81,8 +81,8 @@ Der nächste Ansatz war, die Signale der eingebauten Mikrofone des Laptops aufzu
 Das hat auch fast funktioniert, aber das Grundrauschen des Mikrofons hat den leisen Lautsprecher überdeckt.
 
 Also wurde der Ansatz geschärft.
-Statt die Lautstärke im Allgemeinen zu messen, misst man den *konkret abgespielten Ton* und ignoriert alles andere — ein Goertzel-Filter, der sich auf eine Frequenz einrastet und den Rest verwirft.
-Zwei Frequenzen kamen zum Einsatz: 1 kHz für den Pegel und 6 kHz für eine ganz andere Frage — *kann dieser Lautsprecher überhaupt hohe Frequenzen erzeugen?*
+Statt die Lautstärke im Allgemeinen zu messen, misst man den *konkret abgespielten Ton* und ignoriert alles andere: ein Goertzel-Filter, der sich auf eine Frequenz einrastet und den Rest verwirft.
+Zwei Frequenzen kamen zum Einsatz: 1 kHz für den Pegel und 6 kHz für eine ganz andere Frage: *kann dieser Lautsprecher überhaupt hohe Frequenzen erzeugen?*
 
 Eine Anmerkung dazu, wie verblüffend flexibel das von Claude gelöst wurde: numpy, eine Python-Bibliothek zur Signalanalyse, war in der Umgebung nicht installiert, also wurde die Analyse kurzerhand in reinem Python geschrieben.
 Keine Laborausrüstung nötig.
@@ -113,17 +113,17 @@ Also saß ich da und habe Lautsprecherschlitze mit dem Finger abgedichtet, währ
 Nebenbei: Es fühlte sich leicht albern an.
 Es funktionierte trotzdem, weil ein abgedeckter Lautsprecher messbar leiser wird und ein Mikrofon nun mal keine eigene Meinung hat.
 
-Diese Abfolge möchte ich hervorheben, denn sie ist das, was ich wirklich beeindruckend fand — nicht nur ein einzelner cleverer Schritt, sondern die logische *Richtung*, in der sich unsere Erkenntnisse entwickelten:
+Diese Abfolge möchte ich hervorheben, denn sie ist das, was ich wirklich beeindruckend fand, nicht nur ein einzelner cleverer Schritt, sondern die logische *Richtung*, in der sich unsere Erkenntnisse entwickelten:
 
-1. **„Sag mir, was du hörst.“** — unzuverlässig, und das haben wir schnell herausgefunden.
-2. **„Halt die Hand über diese Öffnung.“** — grob und handfest, aber für Claude objektiv messbar.
-3. **„Hier ist ein tonselektiver Analysator; das Mikrofon liefert die Antwort.“** — wiederholbar, mit Zahlen.
+1. **„Sag mir, was du hörst.“** Unzuverlässig, und das haben wir schnell herausgefunden.
+2. **„Halt die Hand über diese Öffnung.“** Grob und handfest, aber für Claude objektiv messbar.
+3. **„Hier ist ein tonselektiver Analysator; das Mikrofon liefert die Antwort.“** Wiederholbar, mit Zahlen.
 
 Jeder Schritt hat mich als „Bioware“ aus der Messung weiter herausgenommen.
 So sieht echter Fortschritt bei so einem Problem aus.
 Allein wäre ich nicht so weit gekommen.
 
-## Sich öffentlich irren — und es korrigieren
+## Sich öffentlich irren und es korrigieren
 
 Nun wussten wir: Es gibt keinen dritten Breitbandlautsprecher.
 Der dritte Schallwandler ist ein Tieftöner am Lüftungsschlitz auf der Unterseite, hinten rechts — 45 dB leiser und bei 6 kHz stumm.
@@ -150,7 +150,7 @@ In die nächste Sitzung mit Claude bin ich mit einer konkreten neuen Idee gegang
 Das ist deshalb wichtig, weil Werkzeuge, die sofort antworten, uns dazu verleiten können, sofort weiter zu fragen, statt erst einmal weiter nachzudenken.
 So sind wir Menschen sozial konditioniert, und einer agentischen KI nicht sofort zu antworten, fühlt sich erst einmal komisch an.
 
-Eine erzwungene Pause erweist sich aber als durchaus sinnvoll bei einem Problem, das man noch nicht verstanden hat — und anders als bei einem menschlichen Gegenüber setzt die Sitzung exakt dort wieder an, wo sie aufgehört hat, mit vollständigem Kontext.
+Eine erzwungene Pause erweist sich aber als durchaus sinnvoll bei einem Problem, das man noch nicht verstanden hat, und anders als bei einem menschlichen Gegenüber setzt die Sitzung exakt dort wieder an, wo sie aufgehört hat, mit vollständigem Kontext.
 Nichts musste Claude neu erklärt werden.
 
 ## Die Kontrolle behalten
@@ -173,7 +173,7 @@ Ungefragt schrieb Claude Code das hier:
 > Ich sollte zu meinem Anteil offen sein: Um messbare Pegel zu bekommen, habe ich den Signalweg mit seinem kalibrierten Maximum und anhaltenden Vollpegel-Sinustönen betrieben, was lauter und härter ist als deine normale Nutzung —
 > ich kann das also nicht als Mitursache ausschließen.
 
-Anschließend hat es auch die Belege für die Gegenrichtung aufgeführt — der Verstärker meldete weder Überstrom noch Übertemperatur noch Clipping-Fehler.
+Anschließend hat es auch die Belege für die Gegenrichtung aufgeführt: der Verstärker meldete weder Überstrom noch Übertemperatur noch Clipping-Fehler.
 Nach einem Neustart des Rechners war der Lautsprecher übrigens wieder da und ist seitdem stabil.
 
 Ein Assistent, der proaktiv auf seinen möglichen eigenen Anteil an einem akuten Problem hinweist, ist nützlicher als einer, der einen nie beunruhigen möchte und deshalb Informationen vorenthält.
@@ -199,10 +199,11 @@ Die technischen Risiken sind zwar real, aber beherrschbar, wenn man zuerst den P
 ## Ob sich das für dich lohnt
 
 Du musst dafür kein Entwickler sein.
-Diesen Ton-Analysator hätte ich nicht so schnell in Python schreiben können wie Claude, und ich musste es auch nicht — ich musste nur ein Symptom genau beschreiben und ausführen, worum ich von Claude gebeten wurde.
+Diesen Ton-Analysator hätte ich nicht so schnell in Python schreiben können wie Claude, und ich musste es auch nicht.
+Ich musste nur ein Symptom genau beschreiben und ausführen, worum ich von Claude gebeten wurde.
 Und einen Finger auf ein Lautsprecherloch legen, der sich in diesem Moment als das beste verfügbare Instrument herausstellte. :-)
 
-Wenn du ein Gerät hast, an dem etwas irgendwie kaputt ist — ein Lautsprecher, ein Sensor, ein Lüfter, der nie anläuft, irgendeine Funktion, die klammheimlich aufgehört hat zu funktionieren —,
+Wenn du ein Gerät hast, an dem etwas irgendwie kaputt ist, ein Lautsprecher, ein Sensor, ein Lüfter, der nie anläuft, irgendeine Funktion, die klammheimlich aufgehört hat zu funktionieren,
 dann ist es doch so: Solche Probleme sind meist *lösbar*, es lohnte sich bisher nur für niemanden, sie selbst zu lösen.
 Diese Rechnung hat sich klar erkennbar geändert.
 Nicht weil die Unterstützung durch agentische KI unfehlbar wäre.

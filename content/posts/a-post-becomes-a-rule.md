@@ -5,7 +5,7 @@ draft: false
 tags: ["claude-code", "workflow", "writing", "recursion", "self-reference", "Essay"]
 topics: ["writing"]
 series: ["Feedback"]
-summary: "A post about my keyboard shortcuts did not only describe how I work — it changed it. The correction now sits in the file my agent reads at the start of every session. Which makes this blog one of the things it reports on."
+summary: "A post about my keyboard shortcuts did not only describe how I work, it changed it. The correction now sits in the file my agent reads at the start of every session. Which makes this blog one of the things it reports on."
 ---
 
 Yesterday Claude explained to me that several passages in this blog change at the same time when it works on structure and content after a conversation with me.
@@ -40,7 +40,7 @@ On 6 September 2026, at 9:30, a series on this blog was still called *The Same R
 After that moment it is called [Self-Similarity](/series/self-similarity/).
 
 At that point the old name sat in four places: in both language versions of the first part, and on the two series pages.
-Two of those were not passages of text but directories, because in Hugo the directory name is the address.
+Two of those were directories, not passages of text, because in Hugo the directory name is the address.
 And since the blog is bilingual, every name exists twice — a German one and an English one, spelled differently and addressed differently.
 
 Publishing added more.
@@ -50,14 +50,14 @@ Afterwards it was a page of its own with navigation of its own.
 
 Nothing remarkable about it yet.
 Every software project knows it, it is called coupling, and it is the reason renaming has a reputation for being dangerous.
-One name in one place, effects in many — which is why programs carry names for years that nobody considers right any more.
+One name in one place, effects in many, which is why programs carry names for years that nobody considers right any more.
 
 ## The second case: a bracket
 
 On 5 September two posts on this blog are half an hour apart.
 
 At 11:30 came [A codebook from my own corpus](/posts/a-codebook-from-my-own-corpus/).
-It describes how my shortcut list came about: not guessed but counted, out of 764 distinct messages across 13 projects.
+It describes how my shortcut list came about: not guessed, counted, out of 764 distinct messages across 13 projects.
 The most frequent word was `commit` with 28 hits, and the guessed list did not contain it.
 
 At 12:00 came [Shortcuts as an input aid](/posts/shortcuts-as-an-input-aid/).
@@ -70,7 +70,7 @@ The correction is square: `[x]` instead of `(x)`.
 And this is where the resemblance to the first case ends.
 The correction did not stay inside the post.
 Since that same day it sits in `CLAUDE.md`, the file Claude Code reads at the start of every session.
-What sits there is not only the new form but also the sentence that the agent itself should write square brackets, in replies as in documentation.
+What sits there is the new form, and with it the sentence that the agent itself should write square brackets, in replies as in documentation.
 
 ## The difference
 
@@ -101,11 +101,11 @@ A Makefile that generates a Makefile, a formatter that formats its own source, a
 
 The difference is the material.
 `CLAUDE.md` is not a configuration format.
-It is prose — German prose, in my case — with reasons, examples and a table, and the reasons do work of their own: they tell the agent not only what applies but why, which is how the rule reaches cases nobody anticipated when writing it.
+It is prose (German prose, in my case) with reasons, examples and a table, and the reasons do work of their own: they tell the agent not only what applies, they tell it why, which is how the rule reaches cases nobody anticipated when writing it.
 
 That makes one and the same sentence two things: readable text and effective instruction.
 Anyone reading the shortcut post reads roughly what the agent reads.
-Between what is explained here and what steers here, there is no translation step left — and that is the real difference from every manual I have ever written.
+Between what is explained here and what steers here, there is no translation step left, and that is the real difference from every manual I have ever written.
 
 ## What is not being claimed
 
@@ -113,7 +113,8 @@ The blog does not write itself.
 
 Each of the five steps above passes through a decision of mine.
 I decided to count the transcripts.
-I noticed the design flaw — more precisely: it surfaced while I was talking about the list, and I decided it mattered more than the post I was writing at the time.
+I noticed the design flaw.
+More precisely: it surfaced while I was talking about the list, and I decided it mattered more than the post I was writing at the time.
 I decided the correction belonged in the rules file and not only in the text.
 
 Without those decisions the loop does not turn.
@@ -137,7 +138,7 @@ For a rule that only turns out to be wrong after two weeks, the cycle is two wee
 Anyone working with an agent already has this loop, whether they use it or not.
 There is a file that gets read at the start of every session, and everything not in it has to be said again every time.
 
-The step worth taking is small: next time something about your own work strikes you while you are working — a phrasing you needed three times, a question that comes back identical — do not put it in your notes, put it in the rules file.
+The step worth taking is small: next time something about your own work strikes you while you are working, a phrasing you needed three times, a question that comes back identical, do not put it in your notes, put it in the rules file.
 With the reason, in full sentences.
 
 The difference does not show up immediately.

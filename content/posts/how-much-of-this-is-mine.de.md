@@ -4,7 +4,7 @@ date: 2026-09-06T09:10:00+02:00
 tags: ["claude-code", "workflow", "schreiben", "language", "Essay"]
 themen: ["autor"]
 series: ["Selbstaehnlichkeit"]
-summary: "Die ehrliche Antwort lautet: teilweise. Das Interessante ist, dass sich die Teile sauber trennen lassen — der Stoff kommt von mir, die Form meistens von Claude. Am deutlichsten sichtbar wird die Naht an einem Satz, der die Übersetzung nicht überlebt."
+summary: "Die ehrliche Antwort lautet: teilweise. Das Interessante ist, dass sich die Teile sauber trennen lassen: der Stoff kommt von mir, die Form meistens von Claude. Am deutlichsten sichtbar wird die Naht an einem Satz, der die Übersetzung nicht überlebt."
 ---
 
 Die ehrliche Antwort auf die Frage, ob hier ein Mensch schreibt, lautet: teilweise.
@@ -13,12 +13,12 @@ Interessant ist daran, dass sich die Teile ziemlich sauber trennen lassen.
 ## Kurzfassung
 
 - Der Inhalt kommt bisher ausnahmslos von mir: jede Messung, jede Entscheidung, jede Meinung, jeder Widerruf.
-- Die Struktur kommt meistens von Claude — und sie ist meistens besser als meine.
+- Die Struktur kommt meistens von Claude, und sie ist meistens besser als meine.
 - Der Beleg dafür steht in den Beiträgen selbst.
   Kein Modell weiß, welcher Lautsprecher an meinem Laptop stumm bleibt.
 - Die Naht zwischen beidem wird an einer Stelle sichtbar, an der die Sprache nicht mitspielt: *erfahren* und *erlaufen*.
 - Was mitlernt, ist ein Gedächtnis aus Textdateien.
-  Darin steht kein Wissen über Code, sondern Arbeitsabsprachen — jede aus einem Moment, in dem etwas überraschte: schieflief oder besser lief als gedacht.
+  Darin steht kein Wissen über Code, nur Arbeitsabsprachen, jede aus einem Moment, in dem etwas überraschte: schieflief oder besser lief als gedacht.
 - Übertragbar: Behalte den Stoff, gib die Form ab.
   Andersherum entsteht Text, den niemand braucht.
 
@@ -38,8 +38,9 @@ Dazu gehört ein Teil, der weniger nach Autorschaft aussieht und trotzdem einer 
 Ein Text wird nicht dadurch meiner, dass ich ihn gegenlese, sondern dadurch, dass Sätze verschwinden, die ich nicht unterschreiben würde.
 
 Im zweiten Teil dieser Serie steht so ein Fall sogar drin.
-In meinen Rohnotizen stand, die logistische Gleichung lasse sich „bis heute nicht simulieren" — so knapp notiert, dass der Satz wörtlich genommen falsch ist.
-Aufgefallen ist das beim Vorbereiten — die Maschine hat den Satz markiert und zwei präzisere Fassungen danebengelegt.
+In meinen Rohnotizen stand, die logistische Gleichung lasse sich „bis heute nicht simulieren", so knapp notiert, dass der Satz wörtlich genommen falsch ist.
+Aufgefallen ist das beim Vorbereiten.
+Die Maschine hat den Satz markiert und zwei präzisere Fassungen danebengelegt.
 Entschieden habe ich.
 So sieht die Arbeitsteilung in der Praxis aus: Der Einwand kann von überall kommen, die Verantwortung nicht.
 
@@ -78,12 +79,13 @@ Genau das ist die Pointe: Sensorik und Aktuatorik hängen im Deutschen an einem 
 
 Das Englische hat dieses Paar nicht.
 *To experience* und *to walk* teilen keine Wurzel, die man so gegeneinander schlagen könnte.
-In der englischen Fassung dieses Beitrags steht deshalb nicht die Übersetzung dieses Absatzes, sondern der Kompromiss, für den ich mich entschieden habe.
+In der englischen Fassung dieses Beitrags steht deshalb nicht die Übersetzung dieses Absatzes.
+Dort steht der Kompromiss, für den ich mich entschieden habe.
 Wer beide Fassungen nebeneinanderlegt, sieht hier eine Naht.
 
 Und das ist der Punkt, auf den es mir ankommt.
-Nicht, dass eine Maschine kein Wortspiel bauen könnte — sie kann, und ziemlich gut.
-Sondern dass die Entscheidung, was mit einem unübersetzbaren Satz geschieht — stehen lassen, neu bauen oder offenlegen —, eine Entscheidung darüber ist, wofür der Text überhaupt da ist.
+Nicht, dass eine Maschine kein Wortspiel bauen könnte, sie kann, und ziemlich gut.
+Es geht darum, dass die Entscheidung, was mit einem unübersetzbaren Satz geschieht (stehen lassen, neu bauen oder offenlegen), eine Entscheidung darüber ist, wofür der Text überhaupt da ist.
 Die trifft der, dem der Text gehört.
 
 ## Wie das Gegenlesen aussieht
@@ -91,14 +93,14 @@ Die trifft der, dem der Text gehört.
 Der Weg von einem Einfall zu einem Beitrag hat inzwischen eine feste Form:
 
 1. Der Einfall wird eine Notiz in einem Obsidian-Vault, mit Status und Quelle.
-2. Aus der Notiz wird ein Interview — Fragen mit vorgeschlagenen Antworten, die ich klickend beantworte, weil Tippen für mich der teure Teil ist.
+2. Aus der Notiz wird ein Interview: Fragen mit vorgeschlagenen Antworten, die ich klickend beantworte, weil Tippen für mich der teure Teil ist.
 3. Daraus entsteht das Paar aus deutscher und englischer Fassung, beide als Entwurf.
 4. Ich lese gegen, streiche, verschiebe, widerspreche.
 5. Drei kleine Prüfskripte laufen: eines vergleicht den minifizierten Build mit dem normalen, eines prüft die Themen-Taxonomie, eines den Vault.
 6. Erst dann geht es online.
 
 Ein Schritt in dieser Kette wird leicht übersehen und ist der wichtigste.
-Bevor ein Beitrag veröffentlicht wird, sammelt seine Notiz eine Liste aller Aussagen, für die es weder Log noch Messung gibt — Sätze über meine eigene Vergangenheit zum Beispiel.
+Bevor ein Beitrag veröffentlicht wird, sammelt seine Notiz eine Liste aller Aussagen, für die es weder Log noch Messung gibt, Sätze über meine eigene Vergangenheit zum Beispiel.
 Die bestätige ich einzeln, oder sie fliegen raus.
 Bei dieser Serie ist die Liste lang, weil sie die persönlichste ist, die hier bisher stand.
 
@@ -106,13 +108,13 @@ Bei dieser Serie ist die Liste lang, weil sie die persönlichste ist, die hier b
 
 Über die einzelne Sitzung hinaus bleibt ein Gedächtnis: eine `MEMORY.md` als Index und daneben kleine Textdateien, eine Tatsache je Datei.
 
-Darin steht kein Wissen über meinen Code — das steht im Code.
+Darin steht kein Wissen über meinen Code, das steht im Code.
 Darin stehen Arbeitsabsprachen.
 Dass ich ohne Umlaute tippe und Tippfehler nicht kommentiert werden sollen.
 Dass ein Schnitt im Kontext vorgeschlagen werden soll, statt darauf zu warten, dass ich ihn verlange.
 Dass Zitate in der englischen Fassung mit übersetzt werden.
 
-Jede dieser Zeilen kommt aus einem Moment, in dem etwas überraschte — schieflief oder besser lief als gedacht.
+Jede dieser Zeilen kommt aus einem Moment, in dem etwas überraschte: schieflief oder besser lief als gedacht.
 Zusammen sind sie das, was von einem Arbeitstag übrig bleibt, wenn der Kontext gelöscht ist.
 
 Aus dem letzten Teil folgt daraus direkt die nächste Frage.
@@ -123,8 +125,8 @@ Darüber schreibe ich als Nächstes, in einer eigenen Reihe.
 
 Behalte den Stoff, gib die Form ab.
 
-Der Grund dafür ist keine Moral, sondern Arbeitsteilung.
-Den Stoff kann dir niemand abnehmen — die Form schon, und zwar gut.
+Der Grund dafür ist Arbeitsteilung und keine Moral.
+Den Stoff kann dir niemand abnehmen, die Form schon, und zwar gut.
 Andersherum, wenn die Maschine die Substanz liefert und du die Formulierungen polierst, entsteht Text, der aussieht wie ein Beitrag und niemanden hat, der ihn braucht.
 
 Es gibt dafür einen einfachen Prüfsatz.

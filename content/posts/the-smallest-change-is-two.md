@@ -5,7 +5,7 @@ draft: false
 tags: ["claude-code", "workflow", "complexity", "chaos", "measurement", "self-reference", "Essay"]
 topics: ["writing"]
 series: ["Feedback"]
-summary: "In seven days, 39 post files were created and 86 existing ones changed. Most changes touch two files; one touched eighteen. That distribution is why a blog behaves like a coupled system — and it marks the place where I adjust it in passing."
+summary: "In seven days, 39 post files were created and 86 existing ones changed. Most changes touch two files; one touched eighteen. That distribution is why a blog behaves like a coupled system, and it marks the place where I adjust it in passing."
 ---
 
 The smallest possible change to this blog is two files.
@@ -85,7 +85,7 @@ All five are decisions about form, and every one of them touched more posts than
 ## The parameter
 
 The sentence that started the 18 was not a technical instruction.
-It amounted to this: readers should not be met by a list ordered by date, but by questions — what is actually at stake here.
+It amounted to this: instead of a list ordered by date, readers should see the question of what is actually at stake here.
 
 A rule follows from that wish: every post belongs to exactly one topic, and every topic has a page.
 Eighteen post files had to acquire a field for it.

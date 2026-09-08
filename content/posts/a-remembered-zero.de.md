@@ -5,13 +5,13 @@ draft: false
 tags: ["claude-code", "linux", "audio", "pipewire", "debugging", "chuwi", "Technical Deep Dive"]
 themen: ["rechner"]
 series: ["Nachhall"]
-summary: "Der Lautsprechertest in den Systemeinstellungen blieb stumm, während Musik und Video einwandfrei liefen. Die Ursache war kein defekter Treiber, sondern eine einzelne Zahl, die sich mein Audio-Server treu gemerkt hatte — übrig geblieben aus genau der Fehlersuche, über die ich beim letzten Mal geschrieben habe."
+summary: "Der Lautsprechertest in den Systemeinstellungen blieb stumm, während Musik und Video einwandfrei liefen. Die Ursache war kein defekter Treiber, sondern eine einzelne Zahl, die sich mein Audio-Server treu gemerkt hatte, übrig geblieben aus genau der Fehlersuche, über die ich beim letzten Mal geschrieben habe."
 ---
 
 Beim letzten Mal ging es hier ums [Messen statt Raten](/de/posts/measure-dont-guess/),
 um die Lautsprecher in diesem Laptop und darum, sich öffentlich zu irren und es zu korrigieren.
 Dies ist ein kurzes Nachwort dazu.
-Drei Tage nach dem Ende jener Arbeit zeigte derselbe Laptop ein neues Symptom — und es stellte sich als Rückstand der Fehlersuche selbst heraus,
+Drei Tage nach dem Ende jener Arbeit zeigte derselbe Laptop ein neues Symptom, und es stellte sich als Rückstand der Fehlersuche selbst heraus,
 nicht der Hardware und nicht der Lösung.
 
 *Nachtrag vom 3.9.2026:* Inzwischen ist daraus eine Serie geworden.
@@ -32,7 +32,7 @@ Alle Teile, und ein Schema vorweg, das zeigt, worauf man sich einlässt: [Nachha
 ## Eine Erfolgsmeldung und kein Ton
 
 Fedora 44, GNOME 50, PipeWire.
-Zwei kleine Lautsprechersymbole in den Toneinstellungen, eines je Seite; ein Klick darauf soll einen kurzen Testton in genau diesen Lautsprecher schicken.
+Zwei kleine Lautsprechersymbole in den Toneinstellungen, eines je Seite, ein Klick darauf soll einen kurzen Testton in genau diesen Lautsprecher schicken.
 Aus keinem der beiden kam etwas.
 Alles andere auf dem Rechner gab normal Ton aus, was die halbe Fehlersuche sofort ausschließt.
 
@@ -80,7 +80,7 @@ Output/Audio:media.role:Test={"channelMap":["FL"], "volume":1.0, "mute":false, "
 
 Der Lautsprechertest kennzeichnet seinen Ton mit der Rolle `test`.
 Für diese Kennzeichnung war eine Lautstärke von null gespeichert, und sie wurde jedes einzelne Mal getreulich angewendet.
-Die Nachbareinträge — `Music`, `Movie`, die Browser, der Videoplayer — standen alle auf 1.0,
+Die Nachbareinträge, `Music`, `Movie`, die Browser, der Videoplayer, standen alle auf 1.0,
 und genau deshalb klang alles andere normal und nur dieser eine Dialog blieb stumm.
 
 Es war nichts kaputt.
@@ -95,7 +95,7 @@ Die ehrliche Antwort hat drei Teile.
 
 **Die Lösung selbst kann das nicht.** Sie ist eine einzeilige Regel, die eine Eigenschaft der *Soundkarte* ändert.
 Die Null sitzt auf einem *Stream*, in einem völlig anderen Mechanismus.
-Ich habe die naheliegende Brücke dazwischen geprüft — die Balance an den Anschlag fahren, dann den Lautsprechertest laufen lassen — und nachgesehen, ob das etwas in den gespeicherten Eintrag schreibt.
+Ich habe die naheliegende Brücke dazwischen geprüft, die Balance an den Anschlag fahren, dann den Lautsprechertest laufen lassen, und nachgesehen, ob das etwas in den gespeicherten Eintrag schreibt.
 Tut es nicht. Hypothese erledigt, eine Minute, keine Diskussion.
 
 **Die Fehlersuche rund um die Lösung ist der plausible Ursprung.** Jene Sitzung bestand genau daraus, die Balance an beide Anschläge zu fahren
@@ -116,7 +116,7 @@ und die eine veraltete Zahl, die sie nie hätte aufräumen können, saß dort un
 ## Die Reparatur
 
 Dafür gibt es keinen Einstellungsdialog, aber einen vorgesehenen Weg:
-Der Wert wird gespeichert, wenn sich die Lautstärke eines Streams ändert — also erzeugt man einen Stream mit dieser Kennzeichnung, stellt ihn auf 100 % und lässt den Server es notieren.
+Der Wert wird gespeichert, wenn sich die Lautstärke eines Streams ändert, also erzeugt man einen Stream mit dieser Kennzeichnung, stellt ihn auf 100 % und lässt den Server es notieren.
 
 ```bash
 # einen Stream mit der Rolle des Lautsprechertests offen halten
@@ -125,7 +125,7 @@ paplay --property=media.role=test stille.wav &
 pactl set-sink-input-volume "$ID" 100%
 ```
 
-Geprüft auf demselben Weg wie diagnostiziert — Ausgang aufzeichnen, Test abspielen, Spitzen ablesen:
+Geprüft auf demselben Weg wie diagnostiziert, Ausgang aufzeichnen, Test abspielen, Spitzen ablesen:
 
 | Test | Spitze links | Spitze rechts |
 |---|---|---|
@@ -139,10 +139,10 @@ Kein Neustart, keine Neuanmeldung.
 
 Unterwegs lief ich in eine zweite Stummheit und hätte sie beinahe unter dieselbe Überschrift einsortiert.
 Ein Kommandozeilenwerkzeug verweigerte dieselben Klänge mit `Sound disabled`.
-Völlig anderer Grund: Die System-Ereignisklänge waren in den Desktop-Einstellungen schlicht abgeschaltet — ein bewusster Schalter, an dem der Lautsprechertest gar nicht vorbeikommt.
+Völlig anderer Grund: Die System-Ereignisklänge waren in den Desktop-Einstellungen schlicht abgeschaltet, ein bewusster Schalter, an dem der Lautsprechertest gar nicht vorbeikommt.
 
 Zwei Stillen, ein Einstellungsdialog, nichts miteinander zu tun.
-Die Ereignisklänge wieder einzuschalten war eine Einstellung — und brachte eine dritte Kleinigkeit ans Licht:
+Die Ereignisklänge wieder einzuschalten war eine Einstellung, und brachte eine dritte Kleinigkeit ans Licht:
 Benachrichtigungsklänge waren mit 90,48 % statt 100 % gespeichert.
 Auf voll gestellt und nachgemessen ergab sich ein Pegelverhältnis von 1,1052 gegenüber den vorhergesagten 1 / 0,904817 = 1,1052.
 Vier Stellen Übereinstimmung sind mehr, als die Frage verdient hatte, aber es ist eine schöne Art, sicher zu sein, dass man das geändert hat, was man ändern wollte.
@@ -152,7 +152,8 @@ Vier Stellen Übereinstimmung sind mehr, als die Frage verdient hatte, aber es i
 - **„Erfolg" ist eine Aussage über den Codepfad, nicht über die Welt.**
   Jede Schicht hier meldete Erfolg und erzeugte Stille. Nur die Aufzeichnung konnte den Unterschied sehen.
 - **Bevorzuge eine Messung, die dich blamieren kann.** Meine Ursachentheorie war ordentlich und falsch.
-  Das herauszufinden kostete eine Minute; sonst hätte ich eine selbstbewusst falsche Erklärung aufgeschrieben.
+  Das herauszufinden kostete eine Minute.
+  Sonst hätte ich eine selbstbewusst falsche Erklärung aufgeschrieben.
 - **Eine funktionierende Lösung und ein sauberes System sind nicht dasselbe.**
   Fehlersuche hinterlässt Ablagerungen. Die Werkzeuge, mit denen man ein Problem untersucht, haben ein eigenes Gedächtnis,
   und das wird nicht zurückgesetzt, wenn die eigentliche Reparatur ankommt.

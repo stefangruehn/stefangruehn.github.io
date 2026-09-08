@@ -12,14 +12,14 @@ All parts, with a diagram up front showing what you are getting into: [Codebook]
 
 ## TL;DR
 
-- On a September morning my five-hour allowance ran out at 10:07 — after two hours and 27 minutes out of five.
+- On a September morning my five-hour allowance ran out at 10:07, after two hours and 27 minutes out of five.
 - Seconds earlier three research agents had died, each on its own next call, twelve seconds apart.
 - The obvious explanation was right there: three agents at once.
   The measurement says otherwise.
   The three were **7.8 per cent** of the spend.
 - The rest was the session itself: 394 requests whose carried-along context grew from 68,000 to 388,000 tokens.
 - The requests halved over the morning; the spend per quarter hour stayed the same.
-  Per request that is a factor of five — for demonstrably less activity.
+  Per request that is a factor of five, for demonstrably less activity.
 - More than thirty turns consisted of "yes", "flash" or "yes, flash".
   Three characters in, 388,000 tokens on the bill.
 - The next day, with context cuts in the right places: nearly twice the turns, a third less context, the same amount of work done.
@@ -31,7 +31,7 @@ All parts, with a diagram up front showing what you are getting into: [Codebook]
 I had sent out three agents, each with its own research task around a display that kept losing its picture.
 Seven minutes later they were dead.
 
-They did not die together but one by one, each on the next call it made of its own accord:
+They did not die together. Each died on the next call it made of its own accord:
 
 ```
 10:06:45   Agent terminated early due to an API error
@@ -114,7 +114,7 @@ From that follows an arithmetic that explains all the rest:
 So a limit does not measure how much an agent works.
 It measures how much it has to remember.
 
-And because the second factor grows with every turn, the same question costs a multiple at the end of a session that it cost at the start — without the answer getting any better.
+And because the second factor grows with every turn, the same question costs a multiple at the end of a session that it cost at the start, without the answer getting any better.
 
 ## The same measurement, four hours later
 
@@ -134,14 +134,14 @@ This time the measurement comes out the other way round.
 7.8 per cent in the morning, 70 per cent at lunchtime.
 Same tools, same day, same machine.
 
-So the first number is not a property of agents but a property of that one morning.
+So the first number is not a property of agents. It is a property of that one morning.
 What does not change is the rule underneath.
 In the morning it was the session turning many turns with a large context; at lunchtime it was the agents — 312 requests between the three of them against a freshly emptied session.
 
 An agent is not cheap.
 **It merely starts small**, and then it grows like everything else.
 
-One honest aside, because it forces itself on you while adding things up: the first window took 102.7 million tokens, the second broke off at 38.8 million — and in that second window there was no spend outside this one session.
+One honest aside, because it forces itself on you while adding things up: the first window took 102.7 million tokens, the second broke off at 38.8 million, and in that second window there was no spend outside this one session.
 So a limit is not expressed in tokens read, at least not linearly.
 You can measure your own consumption.
 You cannot measure the boundary where it stops.
@@ -165,7 +165,7 @@ It costs exactly as much as any other turn.
 
 And a permission you can grant once costs once instead of thirty times.
 Whatever a project should always be allowed to do belongs in its configuration, not in a question per occurrence.
-For anything dangerous or visible to the outside world the question stays right — just not for flashing the same chip for the thirty-first time.
+For anything dangerous or visible to the outside world the question stays right, just not for flashing the same chip for the thirty-first time.
 
 ## The remedy, measured
 
@@ -218,7 +218,7 @@ So the cut has to be *proposed* by the side that holds the number and *decided* 
 Something follows from that which I had not expected.
 An agent proposing to empty the context is proposing to delete its own memory.
 There is no incentive for it that comes out of the situation itself.
-It only happens if it is written down as a rule — that morning it was not, and the result was three agents in an almost empty allowance.
+It only happens if it is written down as a rule. That morning it was not, and the result was three agents in an almost empty allowance.
 
 ## What the cut-off actually destroyed
 
@@ -265,7 +265,7 @@ If the same thing has happened to you and you want to know what caused it, this 
 3. **Which of those can you permit once instead of confirming every time?**
    Everything that recurs and is neither dangerous nor visible to the outside world.
 4. **When was your state last written down in full?**
-   That was the right moment to cut. For me it was a commit at 09:57 — ten minutes before the cut-off, by which point every further request already cost 388,000 tokens.
+   That was the right moment to cut. For me it was a commit at 09:57, ten minutes before the cut-off, by which point every further request already cost 388,000 tokens.
 5. **And only then: would agents have been right here?**
    They would have been — but at the beginning of the research, not at the end of a long morning.
 

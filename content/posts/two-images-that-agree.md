@@ -5,12 +5,12 @@ draft: true
 tags: ["claude-code", "hardware", "esp32", "reverse-engineering", "debugging", "Technical Deep Dive"]
 topics: ["machine"]
 series: ["Toolchains"]
-summary: "A firmware image does not describe what somebody intended, it describes what gets executed. Three chains end in an image: one reads the factory firmware, one reads two of them against each other, and one reads the same one twice — and finds the difference."
+summary: "A firmware image does not describe what somebody intended, it describes what gets executed. Three chains end in an image: one reads the factory firmware, one reads two of them against each other, and one reads the same one twice and finds the difference."
 ---
 
 Part one described three chains that end on [paper](/posts/the-schematic-is-a-hypothesis/), and refuted the schematic three times along the way.
 Paper describes an intent.
-A firmware image describes what gets executed — and this board carried two of them, each saved before the first write of our own.
+A firmware image describes what gets executed, and this board carried two of them, each saved before the first write of our own.
 
 ## TL;DR
 
@@ -18,9 +18,9 @@ A firmware image describes what gets executed — and this board carried two of 
   An image can answer that, because it contains the answer.
 - **Anchor technique:** log strings inside the image are the fixed points.
   A string's address sits in a constant pool, and from there a single load instruction leads back into the function that prints it.
-- Result: the factory firmware does **not** use the vendor driver's default initialisation table but one of its own with 184 entries — and that one ends with the command the default table is missing.
+- Result: the factory firmware does **not** use the vendor driver's default initialisation table, it has one of its own with 184 entries, and that one ends with the command the default table is missing.
 - **Two images against each other** yielded the protocol between the two processors in full: baud rate, pins, frame format, command vocabulary.
-  Both ends read independently, both in agreement — and the pins contradict the schematic.
+  Both ends read independently, both in agreement, and the pins contradict the schematic.
 - **The same firmware read twice** and compared: byte-identical except for 1,985 bytes.
   The difference *is* the finding.
 - Finally: writing things down as you go is not tidiness, it is a tool.
@@ -32,7 +32,7 @@ A firmware image describes what gets executed — and this board carried two of 
 
 The starting problem stood at the end of part one: the drawn picture fades within one or two seconds.
 The datasheet had supplied the physics.
-What stayed open was what the factory firmware does differently — because it holds a picture on the same panel.
+What stayed open was what the factory firmware does differently, because it holds a picture on the same panel.
 
 The chain:
 
@@ -53,7 +53,7 @@ The device is mine, secure boot and flash encryption are off as shipped; nothing
 Why this is the one place in the whole series where you can actually get something wrong is [a post of its own](/posts/the-wrong-statute/).
 
 The second step splits the image into its parts.
-At address `0x10000` there is a header listing which part of the file is later loaded to which address in memory — six segments, each with file offset, target address and length.
+At address `0x10000` there is a header listing which part of the file is later loaded to which address in memory: six segments, each with file offset, target address and length.
 Without that mapping a disassembler is useless: it can decode instructions, but every jump and every reference to data points at an address it does not know.
 With it — `--adjust-vma=<load address>` tells the disassembler where the piece lives in memory — all addresses line up again.
 
@@ -66,10 +66,10 @@ A string becomes an entry point.
 What that turned up:
 
 **The factory firmware uses an initialisation table of its own.**
-The library it is built against ships a default table 216 entries long — and that one is referenced only in a branch that never runs.
+The library it is built against ships a default table 216 entries long, and that one is referenced only in a branch that never runs.
 Instead the application installs its own with **184 entries**, sitting in a completely different place in the data section.
 That is why an earlier pass, searching near the library's data, kept finding only the default.
-The two differ in nearly every analogue register — and the custom one ends with `INVON`, `SLPOUT`, **`DISPON`**.
+The two differ in nearly every analogue register, and the custom one ends with `INVON`, `SLPOUT`, **`DISPON`**.
 Exactly the command the default table is missing and which the datasheet names as the only way out of the off state.
 
 **The bus configuration sits in the constructor's constants.**
@@ -88,7 +88,7 @@ That answer is unsatisfying and still worth a lot — it stops anybody looking f
 The second chain is the most interesting one, because it needs no instrument at all and is still stronger than the schematic.
 
 The board carries two microcontrollers that talk to each other over a serial line.
-Both hold their factory firmware, both were read out, and both ends of the same conversation were disassembled **independently** — same anchor technique, different processor architecture, different toolchain.
+Both hold their factory firmware, both were read out, and both ends of the same conversation were disassembled **independently**: same anchor technique, different processor architecture, different toolchain.
 
 What came out agrees on every point:
 
@@ -119,7 +119,7 @@ The protocol itself could be recovered in full as well, from the dispatch tables
  4   data    len bytes
 ```
 
-Cover art travels in numbered packets, **and the receiver requests every single one** — the sender never runs ahead.
+Cover art travels in numbered packets, **and the receiver requests every single one**, the sender never runs ahead.
 Both sides compute the same stride of 1,016 bytes per packet, at two places in two different images, and both cap the payload at the same value.
 
 At that point none of it had been measured, only read, and the note said so.
@@ -165,20 +165,21 @@ It is the answer to a question you had not asked.
 At the end of this part, a chain that sits above all the others.
 
 Every one of the investigations above wrote its findings into a file **while working**, not afterwards.
-The files in `scratch-findings/` start as a skeleton — the open questions as numbered headings, each with `(to fill)` beneath it — and next to that runs a source log: `S1`, `S2`, `S3`, every source with its address, a quotation, and a note on whether it supports or refutes something.
+The files in `scratch-findings/` start as a skeleton, the open questions as numbered headings, each with `(to fill)` beneath it, and next to that runs a source log: `S1`, `S2`, `S3`, every source with its address, a quotation, and a note on whether it supports or refutes something.
 At the very bottom, a section headed "Dead ends (do not search again)".
 
-The reason is not tidiness but an experience with a date attached.
+The reason is not tidiness.
+It is an experience with a date attached.
 On 4 September three research runs going in parallel died at a usage limit, mid-sentence.
-What survived was exactly what stood in their files at that moment — and that was enough to carry on with.
+What survived was exactly what stood in their files at that moment, and that was enough to carry on with.
 What was lost was not information but **compression**: the summary that never got written.
 
 From which follows a rule that holds for research in general and not just for hardware: saving your findings up for the final report bets everything on the ending.
 Writing them down as you go risks only the summary, and the summary is the cheapest part.
 
 The collection of dead ends is the underrated piece of this.
-"The schematic has no enable pin for the panel", "the reported bug is about 33,000 bytes and not 3,600", "the factory firmware never reads the screen" — three sentences that answer no question and each save an hour the moment somebody picks up that trail a second time.
+"The schematic has no enable pin for the panel", "the reported bug is about 33,000 bytes and not 3,600", "the factory firmware never reads the screen", three sentences that answer no question and each save an hour the moment somebody picks up that trail a second time.
 
 The last part leaves the images behind.
 Paper says what was intended; an image says what gets executed.
-What is actually soldered onto the board is said by neither — for that you have to ask the device.
+What is actually soldered onto the board is said by neither, for that you have to ask the device.

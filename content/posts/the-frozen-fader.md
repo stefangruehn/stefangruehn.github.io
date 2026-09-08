@@ -5,11 +5,11 @@ draft: false
 tags: ["claude-code", "linux", "audio", "alsa", "pipewire", "wireplumber", "systemd", "debugging", "chuwi", "Technical Deep Dive"]
 topics: ["machine"]
 series: ["Reverberations"]
-summary: "After a reboot every audio source was 23 dB too quiet. The cause was an ALSA control that nobody has touched since an earlier fix — and the repair failed the first time because this laptop's card names swap places between boots."
+summary: "After a reboot every audio source was 23 dB too quiet. The cause was an ALSA control that nobody has touched since an earlier fix, and the repair failed the first time because this laptop's card names swap places between boots."
 ---
 
 Part one of this series found a [hardware problem](/posts/measure-dont-guess/) and fixed it.
-Part two found what the [debugging had left behind](/posts/a-remembered-zero/) — a remembered zero.
+Part two found what the [debugging had left behind](/posts/a-remembered-zero/): a remembered zero.
 This is what the *fix* left behind.
 
 ## TL;DR
@@ -22,7 +22,7 @@ This is what the *fix* left behind.
   Nominal and acoustic differ by 3 dB, and the arithmetic would have pointed at a different control.
 - The first repair did **not** survive its test reboot.
   Both HDA controllers in this laptop are called `HD-Audio Generic`, and the ALSA names swap places between boots.
-  `asound.state` is keyed by name, and so was my systemd unit — both landed on the wrong card.
+  `asound.state` is keyed by name, and so was my systemd unit, both landed on the wrong card.
 - The second version resolves the card by PCI address and waits for it to be enumerated.
   That the wait loop is genuinely needed is recorded nowhere as an error.
   It is recorded in one second between two log lines.
@@ -59,7 +59,7 @@ The control PipeWire displays and the control that actually attenuates had nothi
 
 ## Switch off the mixer and you freeze it
 
-That is not a coincidence but the aftermath of the fix from part one.
+That is the aftermath of the fix from part one, not a coincidence.
 That fix moved volume and balance out of the sound chip and into software, so that each channel's gain arrives at its own speaker:
 
 ```
@@ -155,7 +155,7 @@ That takes down the second safeguard too, for the same reason:
 The stored 69 sat under `state.Generic` and, after the swap, was applied to the HDMI card, which has no `Master` at all.
 Running `alsactl store` again does not repair this, it only moves the problem:
 the section belonging to the other name gets overwritten with whatever currently runs under it.
-After the next clean shutdown the 69 sits under `Generic_1` — and at the next name swap the restore misses again.
+After the next clean shutdown the 69 sits under `Generic_1`, and at the next name swap the restore misses again.
 
 On a machine with two identically named cards, `asound.state` is not a usable home for a particular control.
 
@@ -183,7 +183,8 @@ The wait loop was an aside while writing.
 Two lines, added from the memory of an error message, with no evidence that they were needed.
 
 The second test reboot held: unit ran cleanly, two measurements at 50 % landing at -30.2 and -30.3 dB, inside the reference range.
-The interesting part is not the result but how it came about:
+The interesting part is not the result.
+It is how it came about:
 
 ```
 12:01:50.304347  Starting chuwi-master-volume.service...
@@ -191,7 +192,7 @@ The interesting part is not the result but how it came about:
 ```
 
 One thousand and thirty-one milliseconds for a single `amixer sset`.
-Scanning the cards takes milliseconds — the second is the `sleep 1` between a failed pass and a successful one.
+Scanning the cards takes milliseconds, the second is the `sleep 1` between a failed pass and a successful one.
 At login the analog card is not yet enumerated.
 Without the loop this version would have failed too.
 
@@ -202,7 +203,7 @@ It said:
 amixer[3682]: Invalid card number 'Generic'.
 ```
 
-I had taken it as evidence of the name swap — the name was right there in it.
+I had taken it as evidence of the name swap, the name was right there in it.
 It is nothing of the sort.
 At that moment card0 really was called `Generic`; the card existed, it was merely the wrong one.
 Because this is what the name error actually sounds like, checked on the same machine:
@@ -252,7 +253,7 @@ If everything on your machine is uniformly too quiet and the desktop slider is a
    A tone, the built-in microphone and an FFT are enough.
    The curve between slider and sound pressure is not the one in the datasheet, least of all at the ends.
 5. **Reboot before you call it done.**
-   The simulated test — turn the value back, restart the unit — was green both times, including for the version that did not survive the reboot.
+   The simulated test, turn the value back, restart the unit, was green both times, including for the version that did not survive the reboot.
 
 The fix is three lines in a shell script.
 The two reboots before it cost more and showed more.
@@ -261,5 +262,5 @@ The two reboots before it cost more and showed more.
 
 Four days later it was silent again — noticed once more in the speaker test in Settings, but affecting every output through the built-in speakers.
 This time `Master` was correct at 69; the mute sat on `Speaker`, at `-74 dB` and switched off, from the same source as the 51 back then: at boot, `alsactl restore` puts back whatever is in `asound.state`.
-Which makes the lesson above too narrow — the soft mixer doesn't freeze `Master`, it freezes **every** fader on this card, and I had fixed one while missing the class it belongs to.
+Which makes the lesson above too narrow: the soft mixer doesn't freeze `Master`, it freezes **every** fader on this card, and I had fixed one while missing the class it belongs to.
 Since then the unit sets `Speaker` and `Headphone` to pass-through as well, so `Master` stays the only fader whose value means anything.

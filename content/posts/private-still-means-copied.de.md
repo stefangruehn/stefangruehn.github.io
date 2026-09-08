@@ -4,7 +4,7 @@ date: 2026-09-03T02:00:00+02:00
 draft: false
 tags: ["claude-code", "obsidian", "syncthing", "privacy", "workflow"]
 themen: ["daten"]
-summary: "Ich wollte meine halbfertigen Ideen in Obsidian auf dem Telefon haben und am Schreibtisch Claude Code daran. Die Verbindung der beiden war am Ende gar keine technische Frage — und das Prüfskript, das ich danach schrieb, fand einen Fehler in dem, was gerade erst entstanden war."
+summary: "Ich wollte meine halbfertigen Ideen in Obsidian auf dem Telefon haben und am Schreibtisch Claude Code daran. Die Verbindung der beiden war am Ende gar keine technische Frage, und das Prüfskript, das ich danach schrieb, fand einen Fehler in dem, was gerade erst entstanden war."
 ---
 
 ## Kurzfassung
@@ -29,7 +29,7 @@ Deshalb liegen die Ideen in Obsidian, das ich auf dem Telefon dabeihabe.
 
 Claude Code dagegen läuft am Schreibtisch.
 Er liest Dateien, führt Befehle aus und kann einen halbgaren Gedanken so lange durchsprechen, bis er entweder trägt oder auseinanderfällt.
-Genau das braucht eine Idee — und es fand an einem anderen Ort statt als dort, wo die Ideen lagen.
+Genau das braucht eine Idee, und es fand an einem anderen Ort statt als dort, wo die Ideen lagen.
 
 Ich nahm an, der schwierige Teil wäre die Verbindung der Systeme.
 War er nicht.
@@ -77,16 +77,17 @@ Genau das ist der Sinn eines Orts für unfertige Gedanken: Er muss irgendwo sein
 
 ## Weg zwei: Claude in Obsidian holen
 
-Es gibt ein Community-Plugin — Vault Companion for Claude —, das ein Chatfenster direkt in Obsidian legt, auf dem Telefon wie am Rechner, mit echtem Zugriff auf die Notizen: lesen, suchen, anlegen, ändern, mit einer Freigabekarte für jeden Schreibvorgang.
+Es gibt ein Community-Plugin, Vault Companion for Claude, das ein Chatfenster direkt in Obsidian legt, auf dem Telefon wie am Rechner, mit echtem Zugriff auf die Notizen: lesen, suchen, anlegen, ändern, mit einer Freigabekarte für jeden Schreibvorgang.
 Das ist ziemlich genau die Form dessen, was ich mir ursprünglich vorgestellt hatte.
 
 Es hat zwei Betriebsarten.
-Die eine leitet über einen Rechner mit installiertem Claude Code weiter; dafür wollte sie einen Node server nutzen, der zudem nur auf einem Mac läuft.
+Die eine leitet über einen Rechner mit installiertem Claude Code weiter, dafür wollte sie einen Node server nutzen, der zudem nur auf einem Mac läuft.
 Ich bin Linuxer und Node? Denk dir den Rest.
 Die andere spricht direkt mit dem Anbieter, über **einen eigenen API-Schlüssel**, abgerechnet nach Token.
 
 Und dort war Schluss, aus einem Grund, der langweilig und vollkommen ausschlaggebend ist: Ich zahle bereits ein monatliches Abo, und ich hatte keine Vorstellung davon, was eine zweite, verbrauchsabhängige Abrechnung daneben mit meinen Kosten machen würde.
-Nicht „ich habe es geschätzt und es war zu teuer“ — ich konnte es überhaupt nicht schätzen.
+Nicht „ich habe es geschätzt und es war zu teuer“.
+Ich konnte es überhaupt nicht schätzen.
 Der Tokenverbrauch für Gespräche lässt sich vorab ehrlich schlecht vorhersagen, und die aufrichtige Antwort auf „was kostet mich das im Monat?“ war ein Schulterzucken.
 
 Eine zweite Art, zur Kasse gebeten zu werden, deren Höhe du nicht abschätzen kannst, führt man nicht mal eben an einem Dienstagabend für ein Hobbyprojekt ein.
@@ -108,11 +109,11 @@ Zwei Dinge haben mich abgehalten, und nur eines davon ist technisch.
 
 Das technische: Eine Sitzung muss *laufen*, auf einem Rechner, der *wach und erreichbar* ist, in dem Moment, in dem ich irgendwo stehe und eine Idee habe.
 Mein Laptop ist zugeklappt, solange ich unterwegs bin.
-Das bedeutet einen Rechner im Dauerbetrieb, von außen erreichbar — ein kleines Infrastrukturprojekt für sich.
+Das bedeutet einen Rechner im Dauerbetrieb, von außen erreichbar, ein kleines Infrastrukturprojekt für sich.
 
 Das nichttechnische gehört deutlich gesagt, weil es die ehrliche Grenze dieses ganzen Ansatzes ist: Die Dateien gehen nicht raus, aber **das Gespräch schon**.
 Alles, was Claude Code liest und mit mir bespricht, geht wie jede andere Eingabe zum Anbieter.
-Das ist dieselbe Preisgabe, die ich am Schreibtisch ohnehin akzeptiere, also kein neues Problem — aber „die Dateien bleiben auf meiner Maschine“ ist ein engeres Versprechen, als es zunächst klingt, und ich sage es lieber, als es mitschwingen zu lassen.
+Das ist dieselbe Preisgabe, die ich am Schreibtisch ohnehin akzeptiere, also kein neues Problem, aber „die Dateien bleiben auf meiner Maschine“ ist ein engeres Versprechen, als es zunächst klingt, und ich sage es lieber, als es mitschwingen zu lassen.
 
 ## Was ohnehin schon lief
 
@@ -141,23 +142,23 @@ Nichts hängt daran, dass sie binnen einer Stunde ankommt, und der Druck, Notize
 Die Entwurfsentscheidung, die mir den meisten Ärger erspart hat, war der Verzicht auf Cleverness.
 
 Es gibt genau **einen** Ort, an dem die Notizen liegen: den Vault.
-Eine *single source of truth* — eine Fassung, die gilt, und daneben keine zweite, die still danebendriftet.
+Eine *single source of truth*: eine Fassung, die gilt, und daneben keine zweite, die still danebendriftet.
 Der Projektordner mit den Werkzeugen enthält einen Symlink darauf und sonst nichts, was auseinanderlaufen könnte.
 Kein Spiegel, kein Exportschritt, kein Skript, das Notizen hin- und herkopiert und hinterher abgleicht.
 
 Das ist wichtig wegen einer Eigenschaft, die alle Abgleichwerkzeuge teilen: **Sie führen nicht zusammen.**
 Ändert sich dieselbe Datei zwischen zwei Abgleichen an zwei Stellen, bekommst du weder eine kombinierte Fassung noch eine Fehlermeldung.
-Du bekommst eine zweite Datei mit `sync-conflict` und einem Zeitstempel im Namen, die still neben dem Original liegt — und dort liegen bleibt, bis jemand hinsieht.
+Du bekommst eine zweite Datei mit `sync-conflict` und einem Zeitstempel im Namen, die still neben dem Original liegt, und dort liegen bleibt, bis jemand hinsieht.
 
 Bei einer single source of truth und einem Bearbeiter zur Zeit ist dieser Fall selten.
 Mit Spiegel und Kopierskript hätte ich ihn planmäßig hergestellt.
 
 ## Und dann habe ich geprüft, was gerade entstanden war
 
-Als der Vault stand — eine Vorlage für neue Notizen, ein Index, ein paar Konventionen im Kopfbereich der Dateien — schrieb ich ein Skript, das ihn prüft.
+Als der Vault stand, eine Vorlage für neue Notizen, ein Index, ein paar Konventionen im Kopfbereich der Dateien, schrieb ich ein Skript, das ihn prüft.
 
 Das mag übertrieben klingen für einen Haufen Markdown-Dateien.
-Die Überlegung war: Die Regeln existieren nur in meinem Kopf und in einer README, einige der Prüfungen sind schlicht stumpfsinnig (steht jede Notiz im Index? zeigt jeder Verweis irgendwohin? ist jeder Statuswert einer, den ich definiert habe?), und eine davon ist unsichtbar, bis sie weh tut — nämlich die Konfliktdateien von oben.
+Die Überlegung war: Die Regeln existieren nur in meinem Kopf und in einer README, einige der Prüfungen sind schlicht stumpfsinnig (steht jede Notiz im Index? zeigt jeder Verweis irgendwohin? ist jeder Statuswert einer, den ich definiert habe?), und eine davon ist unsichtbar, bis sie weh tut, nämlich die Konfliktdateien von oben.
 Eine kollidierte Notiz meldet sich nicht.
 Sie liegt einfach da, während ich die veraltete Fassung lese.
 
@@ -179,12 +180,12 @@ Jede aus dieser Vorlage erzeugte Notiz hätte mit Metadaten begonnen, die der Ed
 Die Reparatur sind zwei Anführungszeichen.
 Um die Reparatur geht es nicht.
 
-Es geht darum, dass diese Zeile geschrieben, gegengelesen und von zweien im Vorbeigehen angesehen worden war — und *völlig in Ordnung aussah*, weil sie aussieht wie jeder andere Vorlagen-Platzhalter auf der Welt.
+Es geht darum, dass diese Zeile geschrieben, gegengelesen und von zweien im Vorbeigehen angesehen worden war, und *völlig in Ordnung aussah*, weil sie aussieht wie jeder andere Vorlagen-Platzhalter auf der Welt.
 Es brauchte ein Programm, das nicht weiß, was die Zeile bedeuten soll, und nur prüft, ob sie sich lesen lässt.
 
 Es gibt eine Fassung dieses Abends, in der ich das Prüfskript nicht schreibe und stattdessen Wochen später auf dem Telefon davon erfahre, wenn eine frisch angelegte Notiz ihre eigenen Metadaten als Fließtext anzeigt.
 
-Ob dieses Prüfskript selbst etwas taugt, ist eine andere Frage, und ich möchte sie mir ordentlich ansehen — ein Test, der nicht fehlschlagen kann, ist nichts wert, und dieser hier war in derselben Sitzung von denselben Händen geschrieben worden wie das, was er prüft.
+Ob dieses Prüfskript selbst etwas taugt, ist eine andere Frage, und ich möchte sie mir ordentlich ansehen: ein Test, der nicht fehlschlagen kann, ist nichts wert, und dieser hier war in derselben Sitzung von denselben Händen geschrieben worden wie das, was er prüft.
 Das ist ein eigener Beitrag.
 
 ## Was ich gelernt habe
@@ -195,7 +196,7 @@ Das ist ein eigener Beitrag.
    Hätte ich mit der Verbindung der Systeme angefangen, hätte ich das Falsche kompetent gebaut.
 2. **„Privat“ beschreibt eine Webseite, keinen Arbeitsablauf.**
    Ein privates Repository wird trotzdem bei jeder Sitzung in fremde Infrastruktur kopiert.
-   Wenn dir das bei deinen Inhalten etwas ausmacht, hilft dir die Einstellung nicht — und man hält sie leicht für eine Entscheidung, die man getroffen hat.
+   Wenn dir das bei deinen Inhalten etwas ausmacht, hilft dir die Einstellung nicht, und man hält sie leicht für eine Entscheidung, die man getroffen hat.
 3. **Unabschätzbare Kosten sind ein echter Einwand, kein fauler.**
    „Ich kann das nicht einschätzen“ ist ein legitimer Grund, eine zweite Abrechnung abzulehnen.
    Man muss ihn nicht als technisches Bedenken verkleiden.
@@ -204,10 +205,11 @@ Das ist ein eigener Beitrag.
    Ich hätte beinahe einen zweiten Mechanismus neben einen funktionierenden gestellt, weil meine Frage um ein Produkt herum gebaut war statt um meine Dateien.
 5. **Asynchron reicht meistens.**
    Ideen müssen nicht binnen einer Minute ankommen.
-   Ein Großteil des Drucks zum sofortigen Abgleich ist aus Werkzeugen geerbt, bei denen Verzögerung wirklich zählt — und er ist nicht umsonst, denn genau er treibt dich zuerst in gehostete Ablagen.
+   Ein Großteil des Drucks zum sofortigen Abgleich ist aus Werkzeugen geerbt, bei denen Verzögerung wirklich zählt, und er ist nicht umsonst, denn genau er treibt dich zuerst in gehostete Ablagen.
 6. **Eine single source of truth.**
    Keine Spiegel, keine Exportschritte.
-   Abgleichwerkzeuge führen nicht zusammen; sie legen eine Konfliktdatei ab und sagen nichts.
+   Abgleichwerkzeuge führen nicht zusammen.
+   Sie legen eine Konfliktdatei ab und sagen nichts.
    Stell die Bedingungen dafür nicht absichtlich her.
 7. **Prüfe das, was du gerade gebaut hast, nicht nur das, was du schon hattest.**
    Der Fehler saß in der neuesten, kleinsten und offensichtlich korrektesten Datei des Projekts.
@@ -219,15 +221,15 @@ Wenn du Notizen führst und dich fragst, ob du Claude Code an sie heranlassen so
 Es ist die Reihenfolge der Fragen.
 
 Fang damit an, was tatsächlich in deinen Notizen steht.
-Nicht „ist das sensibel“ im Allgemeinen, sondern: Steht hier etwas, bei dem es mir unangenehm wäre, wenn es auf eine Maschine kopiert würde, die ich nicht kontrolliere — und sei es kurz, und sei es privat?
+Nicht „ist das sensibel“ im Allgemeinen, sondern: Steht hier etwas, bei dem es mir unangenehm wäre, wenn es auf eine Maschine kopiert würde, die ich nicht kontrolliere, und sei es kurz, und sei es privat?
 Bei einer Rezeptsammlung vermutlich nicht, und dann sind die gehosteten Wege ausgezeichnet und du solltest sie nehmen.
-Bei allem Halbfertigen, Persönlichen oder von anderen Handelnden ändert sich die Antwort — und zwar *bevor* du bei den Werkzeugen ankommst.
+Bei allem Halbfertigen, Persönlichen oder von anderen Handelnden ändert sich die Antwort, und zwar *bevor* du bei den Werkzeugen ankommst.
 
 Sieh dir dann an, was du schon betreibst.
-Dateiabgleich, ein Heimserver, ein Gerät, das ohnehin läuft — das ist unspektakulär und taucht in keiner Integrationsanleitung auf, und genau deshalb übersieht man es leicht.
+Dateiabgleich, ein Heimserver, ein Gerät, das ohnehin läuft, das ist unspektakulär und taucht in keiner Integrationsanleitung auf, und genau deshalb übersieht man es leicht.
 
 Und nimm die langweilige Lösung, wenn sie die richtige ist.
 Was ich gebaut habe, ist ein Ordner in einem Verzeichnis, das ohnehin kopiert wurde, plus ein Symlink, plus ein Skript, das etwas YAML liest.
 Es ist nicht clever.
 Es hat keinen Cloud-Anteil, keine zweite Rechnung und keine laufenden Entscheidungen.
-Gekostet hat es einen Abend, von dem der größte Teil dafür draufging herauszufinden, was ich eigentlich will — was, wie üblich, die eigentliche Arbeit war.
+Gekostet hat es einen Abend, von dem der größte Teil dafür draufging herauszufinden, was ich eigentlich will, was, wie üblich, die eigentliche Arbeit war.

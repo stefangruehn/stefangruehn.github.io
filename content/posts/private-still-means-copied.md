@@ -4,7 +4,7 @@ date: 2026-09-03T02:00:00+02:00
 draft: false
 tags: ["claude-code", "obsidian", "syncthing", "privacy", "workflow"]
 topics: ["data"]
-summary: "I wanted my half-formed ideas in Obsidian on my phone and Claude Code on them at my desk. Connecting the two turned out not to be a technical question at all — and the checker I wrote afterwards found a bug in the thing I had just built."
+summary: "I wanted my half-formed ideas in Obsidian on my phone and Claude Code on them at my desk. Connecting the two turned out not to be a technical question at all, and the checker I wrote afterwards found a bug in the thing I had just built."
 ---
 
 ## TL;DR
@@ -85,7 +85,8 @@ I live on Linux, and Node? You can work out the rest.
 The other talks straight to the model provider using **an API key of your own**, billed per token.
 
 And that is where it stopped, for a reason that is boring and completely decisive: I already pay a monthly subscription, and I had no idea what adding a second, usage-metered billing relationship would do to my costs.
-Not "I estimated it and it was too much" — I couldn't estimate it at all.
+Not "I estimated it and it was too much".
+I couldn't estimate it at all.
 Token consumption for conversational work is genuinely hard to predict before you've done it, and the honest answer to "what will this cost me per month?" was a shrug.
 
 Introducing a second way to be charged, whose size you can't predict, is not a thing to do casually on a Tuesday evening for a hobby project.
@@ -203,7 +204,7 @@ That's a post of its own.
    I nearly built a second mechanism next to a working one because I was asking a question shaped around a product rather than around my files.
 5. **Asynchronous is usually enough.**
    Ideas do not need to arrive within the minute.
-   Much of the pressure toward instant sync is inherited from tools where latency genuinely matters, and it isn't free — it's what pushes you toward hosted storage in the first place.
+   Much of the pressure toward instant sync is inherited from tools where latency genuinely matters, and it isn't free, it's what pushes you toward hosted storage in the first place.
 6. **One single source of truth.**
    No mirrors, no export steps.
    Synchronisers don't merge; they leave a conflict file and say nothing.

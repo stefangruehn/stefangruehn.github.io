@@ -1,7 +1,7 @@
 ---
 title: "Codebuch"
 badge: "Field Notes"
-summary: "Drei Beiträge über den Kontext, den man mit einem Agenten teilt: was er kostet, wie man ihn misst und wie man ihn kürzt — bis das Kürzen für manche kein Komfort mehr ist, sondern Zugang."
+summary: "Drei Beiträge über den Kontext, den man mit einem Agenten teilt: was er kostet, wie man ihn misst und wie man ihn kürzt, bis das Kürzen für manche kein Komfort mehr ist, sondern Zugang."
 ---
 
 {{< serienbadge >}}
@@ -20,7 +20,7 @@ und der dritte stellt fest, dass dieses Codebuch für jemand anderen kein Komfor
 Die Kette von links nach rechts ist die Geschichte: messen, abkürzen, weitergeben.
 
 **Die beiden Pfeile nach rechts oben und rechts unten** sind der Grund, hier zu lesen.
-Dasselbe Kürzel spart zwei ganz verschiedene Dinge — Anschläge auf der Tastatur und Runden im Gespräch —, und die beiden Ersparnisse haben nichts miteinander zu tun.
+Dasselbe Kürzel spart zwei ganz verschiedene Dinge (Anschläge auf der Tastatur und Runden im Gespräch), und die beiden Ersparnisse haben nichts miteinander zu tun.
 Aus zwei völlig verschiedenen Begründungen folgt dieselbe Optimierung.
 Das ist die These der Serie.
 

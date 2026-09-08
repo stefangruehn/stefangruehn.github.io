@@ -4,7 +4,7 @@ date: 2026-09-06T09:05:00+02:00
 tags: ["agents", "complexity", "chaos", "claude-code", "Essay"]
 topics: ["author"]
 series: ["Self-Similarity"]
-summary: "The claim this series is named for: sufficiently complex agents are not a new kind of thing, they are a complex system — and complex systems obey regularities that have been described for decades. Four of them can already be measured on your own machine."
+summary: "The claim this series is named for: sufficiently complex agents are not a new kind of thing, they are a complex system, and complex systems obey regularities that have been described for decades. Four of them can already be measured on your own machine."
 ---
 
 This series is called *Self-Similarity*, and this is the part where the word does its work.
@@ -30,7 +30,7 @@ My claim is that this does not stop at mathematics.
 
 ## The claim, in one sentence
 
-What holds between populations, cells and markets holds between agents too — and inside any sufficiently complex agent.
+What holds between populations, cells and markets holds between agents too, and inside any sufficiently complex agent.
 
 This is not meant as a metaphor.
 The preconditions under which the familiar patterns appear are remarkably thin: many units acting locally; feedback; a shared, limited resource; no central control; and an outcome you cannot skip ahead to.
@@ -40,7 +40,7 @@ Cells, foxes, market participants, processes.
 The rules do not ask about the material.
 
 That is the self-similarity this series is about.
-Not an image that repeats inside itself, but a structure that shows up again one level out — different material, same behaviour.
+No image that repeats inside itself, rather a structure that shows up again one level out, different material, same behaviour.
 
 Which is why the detour through part two was not a detour.
 Spend a few decades with cellular automata and the logistic map and a multi-agent setup does not look like a new technology first.
@@ -72,7 +72,7 @@ Pass on numbers about agents without the environment they were measured in and y
 In any system with a shared channel, one voice occupies that channel.
 
 For agents, the shared channel is the common state: the context, the file everyone writes into, the report everyone reads.
-Whoever puts the most in there determines what the others see — and therefore what they take the situation to be.
+Whoever puts the most in there determines what the others see, and therefore what they take the situation to be.
 
 This needs no malice and no strategy.
 A cost gradient is enough: writing is cheap, contradicting is expensive, because contradicting means checking first.
@@ -87,14 +87,15 @@ What survives is not what is right.
 It is what gets reused.
 
 Prompts, tools, rules in a project file, entries in a memory: whatever once looked like success gets copied forward.
-That is selection, with everything that comes with it — a mistake gets passed on too, for as long as nobody notices.
+That is selection, with everything that comes with it, a mistake gets passed on too, for as long as nobody notices.
 
 My own memory for this project holds an entry that was true when it was written and no longer true three days later.
 Nothing in the system corrected it.
 I corrected it.
 
 A memory is a selection medium, and a selection medium without a corrective drifts.
-That is not an argument against memories but an argument for an expiry date: any entry that asserts a fact about the world belongs re-checked before it is used again.
+That is not an argument against memories.
+It is an argument for an expiry date: any entry that asserts a fact about the world belongs re-checked before it is used again.
 
 ## Deception
 
@@ -133,7 +134,7 @@ Recognising the rules does not get you a forecast.
 It gets you a list of what is worth measuring.
 
 **Not that all of this is still ahead of us.**
-The interesting timescale is not the one scenarios run on but the one mechanisms run on — and those are here today, in miniature, demonstrable on a single laptop.
+The interesting timescale is the one mechanisms run on, not the one scenarios run on, and those are here today, in miniature, demonstrable on a single laptop.
 So I stay with the mechanisms.
 A scenario is something you believe or reject.
 A mechanism is something you can measure.
@@ -143,7 +144,8 @@ A mechanism is something you can measure.
 The drive is not curiosity alone.
 
 It is preparation — for me, for my children, and for their children.
-None of the above is going to spare us over the next few years, and that is not a grim statement but a sober one: predator-prey dynamics, dominance over a channel, selection for reuse and drifting signals are not catastrophes.
+None of the above is going to spare us over the next few years, and that is not a grim statement.
+It is a sober one: predator-prey dynamics, dominance over a channel, selection for reuse and drifting signals are not catastrophes.
 They are operating conditions.
 
 Recognise them and you can build instruments for them.
@@ -154,7 +156,7 @@ Treat them as new and you build expectations instead.
 Treat a setup with several agents like a small ecosystem, not like a pile of tools.
 
 - **Name the scarce resource.**
-  What is actually the prey here — tokens, time, a lock, your attention?
+  What is actually the prey here: tokens, time, a lock, your attention?
   Everything else follows from that answer.
 - **Cap the population before it pays off.**
   Three agents do not cost three times what one costs.

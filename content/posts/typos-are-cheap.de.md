@@ -4,7 +4,7 @@ date: 2026-09-04T00:23:36+02:00
 draft: false
 tags: ["claude-code", "rookie", "workflow"]
 themen: ["agent"]
-summary: "In einem zusammenhängenden Messzeitraum habe ich gut vierhundert Nachrichten an Claude Code getippt; in jeder zehnten steht ein Umlaut. Korrigiert wurde nie etwas, verstanden wurde trotzdem alles. Teuer wird nicht die Schreibweise — teuer wird der Satz, der zwei Ergebnisse zulässt."
+summary: "In einem zusammenhängenden Messzeitraum habe ich gut vierhundert Nachrichten an Claude Code getippt; in jeder zehnten steht ein Umlaut. Korrigiert wurde nie etwas, verstanden wurde trotzdem alles. Teuer wird nicht die Schreibweise, teuer wird der Satz, der zwei Ergebnisse zulässt."
 ---
 
 ## Kurzfassung
@@ -12,7 +12,7 @@ summary: "In einem zusammenhängenden Messzeitraum habe ich gut vierhundert Nach
 - Ich tippe schnell und schlampig: keine Umlaute, vertauschte Buchstaben, fehlende Wörter.
 - Ausgezählt über einen zusammenhängenden Messzeitraum, am dichtesten Tag über hundert Nachrichten: In gut jeder zehnten steht ein Umlaut. Das sind 10,3 Prozent.
 - Angemerkt wurde davon nichts. Verstanden wurde trotzdem alles.
-- Was Arbeit macht, ist nicht die falsche Schreibweise, sondern der Satz, der zwei verschiedene Ergebnisse zulässt.
+- Arbeit macht nicht die falsche Schreibweise, Arbeit macht der Satz, der zwei verschiedene Ergebnisse zulässt.
 - Ein einzelnes Wort kann eine ganze Behauptung tragen. Dann ist eine saubere Ersetzung formal richtig und inhaltlich falsch.
 - Die Regel, die beides auflöst: sag, was hinterher **wahr sein soll**, nicht welchen Text du getauscht haben willst.
 
@@ -22,7 +22,7 @@ summary: "In einem zusammenhängenden Messzeitraum habe ich gut vierhundert Nach
 
 Ich schreibe auf einer US-Tastatur.
 Viele Entwickler hier tun das, und der Grund ist unspektakulär: `[ ] { } \ | @ ~` liegen dort direkt oder hinter Shift, auf einer deutschen Belegung hinter AltGr.
-Backtick und Akzent sind auf der deutschen Tastatur außerdem tote Tasten — du tippst sie zweimal oder mit einem Leerzeichen hinterher.
+Backtick und Akzent sind auf der deutschen Tastatur außerdem tote Tasten, du tippst sie zweimal oder mit einem Leerzeichen hinterher.
 Wer den ganzen Tag Pfade, Codeblöcke und Optionen schreibt, zahlt diese Steuer auf jede Zeile.
 
 Der Preis dafür sind die Umlaute.
@@ -44,14 +44,14 @@ Ich habe in diesen Sitzungen „haeufugen" geschrieben, „beginen", „teiner",
 Nichts davon führte zu einer Rückfrage, und keins davon wurde falsch verstanden.
 
 Der Grund ist unromantisch: Es gibt jeweils nur ein Wort, das gemeint sein kann.
-„haeufugen" steht in einem Satz über meine Tippfehler — daraus wird „häufigen", und zwar ohne Rateanteil.
+„haeufugen" steht in einem Satz über meine Tippfehler, daraus wird „häufigen", und zwar ohne Rateanteil.
 Sprache hat genug Redundanz, dass ein verrutschter Buchstabe die Bedeutung nicht mitnimmt.
 Der Satz drumherum trägt sie.
 
 Eine Korrektur hätte mich also Aufmerksamkeit gekostet und nichts eingebracht.
 Sie hätte den Blick von der Sache auf die Schreibweise gezogen, mitten in einer Arbeit, in der die Sache das Teure ist.
 
-Das ist keine Nachsicht und kein Charakterzug, sondern eine Voreinstellung.
+Das ist eine Voreinstellung, keine Nachsicht und kein Charakterzug.
 Wer „korrigier mein Deutsch bitte mit" sagt, bekommt es ab da korrigiert.
 Umgekehrt gilt: Es gibt nichts, wofür du dich beim Tippen zusammenreißen müsstest.
 
@@ -62,7 +62,7 @@ An einem Abend im September schrieb ich diesen Satz:
 > der technical deep dive tag sollte immer mit grossbuchstaben beginen
 
 „beginen" blieb unerwähnt.
-Zurück kam trotzdem eine Frage — und zwar nach etwas ganz anderem: Soll es *Technical Deep Dive* heißen oder *Technical deep dive*?
+Zurück kam trotzdem eine Frage, und zwar nach etwas ganz anderem: Soll es *Technical Deep Dive* heißen oder *Technical deep dive*?
 
 Das ist berechtigt.
 „Mit Großbuchstaben beginnen" lässt beides zu, und der Tag steht auf sechs Beiträgen in zwei Sprachen.
@@ -70,7 +70,7 @@ Zwei Lesarten, zwei verschiedene Ergebnisse, ein Arbeitsgang Unterschied.
 
 Der Tippfehler im selben Satz war belanglos.
 Die Mehrdeutigkeit war es nicht.
-Genau dort verläuft die Grenze — nicht zwischen sauber und schlampig geschrieben, sondern zwischen einer Lesart und zweien.
+Genau dort verläuft die Grenze, nicht zwischen sauber und schlampig geschrieben, sondern zwischen einer Lesart und zweien.
 
 ## Ein Wort, das eine Behauptung trägt
 
@@ -110,7 +110,7 @@ Drei Stellen, an denen ein einzelnes Wort mehr trägt als sich selbst:
 - **Einschränkungen.** „nur", „erst", „außer", „ab". Sie grenzen etwas ein, und das Eingegrenzte hängt am Wort.
 
 Steht dein Suchbegriff an einer dieser Stellen, lohnt der zweite Satz.
-Er ist nicht länger als der erste, er beschreibt nur etwas anderes — nämlich den Zustand statt der Handlung:
+Er ist nicht länger als der erste, er beschreibt nur etwas anderes, nämlich den Zustand statt der Handlung:
 
 > Ich will, dass im Handbuch durchgehend „sensibel" steht, außer wo eine Aussage davon abhängt, dass es um personenbezogene Daten geht.
 
@@ -121,7 +121,7 @@ Sie zwingt zum Lesen jeder einzelnen Fundstelle, und genau das war ja gewollt.
 
 - **Schreibfehler sind gratis.** Sie kosten nichts, weil der Kontext die Bedeutung trägt. Wer sich beim Tippen zusammenreißt, spart an der falschen Stelle.
 - **Eindeutigkeit ist nicht dasselbe wie Korrektheit.** Ein grammatikalisch sauberer Satz kann zwei Ergebnisse zulassen, ein hingerotzter nur eins.
-- **Zähl die Lesarten, nicht die Fehler.** Wenn dir dein eigener Satz zwei verschiedene Ergebnisse liefern könnte, wird nachgefragt — oder es wird geraten.
+- **Zähl die Lesarten, nicht die Fehler.** Wenn dir dein eigener Satz zwei verschiedene Ergebnisse liefern könnte, wird nachgefragt, oder es wird geraten.
 - **Sag den Zustand, nicht die Operation.** „Ersetze X durch Y" ist ausführbar. „Hinterher soll gelten, dass …" ist überprüfbar.
 - **Verneinungen sind die gefährlichste Stelle im Text.** Dort trägt ein Wort die ganze Behauptung, und eine korrekte Ersetzung macht daraus eine andere.
 
@@ -130,12 +130,13 @@ Sie zwingt zum Lesen jeder einzelnen Fundstelle, und genau das war ja gewollt.
 Du fängst gerade an und fragst dich, wie sorgfältig du formulieren musst.
 Die Antwort ist zweigeteilt, und die angenehme Hälfte kommt zuerst.
 
-1. **Tipp, wie du tippst.** Umlaute weglassen, Buchstaben verdrehen, mitten im Satz die Richtung wechseln — nichts davon muss dich bremsen. Es kostet nichts.
+1. **Tipp, wie du tippst.** Umlaute weglassen, Buchstaben verdrehen, mitten im Satz die Richtung wechseln, nichts davon muss dich bremsen. Es kostet nichts.
 2. **Lies deinen Auftrag noch einmal, aber nur mit einer Frage im Kopf:** Kann das auf zwei Arten ausgehen? Nicht: ist das schön geschrieben.
 3. **Wenn ja, nenn das Ergebnis.** Ein Satz, der beschreibt, was hinterher stimmen soll, ist mehr wert als drei sauber formulierte Befehle.
 4. **Achte besonders auf Verneinungen, Vergleiche und Einschränkungen.** Dort steckt die Bedeutung in einem einzelnen Wort.
-5. **Frag zurück, wenn eine Rückfrage kommt.** Sie ist kein Vorwurf, sondern die billigste Stelle im ganzen Ablauf.
+5. **Frag zurück, wenn eine Rückfrage kommt.** Sie ist kein Vorwurf, sie ist die billigste Stelle im ganzen Ablauf.
 
 Der Aufwand liegt also nicht dort, wo Anfänger ihn vermuten.
-Er liegt nicht in der Rechtschreibung und nicht in der Grammatik, sondern in einer einzigen Frage, die du dir bei jedem größeren Auftrag stellen kannst.
+Er liegt nicht in der Rechtschreibung und nicht in der Grammatik.
+Er liegt in einer einzigen Frage, die du dir bei jedem größeren Auftrag stellen kannst.
 Und die kannst du dir auch mit vertauschten Buchstaben stellen.

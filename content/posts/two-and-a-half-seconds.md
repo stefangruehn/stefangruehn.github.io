@@ -8,7 +8,7 @@ summary: "System-level tuning has a reputation for being dangerous, so most of u
 ---
 
 *This one is longer and goes deeper than usual.*
-*If you stay with it, the payoff isn't the seconds saved — it's a change to the boot configuration that installed cleanly, loaded without a single error, and did nothing at all.*
+*If you stay with it, the payoff isn't the seconds saved, it's a change to the boot configuration that installed cleanly, loaded without a single error, and did nothing at all.*
 
 ## TL;DR
 
@@ -50,7 +50,7 @@ And that is exactly why nobody touches it: you don't know what happens if you ta
 My evening didn't begin with a wish to be faster.
 In the middle of the night the laptop stopped during boot after a kernel update.
 Splash screen, nothing else.
-The next attempt with the same kernel came up fine — a single event in twenty boots, which is precisely the kind of problem you normally breathe away.
+The next attempt with the same kernel came up fine, a single event in twenty boots, which is precisely the kind of problem you normally breathe away.
 
 The culprit wasn't the kernel.
 It was `plymouth-read-write.service`, the unit that tells the splash screen the root filesystem is now writable.
@@ -87,13 +87,13 @@ Either way the outcome is the same, and that is the interesting part: the parame
 This is the honest failure mode of tuning your own system by hand, and it has nothing to do with recklessness.
 You solve a real problem under pressure, at night, on a machine showing nothing.
 The fix works.
-Six months later the distribution has moved on, the bug is fixed upstream, and your workaround is still sitting in the kernel command line — no longer doing anything, and by now actively misleading, because it looks like a decision somebody made on purpose.
+Six months later the distribution has moved on, the bug is fixed upstream, and your workaround is still sitting in the kernel command line, no longer doing anything, and by now actively misleading, because it looks like a decision somebody made on purpose.
 There is no point in that process where anyone comes back and asks whether it is still needed.
 Nobody schedules a review of their own boot parameters.
 
 That is the strongest argument I have for running this kind of work through an agentic AI instead of doing it by hand, and it isn't about speed.
 It's that the session produces a record as a by-product: what was changed, why, what it was measured against, and the command that undoes it.
-Before touching the parameter, Claude Code checked whether it still had any effect at all — which is exactly the question I had not asked in the months it sat there.
+Before touching the parameter, Claude Code checked whether it still had any effect at all, which is exactly the question I had not asked in the months it sat there.
 Doing it by hand gets you the change.
 Doing it this way gets you the change plus its reason, in a form you can still read next year.
 
@@ -111,7 +111,7 @@ Since we were already at it, we looked at what the boot spends its time on.
 | **Userspace** | **9.758 s** | **7.139 s** | **−2.619 s** |
 | **Total** | **25.326 s** | **22.842 s** | **−2.484 s** |
 
-Firmware, bootloader, kernel and initrd add up to roughly 15.7 s and don't move between the two measurements — the wobble there is noise, not effect.
+Firmware, bootloader, kernel and initrd add up to roughly 15.7 s and don't move between the two measurements, the wobble there is noise, not effect.
 Two thirds of my boot is outside anything a systemd configuration can reach.
 The only lever is userspace, and userspace was 9.758 s.
 
@@ -172,12 +172,12 @@ After=basic.target app.slice network-online.target foo.target …
 
 That turned a suspicion into a property.
 **Dependency lists in systemd are purely cumulative.**
-`After=`, `Before=`, `Wants=` and `Requires=` can only be extended by a drop-in, never withdrawn — unlike `ExecStart=`, `Environment=` or `SystemCallFilter=`, where the empty assignment behaves exactly as you'd expect.
+`After=`, `Before=`, `Wants=` and `Requires=` can only be extended by a drop-in, never withdrawn, unlike `ExecStart=`, `Environment=` or `SystemCallFilter=`, where the empty assignment behaves exactly as you'd expect.
 To genuinely remove an inherited dependency you have to copy the whole unit into `/etc/systemd/system/`, which then detaches it from vendor updates.
 
 This is the part I consider the point of the whole evening.
 A drop-in that does nothing is worse than no drop-in.
-It sits there, looks like a decision somebody made, and sends the next person hunting a problem in the wrong direction — exactly like that `simpledrm` parameter.
+It sits there, looks like a decision somebody made, and sends the next person hunting a problem in the wrong direction, exactly like that `simpledrm` parameter.
 
 > The difference between "I changed something" and "it worked" is the entire value of the exercise.
 
@@ -198,7 +198,7 @@ sudo systemctl disable NetworkManager-wait-online.service
 ```
 
 Services now start before the Wi-Fi has associated.
-For Docker that's inconsequential — it builds its own bridge and firewall rules.
+For Docker that's inconsequential, it builds its own bridge and firewall rules.
 For the logger likewise.
 The only real worry was the virus signature update running into a dead network.
 It didn't: on the first boot afterwards, `freshclam` reported all three databases `up-to-date`.
@@ -216,21 +216,22 @@ The bottleneck didn't disappear. It moved.
 The same chain had two other residents, and for both the interesting question wasn't "faster?" but "what for?".
 
 **ClamAV** ran as a permanent daemon to refresh virus signatures twelve times a day.
-On this machine `clamd@` and `clamav-clamonacc` are both disabled — nothing is scanning continuously, the signatures only serve occasional manual runs.
+On this machine `clamd@` and `clamav-clamonacc` are both disabled, nothing is scanning continuously, the signatures only serve occasional manual runs.
 Fedora ships `clamav-freshclam-once.timer` for exactly this case, `OnCalendar=daily`, `Persistent=true`, disabled by default.
 Nothing to build. Just switched on.
 
 **rsyslog** read from the systemd journal via `imjournal` and wrote its contents back out as text into `/var/log/messages`.
-The journal here is persistent — 3.9 GB, 92 boots.
+The journal here is persistent: 3.9 GB, 92 boots.
 So it was a second copy of the same logs, and nothing read it: no fail2ban, no analysis script, only logrotate.
 
 ## Does this make the system safer?
 
-That was my own assumption going in, and it holds — but only halfway, and not the half you'd guess.
+That was my own assumption going in, and it holds, but only halfway, and not the half you'd guess.
 
 - **Attack surface: a small plus.**
   One fewer daemon running as root and parsing foreign input.
-  Real, but modest — rsyslog wasn't listening on the network here, it was reading a local journal.
+  Real, but modest.
+  Rsyslog wasn't listening on the network here, it was reading a local journal.
 - **A possible minus, in the other direction.**
   Virus signatures now update once a day instead of twelve times.
   On a system that actually lets ClamAV scan, that is a loss.
@@ -240,11 +241,11 @@ That was my own assumption going in, and it holds — but only halfway, and not 
   That is the most concrete gain of the night and the only one that removes a real failure scenario.
 - **Understood configuration: the actual return.**
   Before this, the machine carried an inert kernel parameter, an unbounded timeout, and three services I could not have told you the purpose of.
-  Now every deviation from stock is written down — with a reason, and with the command that undoes it.
+  Now every deviation from stock is written down, with a reason, and with the command that undoes it.
 
 The last point is the one that matters.
 Unexamined configuration isn't dangerous because an attacker exploits it.
-It's dangerous because it points the next debugging session in the wrong direction — and because in its presence you don't dare touch anything.
+It's dangerous because it points the next debugging session in the wrong direction, and because in its presence you don't dare touch anything.
 That's the state most private Linux installs are in, and it gets worse over time, not better.
 
 ## What I'd tell someone on the fence

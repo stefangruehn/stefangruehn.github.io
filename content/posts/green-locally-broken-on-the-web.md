@@ -4,7 +4,7 @@ date: 2026-09-08T05:00:00+02:00
 draft: false
 tags: ["claude-code", "hugo", "CI", "debugging", "deployment", "Technical Deep Dive"]
 topics: ["shipping"]
-summary: "The landing page of a freshly published series was wrecked on the web — locally everything looked fine, and the source was flawless. The culprit was a single quotation mark in a place nobody ever looks at, and a build stage that only runs in CI."
+summary: "The landing page of a freshly published series was wrecked on the web, locally everything looked fine, and the source was flawless. The culprit was a single quotation mark in a place nobody ever looks at, and a build stage that only runs in CI."
 ---
 
 On 5 September, a few hours after publishing the series [Codebook](/series/codebook/), I looked at the German landing page in my browser.
@@ -18,14 +18,16 @@ It was broken.
 - The source was flawless.
   Every space was there in the Markdown, and locally the page looked fine in the browser.
 - Between what I look at and what gets published sits a stage that exists on one side only: CI builds with `hugo --minify`, my machine builds without — and has done since the first commit.
-- I did not find it by reading, but by comparing: build twice, then put the text of each page next to the text of the same page.
-- The cause was **a single quotation mark** in the description of a diagram — in a place nobody looks at, because it is meant for screen readers.
+- I did not find it by reading.
+  It was a comparison: build twice, then put the text of each page next to the text of the same page.
+- The cause was **a single quotation mark** in the description of a diagram, in a place nobody looks at, because it is meant for screen readers.
 - From that character onwards the minifier loses the plot: spaces at inline tags went missing, and so did closing tags.
-  An anchor that is never closed, sitting on top of an entire post card, swallowed everything that followed — that was the overlapping text.
+  An anchor that is never closed, sitting on top of an entire post card, swallowed everything that followed, that was the overlapping text.
 - The English version of the same diagram came through intact.
-  Not because it was better, but because it used two straight quotation marks: an even number, nothing left dangling.
+  Not because it was better.
+  It used two straight quotation marks: an even number, nothing left dangling.
 - **None of this is specific to a blog.** It takes no Hugo, no Markdown and no agentic AI building a website.
-  All it takes is a pipeline with a step that only runs in CI — where it goes by bundler, compression or image build instead.
+  All it takes is a pipeline with a step that only runs in CI, where it goes by bundler, compression or image build instead.
 - The fix is not the quotation mark.
   The fix is to remove the asymmetry: the CI stage now runs on my machine too, before every deploy.
 
@@ -51,7 +53,7 @@ No theme update, no changed rule, no font that had failed to load.
 
 And then comes the part where debugging normally grinds to a halt: the source is flawless.
 In the Markdown every space sits where it belongs.
-The local Hugo server shows the page the way it was meant to be — no missing spacing, no overlap, nothing.
+The local Hugo server shows the page the way it was meant to be: no missing spacing, no overlap, nothing.
 
 Keep searching at that point and you are searching the source for an error that is not in it.
 You can do that for a long time.
@@ -62,7 +64,7 @@ The mistake hides inside a sentence I had said to myself several times: *it look
 
 Locally, Hugo builds the blog the way I wrote it.
 CI builds it with `--minify`: the minifier throws away whitespace, shortens attributes, and omits closing tags wherever HTML does not strictly require them.
-That is not an exotic setting but the standard route for production builds — and in this blog it had been in the deploy workflow since the first commit.
+That is the standard route for production builds, not an exotic setting, and in this blog it had been in the deploy workflow since the first commit.
 
 So there are two different outputs.
 The page I look at is not the page that goes on the web.
@@ -74,7 +76,7 @@ That is the argument of this post, and it is more uncomfortable than the bug: ev
 
 I did not find the spot by reading, but by comparing.
 Build twice, once with `--minify` and once without, then put the plain text of each page against the plain text of the other.
-Where the two diverge, the damage is — and you do not need to know in advance what the page was supposed to look like.
+Where the two diverge, the damage is, and you do not need to know in advance what the page was supposed to look like.
 
 The text diverged inside the diagram that sits on top of the series landing page.
 It is an inline SVG, and its description contained a phrase saying that something "keeps growing".
@@ -86,11 +88,11 @@ In the German version, that phrase was typeset the German way:
 
 A German opening quote at the bottom of the line in front, a straight quotation mark at the back.
 To a human being, a cosmetic slip.
-To a parser, a single unpaired `"` — one that is missing its partner.
+To a parser, a single unpaired `"`, one that is missing its partner.
 
 The English version of the same diagram came through intact.
 It says `"keeps growing"`: two straight quotation marks, an even number, everything pairs up.
-And the second diagram in the same series had the very same defect twice over — and survived for exactly the same reason.
+And the second diagram in the same series had the very same defect twice over, and survived for exactly the same reason.
 
 So the error was not rare.
 It just happened to be invisible most of the time.
@@ -113,7 +115,7 @@ Their closing tag went missing, the slash stood there looking like an ending wit
 
 These anchors are not ordinary links in running text.
 They are absolutely positioned across the entire card so the whole surface is clickable.
-An anchor that is never closed swallows everything that follows: the rest of the page moves inside an element that is meant to sit on top of a card — and lies down with it over the text below.
+An anchor that is never closed swallows everything that follows: the rest of the page moves inside an element that is meant to sit on top of a card, and lies down with it over the text below.
 
 That is the overlap.
 One quotation mark, three cards, one wrecked page.
@@ -144,7 +146,7 @@ The production build was not affected, so the finding was filed away as a quirk 
 The minifier had bared its teeth, and I let it keep running.
 
 This is the part I would rather not write, and the reason it is here: it was not a lack of care.
-The evidence had been on the table three days earlier, and it was classified correctly — as a special case of a test setup.
+The evidence had been on the table three days earlier, and it was classified correctly, as a special case of a test setup.
 What was missing was not attention, but a place where that suspicion gets re-examined on a regular basis.
 That is exactly what a human being who has already looked three times will not provide.
 
@@ -158,7 +160,8 @@ It checked links, and the links were fine.
 It was noticed by a human being looking at a page in a browser.
 
 I am not writing this as an accusation.
-A German quotation mark in a German sentence is exactly right — in a place that runs through a minifier, it is the break.
+A German quotation mark in a German sentence is exactly right.
+In a place that runs through a minifier, it is the break.
 What is interesting is the combination: the line was written quickly, it was plausible, it passed a green check, and the one check that would have caught it ran on the other side only.
 
 ## A test with no expectation
@@ -168,7 +171,8 @@ That took a minute.
 
 The fix is `tools/check-minify.py`: it builds the blog twice, with and without `--minify`, and compares the plain text and the tag balance of every page.
 145 pages in under a second.
-It sits in the deploy workflow ahead of the publishing build and runs locally before every release — the stage that used to run only in CI now runs on both sides.
+It sits in the deploy workflow ahead of the publishing build and runs locally before every release.
+The stage that used to run only in CI now runs on both sides.
 
 The remarkable thing about this checker is what it does *not* know.
 It has no expectation.
@@ -191,7 +195,7 @@ A test that does not demonstrably fire has proved nothing.
 ## What I learned
 
 - **"Checked locally" is a statement about a different file** as soon as a stage sits between local and published that only one side knows about.
-- **An error in the output does not have to be in the source.** Read only the source and you will never find it — and eventually you will call it magic.
+- **An error in the output does not have to be in the source.** Read only the source and you will never find it, and eventually you will call it magic.
 - **Accidentally invisible is not the same as rare.** The same defect was sitting in the same files several times over; it only showed where the count was odd.
 - **What nobody looks at, nobody corrects in passing.** Screen reader descriptions are a page's blindest spot, quite literally.
 - **A green check proves only what it checks.** The link checker was right: the links were fine.
@@ -200,7 +204,7 @@ A test that does not demonstrably fire has proved nothing.
 ## What transfers
 
 This looks like a blog story, and it is not one.
-No part of it hangs on Hugo, on Markdown, or on an agentic AI writing along — that one only appears because it helped hunt the bug down.
+No part of it hangs on Hugo, on Markdown, or on an agentic AI writing along, that one only appears because it helped hunt the bug down.
 It hangs on a single property of the pipeline: **one step runs on one side only.**
 
 Run `npm run dev` locally and `npm run build` in CI, and you have it.
@@ -212,7 +216,8 @@ Go and see which stages of your publishing pipeline run on one side only.
 Almost every project has at least one: a minifier, a bundler, a compression step, an optimisation that is switched off locally because it makes development slow.
 
 That stage is untested, permanently.
-Not because it is bad, but because nobody looks at its output regularly.
+Not because it is bad.
+Because nobody looks at its output regularly.
 
 The move that pays off is smaller than a test: build both once and compare the results against each other.
 You do not need to know what the outcome should be.

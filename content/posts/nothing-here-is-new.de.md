@@ -4,7 +4,7 @@ date: 2026-09-06T08:40:00+02:00
 tags: ["claude-code", "workflow", "schreiben", "Essay"]
 themen: ["autor"]
 series: ["Selbstaehnlichkeit"]
-summary: "Zehn Beiträge in der ersten Woche, jeder zweisprachig — eine Zahl, bei der man misstrauisch wird. Der Verdacht ist berechtigt und trotzdem falsch: Neu ist an diesen Texten nicht der Inhalt. Neu ist, dass er abfließen kann."
+summary: "Zehn Beiträge in der ersten Woche, jeder zweisprachig, eine Zahl, bei der man misstrauisch wird. Der Verdacht ist berechtigt und trotzdem falsch: Neu ist an diesen Texten nicht der Inhalt. Neu ist, dass er abfließen kann."
 ---
 
 Zehn Beiträge in sieben Tagen ist eine Zahl, bei der man misstrauisch wird.
@@ -21,7 +21,7 @@ Ich wäre es auch.
 - Der Engpass war nie das Denken.
   Er war das Aufschreiben: Struktur finden, Form geben, zweimal formulieren, veröffentlichen.
 - Genau dieser Engpass ist weg.
-  Was seit einer Woche entsteht, ist kein Zuwachs an Gedanken, sondern ein Abfluss.
+  Was seit einer Woche entsteht, ist kein Zuwachs an Gedanken. Es ist ein Abfluss.
 - Was das Werkzeug nicht liefert, ist der Stoff.
   Es weiß nicht, welcher Lautsprecher an meinem Laptop stumm bleibt.
 
@@ -63,7 +63,7 @@ Seit einer Woche ist dieser Teil ungefähr so teuer wie ein Gespräch darüber.
 
 Was hier also passiert, ist kein Zuwachs an Gedanken.
 Es ist ein Abfluss.
-Ein Rückstau aus dreißig Jahren läuft mit der Geschwindigkeit ab, die das Rohr hergibt — und deshalb sieht die erste Woche aus wie ein Fließband, obwohl sie eine Entleerung ist.
+Ein Rückstau aus dreißig Jahren läuft mit der Geschwindigkeit ab, die das Rohr hergibt, und deshalb sieht die erste Woche aus wie ein Fließband, obwohl sie eine Entleerung ist.
 
 ## Was das Werkzeug nicht liefert
 
@@ -75,9 +75,9 @@ Jede einzelne Zahl darin stammt von dieser einen Maschine.
 Kein Modell der Welt kennt sie, bevor sie jemand misst.
 
 Dasselbe gilt für den Drehknopf mit Display, der hier auf dem Schreibtisch liegt.
-Auf dem Board sitzen zwei Mikrocontroller, und welcher von beiden sich am USB-C-Anschluss meldet, hängt davon ab, wie herum der Stecker steckt — das immerhin dokumentiert der Hersteller.
+Auf dem Board sitzen zwei Mikrocontroller, und welcher von beiden sich am USB-C-Anschluss meldet, hängt davon ab, wie herum der Stecker steckt. Das immerhin dokumentiert der Hersteller.
 Er schreibt aber auch, das Board habe zwei Drehgeber.
-Die Pins sagen etwas anderes: keine zwei Kanäle im Viertelversatz, sondern eine Pulsleitung je Drehrichtung — wer sie als Drehgeber liest, bekommt einen Zähler, der ewig einen Schritt vor und einen zurück macht.
+Die Pins sagen etwas anderes: keine zwei Kanäle im Viertelversatz, sondern eine Pulsleitung je Drehrichtung. Wer sie als Drehgeber liest, bekommt einen Zähler, der ewig einen Schritt vor und einen zurück macht.
 In keinem Datenblatt steht das, weil das Datenblatt an dieser Stelle das Gegenteil behauptet.
 In meinen Notizen steht es, weil ich 134 Schritte lang mitgeschrieben habe, was die beiden Leitungen wirklich tun.
 

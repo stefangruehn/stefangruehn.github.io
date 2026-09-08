@@ -4,7 +4,7 @@ date: 2026-09-08T09:00:00+02:00
 draft: false
 tags: ["claude-code", "hugo", "CI", "tooling", "measurement", "self-reference", "Essay"]
 topics: ["shipping"]
-summary: "The first task I gave the agent was six words long, and one of them was already the answer. The tool was settled before anyone had asked — and it was never measured. Here I make up for that, with the uncomfortable finding that Hugo ranks second, first, or nowhere at all, depending on which list you open."
+summary: "The first task I gave the agent was six words long, and one of them was already the answer. The tool was settled before anyone had asked, and it was never measured. Here I make up for that, with the uncomfortable finding that Hugo ranks second, first, or nowhere at all, depending on which list you open."
 ---
 
 *"build a blog with hugo"*
@@ -18,13 +18,13 @@ It started building.
 ## In short
 
 - The very first task I handed the agent already contained the tooling decision.
-  There was no research, no comparison, no reasoning — there was a name in the prompt.
+  There was no research, no comparison, no reasoning, just a name in the prompt.
 - That's the sore spot: this blog claims in two places that things here get **measured** rather than asserted.
   The one decision everything else rests on was never measured at all.
 - You can in fact look this up without crawling half the web yourself. There are at least three public rankings.
-- But no two of them measure the same thing. **Hugo ranks second, ranks first, and doesn't appear at all** — depending on which one you open.
+- But no two of them measure the same thing. **Hugo ranks second, ranks first, and doesn't appear at all**, depending on which one you open.
 - Each ranking structurally favours a particular kind of tool: GitHub stars reward age, the `generator` meta tag rewards whoever leaves it switched on, npm downloads only see what ships through npm.
-- The choice was still right, and I can now say what I base that on — four properties that actually carried their weight day to day.
+- The choice was still right, and I can now say what I base that on, namely four properties that actually carried their weight day to day.
 - Nobody asked for the fourth one: because the whole chain is text files and commands, it could be driven entirely **from the outside**, from a phone. That part is untested.
 
 ---
@@ -33,7 +33,7 @@ It started building.
 
 I wrote "with hugo" into the prompt because I knew Hugo.
 Not because I had compared anything.
-The agent took the constraint as it stood and started building — structure, theme, bilingual setup, deployment.
+The agent took the constraint as it stood and started building: structure, theme, bilingual setup, deployment.
 
 That is, first of all, correct behaviour.
 An agent that responds to "build X with Y" by opening a market survey is exhausting and usually in the way; a tooling constraint in the prompt is there to be followed, not relitigated at every turn.
@@ -44,7 +44,8 @@ On this task, the first one worked cleanly.
 The second one never came into play.
 
 So I'm making up for it.
-Not to overturn the decision — it was a good one — but to see what "good" can even mean here.
+I am not out to overturn the decision, it was a good one.
+What interests me is what "good" can even mean here.
 
 ## What could have been in that slot
 
@@ -63,13 +64,13 @@ A tool can be well kept and still be on its way out.
 ## Three rankings, three different quantities
 
 The real question was whether any of this can be *looked up* rather than surveyed from scratch.
-It can — in at least three places, all freely accessible, as of 8 September 2026:
+It can, in at least three places, all freely accessible, as of 8 September 2026:
 
 | Source | measures | where Hugo lands |
 |---|---|---|
-| [jamstack.org/generators](https://jamstack.org/generators/) (Netlify, 500+ entries, sortable by GitHub stars) | **attention** | **second**, around 82,900 stars — behind Next.js (around 133,900), ahead of Docusaurus (around 61,400) |
+| [jamstack.org/generators](https://jamstack.org/generators/) (Netlify, 500+ entries, sortable by GitHub stars) | **attention** | **second**, around 82,900 stars, behind Next.js (around 133,900), ahead of Docusaurus (around 61,400) |
 | [W3Techs](https://w3techs.com/) | **websites actually served** | **first** among generators, on the order of 0.0x percent of all websites |
-| npm downloads, e.g. via npm trends | **installs in JavaScript projects** | **nowhere** — Hugo is a Go binary and simply doesn't exist on npm |
+| npm downloads, e.g. via npm trends | **installs in JavaScript projects** | **nowhere**, because Hugo is a Go binary and simply doesn't exist on npm |
 
 Three sources, three results, all three correct.
 They don't contradict each other because one of them is wrong, but because they **count different things**.
@@ -81,13 +82,13 @@ A star from 2016 weighs as much as one from yesterday.
 So the list measures something closer to age times visibility than current use.
 
 **W3Techs identifies a generator essentially by a meta tag.**
-Hugo emits `<meta name="generator" content="Hugo …">` out of the box, and so does Jekyll — and plenty of themes strip it right back out again, for leanness or for discretion.
+Hugo emits `<meta name="generator" content="Hugo …">` out of the box, and so does Jekyll, and plenty of themes strip it right back out again, for leanness or for discretion.
 Switch the tag off and you vanish from the statistics.
 Astro and Next.js, by contrast, leave runtime artefacts in the served HTML that nobody configures away by accident.
-So the ranking doesn't measure use, it measures the **visibility of use** — and it systematically penalises exactly those generators whose output is cleanest.
+So the ranking doesn't measure use, it measures the **visibility of use**, and it systematically penalises exactly those generators whose output is cleanest.
 
 **npm downloads are the most honest number and the narrowest one.**
-They are reproducible and current — Astro, for instance, sat at around 2.7 million weekly downloads in May 2026.
+They are reproducible and current, and Astro, for instance, sat at around 2.7 million weekly downloads in May 2026.
 But they measure one ecosystem and mistake its edge for the edge of the world.
 Anything not shipped as an npm package doesn't exist there.
 
@@ -107,14 +108,14 @@ Four properties actually carried their weight:
 **One: fast.**
 The build isn't a wait, it's a keystroke.
 That sounds like convenience and is really a change in behaviour: a preview server that re-renders on every save makes proofreading in the browser the normal case rather than the exception.
-Wait a minute for each build and you proofread in the editor instead — and miss everything that only shows up in the layout.
+Wait a minute for each build and you proofread in the editor instead, and miss everything that only shows up in the layout.
 
 **Two: lightweight.**
 A single static binary. No runtime, no `node_modules`, no supply chain of hundreds of transitive packages you neither read nor update.
 What comes out the other end is HTML — no server, no database, no attack surface to maintain.
 
 **Three: bilingual content and taxonomies are built in, not bolted on.**
-Per-file language variants, a shared `translationKey`, custom taxonomies and series — all of it without a single plugin.
+Per-file language variants, a shared `translationKey`, custom taxonomies and series, all of it without a single plugin.
 This blog depends on that completely: German and English aren't a special case here, they are the unit in which every post exists.
 A generator where multilingual support is a plugin from 2019 would have become a problem by the third post.
 
@@ -124,7 +125,7 @@ Because the input is text files and the output is HTML with no runtime, a checke
 Build twice and compare the text of every page against the text of the same page. Or hold the front matter of every post against a rule.
 No headless browser, no test environment, no server that has to be running.
 
-That produced five checkers and four self-tests, which deliberately feed the checkers broken input and have to go red — otherwise they aren't checking anything.
+That produced five checkers and four self-tests, which deliberately feed the checkers broken input and have to go red, or they aren't checking anything.
 One of them found the incident that [the only other post in this topic so far](/posts/green-locally-broken-on-the-web/) is about: a single quotation mark that threw the minifier off course and wrecked a published page, with nothing whatsoever visible locally.
 
 This is where the two themes meet.
@@ -141,7 +142,7 @@ What stands at the end is a chain made entirely of text files, Git and a CI run.
 No click path, no interface, no program that has to be running for anything to happen.
 
 From that follows a property that appeared in no prompt: the whole chain **could be driven from the outside**.
-Capture an idea, write a draft, check the preview, run the checkers, publish — every one of those is a file operation or a command, and every one of them could be done remotely, through Claude Code Remote Control or from a phone via the Claude app.
+Capture an idea, write a draft, check the preview, run the checkers, publish: every one of those is a file operation or a command, and every one of them could be done remotely, through Claude Code Remote Control or from a phone via the Claude app.
 The only prerequisite would be that the machine is reachable from outside.
 
 Conditional, and the conditional stays: **I haven't tested this.**
@@ -151,7 +152,8 @@ In a post whose thesis is "measure, don't assert", that is exactly the thing to 
 It's interesting regardless, because it shows how a tooling choice keeps having effects.
 A chain of files and commands can be operated remotely.
 A chain of clicks cannot.
-That was no part of the decision — it's a by-product, and it's worth more than most of the criteria I could have written down.
+That was no part of the decision.
+It's a by-product, and it's worth more than most of the criteria I could have written down.
 
 ## What's left
 
