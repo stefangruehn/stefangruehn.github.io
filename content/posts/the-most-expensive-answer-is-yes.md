@@ -207,7 +207,7 @@ Once it is written down, resuming costs nothing.
 
 ## Who has to propose the cut
 
-The cut cannot be automated, and the reason is uncomfortably clean.
+The cut cannot be automated.
 
 **The agent sees the size of the context but not whether the thought is finished.
 I see whether the thought is finished but not the size of the context.**

@@ -207,7 +207,7 @@ Wenn er geschrieben ist, kostet das Wiederaufsetzen nichts.
 
 ## Wer den Schnitt vorschlagen muss
 
-Der Schnitt lässt sich nicht automatisieren, und der Grund dafür ist unangenehm sauber.
+Der Schnitt lässt sich nicht automatisieren.
 
 **Der Agent sieht die Kontextgröße, aber nicht, ob der Gedanke fertig ist.
 Ich sehe, ob der Gedanke fertig ist, aber nicht die Kontextgröße.**
