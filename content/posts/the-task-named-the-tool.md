@@ -2,7 +2,7 @@
 title: "\"build a blog with hugo\": the task that contained its own answer"
 date: 2026-09-08T09:00:00+02:00
 draft: false
-tags: ["claude-code", "hugo", "tooling", "measurement", "self-reference", "Essay"]
+tags: ["claude-code", "hugo", "CI", "tooling", "measurement", "self-reference", "Essay"]
 topics: ["shipping"]
 summary: "The first task I gave the agent was six words long, and one of them was already the answer. The tool was settled before anyone had asked — and it was never measured. Here I make up for that, with the uncomfortable finding that Hugo ranks second, first, or nowhere at all, depending on which list you open."
 ---

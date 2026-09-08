@@ -2,7 +2,7 @@
 title: "„baue einen blog mit hugo\": Der Auftrag, der seine eigene Antwort enthielt"
 date: 2026-09-08T09:00:00+02:00
 draft: false
-tags: ["claude-code", "hugo", "werkzeuge", "messung", "selbstbezug", "Essay"]
+tags: ["claude-code", "hugo", "CI", "werkzeuge", "messung", "selbstbezug", "Essay"]
 themen: ["veroeffentlichen"]
 summary: "Die erste Aufgabe an den Agenten bestand aus sechs Wörtern, und eines davon war bereits die Antwort. Das Werkzeug stand fest, bevor irgendwer gefragt hatte — nachgemessen wurde nie. Hier wird es nachgeholt, mit dem unangenehmen Befund, dass Hugo je nach Rangliste auf Platz 2, auf Platz 1 oder überhaupt nicht steht."
 ---
