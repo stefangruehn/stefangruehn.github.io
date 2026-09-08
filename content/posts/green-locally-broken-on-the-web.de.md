@@ -2,7 +2,7 @@
 title: "Lokal grün, im Web kaputt: Die Baustufe, die niemand sieht"
 date: 2026-09-08T05:00:00+02:00
 draft: false
-tags: ["claude-code", "hugo", "ci", "debugging", "deployment", "Technical Deep Dive"]
+tags: ["claude-code", "hugo", "CI", "debugging", "deployment", "Technical Deep Dive"]
 themen: ["veroeffentlichen"]
 summary: "Die Übersichtsseite einer frisch veröffentlichten Serie war im Web zerlegt — lokal sah alles gut aus, und die Quelle war fehlerfrei. Schuld war ein einzelnes Anführungszeichen an einer Stelle, die niemand ansieht, und eine Baustufe, die nur im CI läuft."
 ---

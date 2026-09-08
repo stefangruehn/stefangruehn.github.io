@@ -2,7 +2,7 @@
 title: "Green locally, broken on the web: the build stage nobody sees"
 date: 2026-09-08T05:00:00+02:00
 draft: false
-tags: ["claude-code", "hugo", "ci", "debugging", "deployment", "Technical Deep Dive"]
+tags: ["claude-code", "hugo", "CI", "debugging", "deployment", "Technical Deep Dive"]
 topics: ["shipping"]
 summary: "The landing page of a freshly published series was wrecked on the web — locally everything looked fine, and the source was flawless. The culprit was a single quotation mark in a place nobody ever looks at, and a build stage that only runs in CI."
 ---
