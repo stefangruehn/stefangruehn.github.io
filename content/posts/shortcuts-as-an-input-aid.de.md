@@ -115,7 +115,7 @@ Zwei Anschläge für etwas, das sonst zwei Sätze braucht.
 
 Wer eine Pause frei wählen kann, macht sie einfach.
 Wer sie nicht frei wählen kann, muss sie ankündigen, und zahlt für die Ankündigung mit genau der Ressource, die gerade knapp ist.
-Ein Zeichen dafür zu haben ist kein Komfort.
+Ein Zeichen dafür zu haben spart genau diese Ressource.
 
 Nebenbei ist es wieder Token-Ökonomie: Die Wartezeit soll keine Runde kosten.
 Dieselbe Optimierung, zum dritten Mal, aus einer dritten Richtung.
@@ -139,7 +139,7 @@ Für jemanden, der pro Tag nur eine bestimmte Zahl von Tastenanschlägen körper
 Das hier sind Entwurfsargumente und keine Nutzerstudie.
 
 Ich habe keine Messung zu Fehlerverteilungen bei fremder Tastatureingabe erhoben, keine Testpersonen befragt und keine Studie gelesen, die die vier oben genannten Fehlerklassen quantifiziert.
-Was ich habe, ist eine Liste, die entlang dieser Annahmen gebaut ist, und die Beobachtung, dass sie sich für den gewöhnlichen Fall auch dann lohnt.
+Was ich habe, ist eine Liste, die entlang dieser Annahmen gebaut ist, und die Beobachtung, dass sie sich für den gewöhnlichen Fall genauso lohnt.
 
 Wer daraus mehr macht, macht zu viel daraus.
 
@@ -149,7 +149,7 @@ Wer daraus mehr macht, macht zu viel daraus.
 Die eigentliche Schreibweise sollte `(x)` bleiben, und die eckige Klammer wäre die Variante für den gewesen, dem der Shift-Griff teuer ist.
 Sonderfall, Nebeneingang, gut gemeint.
 
-Sie hat noch am selben Tag die runde Form abgelöst.
+Sie ist noch am selben Tag die Hauptform geworden.
 
 Nicht aus Rücksicht.
 Sie war schlicht besser: eine Taste statt zwei, dieselbe Bedeutung, nichts eingebüßt.

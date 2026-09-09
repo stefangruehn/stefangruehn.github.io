@@ -185,7 +185,7 @@ It took a program that doesn't know what the line is supposed to mean, and only 
 There's a version of this evening where I don't write the checker, and instead find out weeks later, on my phone, when a note I've just created renders its own metadata as body text.
 
 Whether that checker is any good is a separate question, and one I want to look at properly — a test that can't fail is worth nothing, and this one had been written in the same sitting, by the same hands, as the thing it was checking.
-That's a post of its own.
+That will be a post of its own.
 
 ## Lessons learned
 

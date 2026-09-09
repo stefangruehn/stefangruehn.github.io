@@ -43,7 +43,7 @@ In not one of them did anything come back suggesting I spell it differently.
 In those sessions I wrote "haeufugen", "beginen", "teiner", "vu verwenden".
 None of it produced a question, and none of it was misread.
 
-The reason is unromantic: in each case only one word can be meant.
+It comes down to redundancy: in each case only one word can be meant.
 "haeufugen" sits in a sentence about my typos, which makes it "häufigen" with no guesswork involved.
 Language carries enough redundancy that a slipped letter does not take the meaning with it.
 The surrounding sentence holds it.

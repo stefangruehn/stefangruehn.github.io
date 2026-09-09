@@ -43,7 +43,7 @@ In keiner einzigen davon kam ein Hinweis zurück, dass ich es anders schreiben s
 Ich habe in diesen Sitzungen „haeufugen" geschrieben, „beginen", „teiner", „vu verwenden".
 Nichts davon führte zu einer Rückfrage, und keins davon wurde falsch verstanden.
 
-Der Grund ist unromantisch: Es gibt jeweils nur ein Wort, das gemeint sein kann.
+Dahinter steckt Redundanz: Es gibt jeweils nur ein Wort, das gemeint sein kann.
 „haeufugen" steht in einem Satz über meine Tippfehler, daraus wird „häufigen", und zwar ohne Rateanteil.
 Sprache hat genug Redundanz, dass ein verrutschter Buchstabe die Bedeutung nicht mitnimmt.
 Der Satz drumherum trägt sie.

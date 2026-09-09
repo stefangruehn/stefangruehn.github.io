@@ -99,7 +99,7 @@ In zwei Wochen läuft dasselbe Skript noch einmal, und dann gibt es einen Vergle
 ## Stumm wird die Sitzung, nicht der Rechner
 
 Der erste Entwurf war ein Einzeiler in der Konfiguration, ohne Skript dazwischen.
-Der hielt genau bis zu dem Abend, an dem zwei Sitzungen gleichzeitig liefen: eine, die lange rechnete und mich rufen sollte, und eine zweite nebenher, deren Töne mich störten.
+Der hielt bis später am selben Abend: Zwei Sitzungen liefen gleichzeitig, eine, die lange rechnete und mich rufen sollte, und eine zweite nebenher, deren Töne mich störten.
 Ein globaler Schalter hätte beide stummgeschaltet, also genau die mit, auf die ich gewartet habe.
 
 Deshalb liegt zwischen Hook und Lautsprecher ein kleines Skript.
@@ -120,11 +120,11 @@ Andere offene Sitzungen bleiben hörbar, ohne dass ich irgendwo eine ID abtippen
 
 Das Skript hat noch einen zweiten Zweig, den ich hier stehenlasse, weil er ein allgemeines Muster ist: Ältere Fassungen liefern statt der ID nur den Pfad zum Transkript.
 Die ID steht dann im Dateinamen, und `basename` holt sie da heraus.
-Vier Zeilen für den Fall, dass sich unter mir etwas ändert.
+Vier Zeilen für den Fall, dass Claude Code seine Hook-Daten wieder anders liefert.
 
 ## Der Hook, der beim Eintragen noch nicht gilt
 
-Eine Sache hat mich zwanzig Minuten gekostet, und sie ist typisch für Automatismen, die sich selbst betreffen.
+Eine Sache hat mich ein paar Minuten gekostet, und sie ist typisch für Automatismen, die sich selbst betreffen.
 
 Hooks werden **beim Sitzungsstart** eingelesen.
 Trage ich mitten in einer Sitzung einen ein, tut sich in genau dieser Sitzung nichts, bis `/hooks` oder ein Neustart.

@@ -99,7 +99,7 @@ In two weeks the same script runs again, and then there is a comparison instead 
 ## The session goes silent, not the machine
 
 The first draft was a one-liner in the configuration, with no script in between.
-It survived until the evening two sessions were running at once: one that was computing away and supposed to call me, and a second one alongside whose sounds were in the way.
+It survived until later that same evening: two sessions were running at once, one that was computing away and supposed to call me, and a second one alongside whose sounds were in the way.
 A global switch would have silenced both, including the one I was waiting for.
 
 So there is a small script between hook and speaker.
@@ -120,11 +120,11 @@ Other open sessions stay audible, and I never have to type an ID anywhere.
 
 The script has a second branch that I'll leave in here, because it is a general pattern: older versions supply only the path to the transcript instead of the ID.
 The ID is then part of the file name, and `basename` pulls it back out.
-Four lines for the case that something underneath me changes.
+Four lines for the case that Claude Code delivers its hook data differently again.
 
 ## The hook that doesn't apply when you write it
 
-One thing cost me twenty minutes, and it is typical of automations that concern themselves.
+One thing cost me a few minutes, and it is typical of automations that concern themselves.
 
 Hooks are read **at session start**.
 If I add one mid-session, nothing happens in that session, not until `/hooks` or a restart.

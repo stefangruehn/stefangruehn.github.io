@@ -115,7 +115,7 @@ Two keystrokes for something that otherwise takes two sentences.
 
 Someone who can choose their breaks freely simply takes one.
 Someone who cannot has to announce it, and pays for the announcement with exactly the resource that is scarce at that moment.
-Having a token for that is not a convenience.
+Having a token for that saves exactly that resource.
 
 Incidentally it is token economics again: the waiting should not cost a turn.
 The same optimisation, for the third time, from a third direction.
@@ -149,7 +149,7 @@ Anyone making more of that is making too much of it.
 The actual notation was going to stay `(x)`, and the square bracket would have been the variant for people to whom holding Shift is expensive.
 Special case, side entrance, well meant.
 
-It replaced the round form the same day.
+It became the main form the same day.
 
 Not out of consideration.
 It was simply better: one key instead of two, the same meaning, nothing given up.

@@ -186,7 +186,7 @@ Es brauchte ein Programm, das nicht weiß, was die Zeile bedeuten soll, und nur 
 Es gibt eine Fassung dieses Abends, in der ich das Prüfskript nicht schreibe und stattdessen Wochen später auf dem Telefon davon erfahre, wenn eine frisch angelegte Notiz ihre eigenen Metadaten als Fließtext anzeigt.
 
 Ob dieses Prüfskript selbst etwas taugt, ist eine andere Frage, und ich möchte sie mir ordentlich ansehen: ein Test, der nicht fehlschlagen kann, ist nichts wert, und dieser hier war in derselben Sitzung von denselben Händen geschrieben worden wie das, was er prüft.
-Das ist ein eigener Beitrag.
+Das wird ein eigener Beitrag.
 
 ## Was ich gelernt habe
 
