@@ -1,0 +1,29 @@
+{{- /* Schema der Serie Selbstaehnlichkeit, RSS-Fassung: ASCII statt SVG.
+       Feed-Leser rendern Inline-SVG unzuverlaessig bis gar nicht.
+       Konvention fuer ASCII-Schemata: an jeder Ecke steht innen ein
+       Leerzeichen zwischen dem + und dem angrenzenden Strich. */ -}}
+{{- if eq .Page.Lang "de" -}}
+<pre>
+ Stoff                                 Kadenz
+ (Maschinen, zwei Bücher)              (sagt nichts über das Tempo)
+             \                        /
+              + --&gt; diese Texte &lt;-- +
+                         |
+                         v
+                Wer schreibt hier?
+
+ Der Weg nach unten ist dieselbe Regel wie zwischen Agenten.
+</pre>
+{{- else -}}
+<pre>
+ Material                              Cadence
+ (machines, two books)                 (says nothing about the pace)
+             \                        /
+              + --&gt; these texts &lt;-- +
+                         |
+                         v
+              Who is writing here?
+
+ The way down is the same rule as between agents.
+</pre>
+{{- end -}}

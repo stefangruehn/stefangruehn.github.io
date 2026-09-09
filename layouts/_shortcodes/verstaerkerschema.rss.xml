@@ -1,0 +1,27 @@
+{{- /* Schema der Serie Rueckkopplung, RSS-Fassung: ASCII statt SVG.
+       Feed-Leser rendern Inline-SVG unzuverlaessig bis gar nicht.
+       Konvention fuer ASCII-Schemata: an jeder Ecke steht innen ein
+       Leerzeichen zwischen dem + und dem angrenzenden Strich. */ -}}
+{{- if eq .Page.Lang "de" -}}
+<pre>
+ Stoff von außen
+      |
+      v
+ + ------------------ verstärkt ------------------ +
+ v                                                 |
+ Beobachtung --&gt; Beitrag --&gt; Regel (CLAUDE.md) ----+
+
+ Teil 2 misst den Anteil, Teil 3 die Kopplung, Teil 4 den Zufluss.
+</pre>
+{{- else -}}
+<pre>
+ material from outside
+      |
+      v
+ + ------------------ amplifies ------------------ +
+ v                                                 |
+ Observation --&gt; Post --&gt; Rule (CLAUDE.md) --------+
+
+ Part 2 measures the share, part 3 the coupling, part 4 the inflow.
+</pre>
+{{- end -}}

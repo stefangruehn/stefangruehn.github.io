@@ -1,0 +1,44 @@
+{{- /* Schema der Serie Rueckkopplung, HTML-Fassung.
+       Die RSS-Fassung liegt daneben als verstaerkerschema.rss.xml und liefert
+       ASCII statt SVG — Hugo waehlt die Vorlage nach Ausgabeformat.
+       Beschriftungen kommen aus der Sprache der Seite, damit eine Vorlage
+       fuer beide Fassungen reicht. */ -}}
+{{- $de := eq .Page.Lang "de" -}}
+{{- $kette := slice
+    (dict "t" (cond $de "Beobachtung" "Observation") "s" (cond $de "in der eigenen Arbeit" "in my own work"))
+    (dict "t" (cond $de "Beitrag" "Post")            "s" (cond $de "beschreibt sie" "describes it"))
+    (dict "t" (cond $de "Regel" "Rule")              "s" (cond $de "CLAUDE.md, Prüfer" "CLAUDE.md, checkers"))
+-}}
+<figure class="schema">
+<svg viewBox="0 0 780 210" role="img" aria-labelledby="vs-t vs-d" class="schema-svg">
+  <title id="vs-t">{{ if $de }}Der Kreis, den dieser Blog mit sich selbst bildet{{ else }}The loop this blog forms with itself{{ end }}</title>
+  <desc id="vs-d">{{ if $de }}Beobachtung, Beitrag, Regel. Von der Regel führt ein Pfeil zurück zur Beobachtung, beschriftet „verstärkt“. Von links oben führt ein gestrichelter Pfeil in die Beobachtung, beschriftet „Stoff von außen“.{{ else }}Observation, post, rule. An arrow leads back from the rule to the observation, labelled "amplifies". A dashed arrow enters the observation from the upper left, labelled "material from outside".{{ end }}</desc>
+  <defs>
+    <marker id="vs-ap" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="9" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="var(--secondary)"/>
+    </marker>
+    <marker id="vs-al" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="9" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="var(--primary)"/>
+    </marker>
+  </defs>
+
+  {{- range $i, $b := $kette }}
+  {{- $x := add 40 (mul $i 265) }}
+  <rect x="{{ $x }}" y="62" width="170" height="48" rx="6" fill="var(--entry)" stroke="var(--border)"/>
+  <text x="{{ add $x 85 }}" y="82" text-anchor="middle" class="schema-h">{{ $b.t }}</text>
+  <text x="{{ add $x 85 }}" y="99" text-anchor="middle" class="schema-s">{{ $b.s }}</text>
+  {{- if lt $i 2 }}
+  <line x1="{{ add $x 178 }}" y1="86" x2="{{ add $x 257 }}" y2="86" stroke="var(--secondary)" stroke-width="1.5" marker-end="url(#vs-ap)"/>
+  {{- end }}
+  {{- end }}
+
+  <path d="M20,26 L110,26 C120,26 125,31 125,58" fill="none" stroke="var(--secondary)" stroke-width="1.5"
+        stroke-dasharray="5 4" marker-end="url(#vs-ap)"/>
+  <text x="132" y="30" class="schema-l">{{ if $de }}Stoff von außen{{ else }}material from outside{{ end }}</text>
+
+  <path d="M655,112 C655,158 655,166 600,166 L180,166 C125,166 125,158 125,114" fill="none"
+        stroke="var(--primary)" stroke-width="2" marker-end="url(#vs-al)"/>
+  <text x="390" y="188" text-anchor="middle" class="schema-l schema-l-strong">{{ if $de }}verstärkt{{ else }}amplifies{{ end }}</text>
+</svg>
+<figcaption>{{ if $de }}Teil 1 zeigt den Kreis, Teil 2 misst seinen Anteil, Teil 3 seine Kopplung, Teil 4 fragt nach dem Zufluss.{{ else }}Part 1 shows the loop, part 2 measures its share, part 3 its coupling, part 4 asks about the inflow.{{ end }}</figcaption>
+</figure>
