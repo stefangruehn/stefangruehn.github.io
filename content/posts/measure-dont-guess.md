@@ -84,7 +84,7 @@ So the approach sharpened.
 Rather than measuring loudness in general, measure the *specific tone* being played and ignore everything else: a Goertzel filter, which locks onto one frequency and rejects the rest.
 Two frequencies were used: 1 kHz to gauge level, and 6 kHz to ask a different question entirely: *can this speaker even produce high frequencies?*
 
-A note on how strikingly flexibly Claude handled this: numpy, a Python library for signal analysis, wasn't installed in that environment, so the analysis was simply written in plain Python instead.
+A note on how Claude handled this: numpy, a Python library for signal analysis, wasn't installed in that environment, so the analysis was simply written in plain Python instead.
 No lab equipment needed.
 Just a laptop microphone, a test tone, and about forty lines of arithmetic over the measured data.
 

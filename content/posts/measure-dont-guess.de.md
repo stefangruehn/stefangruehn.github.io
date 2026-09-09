@@ -84,7 +84,7 @@ Also wurde der Ansatz geschärft.
 Statt die Lautstärke im Allgemeinen zu messen, misst man den *konkret abgespielten Ton* und ignoriert alles andere: ein Goertzel-Filter, der sich auf eine Frequenz einrastet und den Rest verwirft.
 Zwei Frequenzen kamen zum Einsatz: 1 kHz für den Pegel und 6 kHz für eine ganz andere Frage: *kann dieser Lautsprecher überhaupt hohe Frequenzen erzeugen?*
 
-Eine Anmerkung dazu, wie verblüffend flexibel das von Claude gelöst wurde: numpy, eine Python-Bibliothek zur Signalanalyse, war in der Umgebung nicht installiert, also wurde die Analyse kurzerhand in reinem Python geschrieben.
+Eine Anmerkung dazu, wie das von Claude gelöst wurde: numpy, eine Python-Bibliothek zur Signalanalyse, war in der Umgebung nicht installiert, also wurde die Analyse kurzerhand in reinem Python geschrieben.
 Keine Laborausrüstung nötig.
 Nur ein Laptop-Mikrofon, ein Testton und ungefähr vierzig Zeilen Rechnerei auf den gemessenen Daten.
 
