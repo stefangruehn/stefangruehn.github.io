@@ -16,7 +16,7 @@ Sechs davon handeln von Werkzeugen, die es ohne diesen Blog nicht gäbe.
 - Töne, Kürzel, Kontingent, Notizablage, Rückfragen: sechs der vierzehn Beiträge beschreiben Werkzeuge oder Verfahren, die bei der Arbeit an diesem Blog entstanden sind.
 - Das ist keine Themenwahl.
   Es folgt daraus, woher der Stoff kommt: Messen lässt sich, was bei der Arbeit anfällt.
-- Vier Prüfprogramme und zwei Messwerkzeuge gehören inzwischen dazu, dazu drei Selbsttests, die die Prüfer prüfen.
+- Am 8. September gehören fünf Prüfprogramme und zwei Messwerkzeuge dazu, dazu vier Selbsttests, die die Prüfer prüfen.
   Jedes davon entstand, weil etwas schiefgegangen war.
 - Der reinste Fall ist ein Änderungswunsch am Verfahren für Änderungswünsche.
   Das Feld für den betroffenen Beitrag bleibt dort leer. Betroffen ist das Verfahren.
@@ -46,7 +46,7 @@ Sie sind nicht erhoben worden, sie lagen da.
 
 ## Fünf Prüfer, zwei Messwerkzeuge, vier Selbsttests
 
-Im Werkzeugverzeichnis dieses Blogs und im Nachbarverzeichnis daneben liegen inzwischen elf Programme.
+Im Werkzeugverzeichnis dieses Blogs und im Nachbarverzeichnis daneben liegen elf Programme, gezählt am 8. September.
 
 Fünf prüfen: ob jeder Beitrag genau ein Thema hat und jedes Thema eine Seite, ob eine Serienseite erst dann öffentlich steht, wenn keiner ihrer Teile mehr Entwurf ist, ob das Minimieren der Auslieferung den Text unangetastet lässt, ob die Ideennotizen zum veröffentlichten Stand passen, ob die Änderungswünsche ins Leere zielen.
 Zwei messen: den Tokenverbrauch über eine Sitzung, die Wartezeiten zwischen meinen Eingaben.

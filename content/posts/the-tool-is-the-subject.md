@@ -16,7 +16,7 @@ Six of them are about tools that would not exist without this blog.
 - Sounds, shortcuts, quota, note storage, questions back: six of the fourteen posts describe tools or procedures that came out of working on this blog.
 - That is not a choice of topic.
   It follows from where the material comes from: what can be measured is what accumulates while working.
-- Four checking programs and two measuring tools now belong to it, plus three self-tests that check the checkers.
+- On 8 September, five checking programs and two measuring tools belong to it, plus four self-tests that check the checkers.
   Every one of them exists because something had gone wrong.
 - The purest case is a change request about the procedure for change requests.
   The field for the affected post stays empty there. What is affected is the procedure.
@@ -46,7 +46,7 @@ They were not collected, they were lying there.
 
 ## Five checkers, two measuring tools, four self-tests
 
-The tools directory of this blog and the neighbouring one next to it now hold eleven programs.
+The tools directory of this blog and the neighbouring one next to it hold eleven programs, counted on 8 September.
 
 Five check: whether every post carries exactly one topic and every topic has a page; whether a series overview only goes public once none of its parts is a draft; whether minifying the output leaves the text untouched; whether the idea notes match the published state; whether the change requests point at anything real.
 Two measure: token consumption across a session, the waits between my inputs.

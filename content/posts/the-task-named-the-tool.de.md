@@ -125,7 +125,7 @@ Weil die Eingabe aus Textdateien besteht und die Ausgabe aus HTML ohne Laufzeit,
 Zweimal bauen und den Text jeder Seite gegen den Text derselben Seite stellen. Oder das Frontmatter aller Beiträge gegen eine Regel halten.
 Kein Headless-Browser, keine Testumgebung, kein laufender Server.
 
-Entstanden sind so fünf Prüfer und vier Selbsttests, die den Prüfern absichtlich Defekte unterschieben und rot werden müssen, sonst prüfen sie nichts.
+Entstanden sind so, bis zum 7. September, fünf Prüfer und vier Selbsttests, die den Prüfern absichtlich Defekte unterschieben und rot werden müssen, sonst prüfen sie nichts.
 Einer davon hat den Vorfall gefunden, von dem [der bislang einzige andere Beitrag in diesem Thema](/de/posts/green-locally-broken-on-the-web/) handelt: ein einzelnes Anführungszeichen, das den Minifier aus dem Tritt brachte und eine veröffentlichte Seite zerlegte, ohne dass lokal irgendetwas zu sehen war.
 
 Hier laufen die beiden Leitthemen zusammen.

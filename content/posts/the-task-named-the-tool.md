@@ -125,7 +125,7 @@ Because the input is text files and the output is HTML with no runtime, a checke
 Build twice and compare the text of every page against the text of the same page. Or hold the front matter of every post against a rule.
 No headless browser, no test environment, no server that has to be running.
 
-That produced five checkers and four self-tests, which deliberately feed the checkers broken input and have to go red, or they aren't checking anything.
+That produced, by 7 September, five checkers and four self-tests, which deliberately feed the checkers broken input and have to go red, or they aren't checking anything.
 One of them found the incident that [the only other post in this topic so far](/posts/green-locally-broken-on-the-web/) is about: a single quotation mark that threw the minifier off course and wrecked a published page, with nothing whatsoever visible locally.
 
 This is where the two themes meet.
