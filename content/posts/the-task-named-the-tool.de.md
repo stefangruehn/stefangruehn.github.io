@@ -52,7 +52,7 @@ Mich interessiert, was „gut" hier überhaupt heißen kann.
 Die Sammlung bei Netlify listet über 500 statische Seitengeneratoren.
 Ernsthaft in Frage gekommen wäre für einen zweisprachigen Textblog eine gute Handvoll, grob nach Bauart sortiert:
 
-- **Ein Binary, keine Laufzeit:** Hugo (Go), Zola (Rust).
+- **Ein Binary, keine Runtime:** Hugo (Go), Zola (Rust).
 - **Die Urahnen:** Jekyll (Ruby), das GitHub Pages bis heute ohne Zutun baut, und Middleman.
 - **Python:** Pelican, MkDocs mit dem Material-Theme, das faktisch der Standard für Dokumentation geworden ist.
 - **JavaScript, contentorientiert:** Astro, Eleventy, Docusaurus, VitePress.
@@ -84,7 +84,7 @@ Die Liste misst damit eher Lebensalter mal Sichtbarkeit als heutige Verwendung.
 **W3Techs erkennt einen Generator im Wesentlichen an einem Meta-Tag.**
 Hugo setzt `<meta name="generator" content="Hugo …">` von Haus aus, Jekyll ebenfalls, und zahlreiche Themes entfernen es wieder, aus Sparsamkeit oder Diskretion.
 Wer das Tag abschaltet, verschwindet aus der Statistik.
-Astro und Next.js hinterlassen dagegen Laufzeitartefakte im ausgelieferten HTML, die niemand versehentlich wegkonfiguriert.
+Astro und Next.js hinterlassen dagegen Runtime-Artefakte im ausgelieferten HTML, die niemand versehentlich wegkonfiguriert.
 Die Rangliste misst also nicht Nutzung, sondern **Sichtbarkeit der Nutzung**, und sie benachteiligt systematisch genau die Generatoren, deren Ergebnis am saubersten ist.
 
 **npm-Downloads sind die ehrlichste und zugleich engste Zahl.**
@@ -111,7 +111,7 @@ Das klingt nach Bequemlichkeit und ist eine Verhaltensänderung: Ein Vorschauser
 Wer eine Minute auf den Build wartet, liest im Editor gegen und übersieht, was erst im Layout auffällt.
 
 **Zweitens: leichtgewichtig.**
-Ein einziges statisches Binary. Keine Laufzeit, kein `node_modules`, keine Lieferkette aus hunderten transitiven Paketen, die man weder liest noch aktualisiert.
+Ein einziges statisches Binary. Keine Runtime, kein `node_modules`, keine Lieferkette aus hunderten transitiven Paketen, die man weder liest noch aktualisiert.
 Was hinten herauskommt, ist HTML, ohne Server, ohne Datenbank, ohne Angriffsfläche, die man pflegen müsste.
 
 **Drittens: Zweisprachigkeit und Taxonomien sind eingebaut, nicht angebaut.**
@@ -121,7 +121,7 @@ Ein Generator, bei dem Mehrsprachigkeit ein Plugin von 2019 ist, wäre späteste
 
 **Viertens: Prüfer sind billig, und Prüfer für Prüfer auch.**
 Das ist der Punkt, den ich vorher nicht auf der Rechnung hatte, und der inzwischen der wichtigste ist.
-Weil die Eingabe aus Textdateien besteht und die Ausgabe aus HTML ohne Laufzeit, ist ein Prüfer ein kurzes Skript.
+Weil die Eingabe aus Textdateien besteht und die Ausgabe aus HTML ohne Runtime, ist ein Prüfer ein kurzes Skript.
 Zweimal bauen und den Text jeder Seite gegen den Text derselben Seite stellen. Oder das Frontmatter aller Beiträge gegen eine Regel halten.
 Kein Headless-Browser, keine Testumgebung, kein laufender Server.
 

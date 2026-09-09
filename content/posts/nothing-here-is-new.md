@@ -76,8 +76,8 @@ No model on earth knows those numbers before somebody measures them.
 
 The same goes for the knob with a display sitting on my desk.
 There are two microcontrollers on that board, and which of them shows up on the USB-C port depends on which way round the plug is inserted — that much the vendor does document.
-It also states that the board has two rotary encoders.
-The pins say otherwise: not two channels a quarter cycle apart, but one pulse line per direction of turn — read them as an encoder and you get a counter that steps one out and one back forever.
+It also states that the board has two rotary encoders. The second one is real, but it hangs on the other microcontroller.
+The one our chip sees says something other than the datasheet: not two channels a quarter cycle apart, but one pulse line per direction of turn — read them as an encoder and you get a counter that steps one out and one back forever.
 No datasheet says so, because at this point the datasheet claims the opposite.
 My notes say so, because I traced 134 steps to find out what those two lines actually do.
 

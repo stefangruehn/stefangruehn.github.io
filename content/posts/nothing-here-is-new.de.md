@@ -76,8 +76,8 @@ Kein Modell der Welt kennt sie, bevor sie jemand misst.
 
 Dasselbe gilt für den Drehknopf mit Display, der hier auf dem Schreibtisch liegt.
 Auf dem Board sitzen zwei Mikrocontroller, und welcher von beiden sich am USB-C-Anschluss meldet, hängt davon ab, wie herum der Stecker steckt. Das immerhin dokumentiert der Hersteller.
-Er schreibt aber auch, das Board habe zwei Drehgeber.
-Die Pins sagen etwas anderes: keine zwei Kanäle im Viertelversatz, sondern eine Pulsleitung je Drehrichtung. Wer sie als Drehgeber liest, bekommt einen Zähler, der ewig einen Schritt vor und einen zurück macht.
+Er schreibt aber auch, das Board habe zwei Drehgeber. Der zweite ist real, hängt aber am anderen Mikrocontroller.
+Der, den unser Chip sieht, sagt etwas anderes als das Datenblatt: keine zwei Kanäle im Viertelversatz, sondern eine Pulsleitung je Drehrichtung. Wer sie als Drehgeber liest, bekommt einen Zähler, der ewig einen Schritt vor und einen zurück macht.
 In keinem Datenblatt steht das, weil das Datenblatt an dieser Stelle das Gegenteil behauptet.
 In meinen Notizen steht es, weil ich 134 Schritte lang mitgeschrieben habe, was die beiden Leitungen wirklich tun.
 
