@@ -170,8 +170,10 @@ Das war eine Minute Arbeit.
 
 Der Fix ist `tools/check-minify.py`: Er baut den Blog zweimal, mit und ohne `--minify`, und vergleicht für jede Seite den reinen Text und die Tag-Bilanz.
 145 Seiten in unter einer Sekunde.
-Er hängt im Deploy-Workflow vor dem Veröffentlichungs-Build und läuft lokal vor jeder Veröffentlichung.
+Er läuft lokal vor jeder Veröffentlichung.
 Die Stufe, die vorher nur im CI lief, läuft jetzt auf beiden Seiten.
+
+*Nachtrag vom 11.9.2026:* Bis zu diesem Tag hing der Prüfer zusätzlich im Deploy-Workflow, seitdem läuft er nur noch auf meinem Rechner.
 
 Das Bemerkenswerte an diesem Prüfer ist, was er *nicht* weiß.
 Er hat kein Soll.

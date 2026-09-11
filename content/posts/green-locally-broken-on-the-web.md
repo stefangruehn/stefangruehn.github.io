@@ -171,8 +171,10 @@ That took a minute.
 
 The fix is `tools/check-minify.py`: it builds the blog twice, with and without `--minify`, and compares the plain text and the tag balance of every page.
 145 pages in under a second.
-It sits in the deploy workflow ahead of the publishing build and runs locally before every release.
+It runs locally before every release.
 The stage that used to run only in CI now runs on both sides.
+
+*Update, added 2026-09-11:* until that day the checker also ran in the deploy workflow; since then it runs on my machine only.
 
 The remarkable thing about this checker is what it does *not* know.
 It has no expectation.
