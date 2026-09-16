@@ -1,7 +1,6 @@
 ---
 title: "Two images that agree: forensics on somebody else's firmware"
 date: 2026-09-06T14:05:00+02:00
-draft: true
 tags: ["claude-code", "hardware", "esp32", "reverse-engineering", "debugging", "Technical Deep Dive"]
 topics: ["machine"]
 series: ["Toolchains"]
@@ -50,7 +49,6 @@ After that the as-delivered state exists as a file, and everything else is work 
 Two sentences on housekeeping, because this is the point at which the one file that never gets passed on comes into being.
 The image is somebody else's firmware: it stays on the disk, `backup/*.bin` is in the `.gitignore`, and what appears in these posts are the findings from it and nothing else — no bytes.
 The device is mine, secure boot and flash encryption are off as shipped; nothing is being circumvented here that anybody intended as protection.
-Why this is the one place in the whole series where you can actually get something wrong is [a post of its own](/posts/the-wrong-statute/).
 
 The second step splits the image into its parts.
 At address `0x10000` there is a header listing which part of the file is later loaded to which address in memory: six segments, each with file offset, target address and length.
@@ -127,11 +125,11 @@ A day later a receiver listened on GPIO39: **921,600 baud, 8N1, zero framing err
 And command `0x06` turned out to be the metadata frame, with four string lengths in its sub-header:
 
 ```
-len 50:  11 0E 0F 00  "Artificial Being\0" "Alien Project\0" "Aztechno Dream\0"
-len 39:  06 0E 0F 00  "Skunk\0"            "Alien Project\0" "Aztechno Dream\0"
+len 50:  11 0E 0F 00  "<title: 16 characters>\0" "<artist: 13>\0" "<album: 14>\0"
+len 39:  06 0E 0F 00  "<title: 5>\0"             "<artist: 13>\0" "<album: 14>\0"
 ```
 
-`0x11` is 17, which is the length of "Artificial Being" plus its terminating zero.
+`0x11` is 17, which is the title's 16 characters plus its terminating zero.
 The four lengths plus the four header bytes add up to exactly the stated total in every frame observed.
 Two images had predicted the protocol; a receiver confirmed it.
 
@@ -165,7 +163,8 @@ It is the answer to a question you had not asked.
 At the end of this part, a chain that sits above all the others.
 
 Every one of the investigations above wrote its findings into a file **while working**, not afterwards.
-The files in `scratch-findings/` start as a skeleton, the open questions as numbered headings, each with `(to fill)` beneath it, and next to that runs a source log: `S1`, `S2`, `S3`, every source with its address, a quotation, and a note on whether it supports or refutes something.
+The finding files sit next to the code but are not published with it.
+They start as a skeleton, the open questions as numbered headings, each with `(to fill)` beneath it, and next to that runs a source log: `S1`, `S2`, `S3`, every source with its address, a quotation, and a note on whether it supports or refutes something.
 At the very bottom, a section headed "Dead ends (do not search again)".
 
 The reason is not tidiness.

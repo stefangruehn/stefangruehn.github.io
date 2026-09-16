@@ -1,7 +1,6 @@
 ---
 title: "Der Schaltplan ist eine Hypothese: was Papier über eine Platine wirklich sagt"
 date: 2026-09-06T14:00:00+02:00
-draft: true
 tags: ["claude-code", "hardware", "esp32", "reverse-engineering", "debugging", "Technical Deep Dive"]
 themen: ["rechner"]
 series: ["Werkzeugketten"]
@@ -137,7 +136,7 @@ Die Frage war: Warum kommen Datenübertragungen an den Bildschirm oberhalb einer
 Der Verdacht richtete sich auf die Hardware-Abstraktionsschicht `esp-hal`, und die liegt ohnehin schon auf der Platte, ausgepackt im Paketcache:
 
 ```
-/home/stefan/.cargo/registry/src/index.crates.io-.../esp-hal-1.1.2/src/spi/master/
+~/.cargo/registry/src/index.crates.io-.../esp-hal-1.1.2/src/spi/master/
 ```
 
 Kein Klonen, kein Suchen: der Quelltext der Version, die tatsächlich gebaut wurde, Zeile für Zeile.

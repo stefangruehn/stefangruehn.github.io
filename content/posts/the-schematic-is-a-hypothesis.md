@@ -1,7 +1,6 @@
 ---
 title: "The schematic is a hypothesis: what paper really says about a board"
 date: 2026-09-06T14:00:00+02:00
-draft: true
 tags: ["claude-code", "hardware", "esp32", "reverse-engineering", "debugging", "Technical Deep Dive"]
 topics: ["machine"]
 series: ["Toolchains"]
@@ -134,7 +133,7 @@ The question was: why do transfers to the screen above a certain size apparently
 Suspicion fell on the hardware abstraction layer `esp-hal`, and that is already on disk anyway, unpacked in the package cache:
 
 ```
-/home/stefan/.cargo/registry/src/index.crates.io-.../esp-hal-1.1.2/src/spi/master/
+~/.cargo/registry/src/index.crates.io-.../esp-hal-1.1.2/src/spi/master/
 ```
 
 No cloning, no searching: the source of the exact version that was built, line by line.

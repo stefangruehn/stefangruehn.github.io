@@ -1,7 +1,6 @@
 ---
 title: "Die Karte nennt ihre eigenen Pins: wenn nur noch das Gerät antwortet"
 date: 2026-09-06T14:10:00+02:00
-draft: true
 tags: ["claude-code", "hardware", "esp32", "reverse-engineering", "debugging", "Technical Deep Dive"]
 themen: ["rechner"]
 series: ["Werkzeugketten"]
@@ -29,11 +28,11 @@ Was auf dieser Platine tatsächlich verlötet ist, sagt keins von beiden.
 Die tragende Kette dieses Teils ist die einfachste zu beschreiben und die produktivste.
 
 ```
-src/bin/<frage>.rs  ->  flashen  ->  Monitorlog  ->  scratch-findings/logs/
+firmware/src/bin/<frage>.rs  ->  flashen  ->  Monitorlog  ->  Logdatei
 ```
 
 Für jede Frage entsteht ein eigenes kleines Programm, das nichts tut außer diese eine Frage zu stellen, und sein Log ist das Messprotokoll.
-Kein Programm mit Schaltern, viele kleine: `pullscan`, `sdprobe`, `switchhunt`, `uartsniff`, `pin38`, jedes mit der Frage im Dateikopf und dem Ergebnis im Log daneben.
+Kein Programm mit Schaltern, viele kleine: `pullscan`, `sdprobe`, `switchhunt`, `uarttalk`, `pin38`, jedes mit der Frage im Dateikopf und dem Ergebnis im Log daneben.
 
 **Das Abtasten der Pins.**
 Die erste Frage an eine unbekannte Platine lautet: Welche Anschlüsse hängen überhaupt an etwas?
@@ -167,7 +166,7 @@ Ein leeres Log ist keine Beobachtung.
 
 Bleibt eine Kette, die keine Hardware anfasst.
 
-Die Sitzungen, in denen all das entstanden ist, liegen als Transkripte im Projekt.
+Die Sitzungen, in denen all das entstanden ist, liegen als Transkripte beim Projekt, lokal und nicht veröffentlicht.
 Sie sind Rohmaterial und keine Dokumentation, die steht in den Befundnotizen aus Teil zwei.
 Aus ihnen kommen später die Zahlen, die Reihenfolge und die Sackgassen, an die sich niemand mehr erinnert.
 Der Satz, dass die erste Fassung des Pin-Abtasters zwei Millisekunden zu früh gelesen hat, steht nicht deshalb in diesem Beitrag, weil er jemandem im Gedächtnis geblieben wäre.

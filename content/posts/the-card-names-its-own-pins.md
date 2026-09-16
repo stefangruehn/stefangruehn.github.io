@@ -1,7 +1,6 @@
 ---
 title: "The card names its own pins: when only the device will answer"
 date: 2026-09-06T14:10:00+02:00
-draft: true
 tags: ["claude-code", "hardware", "esp32", "reverse-engineering", "debugging", "Technical Deep Dive"]
 topics: ["machine"]
 series: ["Toolchains"]
@@ -29,11 +28,11 @@ What is actually soldered onto this board is said by neither.
 The load-bearing chain of this part is the easiest to describe and the most productive.
 
 ```
-src/bin/<question>.rs  ->  flash  ->  monitor log  ->  scratch-findings/logs/
+firmware/src/bin/<question>.rs  ->  flash  ->  monitor log  ->  log file
 ```
 
 Every question gets a small program of its own that does nothing except ask that one question, and its log is the measurement record.
-No one program with switches, many small ones instead: `pullscan`, `sdprobe`, `switchhunt`, `uartsniff`, `pin38`, each with the question in its file header and the result in the log beside it.
+No one program with switches, many small ones instead: `pullscan`, `sdprobe`, `switchhunt`, `uarttalk`, `pin38`, each with the question in its file header and the result in the log beside it.
 
 **Scanning the pins.**
 The first question to put to an unknown board is: which pins are connected to anything at all?
@@ -165,7 +164,7 @@ An empty log is not an observation.
 
 One chain is left that touches no hardware.
 
-The sessions in which all of this happened are kept as transcripts in the project.
+The sessions in which all of this happened are kept as transcripts alongside the project, locally and unpublished.
 They are raw material, not documentation, that is what the finding notes from part two are for.
 The numbers, the order of events and the dead ends nobody remembers come out of them later.
 The sentence about the first pin scanner reading two milliseconds too early is not in this post because somebody remembered it.

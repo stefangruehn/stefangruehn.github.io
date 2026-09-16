@@ -1,7 +1,6 @@
 ---
 title: "Zwei Abbilder, die sich einig sind: Forensik an fremder Firmware"
 date: 2026-09-06T14:05:00+02:00
-draft: true
 tags: ["claude-code", "hardware", "esp32", "reverse-engineering", "debugging", "Technical Deep Dive"]
 themen: ["rechner"]
 series: ["Werkzeugketten"]
@@ -50,7 +49,6 @@ Danach existiert der Auslieferungszustand als Datei, und alles Weitere ist Arbei
 Zwei Sätze zur Ordnung, weil an dieser Stelle die einzige Datei entsteht, die nicht weitergegeben wird.
 Das Abbild ist fremde Firmware: Es bleibt auf der Platte, `backup/*.bin` steht in der `.gitignore`, und was in diesen Beiträgen steht, sind ausschließlich die Befunde daraus — keine Bytes.
 Das Gerät gehört mir, Secure Boot und Flash-Verschlüsselung sind ab Werk aus, es wird hier nichts umgangen, was jemand als Schutz gemeint hätte.
-Warum das die einzige Stelle der ganzen Serie ist, an der man wirklich etwas falsch machen kann, steht [in einem eigenen Beitrag](/de/posts/the-wrong-statute/).
 
 Der zweite Schritt trennt das Abbild in seine Teile.
 An Adresse `0x10000` beginnt ein Kopfbereich, der auflistet, welcher Abschnitt der Datei später an welche Adresse im Speicher geladen wird: sechs Segmente, jedes mit Dateioffset, Zieladresse und Länge.
@@ -129,11 +127,11 @@ Einen Tag später hörte ein Empfänger auf GPIO39 mit: **921 600 Baud, 8N1, nul
 Und der Befehl `0x06` entpuppte sich als Metadatenrahmen mit vier Textlängen im Kopf:
 
 ```
-len 50:  11 0E 0F 00  "Artificial Being\0" "Alien Project\0" "Aztechno Dream\0"
-len 39:  06 0E 0F 00  "Skunk\0"            "Alien Project\0" "Aztechno Dream\0"
+len 50:  11 0E 0F 00  "<Titel: 16 Zeichen>\0" "<Interpret: 13>\0" "<Album: 14>\0"
+len 39:  06 0E 0F 00  "<Titel: 5>\0"          "<Interpret: 13>\0" "<Album: 14>\0"
 ```
 
-`0x11` ist 17, also die Länge von „Artificial Being" plus die abschließende Null.
+`0x11` ist 17, also die 16 Zeichen des Titels plus die abschließende Null.
 Die Summe der vier Längen plus vier Kopfbytes ergibt in allen beobachteten Rahmen exakt die angegebene Gesamtlänge.
 Zwei Abbilder hatten das Protokoll vorhergesagt, ein Empfänger hat es bestätigt.
 
@@ -167,7 +165,8 @@ Er ist die Antwort auf eine Frage, die man nicht gestellt hatte.
 Am Ende dieses Teils eine Kette, die über allen anderen liegt.
 
 Jede der Recherchen oben hat ihre Befunde **während der Arbeit** in eine Datei geschrieben, nicht danach.
-Die Dateien in `scratch-findings/` fangen als Gerüst an, die offenen Fragen als nummerierte Überschriften, darunter jeweils `(to fill)`, und daneben steht ein Quellenlog: `S1`, `S2`, `S3`, jede Quelle mit Adresse, Zitat und dem Vermerk, ob sie etwas belegt oder widerlegt.
+Die Befunddateien liegen neben dem Code, werden aber nicht mit ihm veröffentlicht.
+Sie fangen als Gerüst an, die offenen Fragen als nummerierte Überschriften, darunter jeweils `(to fill)`, und daneben steht ein Quellenlog: `S1`, `S2`, `S3`, jede Quelle mit Adresse, Zitat und dem Vermerk, ob sie etwas belegt oder widerlegt.
 Ganz unten ein Abschnitt mit der Überschrift „Dead ends (do not search again)".
 
 Der Grund dafür ist keine Ordnungsliebe.
