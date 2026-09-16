@@ -154,23 +154,52 @@
 /* Der Palettenknopf selbst. Er traegt den Namen des Schemas als Text statt
    einer Zeichnung: fuer "zurueck zu PaperMod" gibt es kein Zeichen, das
    jemand erkennen wuerde, und das Oktopus-Logo ist eine Marke und meint hier
-   kein Ziel auf GitHub. Den Zustand zeigt die Farbe — gedaempft heisst aus,
-   das Akzentblau der Palette heisst an.
+   kein Ziel auf GitHub. Den Zustand zeigen Farbe und Rahmen: gedaempft und
+   rahmenlos heisst aus, Akzentblau im Kasten heisst an. Kein Unterstrich,
+   der gehoert im Web den Links. Den Rahmen traegt der Knopf in beiden
+   Zustaenden, aus ist er durchsichtig — sonst springt die Kopfzeile beim
+   Umschalten um zwei Pixel. Der Kasten ist quadratisch, und beide Kanten
+   stehen als Mass da statt als aspect-ratio: ein Verhaeltnis allein laesst
+   die Hoehe verhandelbar, und die Kopfzeile verhandelt mit (siehe unten).
+   Er ist so klein, wie die zwei Versalien es zulassen: Innenabstand null,
+   Laufweite null, Schrift so weit herunter, dass GH hineinpasst. Zentriert
+   wird mit flex, weil line-height dafuer den Rahmen auf die Buchstaben legt.
    Im hellen Modus waere der Knopf wirkungslos, deshalb visibility statt
    display: der Platz bleibt stehen, die Kopfzeile springt beim Umschalten
    nicht, und aus Tabreihenfolge und Vorlesereihenfolge faellt der Knopf
    trotzdem. */
 .palette-toggle {
-    padding: 0 0.4rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    width: 1.15rem;
+    height: 1.15rem;
+    padding: 0;
+    border: 1px solid transparent;
+    border-radius: 3px;
     color: var(--secondary);
-    font-size: 0.82rem;
+    font-size: 0.58rem;
     font-weight: 700;
-    letter-spacing: 0.03em;
+    letter-spacing: 0;
     line-height: 1;
+    white-space: nowrap;
+}
+
+/* PaperMod vererbt den Kindern der Kopfzeile die Kopfhoehe: .logo-switches
+   traegt min-height: stretch, und .logo-switches > * erbt sie ausdruecklich.
+   Firefox kennt den Wert nicht und ignoriert ihn, Chromium loest ihn auf 60px
+   auf — dort schlaegt die Mindesthoehe die gesetzte Hoehe, und aus dem Quadrat
+   wird ein Hochformat. Die Ruecknahme braucht die hoehere Spezifitaet, sonst
+   gewinnt die Theme-Regel. */
+.logo-switches .palette-toggle {
+    min-height: 0;
 }
 
 :root[data-palette="github"] .palette-toggle {
     color: var(--gh-accent);
+    border-color: var(--gh-accent);
 }
 
 :root[data-theme="light"] .palette-toggle {
