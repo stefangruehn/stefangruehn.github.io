@@ -1,0 +1,178 @@
+/* Zweite dunkle Palette: GitHub Dark Default.
+   Der Leser waehlt sie im Kopf ueber den Knopf neben Sonne/Mond; die Wahl
+   steht in localStorage unter "pref-palette" und haengt am Attribut
+   data-palette am <html>. Sie greift nur im dunklen Modus — hell bleibt
+   PaperMod, deshalb ist jeder Selektor hier auf beide Attribute gestuetzt.
+
+   Werte aus Primer (github-dark-default): Grund #0d1117, Flaechen #161b22,
+   Text #e6edf3, gedaempft #8b949e, Rahmen #30363d, Akzent #58a6ff. */
+/* Das Akzentblau steht ausserhalb des Palettenblocks: der Knopf traegt es
+   auch dann, wenn die Palette noch nicht aktiv ist. */
+:root {
+    --gh-accent: #58a6ff;
+}
+
+:root[data-theme="dark"][data-palette="github"] {
+    --theme: #0d1117;
+    --entry: #161b22;
+    --primary: #e6edf3;
+    --secondary: #8b949e;
+    --tertiary: #30363d;
+    --content: #c9d1d9;
+    --code-block-bg: #161b22;
+    --code-bg: #262c36;
+    --border: #30363d;
+}
+
+/* PaperMod faerbt die Listenseite ueber --code-bg statt ueber --theme;
+   ohne das hier steht sie neben dem Kopf in einem anderen Grau. */
+:root[data-theme="dark"][data-palette="github"] .list {
+    background: var(--theme);
+}
+
+/* Links im Beitrag tragen bei GitHub die Akzentfarbe, nicht die Textfarbe.
+   Ueberschriftenanker bleiben ausgenommen: sie sind Teil der Zeile. */
+:root[data-theme="dark"][data-palette="github"] .post-content a,
+:root[data-theme="dark"][data-palette="github"] .post-content a code {
+    color: var(--gh-accent);
+}
+
+:root[data-theme="dark"][data-palette="github"] .post-content a.anchor {
+    color: var(--secondary);
+}
+
+/* Syntaxfarben. PaperMod liefert eine feste Chroma-Palette mit; hier steht
+   die von github-dark-default daneben, gescoped und damit ohne Eingriff ins
+   Theme. Aufgefuehrt sind die Klassen, die bash, sh, ini, yaml und json
+   erzeugen, dazu die Diff-Klassen. */
+:root[data-theme="dark"][data-palette="github"] .chroma,
+:root[data-theme="dark"][data-palette="github"] .bg {
+    color: #e6edf3;
+    background-color: #161b22;
+}
+
+:root[data-theme="dark"][data-palette="github"] .chroma .c,
+:root[data-theme="dark"][data-palette="github"] .chroma .ch,
+:root[data-theme="dark"][data-palette="github"] .chroma .cm,
+:root[data-theme="dark"][data-palette="github"] .chroma .c1,
+:root[data-theme="dark"][data-palette="github"] .chroma .cs,
+:root[data-theme="dark"][data-palette="github"] .chroma .cp,
+:root[data-theme="dark"][data-palette="github"] .chroma .cpf,
+:root[data-theme="dark"][data-palette="github"] .chroma .gp {
+    color: #8b949e;
+}
+
+:root[data-theme="dark"][data-palette="github"] .chroma .k,
+:root[data-theme="dark"][data-palette="github"] .chroma .kc,
+:root[data-theme="dark"][data-palette="github"] .chroma .kd,
+:root[data-theme="dark"][data-palette="github"] .chroma .kn,
+:root[data-theme="dark"][data-palette="github"] .chroma .kp,
+:root[data-theme="dark"][data-palette="github"] .chroma .kr,
+:root[data-theme="dark"][data-palette="github"] .chroma .kt,
+:root[data-theme="dark"][data-palette="github"] .chroma .o,
+:root[data-theme="dark"][data-palette="github"] .chroma .ow {
+    color: #ff7b72;
+}
+
+:root[data-theme="dark"][data-palette="github"] .chroma .s,
+:root[data-theme="dark"][data-palette="github"] .chroma .sa,
+:root[data-theme="dark"][data-palette="github"] .chroma .sb,
+:root[data-theme="dark"][data-palette="github"] .chroma .sc,
+:root[data-theme="dark"][data-palette="github"] .chroma .dl,
+:root[data-theme="dark"][data-palette="github"] .chroma .sd,
+:root[data-theme="dark"][data-palette="github"] .chroma .s2,
+:root[data-theme="dark"][data-palette="github"] .chroma .se,
+:root[data-theme="dark"][data-palette="github"] .chroma .sh,
+:root[data-theme="dark"][data-palette="github"] .chroma .si,
+:root[data-theme="dark"][data-palette="github"] .chroma .sx,
+:root[data-theme="dark"][data-palette="github"] .chroma .sr,
+:root[data-theme="dark"][data-palette="github"] .chroma .s1,
+:root[data-theme="dark"][data-palette="github"] .chroma .ss {
+    color: #a5d6ff;
+}
+
+:root[data-theme="dark"][data-palette="github"] .chroma .m,
+:root[data-theme="dark"][data-palette="github"] .chroma .mb,
+:root[data-theme="dark"][data-palette="github"] .chroma .mf,
+:root[data-theme="dark"][data-palette="github"] .chroma .mh,
+:root[data-theme="dark"][data-palette="github"] .chroma .mi,
+:root[data-theme="dark"][data-palette="github"] .chroma .mo,
+:root[data-theme="dark"][data-palette="github"] .chroma .il,
+:root[data-theme="dark"][data-palette="github"] .chroma .na,
+:root[data-theme="dark"][data-palette="github"] .chroma .nb,
+:root[data-theme="dark"][data-palette="github"] .chroma .bp,
+:root[data-theme="dark"][data-palette="github"] .chroma .nc,
+:root[data-theme="dark"][data-palette="github"] .chroma .no,
+:root[data-theme="dark"][data-palette="github"] .chroma .nn,
+:root[data-theme="dark"][data-palette="github"] .chroma .ne {
+    color: #79c0ff;
+}
+
+:root[data-theme="dark"][data-palette="github"] .chroma .nf,
+:root[data-theme="dark"][data-palette="github"] .chroma .fm {
+    color: #d2a8ff;
+}
+
+:root[data-theme="dark"][data-palette="github"] .chroma .nv,
+:root[data-theme="dark"][data-palette="github"] .chroma .vc,
+:root[data-theme="dark"][data-palette="github"] .chroma .vg,
+:root[data-theme="dark"][data-palette="github"] .chroma .vi {
+    color: #ffa657;
+}
+
+:root[data-theme="dark"][data-palette="github"] .chroma .n,
+:root[data-theme="dark"][data-palette="github"] .chroma .nl,
+:root[data-theme="dark"][data-palette="github"] .chroma .nt,
+:root[data-theme="dark"][data-palette="github"] .chroma .p,
+:root[data-theme="dark"][data-palette="github"] .chroma .go {
+    color: #e6edf3;
+}
+
+:root[data-theme="dark"][data-palette="github"] .chroma .err {
+    color: #ffa198;
+}
+
+:root[data-theme="dark"][data-palette="github"] .chroma .ln,
+:root[data-theme="dark"][data-palette="github"] .chroma .lnt {
+    color: #6e7681;
+}
+
+:root[data-theme="dark"][data-palette="github"] .chroma .hl {
+    background-color: rgba(187, 128, 9, 0.15);
+}
+
+:root[data-theme="dark"][data-palette="github"] .chroma .gd {
+    color: #ffdcd7;
+    background-color: #67060c;
+}
+
+:root[data-theme="dark"][data-palette="github"] .chroma .gi {
+    color: #aff5b4;
+    background-color: #033a16;
+}
+
+/* Der Palettenknopf selbst. Er traegt den Namen des Schemas als Text statt
+   einer Zeichnung: fuer "zurueck zu PaperMod" gibt es kein Zeichen, das
+   jemand erkennen wuerde, und das Oktopus-Logo ist eine Marke und meint hier
+   kein Ziel auf GitHub. Den Zustand zeigt die Farbe — gedaempft heisst aus,
+   das Akzentblau der Palette heisst an.
+   Im hellen Modus waere der Knopf wirkungslos, deshalb visibility statt
+   display: der Platz bleibt stehen, die Kopfzeile springt beim Umschalten
+   nicht, und aus Tabreihenfolge und Vorlesereihenfolge faellt der Knopf
+   trotzdem. */
+.palette-toggle {
+    padding: 0 0.4rem;
+    color: var(--secondary);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    line-height: 1;
+}
+
+:root[data-palette="github"] .palette-toggle {
+    color: var(--gh-accent);
+}
+
+:root[data-theme="light"] .palette-toggle {
+    visibility: hidden;
+}

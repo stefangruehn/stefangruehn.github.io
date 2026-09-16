@@ -56,6 +56,14 @@
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
                 </button>
+                {{- /* Zweite dunkle Palette: GitHub Dark Default. Weicht vom
+                       Theme ab. Der Knopf steht neben Sonne/Mond und wirkt nur
+                       im dunklen Modus; hell blendet ihn das CSS aus. */}}
+                <button id="palette-toggle" class="palette-toggle" accesskey="g"
+                    title="{{ i18n "palette_toggle" }} (Alt + G)" aria-label="{{ i18n "palette_toggle" }}"
+                    aria-pressed="false">
+                    GH
+                </button>
                 {{- end }}
                 
                 {{- if (not site.Params.disableLangToggle) }}

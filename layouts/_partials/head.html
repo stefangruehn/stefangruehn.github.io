@@ -121,6 +121,7 @@
 <noscript>
     <style>
         #theme-toggle,
+        #palette-toggle,
         .top-link {
             display: none;
         }
@@ -195,6 +196,19 @@
         document.querySelector("html").dataset.theme = 'dark';
     } else {
         document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+{{- end }}
+
+{{- /* Zweite dunkle Palette: GitHub Dark Default. Weicht vom Theme ab.
+       Steht hier oben aus demselben Grund wie die Themenwahl darueber: erst
+       das Attribut, dann das Stylesheet — sonst blitzt beim Laden die andere
+       Palette auf. */}}
+{{- if (not site.Params.disableThemeToggle) }}
+<script>
+    if (localStorage.getItem("pref-palette") === "github") {
+        document.querySelector("html").dataset.palette = 'github';
     }
 
 </script>

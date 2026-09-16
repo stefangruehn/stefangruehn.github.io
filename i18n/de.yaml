@@ -22,3 +22,7 @@ newer_post: "Neuerer Beitrag"
 # einem Beitrag (older_post/newer_post).
 prev_page: "Neuere Beiträge"
 next_page: "Ältere Beiträge"
+
+# Knopf fuer die zweite dunkle Palette neben Sonne/Mond. Der Name ist der des
+# Farbschemas und wird deshalb nicht uebersetzt.
+palette_toggle: "Palette GitHub Dark Default"

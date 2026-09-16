@@ -1,0 +1,30 @@
+{{- /* Zweite dunkle Palette: GitHub Dark Default. Der Knopf im Kopf schaltet
+       nur das Attribut data-palette um — welche Farben daran haengen, steht in
+       assets/css/extended/palette-github.css. Ohne gesetztes Attribut bleibt
+       es bei PaperMod, deshalb wird es beim Zurueckschalten entfernt statt auf
+       einen zweiten Wert gesetzt. */ -}}
+{{- if (not site.Params.disableThemeToggle) }}
+<script>
+    (function () {
+        const html = document.documentElement;
+        const button = document.getElementById("palette-toggle");
+        if (!button) return;
+
+        const sync = () => button.setAttribute(
+            "aria-pressed", html.dataset.palette === "github" ? "true" : "false");
+
+        sync();
+        button.addEventListener("click", () => {
+            if (html.dataset.palette === "github") {
+                delete html.dataset.palette;
+                localStorage.setItem("pref-palette", 'papermod');
+            } else {
+                html.dataset.palette = 'github';
+                localStorage.setItem("pref-palette", 'github');
+            }
+            sync();
+        });
+    })();
+
+</script>
+{{- end }}

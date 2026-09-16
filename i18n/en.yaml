@@ -21,3 +21,7 @@ newer_post: "Newer post"
 # post do (older_post/newer_post).
 prev_page: "Newer posts"
 next_page: "Older posts"
+
+# Button for the second dark palette, next to sun/moon. The name is the colour
+# scheme's own, so it stays as is.
+palette_toggle: "GitHub Dark Default palette"
