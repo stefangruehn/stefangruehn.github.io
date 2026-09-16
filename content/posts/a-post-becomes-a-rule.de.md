@@ -2,7 +2,7 @@
 title: "Aus einem Beitrag wird eine Regel: Wie dieser Blog an seiner eigenen Entstehung mitschreibt"
 date: 2026-09-07T02:15:00+02:00
 draft: false
-tags: ["claude-code", "workflow", "schreiben", "rekursion", "selbstbezug", "Essay"]
+tags: ["claude-code", "workflow", "writing", "recursion", "self-reference", "Essay"]
 themen: ["schreiben"]
 series: ["Rueckkopplung"]
 summary: "Ein Beitrag über meine Tastaturkürzel hat nicht nur beschrieben, wie ich arbeite, er hat es geändert. Die Korrektur steht seitdem in der Datei, die mein Agent zu Beginn jeder Sitzung liest. Damit gehört dieser Blog zu den Dingen, über die er berichtet."

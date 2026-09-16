@@ -2,7 +2,7 @@
 title: "Das Werkzeug ist der Gegenstand: Wenn ein Blog über seinen eigenen Unterbau schreibt"
 date: 2026-09-07T02:16:00+02:00
 draft: false
-tags: ["claude-code", "workflow", "schreiben", "werkzeuge", "selbstbezug", "Essay"]
+tags: ["claude-code", "workflow", "writing", "tooling", "self-reference", "Essay"]
 themen: ["schreiben"]
 series: ["Rueckkopplung"]
 summary: "Von vierzehn veröffentlichten Beiträgen handeln sechs von Werkzeugen, die bei der Arbeit an diesem Blog entstanden sind. Das ist keine Themenwahl, sondern eine Folge davon, woher der Stoff kommt, und es hat eine Grenze, die man kennen sollte."

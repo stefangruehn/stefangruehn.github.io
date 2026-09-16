@@ -1,7 +1,7 @@
 ---
 title: "Erfahren und erlaufen: wie viel von diesen Texten wirklich von mir ist"
 date: 2026-09-06T09:10:00+02:00
-tags: ["claude-code", "workflow", "schreiben", "language", "Essay"]
+tags: ["claude-code", "workflow", "writing", "language", "Essay"]
 themen: ["autor"]
 series: ["Selbstaehnlichkeit"]
 summary: "Die ehrliche Antwort lautet: teilweise. Das Interessante ist, dass sich die Teile sauber trennen lassen: der Stoff kommt von mir, die Form meistens von Claude. Am deutlichsten sichtbar wird die Naht an einem Satz, der die Übersetzung nicht überlebt."

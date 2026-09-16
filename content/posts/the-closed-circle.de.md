@@ -2,7 +2,7 @@
 title: "Der geschlossene Kreis: warum dieser Blog Stoff von außen braucht"
 date: 2026-09-07T02:18:00+02:00
 draft: false
-tags: ["claude-code", "workflow", "schreiben", "komplexität", "selbstbezug", "Essay"]
+tags: ["claude-code", "workflow", "writing", "complexity", "self-reference", "Essay"]
 themen: ["schreiben"]
 series: ["Rueckkopplung"]
 summary: "Eine Rückkopplung, die gut funktioniert, hat ein Problem: Sie liefert Nachschub. Der Blog kann von sich selbst leben, und genau dann fehlt ihm das, woran seine Theorien zerbrechen. Drei prüfbare Erwartungen, die in vier Wochen falsch sein dürfen."

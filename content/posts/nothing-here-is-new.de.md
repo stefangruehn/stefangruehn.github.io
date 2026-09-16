@@ -1,7 +1,7 @@
 ---
 title: "In der feuchten Dunkelheit meines Kopfes: Zehn Beiträge in sieben Tagen, und kein Gedanke davon ist neu"
 date: 2026-09-06T08:40:00+02:00
-tags: ["claude-code", "workflow", "schreiben", "Essay"]
+tags: ["claude-code", "workflow", "writing", "Essay"]
 themen: ["autor"]
 series: ["Selbstaehnlichkeit"]
 summary: "Zehn Beiträge in der ersten Woche, jeder zweisprachig, eine Zahl, bei der man misstrauisch wird. Der Verdacht ist berechtigt und trotzdem falsch: Neu ist an diesen Texten nicht der Inhalt. Neu ist, dass er abfließen kann."

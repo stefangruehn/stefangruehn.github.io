@@ -2,7 +2,7 @@
 title: "Der falsche Paragraf: die Angst sitzt am anderen Ende der Kette"
 date: 2026-09-06T14:20:00+02:00
 draft: true
-tags: ["claude-code", "hardware", "recht", "schreiben", "meta", "Essay"]
+tags: ["claude-code", "hardware", "law", "writing", "meta", "Essay"]
 themen: ["autor"]
 summary: "Beim Schreiben über Hardware-Forensik kam die Frage, ob man sich damit strafbar macht. Die Antwort war überraschend: Der gefürchtete Paragraf greift aus drei Gründen nicht, und die einzige Handlung, bei der man wirklich etwas falsch machen kann, fühlt sich vollkommen harmlos an."
 ---

@@ -2,7 +2,7 @@
 title: "Die kleinste Änderung ist zwei: was 57 Commits über die Kopplung dieses Blogs sagen"
 date: 2026-09-07T02:17:00+02:00
 draft: false
-tags: ["claude-code", "workflow", "komplexität", "chaos", "messung", "selbstbezug", "Essay"]
+tags: ["claude-code", "workflow", "complexity", "chaos", "measurement", "self-reference", "Essay"]
 themen: ["schreiben"]
 series: ["Rueckkopplung"]
 summary: "In sieben Tagen sind 39 Beitragsdateien entstanden und 86 bestehende geändert worden. Die meisten Änderungen fassen zwei Dateien an, eine fasste achtzehn an. Diese Verteilung ist der Grund, warum sich ein Blog wie ein gekoppeltes System verhält, und die Stelle, an der ich beiläufig an ihm drehe."

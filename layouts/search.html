@@ -39,6 +39,9 @@
   <p class="tagwolke-hinweis">
     {{ if $de }}Feiner als die Themen und ohne deren Einordnung — wer einen Begriff sucht und nicht eine Frage, findet ihn hier.{{ else }}Finer than the topics and without their framing — for looking up a term rather than a question.{{ end }}
   </p>
+  <p class="tagwolke-hinweis">
+    {{ if $de }}Die Tags sind englisch, auch auf den deutschen Seiten: ein Begriff, ein Tag. Übersetzt stünde dieselbe Sache unter zwei Namen, jeder halb so voll — und wer die Sprache wechselt, müsste den Namen mitwechseln.{{ else }}Tags are in English on the German pages as well: one term, one tag. Translated, the same thing would sit under two names, each half as full — and switching language would mean switching names.{{ end }}
+  </p>
   <ul class="terms-tags">
     {{- range $name, $wert := . }}
     {{- with site.GetPage (printf "/tags/%s" $name) }}
