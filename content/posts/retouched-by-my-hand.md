@@ -1,7 +1,6 @@
 ---
 title: "Retouched by my hand: master and workshop"
 date: 2026-09-18T11:20:00+02:00
-draft: true
 tags: ["claude-code", "writing", "self-reference", "authorship", "Essay"]
 topics: ["author"]
 series: ["Authorship"]

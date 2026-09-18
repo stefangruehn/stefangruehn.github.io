@@ -1,7 +1,6 @@
 ---
 title: "Wer die Kette gebaut hat: Stoff, Form und Verfahren"
 date: 2026-09-18T10:40:00+02:00
-draft: true
 tags: ["claude-code", "writing", "self-reference", "reverse-engineering", "authorship", "Essay"]
 themen: ["autor"]
 series: ["Autorschaft"]

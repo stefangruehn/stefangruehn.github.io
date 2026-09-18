@@ -1,7 +1,6 @@
 ---
 title: "Das Wasserzeichen, das es doch gibt"
 date: 2026-09-18T11:55:00+02:00
-draft: true
 tags: ["claude-code", "writing", "authorship", "Essay"]
 themen: ["autor"]
 series: ["Autorschaft"]

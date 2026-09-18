@@ -2,7 +2,6 @@
 title: "Autorschaft"
 badge: "Essay"
 summary: "Wer schreibt hier, wenn eine Maschine mitschreibt? Nicht als Bekenntnis, sondern als Arbeitsteilung, die sich benennen lässt: was vom Menschen kommt, was von Claude, und woran man die Naht erkennt oder eben nicht."
-draft: true
 ---
 
 {{< serienbadge >}}

@@ -1,7 +1,6 @@
 ---
 title: "Von meiner Hand retuschiert: Meister und Werkstatt"
 date: 2026-09-18T11:20:00+02:00
-draft: true
 tags: ["claude-code", "writing", "self-reference", "authorship", "Essay"]
 themen: ["autor"]
 series: ["Autorschaft"]

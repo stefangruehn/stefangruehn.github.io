@@ -2,7 +2,6 @@
 title: "Authorship"
 badge: "Essay"
 summary: "Who is writing here when a machine writes along? Not as a confession but as a division of labour that can be named: what comes from the human, what from Claude, and how you can tell the seam, or cannot."
-draft: true
 ---
 
 {{< serienbadge >}}
