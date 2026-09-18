@@ -12,3 +12,4 @@ This series starts where that split is no longer enough.
 
 Part one takes a case in which the method came from Claude as well, and asks what is left for the human.
 Part two asks what the division of labour is called when the material very much does come from me, and finds the word in the workshops of the old masters.
+Part three asks whether the seam can be detected in the text, and finds a watermark that does exist after all.

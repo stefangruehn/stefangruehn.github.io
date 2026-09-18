@@ -12,3 +12,4 @@ Diese Serie fängt dort an, wo die Zweiteilung nicht mehr reicht.
 
 Der erste Teil nimmt einen Fall, in dem auch das Verfahren von Claude kam, und fragt, was dann beim Menschen bleibt.
 Der zweite fragt, wie die Arbeitsteilung heißt, wenn der Stoff sehr wohl von mir kommt, und findet das Wort in der Werkstatt alter Meister.
+Der dritte fragt, ob sich die Naht am Text nachweisen lässt, und findet ein Wasserzeichen, das es doch gibt.
