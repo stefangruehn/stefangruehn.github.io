@@ -11,3 +11,4 @@ The [Self-Similarity](/series/self-similarity/) series ends on a clean split: th
 This series starts where that split is no longer enough.
 
 Part one takes a case in which the method came from Claude as well, and asks what is left for the human.
+Part two asks what the division of labour is called when the material very much does come from me, and finds the word in the workshops of the old masters.
