@@ -119,7 +119,7 @@ Für diesen Fall kennt der Katalog keine Stufe.
 **Das Gedächtnis.**
 Ein Geselle, der Jahre in einer Werkstatt arbeitet, weiß irgendwann ungefragt, wie der Meister Hände malt.
 Claude beginnt jede Sitzung ohne Erinnerung an die vorige.
-Was bleiben soll, steht in Dateien: in Arbeitsanweisungen und Gedächtnisnotizen, die ich lese und korrigiere.
+Was bleiben soll, steht in Dateien: in Arbeitsanweisungen und Gedächtnisnotizen, die ich [von Zeit zu Zeit durchsehe](/de/posts/many-memories-one-person/) und korrigiere.
 Sie sind Prothesen für den Teil der Zusammenarbeit, der sich unter Menschen von selbst ergibt.
 
 **Die Kosten.**

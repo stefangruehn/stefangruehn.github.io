@@ -118,7 +118,7 @@ The catalogue has no grade for that case.
 **Memory.**
 A journeyman who has spent years in a workshop comes to know, without being told, how the master paints hands.
 Claude starts every session with no memory of the last one.
-What is meant to last is kept in files: in working instructions and memory notes that I read and correct.
+What is meant to last is kept in files: in working instructions and memory notes that I [go through from time to time](/posts/many-memories-one-person/) and correct.
 They are prostheses for the part of working together that people get for free.
 
 **Cost.**

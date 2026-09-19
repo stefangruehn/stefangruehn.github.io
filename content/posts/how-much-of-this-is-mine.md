@@ -123,6 +123,7 @@ Together they are what is left of a working day once the context has been cleare
 Which leads straight to the next question, out of the previous part.
 A memory is a selection medium: whatever is in it gets reused, whether or not it is still true.
 That is what I will write about next, in a series of its own.
+What that looks like once a note goes stale is in [Many Memories, One Person](/posts/many-memories-one-person/).
 
 ## What carries over
 

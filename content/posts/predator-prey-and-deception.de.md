@@ -95,6 +95,8 @@ Ich habe ihn korrigiert.
 Ein Gedächtnis ist ein Selektionsmedium, und ein Selektionsmedium ohne Korrektiv driftet.
 Das ist kein Argument gegen Gedächtnisse.
 Es ist eines für ein Verfallsdatum: Jeder Eintrag, der eine Tatsache über die Welt behauptet, gehört gegengeprüft, bevor er wieder benutzt wird.
+Zehn Tage später habe ich Claudes Gedächtnis ausmisten lassen.
+Was dabei schon veraltet war, steht in [Viele Gedächtnisse, ein Mensch](/de/posts/many-memories-one-person/).
 
 ## Täuschung
 

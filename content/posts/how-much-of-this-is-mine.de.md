@@ -120,6 +120,7 @@ Zusammen sind sie das, was von einem Arbeitstag übrig bleibt, wenn der Kontext 
 Aus dem letzten Teil folgt daraus direkt die nächste Frage.
 Ein Gedächtnis ist ein Selektionsmedium: Was darin steht, wird wiederverwendet, ob es noch stimmt oder nicht.
 Darüber schreibe ich als Nächstes, in einer eigenen Reihe.
+Wie das aussieht, wenn eine Notiz veraltet, steht in [Viele Gedächtnisse, ein Mensch](/de/posts/many-memories-one-person/).
 
 ## Was sich übertragen lässt
 

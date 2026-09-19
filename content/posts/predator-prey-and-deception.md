@@ -96,6 +96,8 @@ I corrected it.
 A memory is a selection medium, and a selection medium without a corrective drifts.
 That is not an argument against memories.
 It is an argument for an expiry date: any entry that asserts a fact about the world belongs re-checked before it is used again.
+Ten days later I had Claude clear out its memory.
+What had already gone stale by then is in [Many Memories, One Person](/posts/many-memories-one-person/).
 
 ## Deception
 
