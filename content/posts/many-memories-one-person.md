@@ -106,8 +106,8 @@ It just wasn't read anymore when things changed, and a memory nobody reads does 
 Time works differently on my memory than on Claude's.
 Claude's note stays word for word and quietly becomes wrong.
 With me it is the other way round: the state stays, the reason goes.
-Two weeks later I still know that an idea is on hold.
-Why it is on hold, I no longer know.
+Three weeks later I still know that an idea is waiting.
+Why, I only remember once I look in the vault.
 
 That is exactly what `wartet_auf` is for.
 The field records what something hangs on, such as "the repository is not public" or "not legally checked".
@@ -125,7 +125,7 @@ Claude's stores have a property mine lack.
 When a session starts, the global `CLAUDE.md`, the project's and the index of the memory notes are loaded automatically.
 What is in them is there without anyone asking for it.
 
-My vault does not inherit into my head.
+My vault does not load itself into my head.
 It wants to be read, and it is read only when I open it.
 That is why it has to be readable on the phone, and why its state lives in folder names rather than in fields you first have to expand.
 

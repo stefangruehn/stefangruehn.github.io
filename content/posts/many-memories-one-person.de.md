@@ -106,8 +106,8 @@ Sie wurde nur nicht mehr gelesen, als sich die Lage änderte, und ein Gedächtni
 Die Zeit wirkt auf mein Gedächtnis anders als auf das von Claude.
 Claudes Notiz bleibt wörtlich stehen und wird still falsch.
 Bei mir ist es umgekehrt: Der Stand bleibt, der Grund geht.
-Ich weiß nach zwei Wochen noch, dass eine Idee liegt.
-Warum sie liegt, weiß ich nicht mehr.
+Nach drei Wochen weiß ich noch, dass eine Idee wartet.
+Warum, weiß ich erst wieder, wenn ich im Vault nachsehe.
 
 Genau dafür ist `wartet_auf` da.
 Das Feld hält fest, woran etwas hängt, etwa „das Repository ist nicht öffentlich“ oder „rechtlich ungeprüft“.
@@ -125,7 +125,7 @@ Claudes Ablagen haben eine Eigenschaft, die meine nicht haben.
 Beim Start einer Sitzung werden die globale `CLAUDE.md`, die des Projekts und der Index der Gedächtnisnotizen automatisch geladen.
 Was dort steht, ist da, ohne dass jemand danach fragt.
 
-Mein Vault erbt nicht in meinen Kopf.
+Mein Vault lädt sich nicht von selbst in meinen Kopf.
 Er will gelesen werden, und gelesen wird er nur, wenn ich ihn öffne.
 Deshalb muss er auf dem Telefon lesbar sein, und deshalb steht sein Stand in Ordnernamen statt in Feldern, die man erst aufklappen muss.
 
