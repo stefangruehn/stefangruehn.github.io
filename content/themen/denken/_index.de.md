@@ -2,7 +2,6 @@
 title: "Denke ich noch wie vorher?"
 translationKey: "thema-denken"
 weight: 8
-draft: true
 summary: "Ich schneide Aufgaben anders zu, denke in Entscheidungen statt in Handgriffen und schreibe auf, was vorher Gewohnheit war. Was die Arbeit mit einem Agenten mit dem Denken macht, und was es kostet, wenn immer weniger Leute dieselbe Erfahrung gemacht haben."
 ---
 
