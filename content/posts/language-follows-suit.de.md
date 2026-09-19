@@ -1,7 +1,6 @@
 ---
 title: "Die Sprache zieht nach: Was ein Leser, der alles wörtlich nimmt, mit meinen Sätzen macht"
 date: 2026-09-19T11:00:00+02:00
-draft: true
 tags: ["claude-code", "language", "writing", "shortcuts", "Essay"]
 themen: ["denken"]
 summary: "Seit ich täglich mit einem Agenten arbeite, ändert sich nicht nur mein Denken, auch meine Sprache, und schneller als je zuvor. Sie wird genauer, widerspruchsärmer und nimmt Wörter aus der Arbeit mit in den Alltag. Die Richtung ist die einer Programmiersprache: Syntax, Semantik und Pragmatik fallen auseinander, auch dort, wo kein Agent mitliest."

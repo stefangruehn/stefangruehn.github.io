@@ -1,7 +1,6 @@
 ---
 title: "Language Follows Suit: What a Reader Who Takes Everything Literally Does to My Sentences"
 date: 2026-09-19T11:00:00+02:00
-draft: true
 tags: ["claude-code", "language", "writing", "shortcuts", "Essay"]
 topics: ["thinking"]
 summary: "Since I started working with an agent every day, it is not only my thinking that has changed but my language too, and faster than ever before. It is getting more precise, poorer in contradictions, and it carries words from the work into everyday life. The direction is that of a programming language: syntax, semantics and pragmatics come apart, even where no agent is reading along."
