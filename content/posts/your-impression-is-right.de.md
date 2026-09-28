@@ -23,11 +23,11 @@ Die App, an der ich mit Claude Code arbeite, zeigt fast alles auf Karten: Listen
 Manche Menüs öffnen sich als Blatt, das von unten ins Bild fährt, ein sogenanntes Bottom Sheet.
 Dort fielen mir die Schatten auf.
 
-Ich schrieb:
+Ich schrieb, zusammen mit einer Reihe anderer Anweisungen:
 
 > Prüfe visuell die Schatten der Karten auf den Bottom Sheets. Ich habe den Eindruck, dass diese stärker sind als die anderer Karten.
 
-Die Antwort kam eine knappe halbe Stunde später und begann so:
+Die Antwort kam kurz darauf und begann so:
 
 > Dein Eindruck stimmt. Der Schatten selbst ist gleich stark, er dunkelt auf der Seite wie im Sheet um etwa 20 % ab. Im hellen Modus war das Sheet aber weiß wie die Karten […] Deshalb wirkte er schwerer.
 

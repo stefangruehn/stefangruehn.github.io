@@ -23,11 +23,11 @@ The app I am building with Claude Code shows almost everything on cards: lists, 
 Some menus open as a panel that slides up from the bottom, a so-called bottom sheet.
 That is where the shadows caught my eye.
 
-I wrote (translated from German here and below):
+I wrote, along with a number of other instructions (translated from German here and below):
 
 > Check the shadows of the cards on the bottom sheets visually. I have the impression that they are stronger than those of other cards.
 
-The answer arrived just under half an hour later and began like this:
+The answer arrived shortly afterwards and began like this:
 
 > Your impression is right. The shadow itself is equally strong, it darkens by about 20 % on the page as in the sheet. In light mode, though, the sheet was white like the cards […] That is why it looked heavier.
 
