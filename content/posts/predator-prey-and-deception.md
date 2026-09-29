@@ -13,6 +13,9 @@ Self-similar means: the same pattern, one level further out.
 The boundary of the Mandelbrot set from the last part looks in miniature the way it looks at full size.
 My claim is that this does not stop at mathematics.
 
+*Update, added 2026-09-29:* others have since measured what I claim here, in three texts and at a larger scale.
+What holds and what does not is in the series [Ecosystem](/series/ecosystem/), starting with the [cross-check](/posts/the-cross-check/).
+
 ## TL;DR
 
 - The claim: sufficiently complex agents are not categorically new.

@@ -13,6 +13,9 @@ Selbstähnlich heißt: dasselbe Muster, eine Ebene weiter.
 Der Rand des Apfelmännchens aus dem letzten Teil sieht im Kleinen aus wie im Großen.
 Meine Behauptung ist, dass das nicht bei der Mathematik aufhört.
 
+*Nachtrag vom 29.9.2026:* Inzwischen haben andere gemessen, was ich hier behaupte, in drei Texten und in größerem Maßstab.
+Was davon hält und was nicht, steht in der Serie [Ökosystem](/de/series/oekosystem/), beginnend mit der [Gegenprobe](/de/posts/the-cross-check/).
+
 ## Kurzfassung
 
 - Die These: Hinreichend komplexe Agenten sind nichts kategorisch Neues.
