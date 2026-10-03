@@ -130,7 +130,6 @@ Er steht da für Leserinnen, die die Grafik nicht sehen können, und wird deshal
 
 Unsichtbarer Text hat die sichtbare Seite zerstört.
 
-Das ist mehr als eine Pointe.
 Barrierefreie Ergänzungen sind fast immer Text ohne Publikum im eigenen Alltag: Alternativtexte, Beschreibungen, Beschriftungen, die man selbst nie zu Gesicht bekommt.
 Was niemand ansieht, korrigiert auch niemand nebenbei.
 Für [dieselbe Sorte Aufmerksamkeit](/de/posts/shortcuts-as-an-input-aid/) habe ich an anderer Stelle argumentiert, dass sie sich für alle auszahlt.

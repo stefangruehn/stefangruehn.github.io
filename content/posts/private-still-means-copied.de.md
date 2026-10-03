@@ -146,7 +146,7 @@ Eine *single source of truth*: eine Fassung, die gilt, und daneben keine zweite,
 Der Projektordner mit den Werkzeugen enthält einen Symlink darauf und sonst nichts, was auseinanderlaufen könnte.
 Kein Spiegel, kein Exportschritt, kein Skript, das Notizen hin- und herkopiert und hinterher abgleicht.
 
-Das ist wichtig wegen einer Eigenschaft, die alle Abgleichwerkzeuge teilen: **Sie führen nicht zusammen.**
+Das schützt vor einer Eigenschaft, die alle Abgleichwerkzeuge teilen: **Sie führen nicht zusammen.**
 Ändert sich dieselbe Datei zwischen zwei Abgleichen an zwei Stellen, bekommst du weder eine kombinierte Fassung noch eine Fehlermeldung.
 Du bekommst eine zweite Datei mit `sync-conflict` und einem Zeitstempel im Namen, die still neben dem Original liegt, und dort liegen bleibt, bis jemand hinsieht.
 

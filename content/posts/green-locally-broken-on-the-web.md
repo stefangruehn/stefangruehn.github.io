@@ -132,7 +132,6 @@ It is there for readers who cannot see the diagram — and therefore never gets 
 
 Invisible text destroyed the visible page.
 
-That is more than a punchline.
 Accessibility additions are almost always text with no audience in your own daily work: alt texts, descriptions, labels you yourself never lay eyes on.
 What nobody looks at, nobody corrects in passing either.
 I have argued elsewhere that [this kind of attention](/posts/shortcuts-as-an-input-aid/) pays off for everybody; here, its absence cost everybody.

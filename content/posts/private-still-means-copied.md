@@ -145,7 +145,7 @@ A single source of truth — one version that counts, with no second one quietly
 The project folder where the tooling sits contains a symlink pointing at it, and nothing else that could drift.
 No mirror, no export step, no script that copies notes from one place to the other and reconciles them afterwards.
 
-This matters because of something worth knowing about file synchronisers in general: **they do not merge.**
+This protects against a trait that file synchronisers share in general: **they do not merge.**
 If the same file changes in two places between syncs, you don't get a combined version and you don't get an error.
 You get a second file with `sync-conflict` and a timestamp in its name, sitting quietly next to the original, and it will keep sitting there until somebody notices.
 
